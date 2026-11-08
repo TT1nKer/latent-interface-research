@@ -1,0 +1,7 @@
+SPDX-License-Identifier: CC-BY-SA-4.0
+
+ARC / AI2 Reasoning Challenge, Allen Institute for Artificial Intelligence (Ai2).
+Source: https://huggingface.co/datasets/allenai/ai2_arc/tree/210d026faf9955653af8916fad021475a3f00453
+Licence: https://creativecommons.org/licenses/by-sa/4.0/
+This project's selection and schema adaptation: Zhenghao Yang, 2026.
+See ../THIRD_PARTY_NOTICES.md for attribution, citation, and modifications.

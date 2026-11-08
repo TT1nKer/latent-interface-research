@@ -1,10 +1,11 @@
 # Reusable communication between frozen language models
 
 Independent, noncommercial student research by Zhenghao Yang, Queen's University.
-This private development snapshot contains the current experimental code, checkpoint
-revisions, controls, and analysis. Evaluation code, methodology, and positive or
-negative findings will be released publicly when the pilot is completed, subject to
-upstream model, code, and data licences.
+This public development snapshot contains the current experimental code, checkpoint
+revisions, controls, and analysis. It is ongoing research, not a finished paper or
+a validated new method. Further evaluation code, methodology, and positive or
+negative findings will be released as the pilot progresses, subject to upstream
+model, code, and data licences.
 
 ## Scientific status, 2026-11-07
 
@@ -73,7 +74,7 @@ record the Dream package and upstream Git pins; that environment is not yet vali
 Exact C2C model revisions and file hashes are in
 `remote/c2c_acquire_v1_manifest.json`; the upstream code is
 https://github.com/thu-nics/C2C at `5eac72b90faf7b3dc2638e874fe7cba1e74c8bcf`.
-Dream reproduces the author release at
+The Dream implementation targets reproduction of the author release at
 https://github.com/alanrbtx/hidden-messages-diffusion-agents/tree/f85b6d8563a2236117407e0df9c6cd60ea406dac.
 The upstream repository provides the exact QASC development data and reference
 predictions used by the driver; author-reported reproduction is separate from our
@@ -81,11 +82,12 @@ independent validation.
 
 ## Rights and acknowledgement
 
-Upstream code, model weights, and benchmark text remain subject to their respective
-licences. ARC question text is included in the small development data/predictions
-with its source URL and dataset revision recorded in
-`remote/late_binding_arc_dev32_v1.json`. This snapshot does not relicense third-party
-materials. A licence and full third-party notices will accompany the public release.
+Original project code and documentation are available under the [MIT licence](LICENSE).
+The ARC-derived development dataset and prediction records containing question text
+are provided under **CC BY-SA 4.0**, as specified in their adjacent `.license` files.
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for attribution, modifications,
+source revisions, and the distinction between bundled data and external dependencies.
+The project licence does not relicense upstream code, model weights, or benchmark text.
 
 MyResearchCloud / Computing for Humanity approved an allocation on 2026-11-07;
 provisioning is pending. No existing experimental result used that allocation.
