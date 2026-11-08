@@ -1,0 +1,102 @@
+{
+  "recorded_at_utc": "2026-11-07T07:22:53.296261+00:00",
+  "job_id": "12428526",
+  "status": "Completed; this configuration is not eligible for automatic expansion",
+  "primary_gate": {
+    "rule": "native_changed >= 0.60",
+    "observed": 0.2916666666666667,
+    "passed": false,
+    "outcome": "native_limited_do_not_attribute_failure_to_interface"
+  },
+  "counts": {
+    "identity": {
+      "n": 32,
+      "correct": {
+        "native": 17,
+        "late": 20,
+        "early": 20
+      }
+    },
+    "changed": {
+      "n": 96,
+      "correct": {
+        "native": 28,
+        "late": 31,
+        "early": 30
+      }
+    },
+    "original": {
+      "n": 32,
+      "correct": {
+        "native": 16,
+        "early": 21
+      }
+    }
+  },
+  "independent_question_units": 32,
+  "correlated_rotation_rows": 128,
+  "condition_meanings": {
+    "native": "Unfused receiver sees full updated prompt",
+    "late": "C2C fusion through original prefix only; subsequent recoding stays receiver-private",
+    "early": "C2C fusion through full updated user prompt; both models see recoding; response lead-in remains receiver-only"
+  },
+  "inference": "Native recoding competence is insufficient to isolate an interface-specific limitation. This result does not refute reusable latent mappings, scaling, or the original C2C method.",
+  "diagnostic_risk": "Native top token is colon in 96/128 cases; mean probability mass on the four scored letter tokens is 0.2469. This is a possible format/scoring confound, not a demonstrated cause of the poor recoding result.",
+  "contrasts": {
+    "late_native_did": -0.06249999999999999,
+    "early_late_did": -0.010416666666666656,
+    "late_native_stale_label_gap": -0.04166666666666668
+  },
+  "question_bootstrap_descriptive_ci95": {
+    "late_native_did": [
+      -0.40624999999999994,
+      0.29166666666666663
+    ],
+    "early_late_did": [
+      -0.17708333333333331,
+      0.1666666666666667
+    ],
+    "late_native_stale_label_gap": [
+      -0.26041666666666663,
+      0.17708333333333334
+    ]
+  },
+  "compute": {
+    "gpu": "NVIDIA L4",
+    "slurm_state": "COMPLETED",
+    "exit_code": "0:0",
+    "slurm_wall_seconds": 63,
+    "script_elapsed_seconds": 37.217956746928394,
+    "torch_peak_allocated_bytes": 3546361344,
+    "peak_scope": "PyTorch allocated memory only, not total GPU footprint",
+    "local_models_loaded": false,
+    "paid_resource_purchase": false
+  },
+  "validity": {
+    "source_and_data_hashes_match_local_files": true,
+    "prediction_and_analysis_hashes_match": true,
+    "strictly_loaded_projectors": 28,
+    "runtime_checks": [
+      {
+        "id": "Mercury_412551",
+        "chunked_max_probability_error": 0.009202316403388977,
+        "chunked_prediction_matches": true,
+        "repeated_fusion_max_probability_error": 0.0
+      },
+      {
+        "id": "Mercury_7193043",
+        "chunked_max_probability_error": 0.010303378105163574,
+        "chunked_prediction_matches": true,
+        "repeated_fusion_max_probability_error": 0.0
+      }
+    ],
+    "chunked_scope": "Predictions agree on two validity examples; probabilities differ by up to 0.0103. Not proof of exact numerical equivalence for all questions."
+  },
+  "next": "Do not increase sample/epochs or tune prompts until positive. Preserve checkpoint and runtime as a usable base. Reopening this candidate requires a specific independently justified measurement correction or a task with validated native competence, with a fresh protocol and held-out assessment.",
+  "artifacts": [
+    "results/late_binding_c2c_dev32_v1.json",
+    "results/late_binding_c2c_dev32_v1.jsonl",
+    "results/late_binding_c2c_dev32_v1.analysis.json",
+    "results/late_binding_c2c_dev32_v1.sacct.txt"
+  ]
+}

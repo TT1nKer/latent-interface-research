@@ -1,0 +1,389 @@
+{
+  "models": [
+    {
+      "repo": "Qwen/Qwen3-0.6B",
+      "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "files": [
+        {
+          "name": "config.json",
+          "size": 726,
+          "sha256": null
+        },
+        {
+          "name": "generation_config.json",
+          "size": 239,
+          "sha256": null
+        },
+        {
+          "name": "merges.txt",
+          "size": 1671853,
+          "sha256": null
+        },
+        {
+          "name": "model.safetensors",
+          "size": 1503300328,
+          "sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b"
+        },
+        {
+          "name": "tokenizer.json",
+          "size": 11422654,
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size": 9732,
+          "sha256": null
+        },
+        {
+          "name": "vocab.json",
+          "size": 2776833,
+          "sha256": null
+        }
+      ]
+    },
+    {
+      "repo": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "files": [
+        {
+          "name": "config.json",
+          "size": 659,
+          "sha256": null
+        },
+        {
+          "name": "generation_config.json",
+          "size": 242,
+          "sha256": null
+        },
+        {
+          "name": "merges.txt",
+          "size": 1671839,
+          "sha256": null
+        },
+        {
+          "name": "model.safetensors",
+          "size": 988097824,
+          "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe"
+        },
+        {
+          "name": "tokenizer.json",
+          "size": 7031645,
+          "sha256": null
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size": 7305,
+          "sha256": null
+        },
+        {
+          "name": "vocab.json",
+          "size": 2776833,
+          "sha256": null
+        }
+      ]
+    },
+    {
+      "repo": "nics-efc/C2C_Fuser",
+      "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d",
+      "files": [
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/config.json",
+          "size": 1644,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/aggregator_config.json",
+          "size": 2,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_0.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_0.pt",
+          "size": 34145223,
+          "sha256": "b3ffcb1bcafd9595b3cd42c01e50fc1f812a04aa54e7804b7fb2dbe67ef36462"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_1.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_1.pt",
+          "size": 34145223,
+          "sha256": "81830bc38f9d8600e30cc91ef23657c14201659eb68985342fc0d99f4b2288c8"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_10.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_10.pt",
+          "size": 34145260,
+          "sha256": "50fd2c2caf3bae0c61b110e67f07ec98ff8619d5c3e2c11fb33ce0c3dc53f886"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_11.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_11.pt",
+          "size": 34145260,
+          "sha256": "17558797306549f27317d41ff5b73f74a59db34d7503bc62e854c35df8e2315e"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_12.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_12.pt",
+          "size": 34145260,
+          "sha256": "a2623ea8cac3f49063b9f78bff9a73f6f63afceecba854b246fa1d4d9fb533f1"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_13.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_13.pt",
+          "size": 34145260,
+          "sha256": "927f645ecd97b2a39b681d21197def470ceab26265703e8134ca3a7693debf9a"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_14.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_14.pt",
+          "size": 34145260,
+          "sha256": "4d11efdf54b2c3e9e7cef8036f98d7814bbdb3260b8701b0efbcb1d0f104f4c7"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_15.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_15.pt",
+          "size": 34145260,
+          "sha256": "fa38d18285736700f298357079b05338224959d74606e3ac7586b3167e424aad"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_16.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_16.pt",
+          "size": 34145260,
+          "sha256": "9d58bda06c5f9f241ef0bba45a2f8f05a67a0794bf013989d4aea0e01765ba16"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_17.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_17.pt",
+          "size": 34145260,
+          "sha256": "eb2ea53b60eef83b8eddc2419b40cf9c8042a5eb04c8aa6c3f6b2aed38a8c64f"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_18.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_18.pt",
+          "size": 34145260,
+          "sha256": "ba5ccbad02cb564cc419ac2894da70f523270e9f66fcab76524def7a80c78c2f"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_19.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_19.pt",
+          "size": 34145260,
+          "sha256": "e5ee9c7b28a77a3c93d00382015f122e5d2e508c36a13ab960a015e0aa241cfd"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_2.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_2.pt",
+          "size": 34145223,
+          "sha256": "abb288aa8a7f6a1631d1f257950a4375287518b227ac09a98f674de84aa6d5a9"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_20.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_20.pt",
+          "size": 34145260,
+          "sha256": "9a762579f0b6362a4df71b4d04c63191d4443762fe1e44611298be7475da9ce1"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_21.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_21.pt",
+          "size": 34145260,
+          "sha256": "7e3c97f05d6d18e4d81d2e86bc5a0516f3f004786c8afaf9c0026f36b317c3f5"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_22.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_22.pt",
+          "size": 34145260,
+          "sha256": "4191d257f1392ff6a1040337f7fcf51168e1aed06103e92ab195a581752935c6"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_23.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_23.pt",
+          "size": 34145260,
+          "sha256": "2784f88e57a9460cca8f2c1059e4070673137c83bbfac27ec2e38c599cfd5ecd"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_24.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_24.pt",
+          "size": 34145260,
+          "sha256": "ebdffd4b8c2112bd64043ea23a0f05ac5ce4ebe70bfe1302bc61743cc4d0f444"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_25.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_25.pt",
+          "size": 34145260,
+          "sha256": "e058b5e22d39a240f6f016dad0ceb314a40887c7c47006fd45b883e1d6218559"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_26.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_26.pt",
+          "size": 34145260,
+          "sha256": "09e0fe14b7a05602f01a4d299ac39f8adac7dd4f2f729ad5f81a318647bfd14f"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_27.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_27.pt",
+          "size": 34145260,
+          "sha256": "4e04e43fee29dda4eb5cdca463aa67a4cf9b8d076e3dcfed18ae1bebed3883e2"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_3.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_3.pt",
+          "size": 34145223,
+          "sha256": "412f4da6bb70e3314b6f82b05279018a1cf8e4ba7028f76206b31b4b17d499f6"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_4.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_4.pt",
+          "size": 34145223,
+          "sha256": "4a277663d1a631b60f28b04a09f1c8cd450c1d16cd9b9444f71feb25f9cd9ca8"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_5.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_5.pt",
+          "size": 34145223,
+          "sha256": "45806b09dbfe7f4cadcead2897b4da4f269f1b13ad1edc8cd8a44d309e16cbe8"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_6.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_6.pt",
+          "size": 34145223,
+          "sha256": "7a1cae8c255f7e4fae5798f3ec6b2343d82bd219d8c4978edfc3dda89bee7cdb"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_7.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_7.pt",
+          "size": 34145223,
+          "sha256": "18e5261371844aa0053d8bb878767b3efeff54106b3850c4606b54872369ee83"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_8.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_8.pt",
+          "size": 34145223,
+          "sha256": "4b5bbe634334ab04c0d11f13a2f5404fa76e0471cb4f6c17dccc401df2ba0462"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_9.json",
+          "size": 415,
+          "sha256": null
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_9.pt",
+          "size": 34145223,
+          "sha256": "a27ebf1c12b6b05f900a996c60e3a8c465cc395716a8298eea8ec1cc2e2203da"
+        },
+        {
+          "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_config.json",
+          "size": 484,
+          "sha256": null
+        }
+      ]
+    }
+  ],
+  "fuser_subdir": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final",
+  "purpose": "Released positive control for late-bound task experiment; acquisition is not a scientific result."
+}

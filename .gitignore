@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+venv/
+dream_env/
+hf_cache/
+*.pt
+*.safetensors
+.env

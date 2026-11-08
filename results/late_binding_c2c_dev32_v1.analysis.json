@@ -1,0 +1,91 @@
+{
+  "questions": 32,
+  "correlated_rotation_rows": 128,
+  "estimates": {
+    "native_changed": 0.2916666666666667,
+    "late_changed": 0.3229166666666667,
+    "early_changed": 0.31250000000000006,
+    "native_identity": 0.53125,
+    "late_identity": 0.625,
+    "early_identity": 0.625,
+    "native_original": 0.5,
+    "early_original": 0.65625,
+    "late_native_did": -0.06249999999999999,
+    "early_late_did": -0.010416666666666656,
+    "late_native_stale_label_gap": -0.04166666666666668
+  },
+  "question_bootstrap_descriptive_ci95": {
+    "late_native_did": [
+      -0.40624999999999994,
+      0.29166666666666663
+    ],
+    "early_late_did": [
+      -0.17708333333333331,
+      0.1666666666666667
+    ],
+    "late_native_stale_label_gap": [
+      -0.26041666666666663,
+      0.17708333333333334
+    ]
+  },
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 20261107,
+  "conditional_native_and_identity_correct": {
+    "n": 8,
+    "questions": 3,
+    "late_accuracy": 0.375,
+    "early_accuracy": 0.25
+  },
+  "answer_format_diagnostics": {
+    "native": {
+      "mean": 0.24685549418791197,
+      "min": 0.04494863748550415,
+      "top_text_counts": {
+        ":": 96,
+        " D": 22,
+        " A": 4,
+        ":\n": 3,
+        " \\": 1,
+        " $\\": 1,
+        " C": 1
+      }
+    },
+    "late": {
+      "mean": 0.7436264082789421,
+      "min": 0.4923311471939087,
+      "top_text_counts": {
+        " B": 51,
+        " A": 29,
+        " D": 19,
+        ":": 16,
+        " C": 13
+      }
+    },
+    "early": {
+      "mean": 0.8233281904831529,
+      "min": 0.7231615781784058,
+      "top_text_counts": {
+        " C": 36,
+        " B": 49,
+        " A": 20,
+        " D": 23
+      }
+    }
+  },
+  "development_decision": "native_limited_do_not_attribute_failure_to_interface",
+  "effect_units": "proportions; multiply by100 for percentage points",
+  "interpretation": {
+    "late_native_did": "Negative means a greater change-vs-identity loss for late fusion than for native.",
+    "early_late_did": "Positive means early fusion improves changed encodings more than identity relative to late fusion.",
+    "late_native_stale_label_gap": "Positive means more old-answer letter selection after recoding under late fusion than native."
+  },
+  "limitations": [
+    "No publication, novelty or scaling conclusion from this development sample.",
+    "Bootstrap intervals describe sampled questions only; selection from first100 validation rows is not unbiased benchmark sampling.",
+    "Conditioning on correct native/identity predictions is a diagnostic, not the primary causal estimand.",
+    "This test uses query-conditioned shared input and cannot establish private-information transfer."
+  ],
+  "job_id": "12428526",
+  "predictions_sha256": "47c2937e0ee7d1ac5c18a4482a3c5db3a686ffb71a3116bca92c0446d1823b31",
+  "analysis_sha256": "186d7be1fadb00491eb2c26fb497c97eb7adb922061f2679e57cdbd2130d5fff"
+}

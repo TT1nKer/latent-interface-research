@@ -1,0 +1,455 @@
+{
+  "job_id": "12428526",
+  "software": {
+    "torch": "2.14.1",
+    "transformers": "4.52.4",
+    "python": "3.11.5"
+  },
+  "gpu": "NVIDIA L4",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "acquisition": {
+    "job_id": "12427270",
+    "models": [
+      {
+        "repo": "Qwen/Qwen3-0.6B",
+        "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+        "snapshot": "./hf_cache/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
+        "files": [
+          {
+            "name": "config.json",
+            "bytes": 726,
+            "sha256": "660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd"
+          },
+          {
+            "name": "generation_config.json",
+            "bytes": 239,
+            "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+          },
+          {
+            "name": "merges.txt",
+            "bytes": 1671853,
+            "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+          },
+          {
+            "name": "model.safetensors",
+            "bytes": 1503300328,
+            "sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b"
+          },
+          {
+            "name": "tokenizer.json",
+            "bytes": 11422654,
+            "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+          },
+          {
+            "name": "tokenizer_config.json",
+            "bytes": 9732,
+            "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+          },
+          {
+            "name": "vocab.json",
+            "bytes": 2776833,
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+          }
+        ]
+      },
+      {
+        "repo": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "snapshot": "./hf_cache/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775",
+        "files": [
+          {
+            "name": "config.json",
+            "bytes": 659,
+            "sha256": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45"
+          },
+          {
+            "name": "generation_config.json",
+            "bytes": 242,
+            "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+          },
+          {
+            "name": "merges.txt",
+            "bytes": 1671839,
+            "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+          },
+          {
+            "name": "model.safetensors",
+            "bytes": 988097824,
+            "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe"
+          },
+          {
+            "name": "tokenizer.json",
+            "bytes": 7031645,
+            "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+          },
+          {
+            "name": "tokenizer_config.json",
+            "bytes": 7305,
+            "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+          },
+          {
+            "name": "vocab.json",
+            "bytes": 2776833,
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+          }
+        ]
+      },
+      {
+        "repo": "nics-efc/C2C_Fuser",
+        "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d",
+        "snapshot": "./hf_cache/hub/models--nics-efc--C2C_Fuser/snapshots/f01fc3258b305e280e04c7238f4f2cf31b7dc70d",
+        "files": [
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/config.json",
+            "bytes": 1644,
+            "sha256": "e1efc0775c2c1daba6ba616576969e515aa5e7691814c2c279ddbc492df3b3b9"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/aggregator_config.json",
+            "bytes": 2,
+            "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_0.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_0.pt",
+            "bytes": 34145223,
+            "sha256": "b3ffcb1bcafd9595b3cd42c01e50fc1f812a04aa54e7804b7fb2dbe67ef36462"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_1.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_1.pt",
+            "bytes": 34145223,
+            "sha256": "81830bc38f9d8600e30cc91ef23657c14201659eb68985342fc0d99f4b2288c8"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_10.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_10.pt",
+            "bytes": 34145260,
+            "sha256": "50fd2c2caf3bae0c61b110e67f07ec98ff8619d5c3e2c11fb33ce0c3dc53f886"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_11.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_11.pt",
+            "bytes": 34145260,
+            "sha256": "17558797306549f27317d41ff5b73f74a59db34d7503bc62e854c35df8e2315e"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_12.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_12.pt",
+            "bytes": 34145260,
+            "sha256": "a2623ea8cac3f49063b9f78bff9a73f6f63afceecba854b246fa1d4d9fb533f1"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_13.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_13.pt",
+            "bytes": 34145260,
+            "sha256": "927f645ecd97b2a39b681d21197def470ceab26265703e8134ca3a7693debf9a"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_14.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_14.pt",
+            "bytes": 34145260,
+            "sha256": "4d11efdf54b2c3e9e7cef8036f98d7814bbdb3260b8701b0efbcb1d0f104f4c7"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_15.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_15.pt",
+            "bytes": 34145260,
+            "sha256": "fa38d18285736700f298357079b05338224959d74606e3ac7586b3167e424aad"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_16.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_16.pt",
+            "bytes": 34145260,
+            "sha256": "9d58bda06c5f9f241ef0bba45a2f8f05a67a0794bf013989d4aea0e01765ba16"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_17.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_17.pt",
+            "bytes": 34145260,
+            "sha256": "eb2ea53b60eef83b8eddc2419b40cf9c8042a5eb04c8aa6c3f6b2aed38a8c64f"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_18.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_18.pt",
+            "bytes": 34145260,
+            "sha256": "ba5ccbad02cb564cc419ac2894da70f523270e9f66fcab76524def7a80c78c2f"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_19.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_19.pt",
+            "bytes": 34145260,
+            "sha256": "e5ee9c7b28a77a3c93d00382015f122e5d2e508c36a13ab960a015e0aa241cfd"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_2.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_2.pt",
+            "bytes": 34145223,
+            "sha256": "abb288aa8a7f6a1631d1f257950a4375287518b227ac09a98f674de84aa6d5a9"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_20.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_20.pt",
+            "bytes": 34145260,
+            "sha256": "9a762579f0b6362a4df71b4d04c63191d4443762fe1e44611298be7475da9ce1"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_21.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_21.pt",
+            "bytes": 34145260,
+            "sha256": "7e3c97f05d6d18e4d81d2e86bc5a0516f3f004786c8afaf9c0026f36b317c3f5"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_22.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_22.pt",
+            "bytes": 34145260,
+            "sha256": "4191d257f1392ff6a1040337f7fcf51168e1aed06103e92ab195a581752935c6"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_23.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_23.pt",
+            "bytes": 34145260,
+            "sha256": "2784f88e57a9460cca8f2c1059e4070673137c83bbfac27ec2e38c599cfd5ecd"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_24.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_24.pt",
+            "bytes": 34145260,
+            "sha256": "ebdffd4b8c2112bd64043ea23a0f05ac5ce4ebe70bfe1302bc61743cc4d0f444"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_25.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_25.pt",
+            "bytes": 34145260,
+            "sha256": "e058b5e22d39a240f6f016dad0ceb314a40887c7c47006fd45b883e1d6218559"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_26.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_26.pt",
+            "bytes": 34145260,
+            "sha256": "09e0fe14b7a05602f01a4d299ac39f8adac7dd4f2f729ad5f81a318647bfd14f"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_27.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_27.pt",
+            "bytes": 34145260,
+            "sha256": "4e04e43fee29dda4eb5cdca463aa67a4cf9b8d076e3dcfed18ae1bebed3883e2"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_3.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_3.pt",
+            "bytes": 34145223,
+            "sha256": "412f4da6bb70e3314b6f82b05279018a1cf8e4ba7028f76206b31b4b17d499f6"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_4.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_4.pt",
+            "bytes": 34145223,
+            "sha256": "4a277663d1a631b60f28b04a09f1c8cd450c1d16cd9b9444f71feb25f9cd9ca8"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_5.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_5.pt",
+            "bytes": 34145223,
+            "sha256": "45806b09dbfe7f4cadcead2897b4da4f269f1b13ad1edc8cd8a44d309e16cbe8"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_6.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_6.pt",
+            "bytes": 34145223,
+            "sha256": "7a1cae8c255f7e4fae5798f3ec6b2343d82bd219d8c4978edfc3dda89bee7cdb"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_7.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_7.pt",
+            "bytes": 34145223,
+            "sha256": "18e5261371844aa0053d8bb878767b3efeff54106b3850c4606b54872369ee83"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_8.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_8.pt",
+            "bytes": 34145223,
+            "sha256": "4b5bbe634334ab04c0d11f13a2f5404fa76e0471cb4f6c17dccc401df2ba0462"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_9.json",
+            "bytes": 415,
+            "sha256": "1652e883e761e4afcc2922550c53372f141f15c0dd4055b02598b0b3fa84523c"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_9.pt",
+            "bytes": 34145223,
+            "sha256": "a27ebf1c12b6b05f900a996c60e3a8c465cc395716a8298eea8ec1cc2e2203da"
+          },
+          {
+            "name": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final/projector_config.json",
+            "bytes": 484,
+            "sha256": "67e3b5d030530aa922ab1676abaed2278c74cb2c5a701f33c8f3d0962948475b"
+          }
+        ]
+      }
+    ],
+    "scope": "Acquisition only",
+    "elapsed_seconds": 97.46253598853946,
+    "passed": true
+  },
+  "data_sha256": "52266e626a4a0d7b3dca91f157b52eb471b12432f3f4546360682c6989086819",
+  "code_sha256": "a9868f6595db7aed07bce2235b6ead19e1a3748201b71b935770b41025a5ede2",
+  "task_code_sha256": "a1889d49d2bde2c92bcd33f4b3610f4722bdc37bfbdbd0c4596ea872efeb4358",
+  "label_token_ids": [
+    362,
+    425,
+    356,
+    422
+  ],
+  "scoring": "Four single-token space-prefixed option labels; not free generation.",
+  "scope": "Development only; receiver has question and all choices in every condition.",
+  "checks": [
+    {
+      "id": "Mercury_412551",
+      "chunked_max_probability_error": 0.009202316403388977,
+      "chunked_prediction_matches": true,
+      "repeated_fusion_max_probability_error": 0.0
+    },
+    {
+      "id": "Mercury_7193043",
+      "chunked_max_probability_error": 0.010303378105163574,
+      "chunked_prediction_matches": true,
+      "repeated_fusion_max_probability_error": 0.0
+    }
+  ],
+  "loaded_projectors": 28,
+  "seed": 20261106,
+  "elapsed_seconds": 37.217956746928394,
+  "peak_gpu_bytes": 3546361344,
+  "summary": {
+    "all": {
+      "native": 0.3515625,
+      "late": 0.3984375,
+      "early": 0.390625,
+      "n": 128
+    },
+    "identity": {
+      "native": 0.53125,
+      "late": 0.625,
+      "early": 0.625,
+      "n": 32
+    },
+    "changed": {
+      "native": 0.2916666666666667,
+      "late": 0.3229166666666667,
+      "early": 0.3125,
+      "n": 96
+    }
+  },
+  "completed": true
+}

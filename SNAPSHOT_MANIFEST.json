@@ -1,0 +1,184 @@
+{
+  "source_commit": "db8861679326e10d4fb83ed3bc93a3aca83a622f",
+  "scope": "Current C2C pilot and Dream recurrence implementation; not the complete historical research archive.",
+  "excluded": [
+    "conversation archives",
+    "emails",
+    "personal identifiers",
+    "credentials",
+    "model weights",
+    "paper PDFs",
+    "historic Git objects"
+  ],
+  "transformations": "Cluster-specific home prefix becomes ./ in metadata; personal Slurm account directives are replaced with generic submission instructions. Scientific code and predictions are unchanged.",
+  "files": [
+    {
+      "path": "analyze_dream_recurrent_v1.py",
+      "source_sha256": "d8a96dd489cdb4e4232cf27bfdf6d4f1f3fc8bb899aae8e638b602ca08f3c377",
+      "exported_sha256": "d8a96dd489cdb4e4232cf27bfdf6d4f1f3fc8bb899aae8e638b602ca08f3c377",
+      "modified": false
+    },
+    {
+      "path": "analyze_late_binding_c2c_v1.py",
+      "source_sha256": "186d7be1fadb00491eb2c26fb497c97eb7adb922061f2679e57cdbd2130d5fff",
+      "exported_sha256": "186d7be1fadb00491eb2c26fb497c97eb7adb922061f2679e57cdbd2130d5fff",
+      "modified": false
+    },
+    {
+      "path": "remote/c2c_acquire_v1.py",
+      "source_sha256": "12f9aff890ec82ea5665fb7da29b85f3358fd0f950afe0e048ba8e76b8b1eb05",
+      "exported_sha256": "12f9aff890ec82ea5665fb7da29b85f3358fd0f950afe0e048ba8e76b8b1eb05",
+      "modified": false
+    },
+    {
+      "path": "remote/c2c_acquire_v1.sbatch",
+      "source_sha256": "c3b00082f8f6edace9e18092e937702c044f543c34b2a9763075fcce86a79553",
+      "exported_sha256": "0658ccb380feccd1987892fd3070e45c6dffc619c1d1eca6c6e103b6715be30c",
+      "modified": true
+    },
+    {
+      "path": "remote/c2c_acquire_v1_manifest.json",
+      "source_sha256": "7d28d21bd9c1ee820fe6e6ec0977c4e61b1af41406d8b7eea0b1dc5d357ed0ba",
+      "exported_sha256": "7d28d21bd9c1ee820fe6e6ec0977c4e61b1af41406d8b7eea0b1dc5d357ed0ba",
+      "modified": false
+    },
+    {
+      "path": "remote/c2c_runtime_install_v1.sh",
+      "source_sha256": "350d3aac25c697bd4dedccd4400f9cb853e46dbaea971bc66dc322909aa33934",
+      "exported_sha256": "350d3aac25c697bd4dedccd4400f9cb853e46dbaea971bc66dc322909aa33934",
+      "modified": false
+    },
+    {
+      "path": "remote/c2c_tokenizer_preflight_v1.py",
+      "source_sha256": "ce2361124d13aa84d4292daff5a3a1b714902daf6001a687bcbddd709c6df655",
+      "exported_sha256": "ce2361124d13aa84d4292daff5a3a1b714902daf6001a687bcbddd709c6df655",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_acquire_v1.py",
+      "source_sha256": "fc733e1d0af297567a84d0dd8f3022ebf7c2908613b28fbd8f3d9e8416d0ceaf",
+      "exported_sha256": "fc733e1d0af297567a84d0dd8f3022ebf7c2908613b28fbd8f3d9e8416d0ceaf",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_import_preflight_v1.py",
+      "source_sha256": "5ad692182e3e0e7cf55cc9e3a71ee9fbd408f451d4c44d5d482fdb51ddf1e5aa",
+      "exported_sha256": "5ad692182e3e0e7cf55cc9e3a71ee9fbd408f451d4c44d5d482fdb51ddf1e5aa",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_prepare_v1.sbatch",
+      "source_sha256": "f1006dcdb6939c98e6a8656b796622f4f1fc4161df234de7fcdaa210ca9d5469",
+      "exported_sha256": "aff71d00035f6f650960df9c2060f4b55435ab504b2a60913788e01589d90a6e",
+      "modified": true
+    },
+    {
+      "path": "remote/dream_profile_v1.py",
+      "source_sha256": "0cd09055c3c1130eb03e05d9ec8ccc16641155e4c01591c4e567d138505f8611",
+      "exported_sha256": "0cd09055c3c1130eb03e05d9ec8ccc16641155e4c01591c4e567d138505f8611",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_profile_v1.sbatch",
+      "source_sha256": "7ac4d26b3663dcf90a3360fc4be0e3275e6e31e1d6358e3760f515092542d7e6",
+      "exported_sha256": "d2ab121346e8d2e65363a8bb8329b632f2a9bbe43a650faf8adc8f0e88a7f438",
+      "modified": true
+    },
+    {
+      "path": "remote/dream_recurrent_trace_v1.py",
+      "source_sha256": "985d66d812600fac9213f965f1558911a2202a178e8a7a3890efe5fef733fab2",
+      "exported_sha256": "985d66d812600fac9213f965f1558911a2202a178e8a7a3890efe5fef733fab2",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_release_requirements.txt",
+      "source_sha256": "2ec1382ed8dbcb232313da70684c5ee026a4b8679b3409ab58361e0c2dfc0753",
+      "exported_sha256": "2ec1382ed8dbcb232313da70684c5ee026a4b8679b3409ab58361e0c2dfc0753",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_trace_full_v1.sbatch",
+      "source_sha256": "95d59cc16f29816f2a70f3b3e3d3f117f9f525526a5ef0022c5c569091b4419a",
+      "exported_sha256": "59ecdd4a28cd57f260e7e10b3de7e1bde4fb1b3a939a1e28fee07ada7c8754dd",
+      "modified": true
+    },
+    {
+      "path": "remote/dream_trace_protocol_v1.json",
+      "source_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
+      "exported_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
+      "modified": false
+    },
+    {
+      "path": "remote/late_binding_arc_dev32_v1.json",
+      "source_sha256": "52266e626a4a0d7b3dca91f157b52eb471b12432f3f4546360682c6989086819",
+      "exported_sha256": "52266e626a4a0d7b3dca91f157b52eb471b12432f3f4546360682c6989086819",
+      "modified": false
+    },
+    {
+      "path": "remote/late_binding_c2c_v1.py",
+      "source_sha256": "a9868f6595db7aed07bce2235b6ead19e1a3748201b71b935770b41025a5ede2",
+      "exported_sha256": "a9868f6595db7aed07bce2235b6ead19e1a3748201b71b935770b41025a5ede2",
+      "modified": false
+    },
+    {
+      "path": "remote/late_binding_c2c_v1.sbatch",
+      "source_sha256": "e6228396c926aba9a55b004ef64bd6c02e60a131eaac22cf7c85f86e9652f9fe",
+      "exported_sha256": "6c7422cc2f75c3419cfd7b526b1cc5fedaec9334004c7698dc27153eee6d1ce9",
+      "modified": true
+    },
+    {
+      "path": "remote/late_binding_tasks.py",
+      "source_sha256": "a1889d49d2bde2c92bcd33f4b3610f4722bdc37bfbdbd0c4596ea872efeb4358",
+      "exported_sha256": "a1889d49d2bde2c92bcd33f4b3610f4722bdc37bfbdbd0c4596ea872efeb4358",
+      "modified": false
+    },
+    {
+      "path": "results/c2c_acquisition_v1.json",
+      "source_sha256": "e0af2a47c2dfe1d9b7f46ce1ea2fe353702b7a72202c58a99eb74d0ad6d6b997",
+      "exported_sha256": "9f8cef1214efaaa69e882fac43d240af841b6a7b1b6873346cbbd5e4c72136fa",
+      "modified": true
+    },
+    {
+      "path": "results/late_binding_c2c_dev32_v1.analysis.json",
+      "source_sha256": "527e44d03d00163995c6b3dd7db230346f1e95063f9ffff9980ff9586d30cb88",
+      "exported_sha256": "527e44d03d00163995c6b3dd7db230346f1e95063f9ffff9980ff9586d30cb88",
+      "modified": false
+    },
+    {
+      "path": "results/late_binding_c2c_dev32_v1.decision.json",
+      "source_sha256": "66db63ae4fc13a8456a118a310073db68930a5598988d6699bc4c8e9ad876310",
+      "exported_sha256": "66db63ae4fc13a8456a118a310073db68930a5598988d6699bc4c8e9ad876310",
+      "modified": false
+    },
+    {
+      "path": "results/late_binding_c2c_dev32_v1.json",
+      "source_sha256": "9a5fc7a64768f1064c1bffd7f9a0cc3789b27eecac52025d0e3660b26e0e482a",
+      "exported_sha256": "f86b30237cfaec3f23372a76c044625e2c966af62fe1c98a8d0e117455d5a335",
+      "modified": true
+    },
+    {
+      "path": "results/late_binding_c2c_dev32_v1.jsonl",
+      "source_sha256": "47c2937e0ee7d1ac5c18a4482a3c5db3a686ffb71a3116bca92c0446d1823b31",
+      "exported_sha256": "47c2937e0ee7d1ac5c18a4482a3c5db3a686ffb71a3116bca92c0446d1823b31",
+      "modified": false
+    },
+    {
+      "path": "test_analyze_dream_recurrent_v1.py",
+      "source_sha256": "af4dda35574b680df81a026fef0b5e7046963700018a84561e55cfca2ecca8da",
+      "exported_sha256": "af4dda35574b680df81a026fef0b5e7046963700018a84561e55cfca2ecca8da",
+      "modified": false
+    },
+    {
+      "path": "test_late_binding_analysis_v1.py",
+      "source_sha256": "7bd8324dc77b79e25227ea365afc8b0fb9a420bd6af92824833901494994d6c4",
+      "exported_sha256": "7bd8324dc77b79e25227ea365afc8b0fb9a420bd6af92824833901494994d6c4",
+      "modified": false
+    },
+    {
+      "path": "vendor/c2c_official/PROVENANCE.json",
+      "source_sha256": "3c2f2366e0ec931f5ebca4d2d747ee9e17e7c45d748e80a5deecca170e9121cf",
+      "exported_sha256": "3c2f2366e0ec931f5ebca4d2d747ee9e17e7c45d748e80a5deecca170e9121cf",
+      "modified": false
+    }
+  ]
+}

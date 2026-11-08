@@ -1,0 +1,68 @@
+{
+  "protocol_id": "recurrent-context-mechanism-v1",
+  "source_revision": "f85b6d8563a2236117407e0df9c6cd60ea406dac",
+  "question": "Test whether re-encoding preserves incoming answer content despite changing private context, and whether empirical cross/self trajectories exhibit semantic parity rather than generic degradation.",
+  "validity_example_ids": [
+    "qasc-dist-552eb68dfca16d32b398",
+    "qasc-dist-35c1620afcd1bb327aa0",
+    "qasc-dist-be1160f33b3ab8fe784b",
+    "qasc-dist-cef40c63d2d76e8c0891",
+    "qasc-dist-b21489637123dff5d28e",
+    "qasc-dist-ed7393f34f3aa11e5b8a",
+    "qasc-dist-f6a5d3bfd95e7b076da4",
+    "qasc-dist-b95476322157e54f1e41",
+    "qasc-dist-d611636e370dfb135f44",
+    "qasc-dist-17bddab6198beb76ae8b",
+    "qasc-dist-d560980e970e16432d63",
+    "qasc-dist-7e74196ee044acd82f41",
+    "qasc-dist-fb37b06b18b8a1cf303b",
+    "qasc-dist-6fb0c64a8ecbc92946aa",
+    "qasc-dist-623396e6f590b6830144",
+    "qasc-dist-9f508fc5501de04fbceb"
+  ],
+  "full_development_rows": 1000,
+  "rounds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "routes": [
+    "cross",
+    "self"
+  ],
+  "common_input_source_indices": [
+    0,
+    1
+  ],
+  "conditions": [
+    "One cross trajectory and one self trajectory per item, retaining both agents endpoints at rounds0..6.",
+    "The four common-input cells G_i(m_j_initial) are already produced by cross/self round1; reuse them when numerical equivalence is established.",
+    "Compare each pair G0(m_j) vsG1(m_j) under the same downstream receiver D0. Two of four final readings already occur at cross/self round2; only two additional passes are needed for the other pair."
+  ],
+  "stop_rules": [
+    "If cross/self neural answer trajectories show no reproducible odd/even contrast, reject parity-specific explanation; do not keep tuning round choices.",
+    "If equal incoming messages produce strongly context-dependent, functionally distinct outgoing messages, the shared-map approximation is not supported; seek another explanation for endpoint self resemblance.",
+    "Agreement on two initial-message inputs cannot establish a global Lipschitz bound or equality on hybrid trajectories. Do not promote the conditional mathematical bound to a neural result.",
+    "If new trajectories only show generic answer copying already covered by prior art, do not present it as a new paper-level mechanism."
+  ],
+  "preparation_job": "12431719",
+  "neural_results_observed_at_registration": false,
+  "limits": {
+    "local_models": false,
+    "paid_compute": false,
+    "initial_profile_gpu_minutes": 30,
+    "full_trace_requires_profile_review": true
+  },
+  "superseded_preparation_job": {
+    "id": "12431715",
+    "action": "cancelled before execution; corrected lm-evaluation-harness origin to actual ZHZisZZ fork from pinned .gitmodules"
+  },
+  "primary_descriptive_contrast": "Per-question linear-depth-adjusted parity contrast in cross/self answer agreement: dot([-5,11,-8,8,-11,5]/24, agreement_rounds1..6). Weights sum to0 and have zero linear-depth moment; even-minus-odd without adjustment is secondary because it confounds a depth trend.",
+  "common_input_contrast": "Both initial messages through each private context; compare resulting message-classifier distributions and final answer distributions under the same receiver0.",
+  "shape_checks": "Report all6depths, all5adjacent changes and the four interior alternating second differences. In particular, require observing declines2->3 and4->5 before describing repeated even-round peaks. A positive adjusted scalar alone cannot prove alternation or mechanism.",
+  "registration_note": "Trend confound corrected before any neural result; CPU preparation still PENDING and GPU profile blocked on afterok dependency at registration."
+}
