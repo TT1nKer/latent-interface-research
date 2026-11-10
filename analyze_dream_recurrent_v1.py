@@ -7,6 +7,8 @@ from pathlib import Path
 import random
 import statistics
 
+from analyze_qasc_lexical_asymmetry_v1 import lexical_matches
+
 # Regression contrast for an even-depth indicator with intercept + linear depth.
 # Plain even-minus-odd would confound parity with increasing depth.
 PARITY_WEIGHTS = (-5/24,11/24,-8/24,8/24,-11/24,5/24)
@@ -101,6 +103,63 @@ def analyze(rows,summary,resamples=2000):
           'A pattern of even-round resemblance does not by itself establish the causal explanation for errors.'])
 
 
+def context_ownership_analysis(rows, development):
+    """Secondary diagnostic planned after public endpoint inspection.
+
+    Reuses both agents' existing forward outputs. Literal option presence is a
+    proxy, not a claim that an agent owns all information needed to solve a task.
+    This analysis does not change the registered primary decision rule.
+    """
+    lookup={r['example_id']:r for r in development}
+    assert len(lookup)==len(development)
+    annotated=[]
+    for row in rows:
+        source=lookup[row['example_id']]
+        assert 'ABCDEFGH'[row['gold']]==source['answer_label']
+        assert len(source['private_contexts'])==2
+        present=[source['answer_label'] in lexical_matches(source['answer_options'],context)
+                 for context in source['private_contexts']]
+        annotated.append((row,present))
+
+    def at(row,route,depth):
+        return row['native'] if depth==0 else row[route][depth-1]
+
+    grouped=[]
+    for agent in (0,1):
+        for receiver,sender in ((False,False),(False,True),(True,False),(True,True)):
+            selected=[r for r,p in annotated if p[agent]==receiver and p[1-agent]==sender]
+            curves={route:[sum(at(r,route,d)['predictions'][agent]==r['gold'] for r in selected)
+                           /len(selected) if selected else None for d in range(7)]
+                    for route in ('cross','self')}
+            grouped.append(dict(receiver_agent=agent,receiver_literal_present=receiver,
+                sender_literal_present=sender,n=len(selected),accuracy_by_depth=curves))
+
+    unilateral=[(r,p.index(True)) for r,p in annotated if sum(p)==1]
+    owner_curves={}
+    for route in ('cross','self'):
+        curve=[]
+        for depth in range(7):
+            owner=sum(at(r,route,depth)['predictions'][i]==r['gold'] for r,i in unilateral)
+            other=sum(at(r,route,depth)['predictions'][1-i]==r['gold'] for r,i in unilateral)
+            n=len(unilateral)
+            curve.append(dict(depth=depth,n=n,owner_correct=owner,other_correct=other,
+                              owner_minus_other_accuracy=(owner-other)/n if n else None))
+        owner_curves[route]=curve
+    contrast={route:sum(w*c['owner_minus_other_accuracy'] for w,c in zip(PARITY_WEIGHTS,curve[1:]))
+              if unilateral else None for route,curve in owner_curves.items()}
+    return dict(role='Secondary development diagnostic; not an independent confirmation or primary gate',
+        definition='Presence of the gold option text in each full private context including distractors; contiguous normalized word match. Within-question side comparisons use only questions with presence on exactly one side.',
+        prediction='If the observed endpoint asymmetry follows returned answer content, an even-depth advantage of the literal-answer side may alternate with odd-depth transfer to the other side. Inspect every depth and cross/self controls; a positive scalar alone is insufficient.',
+        depths=list(range(7)),by_receiver_and_presence=grouped,
+        within_question_literal_side_curves=owner_curves,
+        linear_depth_adjusted_literal_side_contrast=contrast,
+        extra_model_forwards=0,
+        limitations=['Literal answer location is not semantic sufficiency; observational groups differ in difficulty.',
+                    'The two receiver results share a question and are correlated; do not count them as independent examples.',
+                    'Secondary diagnostic motivated by previously inspected public development endpoints; preserve primary analysis regardless of outcome.',
+                    'Reading both existing agents does not perform an actual context-swap or answer-option permutation intervention.'])
+
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('run',type=Path)
@@ -111,6 +170,11 @@ def main():
     rows=[json.loads(x) for x in raw.decode().splitlines()]
     summary=json.loads((args.run/'summary.json').read_text())
     report=analyze(rows,summary)
+    development_path=Path(__file__).resolve().parent/'external/hidden_messages/data/development.jsonl'
+    development_raw=development_path.read_bytes()
+    report['secondary_context_ownership']=context_ownership_analysis(
+        rows,[json.loads(line) for line in development_raw.decode().splitlines()])
+    report['secondary_development_sha256']=hashlib.sha256(development_raw).hexdigest()
     report.update(per_item_sha256=hashlib.sha256(raw).hexdigest(),
                   analysis_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                   summary=summary)

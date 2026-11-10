@@ -1,0 +1,87 @@
+{
+  "stage": "implementation_resource_validation_only",
+  "observed_date": "2026-11-10",
+  "preparation_job": "12446425",
+  "model_job": "12446426",
+  "examples": 16,
+  "model_run_completed": true,
+  "release_parity_passed": false,
+  "trace_validity_executed": false,
+  "full1000_experiment_executed": false,
+  "source_revision": "f85b6d8563a2236117407e0df9c6cd60ea406dac",
+  "protocol_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
+  "model_weight_manifest_sha256": "d97cfa4b2e3a247447039efb60b29e626d7199cc036a1a53d62184a2ef08a2ab",
+  "channel_sha256": "83397168be971c5de6edb51e8d57ddeee87781cae13e77ba55bfb69df3b5f66d",
+  "gpu": "NVIDIA L4",
+  "torch": "2.12.0+cu130",
+  "cuda": "13.0",
+  "python": "3.11.14",
+  "packages": {
+    "transformers": "4.57.0",
+    "accelerate": "1.11.0",
+    "numpy": "2.2.6",
+    "peft": "0.17.1",
+    "huggingface-hub": "0.36.2"
+  },
+  "decoder_parity": {
+    "hidden_bfloat16_exact": true,
+    "constrained_prediction_exact": true,
+    "max_hidden_abs_difference": 0.0
+  },
+  "conditions": {
+    "final_only": {
+      "correct": 15,
+      "accuracy": 0.9375,
+      "reference_labels_equal": 16,
+      "reference_correct": 15
+    },
+    "matched": {
+      "correct": 15,
+      "accuracy": 0.9375,
+      "reference_labels_equal": 16,
+      "reference_correct": 15
+    },
+    "self": {
+      "correct": 15,
+      "accuracy": 0.9375,
+      "reference_labels_equal": 15,
+      "reference_correct": 14
+    },
+    "no_message": {
+      "correct": 13,
+      "accuracy": 0.8125,
+      "reference_labels_equal": 15,
+      "reference_correct": 14
+    }
+  },
+  "mismatches": [
+    {
+      "example_id": "qasc-dist-be1160f33b3ab8fe784b",
+      "condition": "self",
+      "expected": "D",
+      "observed": "B"
+    },
+    {
+      "example_id": "qasc-dist-cef40c63d2d76e8c0891",
+      "condition": "no_message",
+      "expected": "E",
+      "observed": "H"
+    }
+  ],
+  "elapsed_seconds": 62.25695066526532,
+  "torch_peak_allocated_bytes": 15788700160,
+  "torch_peak_reserved_bytes": 16863199232,
+  "limits": [
+    "16 selected examples are an implementation check, not a scientific accuracy estimate.",
+    "Cross one/four-exchange labels match16/16 each; self/no_message match15/16 each. No complete reproduction is claimed.",
+    "The repeated0..6 trace stage did not execute because the preceding author check failed.",
+    "Time includes model loading and recording; allocator peak is not total GPU memory."
+  ],
+  "next_diagnostic": "Repeat same16, then use complete original64-example blocks at indices576 and704 (128 questions total) for self/no_message; test repeatability and cohort batch-layout sensitivity without relaxing the frozen gate.",
+  "evidence_sha256": {
+    "resource.json": "bc57063274dea8569a1fa0143f1f4153e54cf582f1b05d6d0be816d19cfad314",
+    "author_run/verification.json": "0aacc54656bc03aa28aa8349f0d27de076d099c286f831ee4e760feb98303166",
+    "author_run/mismatches.json": "fd414a6382d371e9942234ba945e656c739d86b0f3ab241d475cd0beb36c9330",
+    "author_run/predictions.jsonl": "e662020a13d0853853694e146d7203fc8d4bed1671978dcc92ea21f8484c4493"
+  }
+}

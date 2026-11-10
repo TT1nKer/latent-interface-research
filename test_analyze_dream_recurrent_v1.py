@@ -2,7 +2,7 @@
 import copy
 import math
 import unittest
-from analyze_dream_recurrent_v1 import analyze, PARITY_WEIGHTS
+from analyze_dream_recurrent_v1 import analyze, context_ownership_analysis, PARITY_WEIGHTS
 
 
 def state(a,b):
@@ -46,6 +46,27 @@ class MeasurementTests(unittest.TestCase):
         rows[0]['cross'][0]['predictions'][0]=2
         with self.assertRaises(AssertionError):
             analyze(rows,dict(completed=True,examples=4,stage='validity'),resamples=20)
+
+    def test_literal_side_measurement_is_invariant_to_agent_renaming(self):
+        rows=records()
+        data=[dict(example_id=str(i),answer_label='B',
+                   answer_options=[('A','alpha'),('B','beta')],
+                   private_contexts=['alpha','beta']) for i in range(4)]
+        first=context_ownership_analysis(rows,data)
+        swapped_rows=copy.deepcopy(rows)
+        swapped_data=copy.deepcopy(data)
+        for row in swapped_rows:
+            for s in [row['native'],*row['cross'],*row['self']]:
+                for key in ('predictions','label_logits','message_logits'):
+                    s[key].reverse()
+        for source in swapped_data:
+            source['private_contexts'].reverse()
+        second=context_ownership_analysis(swapped_rows,swapped_data)
+        self.assertEqual(first['within_question_literal_side_curves'],
+                         second['within_question_literal_side_curves'])
+        self.assertEqual(first['linear_depth_adjusted_literal_side_contrast'],
+                         second['linear_depth_adjusted_literal_side_contrast'])
+        self.assertEqual(first['extra_model_forwards'],0)
 
 
 if __name__=='__main__':

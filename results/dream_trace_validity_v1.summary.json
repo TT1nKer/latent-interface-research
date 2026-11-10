@@ -1,0 +1,163 @@
+{
+  "job_id": "12446791",
+  "stage": "validity",
+  "revision": "f85b6d8563a2236117407e0df9c6cd60ea406dac",
+  "code_sha256": "985d66d812600fac9213f965f1558911a2202a178e8a7a3890efe5fef733fab2",
+  "protocol_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
+  "data_sha256": "a88c888c082611fe5ecdfd62563026357068b2e23dfb0914bd31012ea230e20a",
+  "checkpoint_sha256": "83397168be971c5de6edb51e8d57ddeee87781cae13e77ba55bfb69df3b5f66d",
+  "completed": true,
+  "gpu": "NVIDIA L4",
+  "torch": "2.12.0+cu130",
+  "cuda": "13.0",
+  "numerical_validity_scope": "Separate author calls on this fixed16 cohort",
+  "model_weight_manifest_sha256": "d97cfa4b2e3a247447039efb60b29e626d7199cc036a1a53d62184a2ef08a2ab",
+  "decoder_parity": {
+    "hidden_bfloat16_exact": true,
+    "constrained_prediction_exact": true,
+    "max_hidden_abs_difference": 0.0
+  },
+  "independent_author_checks": [
+    {
+      "condition": "matched",
+      "rounds": 1,
+      "predictions_equal": true,
+      "message_hashes_equal": true
+    },
+    {
+      "condition": "matched",
+      "rounds": 4,
+      "predictions_equal": true,
+      "message_hashes_equal": true
+    },
+    {
+      "condition": "self",
+      "rounds": 1,
+      "predictions_equal": true,
+      "message_hashes_equal": true
+    },
+    {
+      "condition": "self",
+      "rounds": 4,
+      "predictions_equal": true,
+      "message_hashes_equal": true
+    },
+    {
+      "condition": "final_only",
+      "rounds": 4,
+      "predictions_equal": true
+    },
+    {
+      "condition": "no_message",
+      "rounds": 4,
+      "predictions_equal": true
+    }
+  ],
+  "reference_agreement": {
+    "final_only": {
+      "equal": 16,
+      "total": 16,
+      "mismatch_ids": []
+    },
+    "matched": {
+      "equal": 16,
+      "total": 16,
+      "mismatch_ids": []
+    },
+    "self": {
+      "equal": 15,
+      "total": 16,
+      "mismatch_ids": [
+        "qasc-dist-be1160f33b3ab8fe784b"
+      ]
+    },
+    "no_message": {
+      "equal": 15,
+      "total": 16,
+      "mismatch_ids": [
+        "qasc-dist-cef40c63d2d76e8c0891"
+      ]
+    }
+  },
+  "examples": 16,
+  "setup_seconds": 31.439970707520843,
+  "elapsed_seconds": 93.56270960345864,
+  "forward_seconds": [
+    1.9142246898263693,
+    1.919709213078022,
+    1.9280044175684452,
+    1.9334317110478878,
+    1.9348826818168163,
+    1.9356227777898312,
+    1.9390167854726315,
+    1.9408182259649038,
+    1.937791420146823,
+    1.9450161904096603,
+    1.9466258492320776,
+    1.9421239532530308,
+    1.9464406482875347,
+    0.9047806654125452,
+    0.9246577434241772
+  ],
+  "torch_peak_allocated_bytes": 15788700672,
+  "torch_peak_reserved_bytes": 16888365056,
+  "numerical_validity_passed": true,
+  "public_reference_all_equal": false,
+  "is_full_trace_authorization": false,
+  "decision": "Same-environment trace implementation check passes on fixed16; exact public-reference gate still fails. Do not submit full1000. Seek external reference/runtime evidence rather than retrying unchanged jobs.",
+  "limitations": [
+    "The16 items test implementation, not a scientific effect or full-dataset equivalence.",
+    "Passing same-runtime author comparisons does not establish equality to the released H100 results.",
+    "Batch restoration and repeated stable labels do not identify the remaining cause.",
+    "No mechanism/scaling finding is claimed; no full1000 trial ran."
+  ],
+  "reference_discrepancy_logits": [
+    {
+      "example_id": "qasc-dist-be1160f33b3ab8fe784b",
+      "condition": "self",
+      "reference_label": "D",
+      "observed_label": "B",
+      "label_order": "ABCDEFGH",
+      "l4_label_logits": [
+        -4.5625,
+        -1.140625,
+        -4.5625,
+        -5.03125,
+        -3.96875,
+        -5.8125,
+        -4.75,
+        -4.40625
+      ],
+      "top_two_logit_gap": 2.828125,
+      "observed_minus_reference_logit": 3.890625
+    },
+    {
+      "example_id": "qasc-dist-cef40c63d2d76e8c0891",
+      "condition": "no_message",
+      "reference_label": "E",
+      "observed_label": "H",
+      "label_order": "ABCDEFGH",
+      "l4_label_logits": [
+        -3.578125,
+        -3.234375,
+        -4.46875,
+        -2.609375,
+        -1.3828125,
+        -3.5625,
+        -1.4296875,
+        -1.3046875
+      ],
+      "top_two_logit_gap": 0.078125,
+      "observed_minus_reference_logit": 0.078125
+    }
+  ],
+  "margin_interpretation": "The no-message discrepancy is near an L4 final-score tie; self is not. Without reference activations/logits these margins do not prove numerical drift or a hardware cause.",
+  "evidence_sha256": {
+    "per_item.jsonl": "b664b6121aa04714c1bd2674b6d2b0b4cf3d70d854c0549f00e226bbb7176e0e",
+    "slurm.err": "217bbbbe55945a78439d7cb8d11c87552de9b6b411d990f117df10e4db98078e",
+    "slurm.out": "1cd9ce53d32ea903d15878ddc7f8ff89e27773400e32f7cf0f49c41fcdb67fb4",
+    "started.json": "da9b8986ab4bd0afb80ed5be5ee01648c4e8e837fc110c1d557909a1ffa0c43d",
+    "summary.json": "062c35cba428a2e63348e0e1c1170f79a07ce5611888ac21c98ee14f8ad7d148",
+    "token_rows.jsonl": "44f633e828b6e95fc0927808d8ad506bb3d6696ac0476709f5fe7a58b29d84e3"
+  }
+}

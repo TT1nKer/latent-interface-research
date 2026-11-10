@@ -14,14 +14,22 @@
   "files": [
     {
       "path": "analyze_dream_recurrent_v1.py",
-      "source_sha256": "d8a96dd489cdb4e4232cf27bfdf6d4f1f3fc8bb899aae8e638b602ca08f3c377",
-      "exported_sha256": "d8a96dd489cdb4e4232cf27bfdf6d4f1f3fc8bb899aae8e638b602ca08f3c377",
+      "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
+      "source_sha256": "fe612b52a50890dc8194be41c72b3e26a79bf49a70a6a14c644f79f7659322dd",
+      "exported_sha256": "fe612b52a50890dc8194be41c72b3e26a79bf49a70a6a14c644f79f7659322dd",
       "modified": false
     },
     {
       "path": "analyze_late_binding_c2c_v1.py",
       "source_sha256": "186d7be1fadb00491eb2c26fb497c97eb7adb922061f2679e57cdbd2130d5fff",
       "exported_sha256": "186d7be1fadb00491eb2c26fb497c97eb7adb922061f2679e57cdbd2130d5fff",
+      "modified": false
+    },
+    {
+      "path": "analyze_qasc_lexical_asymmetry_v1.py",
+      "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
+      "source_sha256": "512f76fff4489ac63b01fe6ddbe5cbf969f8036edc0c87acfb0995c73f12a190",
+      "exported_sha256": "512f76fff4489ac63b01fe6ddbe5cbf969f8036edc0c87acfb0995c73f12a190",
       "modified": false
     },
     {
@@ -61,10 +69,39 @@
       "modified": false
     },
     {
-      "path": "remote/dream_import_preflight_v1.py",
-      "source_sha256": "5ad692182e3e0e7cf55cc9e3a71ee9fbd408f451d4c44d5d482fdb51ddf1e5aa",
-      "exported_sha256": "5ad692182e3e0e7cf55cc9e3a71ee9fbd408f451d4c44d5d482fdb51ddf1e5aa",
+      "path": "remote/dream_batch_diagnostic_v1.py",
+      "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
+      "source_sha256": "5f95af2093112d9c6529b5272f9dd4e519901f7aa64b2203e630c0cbc43bde27",
+      "exported_sha256": "5f95af2093112d9c6529b5272f9dd4e519901f7aa64b2203e630c0cbc43bde27",
       "modified": false
+    },
+    {
+      "path": "remote/dream_batch_diagnostic_v1.sbatch",
+      "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
+      "source_sha256": "410be4969f30407a33d29b4fdb11de12c0af214d5577de1c6234a13fcf4b78c5",
+      "exported_sha256": "7578b4e8105dd18faf4612f03d853530c7778d67e55d3f35f98cba44078efe83",
+      "modified": true
+    },
+    {
+      "path": "remote/dream_container_python_v1.sh",
+      "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
+      "source_sha256": "f75034394d3546d4322656396c9b60d87ba916e97e2d41091421e53ff2255b41",
+      "exported_sha256": "f75034394d3546d4322656396c9b60d87ba916e97e2d41091421e53ff2255b41",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_import_preflight_v1.py",
+      "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
+      "source_sha256": "267ac103a342aaf670335ee992051ba2ef7ef1f6bbc27bb0e16f6aabf6f8a1c1",
+      "exported_sha256": "267ac103a342aaf670335ee992051ba2ef7ef1f6bbc27bb0e16f6aabf6f8a1c1",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_prepare_container_v1.sbatch",
+      "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
+      "source_sha256": "c7b63356e6b4cb555081d9b88b35ff0fc560e6d9f655ffc9ac9b37962450945b",
+      "exported_sha256": "31a521470122d615560074dd83586fcde00d62a37b5a642aa54cf276a84d4621",
+      "modified": true
     },
     {
       "path": "remote/dream_prepare_v1.sbatch",
@@ -80,8 +117,9 @@
     },
     {
       "path": "remote/dream_profile_v1.sbatch",
-      "source_sha256": "7ac4d26b3663dcf90a3360fc4be0e3275e6e31e1d6358e3760f515092542d7e6",
-      "exported_sha256": "d2ab121346e8d2e65363a8bb8329b632f2a9bbe43a650faf8adc8f0e88a7f438",
+      "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
+      "source_sha256": "207561a95e23f9fdc29a6177ddcd98bfc01fa0bf93a062d309e3c59318d3a849",
+      "exported_sha256": "19b546b5792b909d6469f5062a99574706dfe7b7e716be25f2b03db57f4c2e37",
       "modified": true
     },
     {
@@ -98,8 +136,9 @@
     },
     {
       "path": "remote/dream_trace_full_v1.sbatch",
-      "source_sha256": "95d59cc16f29816f2a70f3b3e3d3f117f9f525526a5ef0022c5c569091b4419a",
-      "exported_sha256": "59ecdd4a28cd57f260e7e10b3de7e1bde4fb1b3a939a1e28fee07ada7c8754dd",
+      "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
+      "source_sha256": "873a02e2ef79bda2587775b0a3f558c8fac91c5fbd8f5fa05091178b388b80b6",
+      "exported_sha256": "e6d90a562f0963a42900925de4463944e808a0c8e42c8333ac675ba75d0deaa2",
       "modified": true
     },
     {
@@ -107,6 +146,13 @@
       "source_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
       "exported_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
       "modified": false
+    },
+    {
+      "path": "remote/dream_trace_validity_v1.sbatch",
+      "source_commit": "adc1cca91dcdf9381512f01fa5cf5cdccf77f2b5",
+      "source_sha256": "47a10ecae1cf97c15f52c7360a18f3c7c46bcc813d33412e804338781a4418c6",
+      "exported_sha256": "ca626505ec2587ff47cbee773ceb761518837f48dd35c6896f8829ce3ce3f53a",
+      "modified": true
     },
     {
       "path": "remote/late_binding_arc_dev32_v1.json",
@@ -139,6 +185,27 @@
       "modified": true
     },
     {
+      "path": "results/dream_batch_diagnostic_v1.summary.json",
+      "source_commit": "adc1cca91dcdf9381512f01fa5cf5cdccf77f2b5",
+      "source_sha256": "f49c2791b7ac1f38250ac2f81537fc71de5a3bbf05df1d2634e0fe194e4f4417",
+      "exported_sha256": "f49c2791b7ac1f38250ac2f81537fc71de5a3bbf05df1d2634e0fe194e4f4417",
+      "modified": false
+    },
+    {
+      "path": "results/dream_trace_validity_v1.summary.json",
+      "source_commit": "dc8e53bffd3b7b0374cf4a05ad3e0147df9e9b56",
+      "source_sha256": "a21173fbdbe8779e4aec474d50b2f17acc2c48376edf341c337d4066f2d20033",
+      "exported_sha256": "a21173fbdbe8779e4aec474d50b2f17acc2c48376edf341c337d4066f2d20033",
+      "modified": false
+    },
+    {
+      "path": "results/dream_validity16_v1.summary.json",
+      "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
+      "source_sha256": "13efaf027ee1c3be7e262b4deea347d29ee1136d305cd6491d55e3f3531cf4d5",
+      "exported_sha256": "13efaf027ee1c3be7e262b4deea347d29ee1136d305cd6491d55e3f3531cf4d5",
+      "modified": false
+    },
+    {
       "path": "results/late_binding_c2c_dev32_v1.analysis.json",
       "source_sha256": "527e44d03d00163995c6b3dd7db230346f1e95063f9ffff9980ff9586d30cb88",
       "exported_sha256": "527e44d03d00163995c6b3dd7db230346f1e95063f9ffff9980ff9586d30cb88",
@@ -164,8 +231,9 @@
     },
     {
       "path": "test_analyze_dream_recurrent_v1.py",
-      "source_sha256": "af4dda35574b680df81a026fef0b5e7046963700018a84561e55cfca2ecca8da",
-      "exported_sha256": "af4dda35574b680df81a026fef0b5e7046963700018a84561e55cfca2ecca8da",
+      "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
+      "source_sha256": "d0a48ae1ef962ab14960647033b90c6c546f0e4a64ecce46411875683539af2f",
+      "exported_sha256": "d0a48ae1ef962ab14960647033b90c6c546f0e4a64ecce46411875683539af2f",
       "modified": false
     },
     {
@@ -180,5 +248,7 @@
       "exported_sha256": "3c2f2366e0ec931f5ebca4d2d747ee9e17e7c45d748e80a5deecca170e9121cf",
       "modified": false
     }
-  ]
+  ],
+  "latest_update_source_commit": "dc8e53bffd3b7b0374cf4a05ad3e0147df9e9b56",
+  "latest_update": "2026-11-10: first L4 inference, stable repeated/batch diagnostic, same-runtime trace implementation checks passed; released-reference mismatch remains. Full1000 not run."
 }

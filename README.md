@@ -7,7 +7,7 @@ a validated new method. Further evaluation code, methodology, and positive or
 negative findings will be released as the pilot progresses, subject to upstream
 model, code, and data licences.
 
-## Scientific status, 2026-11-07
+## Scientific status, 2026-11-10
 
 **No validated paper-level contribution or scaling result is claimed.**
 
@@ -23,10 +23,50 @@ See `results/late_binding_c2c_dev32_v1.decision.json` and the raw predictions.
 
 A separate Dream/QASC branch studies repeated latent-message exchange. The
 implementation records cross/self trajectories at depths 0 through 6 and compares
-equal incoming messages under different private contexts. This branch has no new
-neural results in this snapshot. The protocol and analysis were fixed before those
-results. Initial 16-question implementation/resource validation must precede the
-1,000-question development experiment. This work uses a full L4 on Frontenac;
+equal incoming messages under different private contexts. The first 16-question
+L4 inference check has now completed all four requested conditions:
+
+| Condition | Correct / 16 | Labels equal to the author reference / 16 |
+| --- | ---: | ---: |
+| One cross exchange (`final_only`) | 15 | 16 |
+| Four cross exchanges (`matched`) | 15 | 16 |
+| Four self exchanges (`self`) | 15 | 15 |
+| No incoming message (`no_message`) | 13 | 15 |
+
+**Exact release validation failed on two labels.** Both self and no-message differ
+on one example, in opposite correctness directions. Full-model/decoder parity
+was exact in the author's implementation check. The run used PyTorch 2.12.0+cu130
+on an L4, took 62.26 seconds including model loading and recording, and peaked at
+14.70 GiB of PyTorch-allocated GPU memory (not total device usage). See
+`results/dream_validity16_v1.summary.json` for provenance, mismatches and limits.
+These selected 16 questions do not provide a scientific accuracy estimate.
+
+A targeted diagnostic has also completed. Repeating the same 16 questions
+preserved all self/no-message labels and all four self-message hashes. Restoring
+the original complete 64-question blocks around the two discrepancies (128
+questions total), including model and channel minibatch composition, preserved
+both discrepant predictions. Self labels match 127/128 references and no-message
+labels match 126/128. This does not support changed batch membership as the cause
+of the original two discrepancies; hardware, numerical and other reference
+runtime differences remain unresolved. This post-failure subset is diagnostic,
+not an unbiased accuracy estimate. See `results/dream_batch_diagnostic_v1.summary.json`.
+
+The unchanged 0–6-round trace validity stage has now completed on the fixed
+16 questions. All six independent author-function prediction checks passed,
+as did all four applicable message-hash checks in the same L4 environment.
+The trace took 93.56 seconds including setup and those independent calls, with
+14.70 GiB peak allocated memory. The same two public-reference discrepancies
+remain, so the job correctly exited with a failed release-validation gate.
+See `results/dream_trace_validity_v1.summary.json` for checks and provenance.
+
+The L4 self discrepancy is not a final near-tie (B exceeds reference D by
+3.890625 logits); the no-message discrepancy is close (H exceeds E by 0.078125).
+Neither observation establishes the underlying cause. Further reference-side
+runtime/output evidence is needed; unchanged jobs will not be resubmitted.
+The 1,000-question mechanism experiment remains unstarted. The protocol and
+primary analysis were fixed before the neural results; no gate was relaxed.
+
+This work uses a full L4 on Frontenac;
 the 8 GB MyResearchCloud vGPU is intended for bounded small-model profiling and
 controls. Successful migration or a Dream-7B fit on 8 GB is not assumed.
 
@@ -68,8 +108,19 @@ model execution. Set a valid Slurm account and adjust module/wheelhouse settings
 your site; do not run the supplied jobs blindly on a workstation or login node.
 The C2C runtime uses a site-specific Transformers 4.52.4 override. Its actual
 software versions and measured allocation peak are recorded in the run metadata.
-`remote/dream_release_requirements.txt` and `remote/dream_prepare_v1.sbatch`
-record the Dream package and upstream Git pins; that environment is not yet validated.
+`remote/dream_release_requirements.txt` records the exact Dream package pins.
+Use `remote/dream_prepare_container_v1.sbatch` and
+`remote/dream_container_python_v1.sh` for the pinned Python 3.11.14 Apptainer
+runtime. The module-based `dream_prepare_v1.sbatch` is retained as historical
+setup code: its wheel policy failed on this cluster. The container environment
+passed CPU imports and ran the 16-question GPU check; the two prediction
+mismatches above still block complete release validation. The editable-build
+helper `editables==0.5` is installed explicitly because build isolation is disabled.
+This is a staged cluster workflow: the pinned upstream checkouts, acquisition
+environment and cached model/data must already be present at the paths used by
+the preparation script. It is not a self-contained one-command installer.
+The optional lexical-context analysis also expects the exact upstream development
+data at `external/hidden_messages/data/development.jsonl`; that data is not bundled.
 
 Exact C2C model revisions and file hashes are in
 `remote/c2c_acquire_v1_manifest.json`; the upstream code is

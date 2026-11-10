@@ -3,6 +3,7 @@ import importlib
 import importlib.metadata
 import json
 import os
+import platform
 from pathlib import Path
 
 assert os.environ.get('SLURM_JOB_ID'), 'Slurm allocation required'
@@ -18,7 +19,10 @@ import yaml
 base=Path('vendor/hidden_messages_f85b6d8')
 config=yaml.safe_load((base/'configs/qasc_original_evaluation.yaml').read_text())
 report=dict(job_id=os.environ['SLURM_JOB_ID'],imports=modules,passed=True,
-            models_loaded=False,packages={name:importlib.metadata.version(name) for name in
+            models_loaded=False,python=platform.python_version(),
+            torch_cuda_build=torch.version.cuda,
+            container_source='docker://python@sha256:06bb5357fbe87fed6fd7793c8c525ba09417bb23361b161511bb2993e8f0a7e3',
+            packages={name:importlib.metadata.version(name) for name in
             ('torch','transformers','accelerate','numpy','peft','huggingface-hub')},
             surface_present='surface' in config)
 Path('results/dream_import_preflight_v1.json').write_text(json.dumps(report,indent=2)+'\n')

@@ -1,0 +1,158 @@
+{
+  "stage": "batch_layout_diagnostic",
+  "job_id": "12446780",
+  "source_data_sha256": "a88c888c082611fe5ecdfd62563026357068b2e23dfb0914bd31012ea230e20a",
+  "code_sha256": "5f95af2093112d9c6529b5272f9dd4e519901f7aa64b2203e630c0cbc43bde27",
+  "protocol_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
+  "original_block_starts": [
+    576,
+    704
+  ],
+  "block_size": 64,
+  "conditions": [
+    "self",
+    "no_message"
+  ],
+  "is_validity_receipt": false,
+  "full_trace_authorized": false,
+  "completed": true,
+  "interpretation": "Targeted post-failure diagnostic. Does not change or pass the mechanism validity gate.",
+  "cases": {
+    "same16": {
+      "examples": 16,
+      "author_label_mismatch_exit": true,
+      "elapsed_seconds": 63.760160364210606,
+      "peak_allocated_bytes": 15788700160,
+      "peak_reserved_bytes": 16863199232,
+      "conditions": {
+        "self": {
+          "correct": 15,
+          "accuracy": 0.9375,
+          "reference_labels_equal": 15,
+          "profile": {
+            "model_agent_forwards_per_example": 9,
+            "communication_rounds": 4,
+            "transmitted_bytes_per_example": 8192,
+            "round_message_sha256": [
+              "ac9497acb8fcbb39a23ca2a88b072e80b2fc7712d9c8365a0d5397b1945beee7",
+              "810d5279f8f5475a502834aa7cdb69ba8b388dcf4f2ba44b89a32117619b9d8d",
+              "e79ec699855f3a67f911d699e1935d0ce4846a438311ee4983094daba9783850",
+              "91ed0bb6d9609d53a4a0f3db96688d78a9b8db937caed93e5661bad73fcc6422"
+            ]
+          }
+        },
+        "no_message": {
+          "correct": 13,
+          "accuracy": 0.8125,
+          "reference_labels_equal": 15,
+          "profile": {
+            "model_agent_forwards_per_example": 9,
+            "communication_rounds": 0,
+            "transmitted_bytes_per_example": 0,
+            "round_message_sha256": []
+          }
+        }
+      },
+      "token_rows_equal_on_overlap": true,
+      "changed_from_baseline_on_overlap": {
+        "self": [],
+        "no_message": []
+      },
+      "targets": [
+        {
+          "example_id": "qasc-dist-be1160f33b3ab8fe784b",
+          "condition": "self",
+          "expected": "D",
+          "observed": "B",
+          "diagnostic_observed": "B"
+        },
+        {
+          "example_id": "qasc-dist-cef40c63d2d76e8c0891",
+          "condition": "no_message",
+          "expected": "E",
+          "observed": "H",
+          "diagnostic_observed": "H"
+        }
+      ]
+    },
+    "original_blocks128": {
+      "examples": 128,
+      "author_label_mismatch_exit": true,
+      "elapsed_seconds": 168.30548620782793,
+      "peak_allocated_bytes": 15844156928,
+      "peak_reserved_bytes": 19337838592,
+      "conditions": {
+        "self": {
+          "correct": 96,
+          "accuracy": 0.75,
+          "reference_labels_equal": 127,
+          "profile": {
+            "model_agent_forwards_per_example": 9,
+            "communication_rounds": 4,
+            "transmitted_bytes_per_example": 8192,
+            "round_message_sha256": [
+              "074a70275cf1f5a66d855737dc0c715fbf85557d2047b618840801f41b2afa75",
+              "6272759b0f86370c53eaad76b7031cfd5799303a667b6719502f68cf0be28633",
+              "5765b0aed16866da2ff0d4e4832901916ee0ec2aba9870e3add7710929dc09df",
+              "7ad93a22a5f1b17fb5cb0d546a3189591ab1df1fb530d5760ab29c993427ab9f"
+            ]
+          }
+        },
+        "no_message": {
+          "correct": 94,
+          "accuracy": 0.734375,
+          "reference_labels_equal": 126,
+          "profile": {
+            "model_agent_forwards_per_example": 9,
+            "communication_rounds": 0,
+            "transmitted_bytes_per_example": 0,
+            "round_message_sha256": []
+          }
+        }
+      },
+      "token_rows_equal_on_overlap": true,
+      "changed_from_baseline_on_overlap": {
+        "self": [],
+        "no_message": []
+      },
+      "targets": [
+        {
+          "example_id": "qasc-dist-be1160f33b3ab8fe784b",
+          "condition": "self",
+          "expected": "D",
+          "observed": "B",
+          "diagnostic_observed": "B"
+        },
+        {
+          "example_id": "qasc-dist-cef40c63d2d76e8c0891",
+          "condition": "no_message",
+          "expected": "E",
+          "observed": "H",
+          "diagnostic_observed": "H"
+        }
+      ]
+    }
+  },
+  "same16_self_message_hashes_equal_to_initial_run": true,
+  "findings": [
+    "On the tested repeated16 run, self/no_message labels and all4 self message hashes equal the first run.",
+    "Both original discrepant labels persist after restoring original model and channel minibatch membership/order. This does not support cohort-layout change as the explanation for those two discrepancies.",
+    "The restored128-question subset has1 self and2 no_message reference mismatches, including both original targets. It was chosen after failures, not as an unbiased accuracy sample."
+  ],
+  "unresolved": "Cannot yet distinguish hardware/numerics, another runtime difference or reference-generation differences. No cause is established.",
+  "next_check": "Run the existing unchanged16-item trace validity stage separately: compare our0..6 recurrence implementation with independent author calls in the same L4 environment. Preserve both the numerical and public-reference gates; no full1000 authorization.",
+  "evidence_sha256": {
+    "original_blocks128/author_run/mismatches.json": "13018b34e5252bc4bcc15419cf1b605837ff564bf7381a0cab2c290fde1d3cb1",
+    "original_blocks128/author_run/predictions.jsonl": "6808e30129bd7cfaf67de477b8a4b05b5ddc19a3f214e2e9ac5a0ddde06a6c8e",
+    "original_blocks128/author_run/token_rows.jsonl": "d088e70b4829ca5030921d925e90df646e4c9e6522d322fb271746e20253de57",
+    "original_blocks128/author_run/verification.json": "2f09ea77f31291da363927d58eaab6992315ced41b8d811d7c6b694203669a6e",
+    "plan.json": "e7f063f0baeccfb411c6b55b341632f4e1136e702d01e758a765eb2f4a9dd15f",
+    "same16/author_run/mismatches.json": "fd414a6382d371e9942234ba945e656c739d86b0f3ab241d475cd0beb36c9330",
+    "same16/author_run/predictions.jsonl": "0a314544802bc56f076ac535f4f468a3d08fa0c164d2a314bfd836ba59ac970b",
+    "same16/author_run/token_rows.jsonl": "44f633e828b6e95fc0927808d8ad506bb3d6696ac0476709f5fe7a58b29d84e3",
+    "same16/author_run/verification.json": "5e7d628296deeedaf80c7a211fafaa86b91b77e36f3d7b4ed191fe59a2f45e1f",
+    "slurm.err": "bfad47a19f6f901a0943b63e33344d0027960f4e47a98e1efcba9ec8b5e817d9",
+    "slurm.out": "cabed0e8b11b462c96739ad9642513bab8dabaccd755951b22ca7f92592d907f",
+    "summary.json": "a4da7b0551ca9eb5fba5e32c466af6424703f255ae972e6c9c45d9d0c3459dcd"
+  }
+}
