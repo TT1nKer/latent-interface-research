@@ -20,6 +20,13 @@
       "modified": false
     },
     {
+      "path": "analyze_dream_recurrent_v2.py",
+      "source_commit": "0dc6c0284b5990be443c9a791b440320ac2f1ddc",
+      "source_sha256": "c9c7c04eff23c95cf126d7f15877df3e8d6ff518d776c9a09033c8a18259f734",
+      "exported_sha256": "c9c7c04eff23c95cf126d7f15877df3e8d6ff518d776c9a09033c8a18259f734",
+      "modified": false
+    },
+    {
       "path": "analyze_late_binding_c2c_v1.py",
       "source_sha256": "186d7be1fadb00491eb2c26fb497c97eb7adb922061f2679e57cdbd2130d5fff",
       "exported_sha256": "186d7be1fadb00491eb2c26fb497c97eb7adb922061f2679e57cdbd2130d5fff",
@@ -279,6 +286,13 @@
       "modified": false
     },
     {
+      "path": "test_analyze_dream_recurrent_v2.py",
+      "source_commit": "0dc6c0284b5990be443c9a791b440320ac2f1ddc",
+      "source_sha256": "7d7bb191f67e28a4e8796310878163a6aa281eca8e46564d8566cc510392a224",
+      "exported_sha256": "7d7bb191f67e28a4e8796310878163a6aa281eca8e46564d8566cc510392a224",
+      "modified": false
+    },
+    {
       "path": "test_dream_trace_v2.py",
       "source_commit": "b391ebc8a68714e62dc23e6a1a08b0b08a7b9015",
       "source_sha256": "bda8a545883f25d7c01178cfc80ac236cf4bda56fffd151674f94740348d1193",
@@ -298,6 +312,6 @@
       "modified": false
     }
   ],
-  "latest_update_source_commit": "b391ebc8a68714e62dc23e6a1a08b0b08a7b9015",
+  "latest_update_source_commit": "0dc6c0284b5990be443c9a791b440320ac2f1ddc",
   "latest_update": "2026-11-10 explicit v2 gate amendment registered before full1000 results; within-environment comparison and fixed numerical probe."
 }

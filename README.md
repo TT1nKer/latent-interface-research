@@ -92,7 +92,9 @@ BF16 reduced-precision-reduction option described in the
 This is one setting sensitivity check, not a full-FP32 or cross-hardware test;
 identical outputs may mean the selected kernels did not use that option.
 All-question analysis remains primary; mismatch-exclusion and worst-case-score
-analyses are secondary diagnostics. No full-run result is claimed yet.
+analyses are secondary diagnostics. `analyze_dream_recurrent_v2.py` imports the
+unchanged v1 measurements and separately labels the amended interpretation.
+The v2 validity job has been submitted; no full-run result is claimed yet.
 
 Each job uses one L4 and32GiB host RAM. The new validity and sensitivity jobs
 are capped at20minutes each; the full experiment is capped at2hours and must
@@ -119,7 +121,7 @@ refer to the original run; the snapshot manifest identifies any metadata edits.
 Run from this repository root with Python 3.11 or later:
 
 ```bash
-python3 -m unittest test_late_binding_analysis_v1 test_analyze_dream_recurrent_v1 test_dream_trace_v2
+python3 -m unittest test_late_binding_analysis_v1 test_analyze_dream_recurrent_v1 test_dream_trace_v2 test_analyze_dream_recurrent_v2
 python3 analyze_late_binding_c2c_v1.py results/late_binding_c2c_dev32_v1.jsonl \
   --metadata results/late_binding_c2c_dev32_v1.json --out /tmp/c2c-reanalysis.json
 ```
