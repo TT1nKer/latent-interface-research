@@ -1,0 +1,55 @@
+{
+  "amendment_id": "within-environment-v2-20261110",
+  "recorded_at_utc": "2026-11-11T00:23:23.337156+00:00",
+  "authorization": "User explicitly instructed \u505a after discussing separation of strict reference replication from independent mechanism research.",
+  "amendment_after_observation": true,
+  "observed_before_amendment": [
+    "Author four-condition16 check",
+    "same16 repetition and targeted128 batch restoration",
+    "fixed16 trace with six same-runtime author checks"
+  ],
+  "full1000_trajectories_observed_before_amendment": false,
+  "base_protocol_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
+  "base_driver_sha256": "985d66d812600fac9213f965f1558911a2202a178e8a7a3890efe5fef733fab2",
+  "policy": "within_environment_v2",
+  "change": "Reference-label equality is a separate replication outcome, no longer a prerequisite for within-L4 inference. Require same-runtime author comparisons, fingerprints and measured resource gate. Repeat all six author comparisons on the full1000.",
+  "unchanged": [
+    "Pinned model/channel/source/data/config and container dependencies",
+    "Original core question, all1000 inclusion, routes0..6, primary parity weights and repeated-peak shape tests",
+    "Original common-input controls and secondary context-ownership analysis",
+    "No claim of exact reference replication unless measured agreement is complete"
+  ],
+  "budgets": {
+    "validity_wall_seconds": 1200,
+    "full_wall_seconds": 7200,
+    "sensitivity_wall_seconds": 1200,
+    "gpus_per_job": 1,
+    "gpu": "L4",
+    "cpus_per_job": 2,
+    "ram_gib_per_job": 32
+  },
+  "sensitivity": {
+    "block_starts": [
+      0,
+      576,
+      704
+    ],
+    "block_size": 64,
+    "examples": 192,
+    "selection": "First original64-question block plus the two previously discrepant original blocks; chosen before full results, partly failure-targeted, not independent confirmation.",
+    "setting": "torch.backends.cuda.matmul.allow_bf16_reduced_precision_reduction",
+    "baseline_value": true,
+    "perturbation_value": false,
+    "other_numerical_flags_unchanged": true,
+    "interpretation": "Tests only this allowed-kernel setting. Equal outputs may mean the backend did not use reduced reductions. It neither establishes full-FP32 robustness nor identifies the H100 difference cause.",
+    "source": "https://docs.pytorch.org/docs/2.12/notes/numerical_accuracy.html"
+  },
+  "robustness_analysis": {
+    "primary": "All1000, no exclusions, original contrast/shape rules unchanged.",
+    "reference_sensitivity": "Report all reference mismatches; secondary recomputation excluding union of discrepant items, plus worst-case mean interval allowing their primary scores anywhere in[-1,1]. Exclusion is outcome-dependent and cannot replace primary analysis.",
+    "numerical_probe": "Compare matched question IDs and exact token rows against full baseline; report every depth label-change rate, paired primary-score changes and descriptive curve/shape changes. A sign or required-shape reversal on the same probe prevents a robustness claim. Do not extrapolate192 to all1000.",
+    "decision": "Full pattern must meet original positive CI and repeated even peaks. Negative main result terminates parity-specific branch without tuning depths. Positive main result remains provisional until sensitivity checks complete; no paper-level causal or scaling claim."
+  },
+  "original_v1_files_preserved": true,
+  "author_reference_issue_resolved": false
+}

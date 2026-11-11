@@ -70,6 +70,34 @@ This work uses a full L4 on Frontenac;
 the 8 GB MyResearchCloud vGPU is intended for bounded small-model profiling and
 controls. Successful migration or a Dream-7B fit on 8 GB is not assumed.
 
+## Explicit protocol amendment, 2026-11-10
+
+After the documented small-cohort discrepancies, the researcher authorized a
+separate within-environment mechanism experiment. The original v1 files and
+failed reference-validation outcomes are preserved. This is an amendment after
+observing validation data, recorded before any full1,000-question trajectory.
+It does not retroactively make the release reproduction successful.
+
+`remote/dream_trace_amendment_v2.json` specifies the change: exact reference-label
+agreement is reported separately, while execution requires matching runtime and
+source fingerprints, successful independent author-function comparisons, and
+measured memory/time limits. V2 repeats all six implementation comparisons on
+the full1,000 questions. The original primary statistic, all depth/shape checks,
+common-input controls and inclusion of every question are unchanged.
+
+A fixed192-question numerical probe uses the first64-question block plus the two
+previously discrepant blocks, preserving original minibatches. It disables the
+BF16 reduced-precision-reduction option described in the
+[PyTorch2.12 numerical-accuracy documentation](https://docs.pytorch.org/docs/2.12/notes/numerical_accuracy.html).
+This is one setting sensitivity check, not a full-FP32 or cross-hardware test;
+identical outputs may mean the selected kernels did not use that option.
+All-question analysis remains primary; mismatch-exclusion and worst-case-score
+analyses are secondary diagnostics. No full-run result is claimed yet.
+
+Each job uses one L4 and32GiB host RAM. The new validity and sensitivity jobs
+are capped at20minutes each; the full experiment is capped at2hours and must
+pass a conservative projection from the new validity timing before execution.
+
 ## Contents and provenance
 
 - `remote/`: C2C acquisition/evaluation, pinned model manifests, Dream preparation,
@@ -91,7 +119,7 @@ refer to the original run; the snapshot manifest identifies any metadata edits.
 Run from this repository root with Python 3.11 or later:
 
 ```bash
-python3 -m unittest test_late_binding_analysis_v1 test_analyze_dream_recurrent_v1
+python3 -m unittest test_late_binding_analysis_v1 test_analyze_dream_recurrent_v1 test_dream_trace_v2
 python3 analyze_late_binding_c2c_v1.py results/late_binding_c2c_dev32_v1.jsonl \
   --metadata results/late_binding_c2c_dev32_v1.json --out /tmp/c2c-reanalysis.json
 ```

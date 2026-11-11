@@ -129,9 +129,23 @@
       "modified": false
     },
     {
+      "path": "remote/dream_recurrent_trace_v2.py",
+      "source_commit": "b391ebc8a68714e62dc23e6a1a08b0b08a7b9015",
+      "source_sha256": "fa01a86f649cd098a70c7454b397809e6ce3ae7850f3594a77b5ce5bbc0ea6e9",
+      "exported_sha256": "fa01a86f649cd098a70c7454b397809e6ce3ae7850f3594a77b5ce5bbc0ea6e9",
+      "modified": false
+    },
+    {
       "path": "remote/dream_release_requirements.txt",
       "source_sha256": "2ec1382ed8dbcb232313da70684c5ee026a4b8679b3409ab58361e0c2dfc0753",
       "exported_sha256": "2ec1382ed8dbcb232313da70684c5ee026a4b8679b3409ab58361e0c2dfc0753",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_trace_amendment_v2.json",
+      "source_commit": "b391ebc8a68714e62dc23e6a1a08b0b08a7b9015",
+      "source_sha256": "926396e3f8521568e4bba980924bacf543f011146d7c62ab03e5c12a2778cf4f",
+      "exported_sha256": "926396e3f8521568e4bba980924bacf543f011146d7c62ab03e5c12a2778cf4f",
       "modified": false
     },
     {
@@ -142,16 +156,44 @@
       "modified": true
     },
     {
+      "path": "remote/dream_trace_full_v2.sbatch",
+      "source_commit": "b391ebc8a68714e62dc23e6a1a08b0b08a7b9015",
+      "source_sha256": "815aa2fd85594825baff9ed180a0deda95b38bfe3cbc3b890840b35838190f7e",
+      "exported_sha256": "7f923de976575adfc84cc50e4f5bd7b22ee015c73ae24fdc476b9183601e93a7",
+      "modified": true
+    },
+    {
+      "path": "remote/dream_trace_gate_v2.py",
+      "source_commit": "b391ebc8a68714e62dc23e6a1a08b0b08a7b9015",
+      "source_sha256": "e160de43e4a435121da608ad795dda157f773dea2e71833f105eaef1e70c4567",
+      "exported_sha256": "e160de43e4a435121da608ad795dda157f773dea2e71833f105eaef1e70c4567",
+      "modified": false
+    },
+    {
       "path": "remote/dream_trace_protocol_v1.json",
       "source_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
       "exported_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
       "modified": false
     },
     {
+      "path": "remote/dream_trace_sensitivity_v2.sbatch",
+      "source_commit": "b391ebc8a68714e62dc23e6a1a08b0b08a7b9015",
+      "source_sha256": "09fd8bca11f103783528e22c7ce5a3adc57332f95812d060d38e333a6aad1d21",
+      "exported_sha256": "73eb99ba61634b2b40b31e446c60de640487fbd5cd26f40afc2bb595e93f6af9",
+      "modified": true
+    },
+    {
       "path": "remote/dream_trace_validity_v1.sbatch",
       "source_commit": "adc1cca91dcdf9381512f01fa5cf5cdccf77f2b5",
       "source_sha256": "47a10ecae1cf97c15f52c7360a18f3c7c46bcc813d33412e804338781a4418c6",
       "exported_sha256": "ca626505ec2587ff47cbee773ceb761518837f48dd35c6896f8829ce3ce3f53a",
+      "modified": true
+    },
+    {
+      "path": "remote/dream_trace_validity_v2.sbatch",
+      "source_commit": "b391ebc8a68714e62dc23e6a1a08b0b08a7b9015",
+      "source_sha256": "f635dfca6367c571e9946a7623e7ebe4e39118003a422182226f2d83a91c4f37",
+      "exported_sha256": "692629c6380d09fde0310278f8855ea8d8edb116c92c93501d6d7d701142a5ab",
       "modified": true
     },
     {
@@ -237,6 +279,13 @@
       "modified": false
     },
     {
+      "path": "test_dream_trace_v2.py",
+      "source_commit": "b391ebc8a68714e62dc23e6a1a08b0b08a7b9015",
+      "source_sha256": "bda8a545883f25d7c01178cfc80ac236cf4bda56fffd151674f94740348d1193",
+      "exported_sha256": "bda8a545883f25d7c01178cfc80ac236cf4bda56fffd151674f94740348d1193",
+      "modified": false
+    },
+    {
       "path": "test_late_binding_analysis_v1.py",
       "source_sha256": "7bd8324dc77b79e25227ea365afc8b0fb9a420bd6af92824833901494994d6c4",
       "exported_sha256": "7bd8324dc77b79e25227ea365afc8b0fb9a420bd6af92824833901494994d6c4",
@@ -249,6 +298,6 @@
       "modified": false
     }
   ],
-  "latest_update_source_commit": "dc8e53bffd3b7b0374cf4a05ad3e0147df9e9b56",
-  "latest_update": "2026-11-10: first L4 inference, stable repeated/batch diagnostic, same-runtime trace implementation checks passed; released-reference mismatch remains. Full1000 not run."
+  "latest_update_source_commit": "b391ebc8a68714e62dc23e6a1a08b0b08a7b9015",
+  "latest_update": "2026-11-10 explicit v2 gate amendment registered before full1000 results; within-environment comparison and fixed numerical probe."
 }
