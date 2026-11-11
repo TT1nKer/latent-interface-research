@@ -94,7 +94,18 @@ identical outputs may mean the selected kernels did not use that option.
 All-question analysis remains primary; mismatch-exclusion and worst-case-score
 analyses are secondary diagnostics. `analyze_dream_recurrent_v2.py` imports the
 unchanged v1 measurements and separately labels the amended interpretation.
-The v2 validity job has been submitted; no full-run result is claimed yet.
+The v2 validity job completed successfully: all six prediction checks and four
+applicable message-hash checks passed. Its per-question results and token rows
+are byte-identical to the earlier v1 trace. The two public-reference discrepancies
+remain. The measured projection is 6,061.74 seconds (101.03 minutes, including the
+registered margin), with 15.73 GiB peak reserved GPU memory; both resource gates
+pass. See `results/dream_trace_validity_v2.summary.json`.
+
+The full 1,000-question job and its dependent 192-question numerical probe are
+now submitted. At the recorded check, the full job was waiting for resources and
+the probe was waiting for its dependency; no start-time estimate was available.
+There is no full-run scientific result yet. The fixed 16 questions establish
+implementation consistency and a resource estimate, not a mechanism finding.
 
 Each job uses one L4 and32GiB host RAM. The new validity and sensitivity jobs
 are capped at20minutes each; the full experiment is capped at2hours and must

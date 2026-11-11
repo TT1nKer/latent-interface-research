@@ -1,0 +1,169 @@
+{
+  "job_id": "12448322",
+  "stage": "validity",
+  "revision": "f85b6d8563a2236117407e0df9c6cd60ea406dac",
+  "code_sha256": "fa01a86f649cd098a70c7454b397809e6ce3ae7850f3594a77b5ce5bbc0ea6e9",
+  "protocol_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
+  "data_sha256": "a88c888c082611fe5ecdfd62563026357068b2e23dfb0914bd31012ea230e20a",
+  "checkpoint_sha256": "83397168be971c5de6edb51e8d57ddeee87781cae13e77ba55bfb69df3b5f66d",
+  "completed": true,
+  "gpu": "NVIDIA L4",
+  "torch": "2.12.0+cu130",
+  "cuda": "13.0",
+  "execution_policy": "within_environment_v2",
+  "amendment_sha256": "926396e3f8521568e4bba980924bacf543f011146d7c62ab03e5c12a2778cf4f",
+  "gate_sha256": "e160de43e4a435121da608ad795dda157f773dea2e71833f105eaef1e70c4567",
+  "config_sha256": "756aba88e5ae1b09ba80a60aef1ac0f754359925b9424696bc2d4b6a2a73e56d",
+  "reference_sha256": "ca8c48bd4a7d8ae6d56f5fd1173a9a367c9c9f263d4e9f10fb68907858889f03",
+  "numerical_flags": {
+    "bf16_reduced_precision_reduction": true,
+    "float32_matmul_precision": "highest",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "original_numerical_flags": {
+    "bf16_reduced_precision_reduction": true,
+    "float32_matmul_precision": "highest",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "reference_replication_required_for_execution": false,
+  "numerical_validity_scope": "Separate author calls on this fixed16 cohort",
+  "example_ids_sha256": "31e4c1d119a5d896e7ba04f01c31cc4c6cfdf49e38f249687b50e58f487c6b2b",
+  "model_weight_manifest_sha256": "d97cfa4b2e3a247447039efb60b29e626d7199cc036a1a53d62184a2ef08a2ab",
+  "decoder_parity": {
+    "hidden_bfloat16_exact": true,
+    "constrained_prediction_exact": true,
+    "max_hidden_abs_difference": 0.0
+  },
+  "independent_author_checks": [
+    {
+      "condition": "matched",
+      "rounds": 1,
+      "predictions_equal": true,
+      "message_hashes_equal": true
+    },
+    {
+      "condition": "matched",
+      "rounds": 4,
+      "predictions_equal": true,
+      "message_hashes_equal": true
+    },
+    {
+      "condition": "self",
+      "rounds": 1,
+      "predictions_equal": true,
+      "message_hashes_equal": true
+    },
+    {
+      "condition": "self",
+      "rounds": 4,
+      "predictions_equal": true,
+      "message_hashes_equal": true
+    },
+    {
+      "condition": "final_only",
+      "rounds": 4,
+      "predictions_equal": true
+    },
+    {
+      "condition": "no_message",
+      "rounds": 4,
+      "predictions_equal": true
+    }
+  ],
+  "reference_agreement": {
+    "final_only": {
+      "equal": 16,
+      "total": 16,
+      "mismatch_ids": []
+    },
+    "matched": {
+      "equal": 16,
+      "total": 16,
+      "mismatch_ids": []
+    },
+    "self": {
+      "equal": 15,
+      "total": 16,
+      "mismatch_ids": [
+        "qasc-dist-be1160f33b3ab8fe784b"
+      ]
+    },
+    "no_message": {
+      "equal": 15,
+      "total": 16,
+      "mismatch_ids": [
+        "qasc-dist-cef40c63d2d76e8c0891"
+      ]
+    }
+  },
+  "examples": 16,
+  "setup_seconds": 42.37280482426286,
+  "elapsed_seconds": 104.4333998542279,
+  "forward_seconds": [
+    1.9120744448155165,
+    1.9241019859910011,
+    1.9301644656807184,
+    1.9362707268446684,
+    1.9380980506539345,
+    1.9367227014154196,
+    1.932878751307726,
+    1.9378138426691294,
+    1.9403454698622227,
+    1.9399937652051449,
+    1.9456280805170536,
+    1.9478167798370123,
+    1.9474409949034452,
+    0.9207255393266678,
+    0.9224519040435553
+  ],
+  "torch_peak_allocated_bytes": 15788700672,
+  "torch_peak_reserved_bytes": 16888365056,
+  "numerical_validity_passed": true,
+  "public_reference_all_equal": false,
+  "scheduler_state": "COMPLETED",
+  "scheduler_exit_code": "0:0",
+  "scheduler_elapsed": "00:02:56",
+  "same16_comparison": {
+    "per_item.jsonl": {
+      "sha256": "b664b6121aa04714c1bd2674b6d2b0b4cf3d70d854c0549f00e226bbb7176e0e",
+      "byte_identical_to_v1": true
+    },
+    "token_rows.jsonl": {
+      "sha256": "44f633e828b6e95fc0927808d8ad506bb3d6696ac0476709f5fe7a58b29d84e3",
+      "byte_identical_to_v1": true
+    }
+  },
+  "projected_full_seconds_with_margin": 6061.739991295617,
+  "reserved_gib": 15.728515625,
+  "submission_gate_passed": true,
+  "raw_summary_sha256": "d3a5665447eac22152f875cf784fd6f9bf9c9153afb46ea419e035fee3ceab2a",
+  "scientific_effect_established": false,
+  "decision": "Fixed16 within-environment implementation and empirical resource gates passed. Proceed with the preregistered full1000 v2 experiment; exact reference reproduction remains unresolved.",
+  "limitations": [
+    "Fixed16 validates implementation and resources, not the scientific hypothesis or full-cohort equivalence.",
+    "Reference discrepancies remain; the v2 amendment does not retroactively validate v1 reproduction.",
+    "Timing is an extrapolation with a 1.5x margin and 180 seconds overhead, not a completion guarantee.",
+    "Full1000 repeats all six independent author comparisons; the 192-item numerical probe is secondary."
+  ],
+  "evidence_sha256": {
+    "per_item.jsonl": "b664b6121aa04714c1bd2674b6d2b0b4cf3d70d854c0549f00e226bbb7176e0e",
+    "slurm.err": "cce886f8a8bafd23d6bf9c94dedf90decbb4a0d8cf963324f0cd67eb874f99a9",
+    "slurm.out": "53589585f71195f41484acbe4a5190045adb7a5995a7df3680b80d240ebe211a",
+    "started.json": "578d8ef8615b816f9e02294c1917a4b50d8750d9339a0f2a86fdd310d196e3dd",
+    "submission_gate.json": "683e492dcbd0d4d3906dfd5b4af3a1de2dd0667133220a53c492a25690007908",
+    "summary.json": "d3a5665447eac22152f875cf784fd6f9bf9c9153afb46ea419e035fee3ceab2a",
+    "token_rows.jsonl": "44f633e828b6e95fc0927808d8ad506bb3d6696ac0476709f5fe7a58b29d84e3"
+  },
+  "execution_followup": {
+    "full_job": "12448809",
+    "full_state": "PENDING",
+    "full_reason": "Resources",
+    "probe_job": "12448810",
+    "probe_state": "PENDING",
+    "probe_reason": "Dependency",
+    "probe_dependency": "afterok:12448809",
+    "observed_at_utc": "2026-11-11T02:46:56.534643+00:00"
+  }
+}
