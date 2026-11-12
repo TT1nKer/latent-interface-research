@@ -1,0 +1,284 @@
+{
+  "questions": 1000,
+  "decision": "planned_uncertainty_matching_does_not_meet_candidate_rule",
+  "by_arm_receiver": [
+    {
+      "arm": "matched",
+      "receiver": 0,
+      "n": 1000,
+      "accuracy": 0.879,
+      "accuracy_change": 0,
+      "changed_labels": 0,
+      "changed_label_rate": 0,
+      "incoming_class_follow_rate": 0.911,
+      "accuracy_change_descriptive_ci95": [
+        0.0,
+        0.0
+      ],
+      "max_abs_label_logit_change": 0.0,
+      "operational_tolerance_met": true
+    },
+    {
+      "arm": "matched",
+      "receiver": 1,
+      "n": 1000,
+      "accuracy": 0.826,
+      "accuracy_change": 0,
+      "changed_labels": 0,
+      "changed_label_rate": 0,
+      "incoming_class_follow_rate": 0.88,
+      "accuracy_change_descriptive_ci95": [
+        0.0,
+        0.0
+      ],
+      "max_abs_label_logit_change": 0.0,
+      "operational_tolerance_met": true
+    },
+    {
+      "arm": "margin_matched",
+      "receiver": 0,
+      "n": 1000,
+      "accuracy": 0.871,
+      "accuracy_change": -0.008,
+      "changed_labels": 44,
+      "changed_label_rate": 0.044,
+      "incoming_class_follow_rate": 0.914,
+      "accuracy_change_descriptive_ci95": [
+        -0.019,
+        0.003
+      ],
+      "max_abs_label_logit_change": 3.58984375,
+      "operational_tolerance_met": true
+    },
+    {
+      "arm": "margin_matched",
+      "receiver": 1,
+      "n": 1000,
+      "accuracy": 0.824,
+      "accuracy_change": -0.002,
+      "changed_labels": 45,
+      "changed_label_rate": 0.045,
+      "incoming_class_follow_rate": 0.881,
+      "accuracy_change_descriptive_ci95": [
+        -0.015,
+        0.011
+      ],
+      "max_abs_label_logit_change": 3.921875,
+      "operational_tolerance_met": true
+    },
+    {
+      "arm": "posterior_matched",
+      "receiver": 0,
+      "n": 1000,
+      "accuracy": 0.872,
+      "accuracy_change": -0.007,
+      "changed_labels": 29,
+      "changed_label_rate": 0.029,
+      "incoming_class_follow_rate": 0.917,
+      "accuracy_change_descriptive_ci95": [
+        -0.016,
+        0.002
+      ],
+      "max_abs_label_logit_change": 3.2578125,
+      "operational_tolerance_met": true
+    },
+    {
+      "arm": "posterior_matched",
+      "receiver": 1,
+      "n": 1000,
+      "accuracy": 0.815,
+      "accuracy_change": -0.011,
+      "changed_labels": 36,
+      "changed_label_rate": 0.036,
+      "incoming_class_follow_rate": 0.894,
+      "accuracy_change_descriptive_ci95": [
+        -0.022,
+        -0.001
+      ],
+      "max_abs_label_logit_change": 3.703125,
+      "operational_tolerance_met": true
+    }
+  ],
+  "comparisons": [
+    {
+      "arm": "margin_matched",
+      "receiver": 0,
+      "changed_label_rate": 0.044,
+      "old_random_mean_changed_label_rate": 0.055,
+      "relative_reduction_in_changed_predictions": 0.20000000000000007,
+      "accuracy_change_from_matched": -0.008,
+      "candidate_rule_passes": false
+    },
+    {
+      "arm": "margin_matched",
+      "receiver": 1,
+      "changed_label_rate": 0.045,
+      "old_random_mean_changed_label_rate": 0.077,
+      "relative_reduction_in_changed_predictions": 0.4155844155844156,
+      "accuracy_change_from_matched": -0.002,
+      "candidate_rule_passes": false
+    },
+    {
+      "arm": "posterior_matched",
+      "receiver": 0,
+      "changed_label_rate": 0.029,
+      "old_random_mean_changed_label_rate": 0.055,
+      "relative_reduction_in_changed_predictions": 0.47272727272727266,
+      "accuracy_change_from_matched": -0.007,
+      "candidate_rule_passes": false
+    },
+    {
+      "arm": "posterior_matched",
+      "receiver": 1,
+      "changed_label_rate": 0.036,
+      "old_random_mean_changed_label_rate": 0.077,
+      "relative_reduction_in_changed_predictions": 0.5324675324675325,
+      "accuracy_change_from_matched": -0.011,
+      "candidate_rule_passes": true
+    }
+  ],
+  "arm_passes_both_receivers": {
+    "margin_matched": false,
+    "posterior_matched": false
+  },
+  "matching_quality": [
+    {
+      "matched": {
+        "margin": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "posterior": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "within_class_0": {
+        "margin": {
+          "mean": 2.9424454135894775,
+          "p95": 6.8046875,
+          "maximum": 9.21484375
+        },
+        "posterior": {
+          "mean": 0.22846230977881576,
+          "p95": 0.6742409915885605,
+          "maximum": 0.8671079654324313
+        }
+      },
+      "within_class_1": {
+        "margin": {
+          "mean": 3.0463651123046875,
+          "p95": 7.130859375,
+          "maximum": 8.970703125
+        },
+        "posterior": {
+          "mean": 0.23328949083586697,
+          "p95": 0.6740271048565891,
+          "maximum": 0.8573403538582155
+        }
+      },
+      "margin_matched": {
+        "margin": {
+          "mean": 0.07473647117614746,
+          "p95": 0.2265625,
+          "maximum": 0.62109375
+        },
+        "posterior": {
+          "mean": 0.09987418654215739,
+          "p95": 0.4884646478043738,
+          "maximum": 0.637880323867459
+        }
+      },
+      "posterior_matched": {
+        "margin": {
+          "mean": 0.30987388038635255,
+          "p95": 0.796875,
+          "maximum": 4.046875
+        },
+        "posterior": {
+          "mean": 0.05731063032917407,
+          "p95": 0.26891616909775784,
+          "maximum": 0.6322743605193015
+        }
+      }
+    },
+    {
+      "matched": {
+        "margin": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "posterior": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "within_class_0": {
+        "margin": {
+          "mean": 2.955651412963867,
+          "p95": 6.78515625,
+          "maximum": 9.7060546875
+        },
+        "posterior": {
+          "mean": 0.2922270188292466,
+          "p95": 0.7370312719612381,
+          "maximum": 0.8803123016934387
+        }
+      },
+      "within_class_1": {
+        "margin": {
+          "mean": 3.10983381652832,
+          "p95": 6.9921875,
+          "maximum": 8.5390625
+        },
+        "posterior": {
+          "mean": 0.30721101363045955,
+          "p95": 0.7413594310448385,
+          "maximum": 0.8917160593186421
+        }
+      },
+      "margin_matched": {
+        "margin": {
+          "mean": 0.0744386749267578,
+          "p95": 0.23828125,
+          "maximum": 0.93359375
+        },
+        "posterior": {
+          "mean": 0.1251224250525456,
+          "p95": 0.45970845247320236,
+          "maximum": 0.6086371779217604
+        }
+      },
+      "posterior_matched": {
+        "margin": {
+          "mean": 0.29583259582519533,
+          "p95": 0.828125,
+          "maximum": 4.171875
+        },
+        "posterior": {
+          "mean": 0.0698464676299264,
+          "p95": 0.2667587475658292,
+          "maximum": 0.6601314826374456
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Development follow-up motivated by post-result uncertainty strata, not independent confirmation.",
+    "Original class-only sufficiency hypothesis still failed; this is a different intervention.",
+    "Matching is approximate, especially for rare score patterns; no semantic-information or confidence-only proof.",
+    "Softmax scores are not calibrated probabilities. Nearest donors may also share unmeasured properties.",
+    "50% fewer changes and at most2pp accuracy difference are fixed operational criteria, not population equivalence.",
+    "Question-bootstrap intervals are descriptive conditional on these donor plans; donor dependence is omitted.",
+    "A passing intervention retains full donor packets, so it is not a demonstrated scalar/8-score codec or bandwidth reduction."
+  ],
+  "source_sha256": {
+    "summary.json": "e20f21fae0487eaa9c0fd27704c2b691eaedd2ecba8ef407b86bdbe26d1fff71",
+    "per_item.jsonl": "b57ec758584bbbbcba0e4ab1ea1bc782482171c146ceef5ac2a09054eda72369"
+  },
+  "analysis_sha256": "fceb86afb6eb3bec694b238d4d34b62f4ff1fffa5f0223bee4979789e7b90712"
+}

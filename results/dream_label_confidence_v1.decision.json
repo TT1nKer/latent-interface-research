@@ -1,0 +1,76 @@
+{
+  "updated_at_utc": "2026-11-12T21:10:38.120623+00:00",
+  "status": "Completed fixed development experiment; neither matched arm passes both-receiver candidate rule. Stop tuning this development donor-matching branch.",
+  "validity": "All1000 exact original answers and all label logits in both directions, same tokens/model/config/runtime; only registered donor assignments change.",
+  "result": {
+    "prior_random_changed_rate": [
+      0.055,
+      0.077
+    ],
+    "margin_matched_changed_rate": [
+      0.044,
+      0.045
+    ],
+    "eight_score_matched_changed_rate": [
+      0.029,
+      0.036
+    ],
+    "margin_accuracy": [
+      0.871,
+      0.824
+    ],
+    "eight_score_accuracy": [
+      0.872,
+      0.815
+    ],
+    "original_accuracy": [
+      0.879,
+      0.826
+    ],
+    "eight_score_relative_change_reduction": [
+      0.47272727272727266,
+      0.5324675324675325
+    ],
+    "fixed50percent_both_receiver_rule_passed": false
+  },
+  "interpretation": [
+    "Class-only interchangeable-message hypothesis failed the original joint rule.",
+    "Uncertainty/score matching reduces behavioral changes on these development examples, with8-score matching reducing changes by47.3% and53.2%.",
+    "The later50% cutoff fails for receiver0 (29 changes versus required<=27.5). Report the continuous effect and failed rule; do not move the threshold or equate this screen failure with no effect.",
+    "All new arms meet the earlier loose2pp/5% operational tolerances, but this does not retroactively rescue class-only sufficiency or prove population equivalence.",
+    "Nearest-score matching retains full donor packets and can correlate with other properties. It is not a causal isolation of confidence, a demonstrated codec, or semantic sufficiency."
+  ],
+  "new_information": [
+    "Two full1000 neural interventions now replace earlier label correlations alone.",
+    "Hard-prefix changes are concentrated in low-margin cases, but that stratum finding is post-result exploratory.",
+    "Scalar-margin matching nearly restores aggregate accuracy in receiver1 while8-score matching preserves more individual answers; aggregate accuracy and behavioral equivalence differ."
+  ],
+  "next_scientific_step": {
+    "direction": "Independent confirmation with a fixed development donor bank and untouched official validation926, before further mechanistic claims or tuning.",
+    "rationale": "Separate donor selection data from target evaluation, and freeze per-target rules/metrics before opening held-out rows. A fixed bank would support conditional target-level uncertainty estimates without the current all-target bijection dependence.",
+    "not_yet_authoritative_protocol": "This is the next design choice, not a preregistered experiment. Must define data reconstruction, donor-bank rules, endpoints, resource budget and numerical checks before access/submission.",
+    "no_pending_job": true,
+    "not_started": [
+      "held-out926",
+      "new model training",
+      "deeper recurrence",
+      "paid resources",
+      "automatic polling"
+    ]
+  },
+  "paper_assessment": "Useful development mechanism evidence, not yet an independently confirmed or sufficiently general/novel paper contribution. Generic soft-score/confidence communication already exists.",
+  "evidence": [
+    "results/dream_label_ablation_v1.analysis.json",
+    "results/dream_label_uncertainty_v1.json",
+    "results/dream_label_confidence_v1.analysis.json",
+    "results/dream_label_confidence_v1.summary.json"
+  ],
+  "resources": {
+    "first_success_slurm_seconds": 682,
+    "failed_pre_model_seconds": 55,
+    "second_success_slurm_seconds": 407,
+    "total_single_L4_allocation_seconds": 1144,
+    "local_models_loaded": false,
+    "scheduled_automation_recreated": false
+  }
+}

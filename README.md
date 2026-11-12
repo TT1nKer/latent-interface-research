@@ -134,8 +134,8 @@ both receivers must reduce changed predictions by at least 50% relative to the
 prior two random donor plans' mean, while keeping absolute accuracy differences
 within two percentage points of matched packets. Matching is approximate, and the
 full donor packets remain intact: success would not demonstrate a scalar or
-8-score codec. No follow-up model result has yet been observed. The resource cap
-is one L4 for 15 minutes. Five new CPU measurement/plan tests pass.
+8-score codec. The registered resource cap was one L4 for 15 minutes.
+Five new CPU measurement/plan tests passed before execution. The completed result follows.
 
 The first follow-up job stopped before model loading because its plan hash also
 included floating diagnostic aggregates. Python 3.14.8 locally and Python 3.11.4
@@ -153,6 +153,45 @@ uses confidence to guide agent communication, and
 handoffs. Our potential contribution would need a specific, independently verified
 account of this implicit latent channel and its recurrent behavior; generic
 uncertainty communication is not new.
+
+### Uncertainty-matched follow-up: completed, fixed joint rule unmet
+
+The repaired job completed in 6 minutes 47 seconds. Actual container donor choices
+match the registered assignments exactly, and both 1,000-question matched replays
+again reproduce every label and every label logit. No threshold or donor choice
+was changed in response to these outcomes.
+
+| Replacement | Receiver 0 accuracy / changed answers | Receiver 1 accuracy / changed answers |
+| --- | ---: | ---: |
+| Same class + top-two margin matching | 87.1% / 4.4% | 82.4% / 4.5% |
+| Same class + eight-score matching | 87.2% / 2.9% | 81.5% / 3.6% |
+
+Relative to the mean of the original two random within-class donor plans (5.5%
+and 7.7% changed answers), eight-score matching reduces changes by **47.3% and
+53.2%**. It therefore **fails the registered requirement of at least 50% reduction
+in both directions**. Receiver 0 has 29 changed answers rather than the required
+at most 27.5. We retain this failed screen and the continuous effect sizes; the
+cutoff will not be moved. Scalar-margin matching also fails that joint rule.
+
+Both new arms satisfy the earlier looser 2-percentage-point/5%-changed-answer
+operational tolerances, but this does not rescue the original class-only hypothesis.
+The evidence supports partial preservation of behavior under uncertainty/score
+matching on this development set. It does not demonstrate a scalar or eight-score
+codec, isolate semantic information, prove calibrated confidence causation, or
+establish independent generalization. In particular, the full donor packets
+remain present, and rare score patterns are only approximately matched.
+
+![Aggregate class-preserving interventions](results/figures/dream_label_interventions_v1.png)
+
+See [fixed analysis](results/dream_label_confidence_v1.analysis.json),
+[validation summary](results/dream_label_confidence_v1.summary.json),
+[scoped decision](results/dream_label_confidence_v1.decision.json), and
+[vector figure](results/figures/dream_label_interventions_v1.svg).
+The two successful interventions plus the 55-second pre-model failure used
+19 minutes 4 seconds of single-L4 allocation. No further donor tuning, training,
+or depth expansion is running. The next design priority is independent evaluation
+with a development-only donor bank and the still-unopened 926-question split;
+that separate protocol and experiment have not yet been executed.
 
 ### Earlier stages and preserved failures
 

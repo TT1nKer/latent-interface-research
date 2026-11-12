@@ -1,5 +1,5 @@
 {
-  "source_commit": "2f8a2e9602f8fa60a9089e434f73a99bad791cea",
+  "source_commit": "bda60bce04f268cc3a24a83ef19bf489c67e5e34",
   "scope": "Current C2C pilot and Dream recurrence implementation; not the complete historical research archive.",
   "excluded": [
     "conversation archives",
@@ -72,6 +72,13 @@
       "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
       "source_sha256": "512f76fff4489ac63b01fe6ddbe5cbf969f8036edc0c87acfb0995c73f12a190",
       "exported_sha256": "512f76fff4489ac63b01fe6ddbe5cbf969f8036edc0c87acfb0995c73f12a190",
+      "modified": false
+    },
+    {
+      "path": "plot_dream_label_interventions_v1.py",
+      "source_commit": "bda60bce04f268cc3a24a83ef19bf489c67e5e34",
+      "source_sha256": "f897e3de5a3e29762dba8355ffd217a8de07342d4407232a84542853d74f68dc",
+      "exported_sha256": "f897e3de5a3e29762dba8355ffd217a8de07342d4407232a84542853d74f68dc",
       "modified": false
     },
     {
@@ -395,10 +402,31 @@
       "modified": false
     },
     {
+      "path": "results/dream_label_confidence_v1.analysis.json",
+      "source_commit": "bda60bce04f268cc3a24a83ef19bf489c67e5e34",
+      "source_sha256": "fb146a84cab17e5641a0e99a31a237ddb1e3e6b4f953d2880e3ecd37b54db36a",
+      "exported_sha256": "fb146a84cab17e5641a0e99a31a237ddb1e3e6b4f953d2880e3ecd37b54db36a",
+      "modified": false
+    },
+    {
+      "path": "results/dream_label_confidence_v1.decision.json",
+      "source_commit": "bda60bce04f268cc3a24a83ef19bf489c67e5e34",
+      "source_sha256": "23fffab66dc5ebb04ff6cc418299c4cdb1b4e14b6b2b779ef90a5a6251fe77eb",
+      "exported_sha256": "26e199817ddf7e05bb317bb59596fdc0a05c09818ad6d29a78653fdc0e2a5c18",
+      "modified": true
+    },
+    {
       "path": "results/dream_label_confidence_v1.failure.json",
-      "source_commit": "2f8a2e9602f8fa60a9089e434f73a99bad791cea",
-      "source_sha256": "44714cad2f2347f1c1106c9cdfc1317a450c9946adf7f96eb0d07bf1854ee38e",
-      "exported_sha256": "44714cad2f2347f1c1106c9cdfc1317a450c9946adf7f96eb0d07bf1854ee38e",
+      "source_commit": "bda60bce04f268cc3a24a83ef19bf489c67e5e34",
+      "source_sha256": "dde157c8c9a2cf54919fbe29e8a3ed03f7a1c57e0c52a2f8fcfd0caeb7a1cef9",
+      "exported_sha256": "dde157c8c9a2cf54919fbe29e8a3ed03f7a1c57e0c52a2f8fcfd0caeb7a1cef9",
+      "modified": false
+    },
+    {
+      "path": "results/dream_label_confidence_v1.summary.json",
+      "source_commit": "bda60bce04f268cc3a24a83ef19bf489c67e5e34",
+      "source_sha256": "ed0c43374a3bd3df4f32390ee5b0ca0a875c3c64a3ee0c6665d1c4adf0e5733e",
+      "exported_sha256": "ed0c43374a3bd3df4f32390ee5b0ca0a875c3c64a3ee0c6665d1c4adf0e5733e",
       "modified": false
     },
     {
@@ -483,6 +511,20 @@
       "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
       "source_sha256": "13efaf027ee1c3be7e262b4deea347d29ee1136d305cd6491d55e3f3531cf4d5",
       "exported_sha256": "13efaf027ee1c3be7e262b4deea347d29ee1136d305cd6491d55e3f3531cf4d5",
+      "modified": false
+    },
+    {
+      "path": "results/figures/dream_label_interventions_v1.png",
+      "source_commit": "bda60bce04f268cc3a24a83ef19bf489c67e5e34",
+      "source_sha256": "87ff648fe7790c8582cd5dd0dd5ec14dad194ee77eea6a62b10c30cb72a208d8",
+      "exported_sha256": "87ff648fe7790c8582cd5dd0dd5ec14dad194ee77eea6a62b10c30cb72a208d8",
+      "modified": false
+    },
+    {
+      "path": "results/figures/dream_label_interventions_v1.svg",
+      "source_commit": "bda60bce04f268cc3a24a83ef19bf489c67e5e34",
+      "source_sha256": "66a16377ff585ddd91b0e24f13b84b9eff8470900914945f68b81d759d32bbdd",
+      "exported_sha256": "66a16377ff585ddd91b0e24f13b84b9eff8470900914945f68b81d759d32bbdd",
       "modified": false
     },
     {
@@ -571,6 +613,6 @@
       "modified": false
     }
   ],
-  "latest_update_source_commit": "2f8a2e9602f8fa60a9089e434f73a99bad791cea",
-  "latest_update": "2026-11-12 preserve failed confidence-plan hash gate; exact donor choices unchanged, floating diagnostics checked separately before one evidenced repair."
+  "latest_update_source_commit": "bda60bce04f268cc3a24a83ef19bf489c67e5e34",
+  "latest_update": "2026-11-12 both1000-question interventions concluded: class-only rule fails; score matching partly preserves behavior but misses fixed joint50% screen. No threshold tuning or held-out claim."
 }

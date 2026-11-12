@@ -1,0 +1,55 @@
+{
+  "job_id": "12457879",
+  "examples": 1000,
+  "completed": true,
+  "implementation_validity_passed": true,
+  "matched_replay_checks": [
+    {
+      "receiver": 0,
+      "predictions_equal": true,
+      "logits_exact": true,
+      "max_abs_logit_delta": 0.0
+    },
+    {
+      "receiver": 1,
+      "predictions_equal": true,
+      "logits_exact": true,
+      "max_abs_logit_delta": 0.0
+    }
+  ],
+  "code_sha256": "4722f224835c2e83d13ac8bff581b0c23dc60c9cb5b0c4b1f25b4678006cfb57",
+  "helper_sha256": "401f0795a82e91fad640554917f8e70c5d71ae4566933b8bee47ae3b76483842",
+  "protocol_sha256": "780f714dbf78dbe96d0d880ce15dedb9a78472fb4d2dd8e05f8fb844ba4f82c9",
+  "donor_plan_sha256": "8897cf20821fe30b3f5a16e1873520c0b7c79be366e808ee9247916dba68b5d3",
+  "baseline_summary_sha256": "9f43bb1d8ddfb0ec580fdca690bdee8ae0f81e76406446dce99d938b7f8cb9e5",
+  "baseline_per_item_sha256": "a8a411cad532fdedd2b3cf01785b273928b7f8d725411df6779c22abe8e4fc85",
+  "native_state_sha256": "7733dd4fdd7ff39ea7cdb5e95c93d33c48c940463b3833598e9657539420301d",
+  "revision": "f85b6d8563a2236117407e0df9c6cd60ea406dac",
+  "model_weight_manifest_sha256": "d97cfa4b2e3a247447039efb60b29e626d7199cc036a1a53d62184a2ef08a2ab",
+  "data_sha256": "a88c888c082611fe5ecdfd62563026357068b2e23dfb0914bd31012ea230e20a",
+  "checkpoint_sha256": "83397168be971c5de6edb51e8d57ddeee87781cae13e77ba55bfb69df3b5f66d",
+  "config_sha256": "756aba88e5ae1b09ba80a60aef1ac0f754359925b9424696bc2d4b6a2a73e56d",
+  "numerical_flags": {
+    "bf16_reduced_precision_reduction": true,
+    "float32_matmul_precision": "highest",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "torch": "2.12.0+cu130",
+  "cuda": "13.0",
+  "gpu": "NVIDIA L4",
+  "elapsed_seconds": 381.75826900452375,
+  "torch_peak_reserved_bytes": 16240345088,
+  "readout_seconds": [
+    57.946266604587436,
+    57.39352787844837,
+    59.430406084284186,
+    57.79298170283437,
+    58.879120429977775,
+    57.25823511183262
+  ],
+  "slurm_walltime_seconds": 407,
+  "public_reference_all_equal": false,
+  "decision": "planned_uncertainty_matching_does_not_meet_candidate_rule",
+  "actual_assignment_hash_passed": true
+}
