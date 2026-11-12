@@ -1,0 +1,152 @@
+{
+  "job_id": "12454532",
+  "stage": "readout_diagnostic",
+  "completed": true,
+  "is_validity_receipt": false,
+  "scientific_claim": false,
+  "baseline_summary_sha256": "1ef32e9d36269dafdbbdf1a800fd088cb6a0a589300090e4cfef8dc3252f0be3",
+  "code_sha256": "8e6955f55d89b9dcaf063d9d94b83c039b85cacdef46a170a374b1cf95616404",
+  "numerical_flags": {
+    "bf16_reduced_precision_reduction": true,
+    "float32_matmul_precision": "highest",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "examples": 1000,
+  "upstream_revision": "f85b6d8563a2236117407e0df9c6cd60ea406dac",
+  "state_file_sha256": {
+    "native": "7733dd4fdd7ff39ea7cdb5e95c93d33c48c940463b3833598e9657539420301d",
+    "cross_1": "66b1a1b826d0d8816926936b0cbd3c45da62832349302500c652427ec038dd76",
+    "cross_3": "a99678f79c7ac9da01e8fff368ac200ae009da13306165191a04f47e03e94956",
+    "cross_4": "4bfaef52cdb46446ed8ef9a47a0ada2884575e6c41d732d3fcccbfb914780b42",
+    "self_1": "592233a4bad6740b5de879bb7095724b162e17b4e1d8b63ee119f012f54c919d",
+    "self_3": "dcd5c9e685eeec83de580bb2efc4c83c331a361e0168522739e5120bc33c2e7f",
+    "self_4": "8afcecf6396247266d9cf1f98fd500d1fd3acd6ea43f2c5dda2e91d01675d027"
+  },
+  "comparisons": {
+    "cross1_receiver_vs_saved_joint": {
+      "equal": 998,
+      "total": 1000,
+      "mismatch_ids": [
+        "qasc-dist-16504d83861daceca866",
+        "qasc-dist-fc3677251d114ea32da1"
+      ],
+      "max_abs_label_logit_difference": 0.54296875
+    },
+    "cross1_joint_replay_vs_saved": {
+      "equal": 1000,
+      "total": 1000,
+      "mismatch_ids": [],
+      "max_abs_label_logit_difference": 0.0
+    },
+    "final_only_receiver_vs_saved_joint": {
+      "equal": 998,
+      "total": 1000,
+      "mismatch_ids": [
+        "qasc-dist-16504d83861daceca866",
+        "qasc-dist-fc3677251d114ea32da1"
+      ],
+      "max_abs_label_logit_difference": 0.54296875
+    },
+    "cross4_receiver_vs_saved_joint": {
+      "equal": 996,
+      "total": 1000,
+      "mismatch_ids": [
+        "qasc-dist-0ad72e8b1ba538189c23",
+        "qasc-dist-ca2cbd0f961bde146b88",
+        "qasc-dist-5af7b2cbafa2d27a0dc2",
+        "qasc-dist-35661c47eb80b3c69ee5"
+      ],
+      "max_abs_label_logit_difference": 0.47265625
+    },
+    "self1_receiver_vs_saved_joint": {
+      "equal": 999,
+      "total": 1000,
+      "mismatch_ids": [
+        "qasc-dist-e50db7a1a1646de7defe"
+      ],
+      "max_abs_label_logit_difference": 0.59375
+    },
+    "self4_receiver_vs_saved_joint": {
+      "equal": 1000,
+      "total": 1000,
+      "mismatch_ids": [],
+      "max_abs_label_logit_difference": 0.40625
+    },
+    "native_receiver_decoder_vs_saved_joint": {
+      "equal": 988,
+      "total": 1000,
+      "mismatch_ids": [
+        "qasc-dist-0ef8bfdc5ecfcae4c5d2",
+        "qasc-dist-cd6836e85b4c1d13bacd",
+        "qasc-dist-dc1026c22b3df1395493",
+        "qasc-dist-f9da6d513e8a62ed424d",
+        "qasc-dist-131c4d943f75683951bd",
+        "qasc-dist-470758ae838bc0c4faa5",
+        "qasc-dist-763ddf2993dcc49a38eb",
+        "qasc-dist-35fba283027e29d941c8",
+        "qasc-dist-233e6440fb3e2836766d",
+        "qasc-dist-b01dd629311fc99483dd",
+        "qasc-dist-c1b63dca9af24479ec24",
+        "qasc-dist-0ed36ed85b1e727fd1a8"
+      ],
+      "max_abs_label_logit_difference": 0.953125
+    },
+    "native_receiver_full_vs_decoder": {
+      "equal": 1000,
+      "total": 1000,
+      "mismatch_ids": [],
+      "max_abs_label_logit_difference": 0.0
+    },
+    "native_receiver_full_vs_saved_joint": {
+      "equal": 988,
+      "total": 1000,
+      "mismatch_ids": [
+        "qasc-dist-0ef8bfdc5ecfcae4c5d2",
+        "qasc-dist-cd6836e85b4c1d13bacd",
+        "qasc-dist-dc1026c22b3df1395493",
+        "qasc-dist-f9da6d513e8a62ed424d",
+        "qasc-dist-131c4d943f75683951bd",
+        "qasc-dist-470758ae838bc0c4faa5",
+        "qasc-dist-763ddf2993dcc49a38eb",
+        "qasc-dist-35fba283027e29d941c8",
+        "qasc-dist-233e6440fb3e2836766d",
+        "qasc-dist-b01dd629311fc99483dd",
+        "qasc-dist-c1b63dca9af24479ec24",
+        "qasc-dist-0ed36ed85b1e727fd1a8"
+      ],
+      "max_abs_label_logit_difference": 0.953125
+    },
+    "cross1_cached_receiver_vs_fresh_author": {
+      "equal": 1000,
+      "total": 1000,
+      "mismatch_ids": []
+    }
+  },
+  "elapsed_seconds": 755.8665953222662,
+  "joint_replay_hidden_exact": true,
+  "final_only_projection_equals_joint_receiver_slice": true,
+  "fresh_author_native_message_hash_equal": true,
+  "torch_peak_allocated_bytes": 15875095552,
+  "torch_peak_reserved_bytes": 21615345664,
+  "scope": "Failure localization only. Original v2 gate remains failed; no primary scientific statistic computed.",
+  "scheduler": {
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:13:49",
+    "start_cluster_time": "2026-11-12T00:57:00",
+    "end_cluster_time": "2026-11-12T01:10:49"
+  },
+  "decision": "Terminal receiver-only readout differences are supported by exact joint replay and exact fresh-author matched1 equality. Correct terminal measurements while preserving recurrence and the strict full-cohort implementation gate.",
+  "limitations": [
+    "One runtime and checkpoint; this localizes the same-environment readout problem but not the public H100 reference discrepancy.",
+    "Only matched1 was independently recomputed in this diagnostic; corrected full run must validate all six cases.",
+    "No primary scientific statistic computed on the invalid v2 full run."
+  ],
+  "evidence_sha256": {
+    "per_item.jsonl": "5161d5ecb4b86f61f49cb02071c2062fdcf9636a7331121b2f18e962d5977ee8",
+    "slurm.err": "0edf4d6c3bebd1829f9250073b57c04c89a8697958c309880e3a2749a5e24592",
+    "slurm.out": "a8240246b710c4a63048d77dbc099fa78f95da5a372440704f9c5a8e230f3920",
+    "summary.json": "521423eeae228c0be1ea623f9866f48962e70d7f687c8367edcde66e7ba99cc3"
+  }
+}

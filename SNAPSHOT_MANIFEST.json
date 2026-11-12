@@ -1,5 +1,5 @@
 {
-  "source_commit": "967aae0ce1808caf1703bf1c206abeb7c695b326",
+  "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
   "scope": "Current C2C pilot and Dream recurrence implementation; not the complete historical research archive.",
   "excluded": [
     "conversation archives",
@@ -24,6 +24,13 @@
       "source_commit": "0dc6c0284b5990be443c9a791b440320ac2f1ddc",
       "source_sha256": "c9c7c04eff23c95cf126d7f15877df3e8d6ff518d776c9a09033c8a18259f734",
       "exported_sha256": "c9c7c04eff23c95cf126d7f15877df3e8d6ff518d776c9a09033c8a18259f734",
+      "modified": false
+    },
+    {
+      "path": "analyze_dream_recurrent_v3.py",
+      "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
+      "source_sha256": "3b5181b4816dc304d9f39ac1955a29d316c33590fc1a8983208e77d55f2ec836",
+      "exported_sha256": "3b5181b4816dc304d9f39ac1955a29d316c33590fc1a8983208e77d55f2ec836",
       "modified": false
     },
     {
@@ -130,6 +137,13 @@
       "modified": true
     },
     {
+      "path": "remote/dream_readout_amendment_v3.json",
+      "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
+      "source_sha256": "b215f407e94a0d8f0a623b94a682949e02658e7a4ce18cdb9299f7991dda921c",
+      "exported_sha256": "b215f407e94a0d8f0a623b94a682949e02658e7a4ce18cdb9299f7991dda921c",
+      "modified": false
+    },
+    {
       "path": "remote/dream_readout_diagnostic_v1.py",
       "source_commit": "967aae0ce1808caf1703bf1c206abeb7c695b326",
       "source_sha256": "8e6955f55d89b9dcaf063d9d94b83c039b85cacdef46a170a374b1cf95616404",
@@ -142,6 +156,34 @@
       "source_sha256": "df8990c20f63f5482b3abae62e9c20d57ca7409a64ca9d57385540d96ec8336f",
       "exported_sha256": "f9f944245a270ade74599bd6a2bba080dc8f7e2d09a9d5a5a371a9b1a39af46a",
       "modified": true
+    },
+    {
+      "path": "remote/dream_readout_full_v3.sbatch",
+      "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
+      "source_sha256": "64a1c47297a508a066444b0970c6640ec1a2110ae697b1bee1d262baf467839f",
+      "exported_sha256": "cab953ca1dc1dd9ea141333d35e3d78e1a94b33416b54d69f5197fae36d22454",
+      "modified": true
+    },
+    {
+      "path": "remote/dream_readout_gate_v3.py",
+      "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
+      "source_sha256": "091d575277ba9aeb6cdd3a746b66763496fab4af1861ed7891b0b48d89a3994b",
+      "exported_sha256": "091d575277ba9aeb6cdd3a746b66763496fab4af1861ed7891b0b48d89a3994b",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_readout_sensitivity_v3.sbatch",
+      "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
+      "source_sha256": "9ae852fce6d003aa167f4354199cedc91c27dedcd1f1a035e5879d9c9d053eef",
+      "exported_sha256": "1a613391f2ded855d05a37b695be2b20d998f680c9c3c1658486eee2e8a1b9e6",
+      "modified": true
+    },
+    {
+      "path": "remote/dream_recurrent_readout_v3.py",
+      "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
+      "source_sha256": "762ea84914366d0ef91adc1f120da0efc9267566c7b572d0042fc933db9d5342",
+      "exported_sha256": "762ea84914366d0ef91adc1f120da0efc9267566c7b572d0042fc933db9d5342",
+      "modified": false
     },
     {
       "path": "remote/dream_recurrent_trace_v1.py",
@@ -255,6 +297,13 @@
       "modified": false
     },
     {
+      "path": "results/dream_readout_diagnostic_v1.summary.json",
+      "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
+      "source_sha256": "7b9e20282fb468ab872ae1b164bad0d3b4231a57a3bd9cc31da495dfb63257a2",
+      "exported_sha256": "7b9e20282fb468ab872ae1b164bad0d3b4231a57a3bd9cc31da495dfb63257a2",
+      "modified": false
+    },
+    {
       "path": "results/dream_trace_full_v2.failure.json",
       "source_commit": "967aae0ce1808caf1703bf1c206abeb7c695b326",
       "source_sha256": "61151560d9172350dc871b6933c46d6989b065292ca27bdaf7b94c7311115cfd",
@@ -318,6 +367,20 @@
       "source_commit": "0dc6c0284b5990be443c9a791b440320ac2f1ddc",
       "source_sha256": "7d7bb191f67e28a4e8796310878163a6aa281eca8e46564d8566cc510392a224",
       "exported_sha256": "7d7bb191f67e28a4e8796310878163a6aa281eca8e46564d8566cc510392a224",
+      "modified": false
+    },
+    {
+      "path": "test_analyze_dream_recurrent_v3.py",
+      "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
+      "source_sha256": "71db67d31e604cac963bcf95be4ca4e4c6fb04756ceddb651fdccbf7f5d81b7a",
+      "exported_sha256": "71db67d31e604cac963bcf95be4ca4e4c6fb04756ceddb651fdccbf7f5d81b7a",
+      "modified": false
+    },
+    {
+      "path": "test_dream_readout_v3.py",
+      "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
+      "source_sha256": "f2ca654531c21a8b372debce619a57b7369dbea5fa689898dcbe2c2d51ddc385",
+      "exported_sha256": "f2ca654531c21a8b372debce619a57b7369dbea5fa689898dcbe2c2d51ddc385",
       "modified": false
     },
     {

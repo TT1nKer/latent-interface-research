@@ -113,11 +113,30 @@ Source inspection identifies a concrete difference to test: the trace takes the
 designated agent's answer from a joint two-agent forward, while the author uses a
 separate receiver-only terminal forward. Native output also has a full-model
 versus decoder path difference; final-only projects receiver messages separately.
-A submitted diagnostic reuses the saved messages and all original 1,000-question
-batches, compares these readout paths, checks exact joint replay, and compares one
-cached-message endpoint with a fresh author evaluation. Its single-L4 allocation
-is capped at 20 minutes. This is failure localization, not a relaxed validity
-gate, a repaired result, or evidence for the mechanism hypothesis.
+The diagnostic completed in 13 minutes 49 seconds. Joint replay exactly repeats
+the saved hidden states, labels and logits; receiver-only matched1 readout matches
+a fresh author evaluation on all 1,000 questions. Switching from joint to
+receiver-only readout changes 2 matched1, 4 matched4, 1 self1, 0 self4, 2 final-only
+and 12 native labels. Native receiver-only full-model and decoder logits are
+identical, as are the two tested final-only projection paths. This supports a
+terminal readout correction; it does not establish the cause of the H100 reference
+differences. See `results/dream_readout_diagnostic_v1.summary.json`.
+
+The v3 correction is registered before corrected scientific analysis in
+`remote/dream_readout_amendment_v3.json`. It reuses every saved recurrence message,
+separately measures both agents at every depth using the author terminal readout,
+and repeats the four common-input receiver measurements. The original primary
+weights, shape criterion, six depths, all-question inclusion and all six
+independent author checks remain fixed. Old failed receipts remain failed.
+The measured conservative full-run projection is 6,720 seconds within the
+single-L4 two-hour cap; actual corrected full-cohort validity remains untested.
+
+Only after full validity passes will `analyze_dream_recurrent_v3.py` apply the
+original primary test. A negative result stops the parity branch. A positive
+result remains provisional pending the fixed 192-question numerical probe.
+That probe recomputes recurrence under the changed flag and uses the corrected
+readouts; it cannot reuse baseline messages as the intervention. No corrected
+mechanism result or numerical robustness result is claimed yet.
 
 Each job uses one L4 and32GiB host RAM. The new validity and sensitivity jobs
 are capped at20minutes each; the full experiment is capped at2hours and must

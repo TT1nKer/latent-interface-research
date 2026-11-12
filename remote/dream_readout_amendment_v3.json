@@ -1,0 +1,71 @@
+{
+  "amendment_id": "terminal-readout-correction-v3-20261112",
+  "recorded_at_utc": "2026-11-12T06:57:46.308612+00:00",
+  "policy": "within_environment_v3_corrected_readout",
+  "authorization": "Existing autonomous research authorization and explicit bounded repair after concrete new failure evidence; not a relaxation of independent author equality.",
+  "observed_before_correction": [
+    "Failed full1000 v2 implementation checks and stored trajectories",
+    "Full1000 terminal-readout diagnostic12454532"
+  ],
+  "primary_statistics_inspected_before_correction": false,
+  "base_protocol_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
+  "base_driver_v2_sha256": "fa01a86f649cd098a70c7454b397809e6ce3ae7850f3594a77b5ce5bbc0ea6e9",
+  "base_amendment_v2_sha256": "926396e3f8521568e4bba980924bacf543f011146d7c62ab03e5c12a2778cf4f",
+  "legacy_full_summary_sha256": "1ef32e9d36269dafdbbdf1a800fd088cb6a0a589300090e4cfef8dc3252f0be3",
+  "diagnostic_summary_sha256": "521423eeae228c0be1ea623f9866f48962e70d7f687c8367edcde66e7ba99cc3",
+  "diagnostic_code_sha256": "8e6955f55d89b9dcaf063d9d94b83c039b85cacdef46a170a374b1cf95616404",
+  "change": "Replace terminal answer measurements from joint-agent forward outputs with separate receiver-only author readouts for each agent/depth; native uses full-model path. Reuse unchanged cached recurrence states. Both common-input sources use explicit same-receiver readouts. Keep message and message-classifier measurements from the recurrence unchanged.",
+  "unchanged": [
+    "Original primary parity weights, six depths and repeated-even-peak shape gate",
+    "All1000 original questions, order, labels, tokenizer/config/model/channel",
+    "Frozen recurrence dynamics and message encoding/aggregation",
+    "Independent six author prediction comparisons and four applicable message-hash comparisons on all1000",
+    "Public-reference mismatch reporting separate from within-environment validity",
+    "Fixed192 numerical probe with original blocks and BF16 reduction-only change"
+  ],
+  "implementation_requirements": [
+    "Cached states retain original provenance and exact original example ordering; do not overwrite v2 evidence",
+    "All new terminal label predictions equal argmax of captured label logits",
+    "Both agents use separate receiver-only batches; changing which agent is read out never changes recurrence",
+    "Full1000 new author calls must match six prediction cases and four message hashes; save per-item independent author labels",
+    "No statistical analysis on failed corrected validity",
+    "Probe recomputes recurrence under changed flag; it must not reuse baseline messages for the intervention"
+  ],
+  "budgets": {
+    "full_wall_seconds": 7200,
+    "sensitivity_wall_seconds": 1200,
+    "gpus_per_job": 1,
+    "gpu": "L4",
+    "cpus_per_job": 2,
+    "ram_gib_per_job": 32,
+    "full_projection_rule": "1.5*(legacy setup + legacy elapsed minus setup minus sum(forwards) +30*1.2*max(last2 receiver forwards))+180; 30=26 agent/depth readouts plus4 common-input readouts. Diagnostic reserve must be<22GiB.",
+    "probe_projection_rule": "1.3*(corrected setup +192/1000*(legacy first13 forwards +corrected terminal forwards +corrected common-input forwards))+120; must be<=1200 seconds. Primary-negative branch need not spend further GPU on the probe."
+  },
+  "sensitivity": {
+    "block_starts": [
+      0,
+      576,
+      704
+    ],
+    "block_size": 64,
+    "examples": 192,
+    "selection": "First original64-question block plus the two previously discrepant original blocks; chosen before full results, partly failure-targeted, not independent confirmation.",
+    "setting": "torch.backends.cuda.matmul.allow_bf16_reduced_precision_reduction",
+    "baseline_value": true,
+    "perturbation_value": false,
+    "other_numerical_flags_unchanged": true,
+    "interpretation": "Tests only this allowed-kernel setting. Equal outputs may mean the backend did not use reduced reductions. It neither establishes full-FP32 robustness nor identifies the H100 difference cause.",
+    "source": "https://docs.pytorch.org/docs/2.12/notes/numerical_accuracy.html"
+  },
+  "robustness_analysis": {
+    "primary": "All1000, no exclusions, original contrast/shape rules unchanged.",
+    "reference_sensitivity": "Report all reference mismatches; secondary recomputation excluding union of discrepant items, plus worst-case mean interval allowing their primary scores anywhere in[-1,1]. Exclusion is outcome-dependent and cannot replace primary analysis.",
+    "numerical_probe": "Compare matched question IDs and exact token rows against full baseline; report every depth label-change rate, paired primary-score changes and descriptive curve/shape changes. A sign or required-shape reversal on the same probe prevents a robustness claim. Do not extrapolate192 to all1000.",
+    "decision": "Full pattern must meet original positive CI and repeated even peaks. Negative main result terminates parity-specific branch without tuning depths. Positive main result remains provisional until sensitivity checks complete; no paper-level causal or scaling claim."
+  },
+  "limitations": [
+    "A validated implementation correction is not a new scientific result.",
+    "Batch/layout readout differences do not establish the cause of cross-hardware public-reference mismatches.",
+    "Preserve both failed v1/v2 histories; never relabel their validity flags."
+  ]
+}
