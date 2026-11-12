@@ -11,7 +11,7 @@ from pathlib import Path
 import subprocess
 import time
 
-from dream_label_confidence_plan_v1 import ARMS, build_plan, digest, resource_projection
+from dream_label_confidence_plan_v1 import ARMS, build_plan, digest, resource_projection, quality_equal
 from dream_trace_gate_v2 import implementation_checks_pass
 
 
@@ -46,6 +46,7 @@ def main():
     ids = [row['example_id'] for row in old_rows]
     plan = build_plan(ids, [r['native']['message_logits'] for r in old_rows])
     assert digest(plan) == protocol['donor_plan_sha256']
+    assert quality_equal([r['matching_quality'] for r in plan['receivers']], protocol['matching_quality'])
     base = Path('vendor/hidden_messages_f85b6d8')
     revision = subprocess.check_output(['git', '-C', str(base), 'rev-parse', 'HEAD'], text=True).strip()
     assert revision == baseline['revision']

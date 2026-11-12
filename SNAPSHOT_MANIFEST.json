@@ -1,5 +1,5 @@
 {
-  "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
+  "source_commit": "2f8a2e9602f8fa60a9089e434f73a99bad791cea",
   "scope": "Current C2C pilot and Dream recurrence implementation; not the complete historical research archive.",
   "excluded": [
     "conversation archives",
@@ -161,23 +161,23 @@
     },
     {
       "path": "remote/dream_label_confidence_plan_v1.py",
-      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
-      "source_sha256": "e57360729b5fc25cc2679e28df895853696536dfa0407e14f66e15b28a9fddb9",
-      "exported_sha256": "e57360729b5fc25cc2679e28df895853696536dfa0407e14f66e15b28a9fddb9",
+      "source_commit": "2f8a2e9602f8fa60a9089e434f73a99bad791cea",
+      "source_sha256": "401f0795a82e91fad640554917f8e70c5d71ae4566933b8bee47ae3b76483842",
+      "exported_sha256": "401f0795a82e91fad640554917f8e70c5d71ae4566933b8bee47ae3b76483842",
       "modified": false
     },
     {
       "path": "remote/dream_label_confidence_protocol_v1.json",
-      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
-      "source_sha256": "d59850ff9fe56653c5f3899dcbe7fda5d1573b9d4ee6c657e2d0305f9e02a8b3",
-      "exported_sha256": "d59850ff9fe56653c5f3899dcbe7fda5d1573b9d4ee6c657e2d0305f9e02a8b3",
+      "source_commit": "2f8a2e9602f8fa60a9089e434f73a99bad791cea",
+      "source_sha256": "780f714dbf78dbe96d0d880ce15dedb9a78472fb4d2dd8e05f8fb844ba4f82c9",
+      "exported_sha256": "780f714dbf78dbe96d0d880ce15dedb9a78472fb4d2dd8e05f8fb844ba4f82c9",
       "modified": false
     },
     {
       "path": "remote/dream_label_confidence_v1.py",
-      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
-      "source_sha256": "11109fdb733ea0533142c6c2db8f74674c5b103a6ab8a806f8fccd154f8af3e2",
-      "exported_sha256": "11109fdb733ea0533142c6c2db8f74674c5b103a6ab8a806f8fccd154f8af3e2",
+      "source_commit": "2f8a2e9602f8fa60a9089e434f73a99bad791cea",
+      "source_sha256": "4722f224835c2e83d13ac8bff581b0c23dc60c9cb5b0c4b1f25b4678006cfb57",
+      "exported_sha256": "4722f224835c2e83d13ac8bff581b0c23dc60c9cb5b0c4b1f25b4678006cfb57",
       "modified": false
     },
     {
@@ -395,6 +395,13 @@
       "modified": false
     },
     {
+      "path": "results/dream_label_confidence_v1.failure.json",
+      "source_commit": "2f8a2e9602f8fa60a9089e434f73a99bad791cea",
+      "source_sha256": "44714cad2f2347f1c1106c9cdfc1317a450c9946adf7f96eb0d07bf1854ee38e",
+      "exported_sha256": "44714cad2f2347f1c1106c9cdfc1317a450c9946adf7f96eb0d07bf1854ee38e",
+      "modified": false
+    },
+    {
       "path": "results/dream_label_tracking_v1.json",
       "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
       "source_sha256": "be68deecbed8cc330facee4edda33a2a351302394b7a801a372fcbd38f7b7527",
@@ -532,9 +539,9 @@
     },
     {
       "path": "test_dream_label_confidence_v1.py",
-      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
-      "source_sha256": "0f5e9d8fc8a972a52fcb7d8ec5f7e255e468d40d833d0f1cc8683cce9dc4335a",
-      "exported_sha256": "0f5e9d8fc8a972a52fcb7d8ec5f7e255e468d40d833d0f1cc8683cce9dc4335a",
+      "source_commit": "2f8a2e9602f8fa60a9089e434f73a99bad791cea",
+      "source_sha256": "3c27475c138b1bcf0cd1e7df83c54ee7fa8f464ea49bf0f94300b82d3ba21f44",
+      "exported_sha256": "3c27475c138b1bcf0cd1e7df83c54ee7fa8f464ea49bf0f94300b82d3ba21f44",
       "modified": false
     },
     {
@@ -564,6 +571,6 @@
       "modified": false
     }
   ],
-  "latest_update_source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
-  "latest_update": "2026-11-12 full class-conditioned intervention completed; fixed class-only rule fails. Uncertainty-matched follow-up registered before new outputs."
+  "latest_update_source_commit": "2f8a2e9602f8fa60a9089e434f73a99bad791cea",
+  "latest_update": "2026-11-12 preserve failed confidence-plan hash gate; exact donor choices unchanged, floating diagnostics checked separately before one evidenced repair."
 }

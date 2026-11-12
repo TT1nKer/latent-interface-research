@@ -2,12 +2,27 @@
 import math
 
 if __package__:
-    from .dream_label_plan_v1 import build_plan as random_plan, digest
+    from .dream_label_plan_v1 import build_plan as random_plan, digest as full_digest
 else:
-    from dream_label_plan_v1 import build_plan as random_plan, digest
+    from dream_label_plan_v1 import build_plan as random_plan, digest as full_digest
 
 
 ARMS = ('matched', 'margin_matched', 'posterior_matched')
+
+
+def digest(plan):
+    # Hash actual interventions exactly, separately from floating diagnostics.
+    value={k:v for k,v in plan.items() if k!='receivers'}
+    value['receivers']=[{k:v for k,v in r.items() if k!='matching_quality'} for r in plan['receivers']]
+    return full_digest(value)
+
+
+def quality_equal(actual, expected):
+    if isinstance(expected,dict):
+        return set(actual)==set(expected) and all(quality_equal(actual[k],v) for k,v in expected.items())
+    if isinstance(expected,list):
+        return len(actual)==len(expected) and all(quality_equal(a,b) for a,b in zip(actual,expected))
+    return math.isclose(actual,expected,rel_tol=1e-12,abs_tol=1e-12)
 
 
 def softmax(values):

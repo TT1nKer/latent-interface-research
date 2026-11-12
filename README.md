@@ -137,6 +137,23 @@ full donor packets remain intact: success would not demonstrate a scalar or
 8-score codec. No follow-up model result has yet been observed. The resource cap
 is one L4 for 15 minutes. Five new CPU measurement/plan tests pass.
 
+The first follow-up job stopped before model loading because its plan hash also
+included floating diagnostic aggregates. Python 3.14.8 locally and Python 3.11.4
+on the cluster produced identical donor indices/classes but diagnostic differences
+up to 3.9e-16. The [recorded repair](results/dream_label_confidence_v1.failure.json)
+binds every actual assignment exactly and checks floating diagnostics separately
+within 1e-12. It changes neither donors nor scientific criteria. The original
+failed protocol remains in Git history; the amended protocol is published before
+any follow-up model outputs.
+
+The broader ideas are established: [distillation](https://arxiv.org/abs/1503.02531v1)
+uses information in soft class targets, [TalkMesh](https://arxiv.org/abs/2609.30578v1)
+uses confidence to guide agent communication, and
+[MASCAL](https://arxiv.org/abs/2610.39927v1) intervenes on explicit confidence
+handoffs. Our potential contribution would need a specific, independently verified
+account of this implicit latent channel and its recurrent behavior; generic
+uncertainty communication is not new.
+
 ### Earlier stages and preserved failures
 
 The initial C2C experiment asks whether an earlier answer encoding continues to

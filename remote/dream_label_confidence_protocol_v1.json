@@ -43,10 +43,10 @@
   "question": "Does preserving the native classifier uncertainty or eight-score distribution reduce changes caused by same-class cross-question packet substitutions?",
   "status_at_registration": "Follow-up after the class-only development intervention failed its fixed rule and exploratory margin strata were inspected; no confidence-matched model outputs observed.",
   "prior_analysis_sha256": "779959d287fef9b04ae888eebad365893963a51305fa47d3727cf7adee324be2",
-  "donor_plan_sha256": "36d88089c504aaeb6cb0284f9c6ed18f7c0a3d454f7ff9ab48d71d01828bed0a",
+  "donor_plan_sha256": "8897cf20821fe30b3f5a16e1873520c0b7c79be366e808ee9247916dba68b5d3",
   "implementation_sha256": {
-    "dream_label_confidence_v1.py": "11109fdb733ea0533142c6c2db8f74674c5b103a6ab8a806f8fccd154f8af3e2",
-    "dream_label_confidence_plan_v1.py": "e57360729b5fc25cc2679e28df895853696536dfa0407e14f66e15b28a9fddb9",
+    "dream_label_confidence_v1.py": "4722f224835c2e83d13ac8bff581b0c23dc60c9cb5b0c4b1f25b4678006cfb57",
+    "dream_label_confidence_plan_v1.py": "401f0795a82e91fad640554917f8e70c5d71ae4566933b8bee47ae3b76483842",
     "dream_label_plan_v1.py": "7b92164d74dbe4da3e1ad5b6d0b7373c34009efeb196f05b9cad5556a9651fba",
     "dream_trace_gate_v2.py": "e160de43e4a435121da608ad795dda157f773dea2e71833f105eaef1e70c4567"
   },
@@ -220,5 +220,15 @@
     "Matched donors may share other properties; no isolated semantic mechanism or independent confirmation.",
     "Conditional bootstrap excludes donor-plan dependence/uncertainty. No population equivalence claim.",
     "Official validation926 remains untouched; no new training, paid procurement, local models or scheduler."
-  ]
+  ],
+  "plan_hash_amendment": {
+    "date": "2026-11-12",
+    "before_model_intervention_outputs": true,
+    "failed_job": "12457733",
+    "old_protocol_sha256": "d59850ff9fe56653c5f3899dcbe7fda5d1573b9d4ee6c657e2d0305f9e02a8b3",
+    "old_full_plan_digest": "36d88089c504aaeb6cb0284f9c6ed18f7c0a3d454f7ff9ab48d71d01828bed0a",
+    "new_scope": "All IDs, class labels/counts, donor indices and version exactly bound; only floating matching_quality excluded from this digest, compared separately at abs/rel tolerance1e-12.",
+    "evidence": "All assignments identical between localPython3.14.8 and cluster systemPython3.11.4; maximum diagnostic difference3.8858e-16. Actual container still must pass exact assignment hash before loading model.",
+    "scientific_arms_and_criteria_unchanged": true
+  }
 }

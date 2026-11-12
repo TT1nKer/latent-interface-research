@@ -1,4 +1,5 @@
 import unittest
+import copy
 from remote.dream_label_confidence_plan_v1 import pair_plan, softmax, distance, build_plan, digest, ARMS
 from analyze_dream_label_confidence_v1 import analyze
 
@@ -27,6 +28,11 @@ class ConfidencePlanTests(unittest.TestCase):
         a=build_plan(ids,logits);b=build_plan(ids,[x[::-1] for x in logits])
         self.assertEqual(a['receivers'][0]['donors'],b['receivers'][1]['donors'])
         self.assertEqual(digest(a),digest(build_plan(ids,logits)))
+        other=copy.deepcopy(a)
+        other['receivers'][0]['matching_quality']['posterior_matched']['posterior']['mean']+=1e-16
+        self.assertEqual(digest(a),digest(other))
+        other['receivers'][0]['donors']['posterior_matched'][0]=0
+        self.assertNotEqual(digest(a),digest(other))
 
     def test_fixed_candidate_rule_requires_both_receivers(self):
         rows=[]
