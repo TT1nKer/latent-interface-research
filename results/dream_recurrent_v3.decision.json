@@ -1,0 +1,66 @@
+{
+  "recorded_at_utc": "2026-11-12T13:13:09.491868+00:00",
+  "branch": "QASC frozen recurrence, corrected terminal readouts",
+  "status": "bounded_experiment_complete_candidate_retained_for_independent_confirmation",
+  "decision": "within_environment_candidate_survives_planned_diagnostics_needs_independent_confirmation",
+  "full_examples": 1000,
+  "primary_effect": 0.15225,
+  "primary_descriptive_ci95": [
+    0.130875,
+    0.17341666666666666
+  ],
+  "primary_shape_passed": true,
+  "primary_all1000_unchanged_after_probe": true,
+  "probe": {
+    "examples": 192,
+    "completed_job": "12455591",
+    "only_planned_setting_change": "BF16 reduced precision reduction true to false",
+    "recurrence_recomputed": true,
+    "changed_prediction_slots": 39,
+    "compared_prediction_slots": 4992,
+    "unique_examples_with_any_label_change": 19,
+    "baseline_primary": 0.2016059027777778,
+    "perturbed_primary": 0.2126736111111111,
+    "paired_change": 0.011067708333333334,
+    "paired_descriptive_ci95": [
+      -0.007161458333333331,
+      0.032552083333333336
+    ],
+    "direction_changes": {
+      "linear_depth_adjusted_parity": false,
+      "agreement_change_2_to_3": false,
+      "agreement_change_4_to_5": false
+    },
+    "repeated_even_peaks_before": true,
+    "repeated_even_peaks_after": true,
+    "positive_primary_ci_before_and_after": true,
+    "max_abs_terminal_label_logit_change": 4.953125,
+    "max_abs_message_classifier_logit_change": 10.36181640625
+  },
+  "interpretation": "Individual predictions and scores are numerically sensitive, while the predefined aggregate parity pattern survives this one setting change on the fixed192 subset. The paired-change interval includes zero; do not claim a significant increase. Retain as development candidate, not a proven recurrent mechanism.",
+  "limitations": [
+    "One checkpoint and previously inspected development data; no held-out confirmation.",
+    "192 questions were preselected and partly failure-targeted; one flag cannot establish full1000, FP32 or cross-hardware robustness.",
+    "Released-reference disagreement persists; same-runtime author equality is separate from exact release replication.",
+    "Literal-context secondary associations are not semantic-sufficiency or causal intervention evidence.",
+    "No new novelty or paper-level contribution established by this bounded experiment."
+  ],
+  "future_discriminating_work_not_launched": [
+    "Confirm the fixed pattern on independent, uninspected examples without tuning depths.",
+    "Use a separately specified message/context intervention that distinguishes returned answer content from mere aggregate answer resemblance."
+  ],
+  "stop_action": "qasc heartbeat deleted after bounded judgment; no new GPU jobs, depth search or training launched. Overall paper goal remains incomplete.",
+  "overall_paper_goal_complete": false,
+  "evidence": [
+    "results/dream_readout_full_v3.summary.json",
+    "results/dream_recurrent_v3.baseline.summary.json",
+    "results/dream_readout_sensitivity_v3.summary.json",
+    "results/dream_recurrent_v3.final.summary.json"
+  ],
+  "raw_evidence_sha256": {
+    "baseline_summary": "9f43bb1d8ddfb0ec580fdca690bdee8ae0f81e76406446dce99d938b7f8cb9e5",
+    "probe_summary": "1fdb5da9d2524c97750b7c34b93e3facd0e92cc911fba9fe71eff2049defef27",
+    "probe_per_item": "c69d1e97bcfb4086fe5f8d04155ce2f027ef95e9ca0f3dfc0c91605ca23acda0",
+    "final_analysis": "2e8b646b387c47be2965cd005617170729404cb911483b805a2c639cb9a34785"
+  }
+}

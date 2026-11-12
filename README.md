@@ -36,10 +36,27 @@ In the planned secondary literal-context analysis, the aggregate accuracy advant
 the two agents alternates across cross-exchange depths on the 701 questions where
 the gold option text appears on only one side. The self control does not show
 that alternating sign. Literal presence is a proxy, not semantic sufficiency;
-no context-swap intervention was performed. The fixed 192-question numerical
-sensitivity run has been submitted and is pending. See
-[full-run validation](results/dream_readout_full_v3.summary.json) and
-[baseline analysis](results/dream_recurrent_v3.baseline.summary.json).
+no context-swap intervention was performed.
+
+The fixed 192-question numerical sensitivity run has now completed. Disabling
+BF16 reduced-precision reduction changed 39 of 4,992 recorded agent/route/depth
+predictions, affecting 19 distinct questions, while retaining the three-peak
+shape and the primary direction. On this same subset, the primary contrast was
+0.201606 before and 0.212674 after the setting change; the paired change was
+0.011068, with descriptive 95% interval [-0.007161, 0.032552]. This interval includes
+zero; no significant increase is claimed. Predictions and scores are numerically
+sensitive, but this particular perturbation does not eliminate the aggregate
+candidate pattern. The 192 questions are partly failure-targeted and cannot
+establish full-dataset, FP32, or cross-hardware robustness.
+
+This bounded experiment is complete. No further depth search or training has
+been launched. A paper-level conclusion still needs independent uninspected
+examples, a discriminating mechanism intervention, and a novelty assessment.
+See [full-run validation](results/dream_readout_full_v3.summary.json),
+[final paired analysis](results/dream_recurrent_v3.final.summary.json), and
+[scoped decision](results/dream_recurrent_v3.decision.json).
+The earlier [baseline analysis](results/dream_recurrent_v3.baseline.summary.json)
+is preserved unchanged.
 
 ### Earlier stages and preserved failures
 
@@ -176,10 +193,42 @@ allowing these 38 scores to take arbitrary values in [-1,1] yields a mean range
 confidence interval or a bound on other numerical errors, nor does exclusion
 replace the primary analysis.
 
-The fixed 192-question numerical probe is now submitted. Its empirical budget
-projection is 1,003.55 seconds within the 20-minute cap. It recomputes recurrence
-under the changed flag and uses the corrected readouts; it cannot reuse baseline
-messages as the intervention. No numerical robustness result is claimed yet.
+The fixed 192-question numerical probe completed in 12 minutes 44 seconds,
+within the 20-minute cap. It recomputed recurrence under the changed flag and
+used the corrected readouts, with identical selected question IDs and token
+rows. Code, model, data, configuration and runtime fingerprints match the
+validated baseline; only the planned numerical flag changes. Its validity flag
+is intentionally null: this is a setting-sensitivity comparison, not a new
+independent-author validity receipt. See
+[probe receipt](results/dream_readout_sensitivity_v3.summary.json).
+
+The following changes compare the disabled-flag probe to the corresponding
+192 baseline questions. Counts are shown separately for each agent; each maximum
+absolute logit difference is over both agents, all 192 questions and answer
+classes for that route/depth. These are unnormalized scores, not probabilities.
+
+| Route | Round | Changed labels, agent 0 | Changed labels, agent 1 | Max answer-logit change | Max message-classifier-logit change |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| native | 0 | 2 | 0 | 0.4531 | 0.5625 |
+| cross | 1 | 0 | 4 | 0.9531 | 2.5938 |
+| cross | 2 | 2 | 2 | 2.9219 | 10.3618 |
+| cross | 3 | 3 | 4 | 4.4844 | 9.6471 |
+| cross | 4 | 4 | 3 | 4.1406 | 9.7812 |
+| cross | 5 | 3 | 2 | 4.9531 | 9.6279 |
+| cross | 6 | 3 | 2 | 4.3594 | 10.0703 |
+| self | 1 | 1 | 0 | 0.9219 | 1.1250 |
+| self | 2 | 1 | 0 | 0.7500 | 1.6328 |
+| self | 3 | 1 | 0 | 0.6250 | 4.3184 |
+| self | 4 | 0 | 1 | 1.6250 | 4.5194 |
+| self | 5 | 1 | 0 | 2.8672 | 4.5000 |
+| self | 6 | 0 | 0 | 1.1875 | 2.6992 |
+
+All observations within one question are correlated; 4,992 is a count of recorded
+predictions, not independent trials. Both the subset baseline and perturbation
+retain all three required even-round peaks and positive descriptive intervals
+for the primary contrast. The complete per-agent score changes, direction checks
+and paired estimates are in the final aggregate analysis. This does not resolve
+the released-reference discrepancy or prove a causal explanation for the pattern.
 
 Each GPU job uses one L4 and 32 GiB host RAM. Sensitivity jobs are capped at
 20 minutes and full experiments at two hours, with empirical resource gates.

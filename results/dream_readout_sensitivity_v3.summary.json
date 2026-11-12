@@ -1,0 +1,239 @@
+{
+  "job_id": "12455591",
+  "stage": "sensitivity",
+  "revision": "f85b6d8563a2236117407e0df9c6cd60ea406dac",
+  "code_sha256": "762ea84914366d0ef91adc1f120da0efc9267566c7b572d0042fc933db9d5342",
+  "protocol_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
+  "data_sha256": "a88c888c082611fe5ecdfd62563026357068b2e23dfb0914bd31012ea230e20a",
+  "checkpoint_sha256": "83397168be971c5de6edb51e8d57ddeee87781cae13e77ba55bfb69df3b5f66d",
+  "completed": true,
+  "gpu": "NVIDIA L4",
+  "torch": "2.12.0+cu130",
+  "cuda": "13.0",
+  "execution_policy": "within_environment_v3_corrected_readout",
+  "amendment_sha256": "b215f407e94a0d8f0a623b94a682949e02658e7a4ce18cdb9299f7991dda921c",
+  "gate_sha256": "091d575277ba9aeb6cdd3a746b66763496fab4af1861ed7891b0b48d89a3994b",
+  "config_sha256": "756aba88e5ae1b09ba80a60aef1ac0f754359925b9424696bc2d4b6a2a73e56d",
+  "reference_sha256": "ca8c48bd4a7d8ae6d56f5fd1173a9a367c9c9f263d4e9f10fb68907858889f03",
+  "numerical_flags": {
+    "bf16_reduced_precision_reduction": false,
+    "float32_matmul_precision": "highest",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "original_numerical_flags": {
+    "bf16_reduced_precision_reduction": true,
+    "float32_matmul_precision": "highest",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "reference_replication_required_for_execution": false,
+  "legacy_full_summary_sha256": "1ef32e9d36269dafdbbdf1a800fd088cb6a0a589300090e4cfef8dc3252f0be3",
+  "diagnostic_summary_sha256": "521423eeae228c0be1ea623f9866f48962e70d7f687c8367edcde66e7ba99cc3",
+  "terminal_readout": "Separate receiver-only author readout for each agent; native full-model path",
+  "recurrence_reused": false,
+  "state_file_sha256": {},
+  "projected_full_seconds_with_margin": 6719.994564626366,
+  "projected_probe_seconds_with_margin": 1003.548461721398,
+  "prior_validity_receipt_sha256": "9f43bb1d8ddfb0ec580fdca690bdee8ae0f81e76406446dce99d938b7f8cb9e5",
+  "numerical_validity_scope": "Numerical-setting probe; corrected baseline separately verified on all1000",
+  "example_ids_sha256": "b6746678664ac235b61d0ed32898f9ae051700c925fec8016c04ce56c5ba761c",
+  "model_weight_manifest_sha256": "d97cfa4b2e3a247447039efb60b29e626d7199cc036a1a53d62184a2ef08a2ab",
+  "decoder_parity": {
+    "hidden_bfloat16_exact": true,
+    "constrained_prediction_exact": true,
+    "max_hidden_abs_difference": 0.0
+  },
+  "recurrence_seconds": 314.55452803708613,
+  "terminal_label_changes_from_joint": [
+    {
+      "route": "native",
+      "depth": 0,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    },
+    {
+      "route": "cross",
+      "depth": 1,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    },
+    {
+      "route": "cross",
+      "depth": 2,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    },
+    {
+      "route": "cross",
+      "depth": 3,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    },
+    {
+      "route": "cross",
+      "depth": 4,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    },
+    {
+      "route": "cross",
+      "depth": 5,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    },
+    {
+      "route": "cross",
+      "depth": 6,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    },
+    {
+      "route": "self",
+      "depth": 1,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    },
+    {
+      "route": "self",
+      "depth": 2,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    },
+    {
+      "route": "self",
+      "depth": 3,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    },
+    {
+      "route": "self",
+      "depth": 4,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    },
+    {
+      "route": "self",
+      "depth": 5,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    },
+    {
+      "route": "self",
+      "depth": 6,
+      "changed_by_agent": [
+        0,
+        0
+      ]
+    }
+  ],
+  "reference_agreement": {
+    "final_only": {
+      "equal": 191,
+      "total": 192,
+      "mismatch_count": 1
+    },
+    "matched": {
+      "equal": 190,
+      "total": 192,
+      "mismatch_count": 2
+    },
+    "self": {
+      "equal": 191,
+      "total": 192,
+      "mismatch_count": 1
+    },
+    "no_message": {
+      "equal": 188,
+      "total": 192,
+      "mismatch_count": 4
+    }
+  },
+  "examples": 192,
+  "setup_seconds": 31.908718897029757,
+  "elapsed_seconds": 692.5875098388642,
+  "forward_seconds": [
+    23.188561527058482,
+    23.914017090573907,
+    24.116868250072002,
+    24.296504456549883,
+    24.394289104267955,
+    24.435075748711824,
+    24.4136901833117,
+    24.343706322833896,
+    24.287017630413175,
+    24.220964640378952,
+    24.19740780442953,
+    24.19415893778205,
+    24.175884513184428,
+    11.633726458996534,
+    11.594546297565103,
+    11.621416760608554,
+    11.609755974262953
+  ],
+  "terminal_seconds": [
+    12.050662545487285,
+    11.671839958056808,
+    11.67138427682221,
+    11.373438909649849,
+    11.678068567067385,
+    11.37138775549829,
+    11.65171217545867,
+    11.34442800283432,
+    11.661388469859958,
+    11.374436866492033,
+    11.610996631905437,
+    11.352090936154127,
+    11.614457642659545,
+    11.349798476323485,
+    11.64167739637196,
+    11.345454627647996,
+    11.615421703085303,
+    11.350933082401752,
+    11.613928519189358,
+    11.332399187609553,
+    11.602595262229443,
+    11.329274948686361,
+    11.614791551604867,
+    11.33143300190568,
+    11.62043914012611,
+    11.342128647491336
+  ],
+  "torch_peak_allocated_bytes": 15860701696,
+  "torch_peak_reserved_bytes": 21741174784,
+  "numerical_validity_passed": null,
+  "public_reference_all_equal": false,
+  "raw_summary_sha256": "1fdb5da9d2524c97750b7c34b93e3facd0e92cc911fba9fe71eff2049defef27",
+  "scheduler": {
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:12:44",
+    "start_cluster_time": "2026-11-12T05:55:43",
+    "end_cluster_time": "2026-11-12T06:08:27"
+  },
+  "scope": "Fixed192 numerical-setting probe; recurrence recomputed, original tokens/order retained. Not an independent author validity receipt or full-dataset robustness result."
+}
