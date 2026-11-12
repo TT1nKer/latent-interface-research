@@ -1,0 +1,224 @@
+{
+  "baseline_summary_sha256": "9f43bb1d8ddfb0ec580fdca690bdee8ae0f81e76406446dce99d938b7f8cb9e5",
+  "baseline_per_item_sha256": "a8a411cad532fdedd2b3cf01785b273928b7f8d725411df6779c22abe8e4fc85",
+  "baseline_token_rows_sha256": "8d4d538bb4b61eaf19036347a41c68a37ac3d69a9407b373693eda7c1b128ecd",
+  "native_state_sha256": "7733dd4fdd7ff39ea7cdb5e95c93d33c48c940463b3833598e9657539420301d",
+  "source_revision": "f85b6d8563a2236117407e0df9c6cd60ea406dac",
+  "model_weight_manifest_sha256": "d97cfa4b2e3a247447039efb60b29e626d7199cc036a1a53d62184a2ef08a2ab",
+  "data_sha256": "a88c888c082611fe5ecdfd62563026357068b2e23dfb0914bd31012ea230e20a",
+  "checkpoint_sha256": "83397168be971c5de6edb51e8d57ddeee87781cae13e77ba55bfb69df3b5f66d",
+  "config_sha256": "756aba88e5ae1b09ba80a60aef1ac0f754359925b9424696bc2d4b6a2a73e56d",
+  "numerical_flags": {
+    "bf16_reduced_precision_reduction": true,
+    "float32_matmul_precision": "highest",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "population": {
+    "questions": 1000,
+    "receivers": [
+      0,
+      1
+    ],
+    "depth": 1,
+    "original_order_and_batches": true,
+    "exclusions": [],
+    "new_training": false,
+    "new_recurrence": false,
+    "gold_used_for_intervention_selection": false
+  },
+  "validity": {
+    "replay": "Both original receiver-only paths must match1000/1000 labels and every recorded label logit before new arms. Small-cohort pass is not accepted.",
+    "fixed_environment": "Model/data/checkpoint/config/vendor/torch/CUDA/flags and input tokens must match the validated baseline.",
+    "public_reference_all_equal": false,
+    "author_reply_is_dependency": false
+  },
+  "execution_policy": {
+    "automatic_scheduler": "No scheduled polling or automatic expansion is part of this fixed experiment.",
+    "on_failure": "Save actual evidence; no unchanged retry, no threshold changes to manufacture success.",
+    "publication": "Original code and aggregate evidence only; no question texts, private per-item files, tokens or author code."
+  },
+  "version": "confidence_v1",
+  "registered_date": "2026-11-12",
+  "question": "Does preserving the native classifier uncertainty or eight-score distribution reduce changes caused by same-class cross-question packet substitutions?",
+  "status_at_registration": "Follow-up after the class-only development intervention failed its fixed rule and exploratory margin strata were inspected; no confidence-matched model outputs observed.",
+  "prior_analysis_sha256": "779959d287fef9b04ae888eebad365893963a51305fa47d3727cf7adee324be2",
+  "donor_plan_sha256": "36d88089c504aaeb6cb0284f9c6ed18f7c0a3d454f7ff9ab48d71d01828bed0a",
+  "implementation_sha256": {
+    "dream_label_confidence_v1.py": "11109fdb733ea0533142c6c2db8f74674c5b103a6ab8a806f8fccd154f8af3e2",
+    "dream_label_confidence_plan_v1.py": "e57360729b5fc25cc2679e28df895853696536dfa0407e14f66e15b28a9fddb9",
+    "dream_label_plan_v1.py": "7b92164d74dbe4da3e1ad5b6d0b7373c34009efeb196f05b9cad5556a9651fba",
+    "dream_trace_gate_v2.py": "e160de43e4a435121da608ad795dda157f773dea2e71833f105eaef1e70c4567"
+  },
+  "analysis_sha256": "fceb86afb6eb3bec694b238d4d34b62f4ff1fffa5f0223bee4979789e7b90712",
+  "arms": {
+    "matched": "Replay native other-agent packet, same private receiver context, author receiver-only terminal readout; exact predictions and all8 logits must match validated cross1 for both agents on all1000.",
+    "margin_matched": "Within each frozen predicted class, sort original top1-minus-top2 raw message-classifier logits, then swap adjacent pairs; the final3 in an odd-size class form a cycle. Deterministic ID tie-breaks, no fixed point and bijection.",
+    "posterior_matched": "Within each frozen predicted class, compute softmax at temperature1. Greedily take closest available pairs in Euclidean8-score distance; final2 or3 form a cycle. Deterministic ID tie-breaks. This is approximate matching, not an optimal assignment or calibrated probability."
+  },
+  "fixed_measurements": {
+    "primary": [
+      "changed_label_rate",
+      "accuracy_change_from_matched"
+    ],
+    "reference": "The mean changed-label rate of the two already fixed random within-class plans on the same1000 questions, separately by receiver: .055 and .077.",
+    "candidate_rule": "For an arm, both receivers must reduce changed predictions by at least50% relative to that prior random-plan mean, and each absolute accuracy change versus matched must be<=.02. No pooling directions to rescue failure.",
+    "secondary": [
+      "incoming_class_follow_rate",
+      "max_abs_label_logit_change",
+      "descriptive paired question-bootstrap95CI"
+    ],
+    "resamples": 2000,
+    "seed_base": 20261112
+  },
+  "matching_quality": [
+    {
+      "matched": {
+        "margin": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "posterior": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "within_class_0": {
+        "margin": {
+          "mean": 2.9424454135894775,
+          "p95": 6.8046875,
+          "maximum": 9.21484375
+        },
+        "posterior": {
+          "mean": 0.2284623097788157,
+          "p95": 0.6742409915885609,
+          "maximum": 0.8671079654324314
+        }
+      },
+      "within_class_1": {
+        "margin": {
+          "mean": 3.0463651123046875,
+          "p95": 7.130859375,
+          "maximum": 8.970703125
+        },
+        "posterior": {
+          "mean": 0.23328949083586725,
+          "p95": 0.6740271048565893,
+          "maximum": 0.8573403538582155
+        }
+      },
+      "margin_matched": {
+        "margin": {
+          "mean": 0.07473647117614746,
+          "p95": 0.2265625,
+          "maximum": 0.62109375
+        },
+        "posterior": {
+          "mean": 0.09987418654215738,
+          "p95": 0.48846464780437376,
+          "maximum": 0.637880323867459
+        }
+      },
+      "posterior_matched": {
+        "margin": {
+          "mean": 0.30987388038635255,
+          "p95": 0.796875,
+          "maximum": 4.046875
+        },
+        "posterior": {
+          "mean": 0.057310630329174016,
+          "p95": 0.26891616909775784,
+          "maximum": 0.6322743605193015
+        }
+      }
+    },
+    {
+      "matched": {
+        "margin": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "posterior": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "within_class_0": {
+        "margin": {
+          "mean": 2.955651412963867,
+          "p95": 6.78515625,
+          "maximum": 9.7060546875
+        },
+        "posterior": {
+          "mean": 0.292227018829247,
+          "p95": 0.7370312719612381,
+          "maximum": 0.8803123016934385
+        }
+      },
+      "within_class_1": {
+        "margin": {
+          "mean": 3.10983381652832,
+          "p95": 6.9921875,
+          "maximum": 8.5390625
+        },
+        "posterior": {
+          "mean": 0.3072110136304595,
+          "p95": 0.7413594310448385,
+          "maximum": 0.891716059318642
+        }
+      },
+      "margin_matched": {
+        "margin": {
+          "mean": 0.0744386749267578,
+          "p95": 0.23828125,
+          "maximum": 0.93359375
+        },
+        "posterior": {
+          "mean": 0.1251224250525456,
+          "p95": 0.45970845247320236,
+          "maximum": 0.6086371779217604
+        }
+      },
+      "posterior_matched": {
+        "margin": {
+          "mean": 0.29583259582519533,
+          "p95": 0.828125,
+          "maximum": 4.171875
+        },
+        "posterior": {
+          "mean": 0.06984646762992645,
+          "p95": 0.26675874756582924,
+          "maximum": 0.6601314826374456
+        }
+      }
+    }
+  ],
+  "pre_execution_matching_gate": "For each receiver, margin matching mean margin distance<=.05 of prior random-plan mean;8-score matching mean Euclidean score distance<=.25 and p95<=.5 of corresponding prior random-plan mean. Verified before model execution.",
+  "resource": {
+    "gpu": "one L4",
+    "cpu": 2,
+    "ram_gib": 32,
+    "walltime_seconds": 900,
+    "projected_seconds_with_margin": 768.8264433173463,
+    "projection": "1.5*(validated setup+6*max terminal seconds)+180",
+    "after_two_replays_gate": "elapsed+1.5*4*max(two measured readout times)+60<=900; reserved<22GiB"
+  },
+  "decision_rule": {
+    "margin_pass": "Candidate scalar-uncertainty matching explanation, still no demonstrated scalar codec or semantic sufficiency.",
+    "margin_fail_scores_pass": "Candidate information beyond winning class and scalar margin in the8-score distribution; still no8-score codec demonstration.",
+    "both_fail": "This approximate matching does not meet the operational rule. Residual geometric or content effects, or imperfect matching, remain; no automatic training/depth extension."
+  },
+  "limitations": [
+    "Development follow-up; old class-only sufficiency failure remains unchanged.",
+    "Packets remain full continuous donor packets; successful matching does not establish a low-bit codec.",
+    "The score distribution may carry alternative-answer identity as well as uncertainty; it is not purely scalar confidence.",
+    "Approximate nearest donors can differ substantially in rare uncertain cases; failure cannot exclude all confidence-based explanations.",
+    "Matched donors may share other properties; no isolated semantic mechanism or independent confirmation.",
+    "Conditional bootstrap excludes donor-plan dependence/uncertainty. No population equivalence claim.",
+    "Official validation926 remains untouched; no new training, paid procurement, local models or scheduler."
+  ]
+}

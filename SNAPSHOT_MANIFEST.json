@@ -1,5 +1,5 @@
 {
-  "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
+  "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
   "scope": "Current C2C pilot and Dream recurrence implementation; not the complete historical research archive.",
   "excluded": [
     "conversation archives",
@@ -20,10 +20,24 @@
       "modified": false
     },
     {
+      "path": "analyze_dream_label_confidence_v1.py",
+      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
+      "source_sha256": "fceb86afb6eb3bec694b238d4d34b62f4ff1fffa5f0223bee4979789e7b90712",
+      "exported_sha256": "fceb86afb6eb3bec694b238d4d34b62f4ff1fffa5f0223bee4979789e7b90712",
+      "modified": false
+    },
+    {
       "path": "analyze_dream_label_tracking_v1.py",
       "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
       "source_sha256": "23487039b657501839cbcdb745b7434190d5d2e773eeaa0b3826d0d510411b78",
       "exported_sha256": "23487039b657501839cbcdb745b7434190d5d2e773eeaa0b3826d0d510411b78",
+      "modified": false
+    },
+    {
+      "path": "analyze_dream_label_uncertainty_v1.py",
+      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
+      "source_sha256": "eb1c9f9e399dbe50d41ebe741aff631cff1973cd6a86fdcaa167f242ab644bc0",
+      "exported_sha256": "eb1c9f9e399dbe50d41ebe741aff631cff1973cd6a86fdcaa167f242ab644bc0",
       "modified": false
     },
     {
@@ -143,6 +157,34 @@
       "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
       "source_sha256": "8902b850e19b5464db4b4f5c9eb0bba78355c3977332f2b11abe7fa62a954010",
       "exported_sha256": "4ad846e83722e08d1c158fc72b63ec829f420e02c95371e202061ae4a78af571",
+      "modified": true
+    },
+    {
+      "path": "remote/dream_label_confidence_plan_v1.py",
+      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
+      "source_sha256": "e57360729b5fc25cc2679e28df895853696536dfa0407e14f66e15b28a9fddb9",
+      "exported_sha256": "e57360729b5fc25cc2679e28df895853696536dfa0407e14f66e15b28a9fddb9",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_label_confidence_protocol_v1.json",
+      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
+      "source_sha256": "d59850ff9fe56653c5f3899dcbe7fda5d1573b9d4ee6c657e2d0305f9e02a8b3",
+      "exported_sha256": "d59850ff9fe56653c5f3899dcbe7fda5d1573b9d4ee6c657e2d0305f9e02a8b3",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_label_confidence_v1.py",
+      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
+      "source_sha256": "11109fdb733ea0533142c6c2db8f74674c5b103a6ab8a806f8fccd154f8af3e2",
+      "exported_sha256": "11109fdb733ea0533142c6c2db8f74674c5b103a6ab8a806f8fccd154f8af3e2",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_label_confidence_v1.sbatch",
+      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
+      "source_sha256": "0de0101048ef805da21cf28dd14935f29c494ff2e653efe31727b3cdaef9c3b2",
+      "exported_sha256": "45491a7278c71b9cacc317b2eed5245a638e71c0ff87f75cf2132078f39d50a9",
       "modified": true
     },
     {
@@ -339,10 +381,31 @@
       "modified": false
     },
     {
+      "path": "results/dream_label_ablation_v1.analysis.json",
+      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
+      "source_sha256": "779959d287fef9b04ae888eebad365893963a51305fa47d3727cf7adee324be2",
+      "exported_sha256": "779959d287fef9b04ae888eebad365893963a51305fa47d3727cf7adee324be2",
+      "modified": false
+    },
+    {
+      "path": "results/dream_label_ablation_v1.summary.json",
+      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
+      "source_sha256": "9d9e1f54d3fb227cc3ef388c16f61405aeb8b623411c2af3b42947fb87029a1b",
+      "exported_sha256": "9d9e1f54d3fb227cc3ef388c16f61405aeb8b623411c2af3b42947fb87029a1b",
+      "modified": false
+    },
+    {
       "path": "results/dream_label_tracking_v1.json",
       "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
       "source_sha256": "be68deecbed8cc330facee4edda33a2a351302394b7a801a372fcbd38f7b7527",
       "exported_sha256": "be68deecbed8cc330facee4edda33a2a351302394b7a801a372fcbd38f7b7527",
+      "modified": false
+    },
+    {
+      "path": "results/dream_label_uncertainty_v1.json",
+      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
+      "source_sha256": "658793de91944ec0894785c757666f769d8303d6720e5bc4dcf1236e5c39ecde",
+      "exported_sha256": "658793de91944ec0894785c757666f769d8303d6720e5bc4dcf1236e5c39ecde",
       "modified": false
     },
     {
@@ -468,6 +531,13 @@
       "modified": false
     },
     {
+      "path": "test_dream_label_confidence_v1.py",
+      "source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
+      "source_sha256": "0f5e9d8fc8a972a52fcb7d8ec5f7e255e468d40d833d0f1cc8683cce9dc4335a",
+      "exported_sha256": "0f5e9d8fc8a972a52fcb7d8ec5f7e255e468d40d833d0f1cc8683cce9dc4335a",
+      "modified": false
+    },
+    {
       "path": "test_dream_readout_v3.py",
       "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
       "source_sha256": "f2ca654531c21a8b372debce619a57b7369dbea5fa689898dcbe2c2d51ddc385",
@@ -494,6 +564,6 @@
       "modified": false
     }
   ],
-  "latest_update_source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
-  "latest_update": "2026-11-12 decoded-label tracking and fixed class-conditioned donor experiment registered before intervention results; no new GPU run yet."
+  "latest_update_source_commit": "a939e8e0b97b55d71cadb94b7f40a7edd281b5ef",
+  "latest_update": "2026-11-12 full class-conditioned intervention completed; fixed class-only rule fails. Uncertainty-matched follow-up registered before new outputs."
 }

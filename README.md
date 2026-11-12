@@ -84,9 +84,8 @@ absolute accuracy change and five percent changed predictions, for both receiver
 and every class-preserving/class-only arm. Different-class swaps must change at
 least twenty percent of predictions in both receivers. Conditional donor-bootstrap
 intervals are descriptive, not population equivalence tests. Failure could reflect
-confidence or projection geometry rather than rich semantic content. No outcome
-has yet been observed; the registered budget is one L4 for at most 20 minutes.
-Nine synthetic CPU measurement/plan tests pass; GPU execution remains pending.
+confidence or projection geometry rather than rich semantic content. The registered budget was one L4 for at most 20 minutes.
+Nine synthetic CPU measurement/plan tests passed before execution. Results are below.
 
 The original [Hidden Messages paper](https://arxiv.org/abs/2610.28905v1) already
 discloses task-specific answer-label supervision and answer-oriented prefix targets.
@@ -99,6 +98,44 @@ still require independent confirmation and a contribution beyond this checkpoint
 Official QASC validation's 926 questions remain unopened and unevaluated in this
 project. See the [aggregate tracking result](results/dream_label_tracking_v1.json)
 and the [original analysis code](analyze_dream_label_tracking_v1.py).
+
+### Class-conditioned intervention result and registered follow-up
+
+The full first-exchange intervention has completed on all 1,000 questions in
+11 minutes 22 seconds. Both receiver paths first replayed every baseline label
+and every label logit exactly. **The joint class-only sufficiency rule failed.**
+
+| Replacement | Receiver 0 accuracy / changed answers | Receiver 1 accuracy / changed answers |
+| --- | ---: | ---: |
+| Original packet | 87.9% / 0% | 82.6% / 0% |
+| Same predicted class, donor plan 0 | 86.3% / 5.7% | 79.1% / 7.7% |
+| Same predicted class, donor plan 1 | 86.6% / 5.3% | 79.8% / 7.7% |
+| Different predicted class | 38.7% / 61.4% | 52.6% / 52.1% |
+| Fixed class-only teacher prefix | 87.9% / 3.7% | 79.0% / 6.3% |
+
+The different-class positive control is effective. Within-class details affect
+behavior, but this does not identify semantic content as the cause. The class-only
+prefix retains receiver 0 aggregate accuracy while changing 37 individual answers;
+receiver 1 loses 3.6 percentage points. See the [fixed analysis](results/dream_label_ablation_v1.analysis.json)
+and [validation/resource summary](results/dream_label_ablation_v1.summary.json).
+
+**Post-result exploratory analysis:** all 37 class-prefix changes for receiver 0
+and 59 of 63 for receiver 1 occur in the lowest fifth of original sender top-two
+logit margins. These strata were chosen after seeing the intervention results;
+they motivate a follow-up, not a confirmatory confidence mechanism claim.
+See [uncertainty strata](results/dream_label_uncertainty_v1.json).
+
+The [new fixed follow-up](remote/dream_label_confidence_protocol_v1.json) compares
+within-class donors matched either on top-two logit margin or on the eight softmax
+scores. All 1,000 questions and both receivers remain; packets are permuted after
+projection, with no gold-selected donors, training, or recurrent recomputation.
+The matched replay gate remains exact. For an arm to retain a candidate explanation,
+both receivers must reduce changed predictions by at least 50% relative to the
+prior two random donor plans' mean, while keeping absolute accuracy differences
+within two percentage points of matched packets. Matching is approximate, and the
+full donor packets remain intact: success would not demonstrate a scalar or
+8-score codec. No follow-up model result has yet been observed. The resource cap
+is one L4 for 15 minutes. Five new CPU measurement/plan tests pass.
 
 ### Earlier stages and preserved failures
 

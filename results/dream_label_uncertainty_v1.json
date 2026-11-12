@@ -1,0 +1,357 @@
+{
+  "status": "Exploratory strata chosen after the intervention results, not confirmatory.",
+  "n": 1000,
+  "receivers": [
+    {
+      "receiver": 0,
+      "margin_quintiles": [
+        {
+          "quintile": 0,
+          "n": 200,
+          "margin_min": 0.0,
+          "margin_max": 1.5625,
+          "counts": {
+            "matched": {
+              "correct": 126,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 126,
+              "changed": 36
+            },
+            "within_class_1": {
+              "correct": 124,
+              "changed": 37
+            },
+            "label_prefix": {
+              "correct": 126,
+              "changed": 37
+            }
+          }
+        },
+        {
+          "quintile": 1,
+          "n": 200,
+          "margin_min": 1.5625,
+          "margin_max": 3.9375,
+          "counts": {
+            "matched": {
+              "correct": 172,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 166,
+              "changed": 9
+            },
+            "within_class_1": {
+              "correct": 169,
+              "changed": 7
+            },
+            "label_prefix": {
+              "correct": 172,
+              "changed": 0
+            }
+          }
+        },
+        {
+          "quintile": 2,
+          "n": 200,
+          "margin_min": 3.953125,
+          "margin_max": 5.611328125,
+          "counts": {
+            "matched": {
+              "correct": 187,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 185,
+              "changed": 4
+            },
+            "within_class_1": {
+              "correct": 185,
+              "changed": 3
+            },
+            "label_prefix": {
+              "correct": 187,
+              "changed": 0
+            }
+          }
+        },
+        {
+          "quintile": 3,
+          "n": 200,
+          "margin_min": 5.61328125,
+          "margin_max": 6.9609375,
+          "counts": {
+            "matched": {
+              "correct": 198,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 192,
+              "changed": 6
+            },
+            "within_class_1": {
+              "correct": 195,
+              "changed": 3
+            },
+            "label_prefix": {
+              "correct": 198,
+              "changed": 0
+            }
+          }
+        },
+        {
+          "quintile": 4,
+          "n": 200,
+          "margin_min": 6.966796875,
+          "margin_max": 9.48046875,
+          "counts": {
+            "matched": {
+              "correct": 196,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 194,
+              "changed": 2
+            },
+            "within_class_1": {
+              "correct": 193,
+              "changed": 3
+            },
+            "label_prefix": {
+              "correct": 196,
+              "changed": 0
+            }
+          }
+        }
+      ],
+      "sender_class_correctness": [
+        {
+          "sender_class_correct": false,
+          "n": 138,
+          "counts": {
+            "matched": {
+              "correct": 50,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 39,
+              "changed": 24
+            },
+            "within_class_1": {
+              "correct": 38,
+              "changed": 26
+            },
+            "label_prefix": {
+              "correct": 35,
+              "changed": 22
+            }
+          }
+        },
+        {
+          "sender_class_correct": true,
+          "n": 862,
+          "counts": {
+            "matched": {
+              "correct": 829,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 824,
+              "changed": 33
+            },
+            "within_class_1": {
+              "correct": 828,
+              "changed": 27
+            },
+            "label_prefix": {
+              "correct": 844,
+              "changed": 15
+            }
+          }
+        }
+      ]
+    },
+    {
+      "receiver": 1,
+      "margin_quintiles": [
+        {
+          "quintile": 0,
+          "n": 200,
+          "margin_min": 0.0,
+          "margin_max": 0.859375,
+          "counts": {
+            "matched": {
+              "correct": 129,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 98,
+              "changed": 53
+            },
+            "within_class_1": {
+              "correct": 103,
+              "changed": 54
+            },
+            "label_prefix": {
+              "correct": 92,
+              "changed": 59
+            }
+          }
+        },
+        {
+          "quintile": 1,
+          "n": 200,
+          "margin_min": 0.8671875,
+          "margin_max": 2.6171875,
+          "counts": {
+            "matched": {
+              "correct": 135,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 134,
+              "changed": 11
+            },
+            "within_class_1": {
+              "correct": 137,
+              "changed": 9
+            },
+            "label_prefix": {
+              "correct": 135,
+              "changed": 3
+            }
+          }
+        },
+        {
+          "quintile": 2,
+          "n": 200,
+          "margin_min": 2.6171875,
+          "margin_max": 4.7890625,
+          "counts": {
+            "matched": {
+              "correct": 172,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 172,
+              "changed": 8
+            },
+            "within_class_1": {
+              "correct": 172,
+              "changed": 6
+            },
+            "label_prefix": {
+              "correct": 173,
+              "changed": 1
+            }
+          }
+        },
+        {
+          "quintile": 3,
+          "n": 200,
+          "margin_min": 4.7890625,
+          "margin_max": 6.544921875,
+          "counts": {
+            "matched": {
+              "correct": 193,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 193,
+              "changed": 2
+            },
+            "within_class_1": {
+              "correct": 193,
+              "changed": 4
+            },
+            "label_prefix": {
+              "correct": 193,
+              "changed": 0
+            }
+          }
+        },
+        {
+          "quintile": 4,
+          "n": 200,
+          "margin_min": 6.546875,
+          "margin_max": 9.8388671875,
+          "counts": {
+            "matched": {
+              "correct": 197,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 194,
+              "changed": 3
+            },
+            "within_class_1": {
+              "correct": 193,
+              "changed": 4
+            },
+            "label_prefix": {
+              "correct": 197,
+              "changed": 0
+            }
+          }
+        }
+      ],
+      "sender_class_correctness": [
+        {
+          "sender_class_correct": false,
+          "n": 251,
+          "counts": {
+            "matched": {
+              "correct": 92,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 63,
+              "changed": 59
+            },
+            "within_class_1": {
+              "correct": 69,
+              "changed": 60
+            },
+            "label_prefix": {
+              "correct": 50,
+              "changed": 57
+            }
+          }
+        },
+        {
+          "sender_class_correct": true,
+          "n": 749,
+          "counts": {
+            "matched": {
+              "correct": 734,
+              "changed": 0
+            },
+            "within_class_0": {
+              "correct": 728,
+              "changed": 18
+            },
+            "within_class_1": {
+              "correct": 729,
+              "changed": 17
+            },
+            "label_prefix": {
+              "correct": 740,
+              "changed": 6
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Raw top-two logit margin is an uncertainty proxy, not calibrated confidence.",
+    "Stratum membership uses original frozen sender scores; gold used only for descriptive correctness grouping.",
+    "Concentration does not prove uncertainty causes the changes. A new matched intervention is needed."
+  ],
+  "source_sha256": {
+    "intervention_per_item": "45ac6fa8ff991ea2321f1eca72890232fc890a9e107580fb94c6f01ac6aa55a4",
+    "baseline_per_item": "a8a411cad532fdedd2b3cf01785b273928b7f8d725411df6779c22abe8e4fc85"
+  }
+}
