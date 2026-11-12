@@ -1,5 +1,5 @@
 {
-  "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
+  "source_commit": "22c3f70811320c30afa5d505b4f2ae62907812ba",
   "scope": "Current C2C pilot and Dream recurrence implementation; not the complete historical research archive.",
   "excluded": [
     "conversation archives",
@@ -301,6 +301,20 @@
       "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
       "source_sha256": "7b9e20282fb468ab872ae1b164bad0d3b4231a57a3bd9cc31da495dfb63257a2",
       "exported_sha256": "7b9e20282fb468ab872ae1b164bad0d3b4231a57a3bd9cc31da495dfb63257a2",
+      "modified": false
+    },
+    {
+      "path": "results/dream_readout_full_v3.summary.json",
+      "source_commit": "22c3f70811320c30afa5d505b4f2ae62907812ba",
+      "source_sha256": "c65623349be460dd37e9a47ea2fd22beebe3580941cc19635d59ece6bbf81fa4",
+      "exported_sha256": "c65623349be460dd37e9a47ea2fd22beebe3580941cc19635d59ece6bbf81fa4",
+      "modified": false
+    },
+    {
+      "path": "results/dream_recurrent_v3.baseline.summary.json",
+      "source_commit": "22c3f70811320c30afa5d505b4f2ae62907812ba",
+      "source_sha256": "d7bdc809af4a41b1455d2b4d2ba3e86c5186ee3ef188494e2155b34046cb500e",
+      "exported_sha256": "d7bdc809af4a41b1455d2b4d2ba3e86c5186ee3ef188494e2155b34046cb500e",
       "modified": false
     },
     {

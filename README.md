@@ -7,9 +7,41 @@ a validated new method. Further evaluation code, methodology, and positive or
 negative findings will be released as the pilot progresses, subject to upstream
 model, code, and data licences.
 
-## Scientific status, 2026-11-10
+## Scientific status, 2026-11-12
 
 **No validated paper-level contribution or scaling result is claimed.**
+
+The corrected Dream/QASC full run has completed on all 1,000 development questions.
+All six same-environment independent author-function prediction checks and all four
+applicable message-hash checks pass. The previously fixed contrast and three-peak
+shape rule pass, giving a **development-set parity candidate**:
+
+| Exchange round | Cross accuracy | Self accuracy | Cross/self answer agreement |
+| ---: | ---: | ---: | ---: |
+| 1 | 87.9% | 74.4% | 73.6% |
+| 2 | 81.3% | 73.7% | 90.4% |
+| 3 | 87.2% | 73.6% | 75.1% |
+| 4 | 80.7% | 73.8% | 90.1% |
+| 5 | 86.8% | 73.8% | 75.5% |
+| 6 | 80.7% | 73.8% | 89.9% |
+
+The primary linear-depth-adjusted parity contrast in answer agreement is
+**0.15225**, with question-bootstrap descriptive 95% interval **[0.130875, 0.173417]**.
+All 1,000 questions remain in the primary result. These are correlated repeated
+measurements from one checkpoint and a development set whose endpoints were
+previously inspected; they are not held-out confirmation, a causal mechanism,
+or a scaling result. Exact reproduction of the released reference still fails.
+
+In the planned secondary literal-context analysis, the aggregate accuracy advantage between
+the two agents alternates across cross-exchange depths on the 701 questions where
+the gold option text appears on only one side. The self control does not show
+that alternating sign. Literal presence is a proxy, not semantic sufficiency;
+no context-swap intervention was performed. The fixed 192-question numerical
+sensitivity run has been submitted and is pending. See
+[full-run validation](results/dream_readout_full_v3.summary.json) and
+[baseline analysis](results/dream_recurrent_v3.baseline.summary.json).
+
+### Earlier stages and preserved failures
 
 The initial C2C experiment asks whether an earlier answer encoding continues to
 influence a frozen receiver after its instruction changes. It compares the native
@@ -63,8 +95,9 @@ The L4 self discrepancy is not a final near-tie (B exceeds reference D by
 3.890625 logits); the no-message discrepancy is close (H exceeds E by 0.078125).
 Neither observation establishes the underlying cause. Further reference-side
 runtime/output evidence is needed; unchanged jobs will not be resubmitted.
-The 1,000-question mechanism experiment remains unstarted. The protocol and
-primary analysis were fixed before the neural results; no gate was relaxed.
+At that stage, the 1,000-question experiment was unstarted. The original protocol
+and primary analysis were fixed before the neural results. The later explicit
+amendment and implementation correction are documented below.
 
 This work uses a full L4 on Frontenac;
 the 8 GB MyResearchCloud vGPU is intended for bounded small-model profiling and
@@ -105,8 +138,8 @@ The full 1,000-question run saved every trajectory, then failed its implementati
 gate after 67 minutes 51 seconds. All four applicable message-hash comparisons
 passed, but five of six independent prediction comparisons failed (only self at
 round 4 passed). The dependent numerical probe was cancelled without running.
-The primary scientific analysis remains blocked. The small validation cohort did
-not establish full-cohort implementation equivalence. Failure evidence and the
+That failure blocked scientific analysis until the evidenced correction below.
+The small validation cohort did not establish full-cohort implementation equivalence. Failure evidence and the
 bounded diagnostic plan are in `results/dream_trace_full_v2.failure.json`.
 
 Source inspection identifies a concrete difference to test: the trace takes the
@@ -128,19 +161,29 @@ separately measures both agents at every depth using the author terminal readout
 and repeats the four common-input receiver measurements. The original primary
 weights, shape criterion, six depths, all-question inclusion and all six
 independent author checks remain fixed. Old failed receipts remain failed.
-The measured conservative full-run projection is 6,720 seconds within the
-single-L4 two-hour cap; actual corrected full-cohort validity remains untested.
+The corrected full run completed in 67 minutes 35 seconds, within the single-L4
+two-hour cap, with 17.64 GiB peak PyTorch-reserved memory. All six independent
+prediction checks and all four message-hash checks pass on the full cohort. Input
+tokens and question order are unchanged; all cached recurrence messages are reused.
 
-Only after full validity passes will `analyze_dream_recurrent_v3.py` apply the
-original primary test. A negative result stops the parity branch. A positive
-result remains provisional pending the fixed 192-question numerical probe.
-That probe recomputes recurrence under the changed flag and uses the corrected
-readouts; it cannot reuse baseline messages as the intervention. No corrected
-mechanism result or numerical robustness result is claimed yet.
+`analyze_dream_recurrent_v3.py` then applied the unchanged primary test, producing
+the positive candidate reported above. Public-reference agreement remains
+993/1,000 final-only, 989/1,000 matched, 993/1,000 self, and 987/1,000 native.
+The mismatch union contains 38 questions. Excluding these in a secondary analysis
+retains the three peaks and a contrast of 0.151724. Holding other scores fixed and
+allowing these 38 scores to take arbitrary values in [-1,1] yields a mean range
+[0.107958, 0.183958] with the original 1,000-question denominator. This is not a
+confidence interval or a bound on other numerical errors, nor does exclusion
+replace the primary analysis.
 
-Each job uses one L4 and32GiB host RAM. The new validity and sensitivity jobs
-are capped at20minutes each; the full experiment is capped at2hours and must
-pass a conservative projection from the new validity timing before execution.
+The fixed 192-question numerical probe is now submitted. Its empirical budget
+projection is 1,003.55 seconds within the 20-minute cap. It recomputes recurrence
+under the changed flag and uses the corrected readouts; it cannot reuse baseline
+messages as the intervention. No numerical robustness result is claimed yet.
+
+Each GPU job uses one L4 and 32 GiB host RAM. Sensitivity jobs are capped at
+20 minutes and full experiments at two hours, with empirical resource gates.
+Completed old failed runs are not relabelled as successful.
 
 ## Contents and provenance
 
