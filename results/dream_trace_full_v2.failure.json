@@ -1,0 +1,217 @@
+{
+  "job_id": "12448809",
+  "stage": "full",
+  "revision": "f85b6d8563a2236117407e0df9c6cd60ea406dac",
+  "code_sha256": "fa01a86f649cd098a70c7454b397809e6ce3ae7850f3594a77b5ce5bbc0ea6e9",
+  "protocol_sha256": "87bd1213f8ce6acdc71de9adf054a4e40ee8b0614ad5c1a680a58b744754af8c",
+  "data_sha256": "a88c888c082611fe5ecdfd62563026357068b2e23dfb0914bd31012ea230e20a",
+  "checkpoint_sha256": "83397168be971c5de6edb51e8d57ddeee87781cae13e77ba55bfb69df3b5f66d",
+  "completed": true,
+  "gpu": "NVIDIA L4",
+  "torch": "2.12.0+cu130",
+  "cuda": "13.0",
+  "execution_policy": "within_environment_v2",
+  "amendment_sha256": "926396e3f8521568e4bba980924bacf543f011146d7c62ab03e5c12a2778cf4f",
+  "gate_sha256": "e160de43e4a435121da608ad795dda157f773dea2e71833f105eaef1e70c4567",
+  "config_sha256": "756aba88e5ae1b09ba80a60aef1ac0f754359925b9424696bc2d4b6a2a73e56d",
+  "reference_sha256": "ca8c48bd4a7d8ae6d56f5fd1173a9a367c9c9f263d4e9f10fb68907858889f03",
+  "numerical_flags": {
+    "bf16_reduced_precision_reduction": true,
+    "float32_matmul_precision": "highest",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "original_numerical_flags": {
+    "bf16_reduced_precision_reduction": true,
+    "float32_matmul_precision": "highest",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "reference_replication_required_for_execution": false,
+  "projected_full_seconds_with_margin": 6061.739991295617,
+  "prior_validity_receipt_sha256": "d3a5665447eac22152f875cf784fd6f9bf9c9153afb46ea419e035fee3ceab2a",
+  "numerical_validity_scope": "All1000 separate author calls in this runtime",
+  "example_ids_sha256": "f6ba57a1fe220f848f991804c6e37d97c70d02b407f1927787a64ca778c3c954",
+  "model_weight_manifest_sha256": "d97cfa4b2e3a247447039efb60b29e626d7199cc036a1a53d62184a2ef08a2ab",
+  "decoder_parity": {
+    "hidden_bfloat16_exact": true,
+    "constrained_prediction_exact": true,
+    "max_hidden_abs_difference": 0.0
+  },
+  "independent_author_checks": [
+    {
+      "condition": "matched",
+      "rounds": 1,
+      "predictions_equal": false,
+      "message_hashes_equal": true
+    },
+    {
+      "condition": "matched",
+      "rounds": 4,
+      "predictions_equal": false,
+      "message_hashes_equal": true
+    },
+    {
+      "condition": "self",
+      "rounds": 1,
+      "predictions_equal": false,
+      "message_hashes_equal": true
+    },
+    {
+      "condition": "self",
+      "rounds": 4,
+      "predictions_equal": true,
+      "message_hashes_equal": true
+    },
+    {
+      "condition": "final_only",
+      "rounds": 4,
+      "predictions_equal": false
+    },
+    {
+      "condition": "no_message",
+      "rounds": 4,
+      "predictions_equal": false
+    }
+  ],
+  "reference_agreement": {
+    "final_only": {
+      "equal": 993,
+      "total": 1000,
+      "mismatch_ids": [
+        "qasc-dist-2f6462a61f1cf8e92728",
+        "qasc-dist-f9fbd129ad5bcfa772e4",
+        "qasc-dist-1bd6db858c119031b7be",
+        "qasc-dist-3d6ed8702fdc534e0e4e",
+        "qasc-dist-7babb1fccc6a9a5d0c13",
+        "qasc-dist-830667e6a3393d1ae4f0",
+        "qasc-dist-fc3677251d114ea32da1"
+      ]
+    },
+    "matched": {
+      "equal": 989,
+      "total": 1000,
+      "mismatch_ids": [
+        "qasc-dist-060917d518f76227c3de",
+        "qasc-dist-e16641fb48ea253b8985",
+        "qasc-dist-0d0f22dfebb46ff7968b",
+        "qasc-dist-fa49ab427d86d265a24e",
+        "qasc-dist-beaecfa5842dc9f724e0",
+        "qasc-dist-5af7b2cbafa2d27a0dc2",
+        "qasc-dist-cecf21cc594e8986e5e5",
+        "qasc-dist-f5099c8b46d5559f0735",
+        "qasc-dist-3f0b2bfa5fa87454cdf3",
+        "qasc-dist-cd8532a0ee89479f9435",
+        "qasc-dist-35661c47eb80b3c69ee5"
+      ]
+    },
+    "self": {
+      "equal": 993,
+      "total": 1000,
+      "mismatch_ids": [
+        "qasc-dist-3605ea3ee1870d5ca757",
+        "qasc-dist-3743801b5b5fd1ec0386",
+        "qasc-dist-d9f6602b443c5c37d11a",
+        "qasc-dist-a2aac11677bdd5f376a9",
+        "qasc-dist-8f77c4031d6210938f17",
+        "qasc-dist-efe280b856e7cfa3801d",
+        "qasc-dist-be1160f33b3ab8fe784b"
+      ]
+    },
+    "no_message": {
+      "equal": 991,
+      "total": 1000,
+      "mismatch_ids": [
+        "qasc-dist-8b16ac5b900ed6c3a72d",
+        "qasc-dist-dc1026c22b3df1395493",
+        "qasc-dist-5e0f697e13bcd39b2f8b",
+        "qasc-dist-f9da6d513e8a62ed424d",
+        "qasc-dist-eb10f569f6eec9dae835",
+        "qasc-dist-763ddf2993dcc49a38eb",
+        "qasc-dist-457c38792cbc563b960a",
+        "qasc-dist-233e6440fb3e2836766d",
+        "qasc-dist-cef40c63d2d76e8c0891"
+      ]
+    }
+  },
+  "examples": 1000,
+  "setup_seconds": 36.835303811356425,
+  "elapsed_seconds": 3987.7203827220947,
+  "forward_seconds": [
+    121.8279024399817,
+    125.7852177247405,
+    124.7248336430639,
+    124.99294643849134,
+    125.0312195122242,
+    125.02268332988024,
+    125.0191668830812,
+    125.09233926422894,
+    125.0902286991477,
+    125.1140897218138,
+    125.13498302549124,
+    125.15087972953916,
+    125.10142984427512,
+    58.68706825003028,
+    58.683474799618125
+  ],
+  "torch_peak_allocated_bytes": 15875095552,
+  "torch_peak_reserved_bytes": 21390950400,
+  "numerical_validity_passed": false,
+  "public_reference_all_equal": false,
+  "scheduler": {
+    "checked_at_utc": "2026-11-12T04:51:52.053110+00:00",
+    "full": {
+      "job_id": "12448809",
+      "state": "FAILED",
+      "exit_code": "1:0",
+      "elapsed": "01:07:51",
+      "start_cluster_time": "2026-11-10T23:09:33",
+      "end_cluster_time": "2026-11-11T00:17:24"
+    },
+    "probe": {
+      "job_id": "12448810",
+      "state": "CANCELLED",
+      "elapsed": "00:00:00",
+      "end_cluster_time": "2026-11-11T00:17:26"
+    }
+  },
+  "raw_summary_sha256": "1ef32e9d36269dafdbbdf1a800fd088cb6a0a589300090e4cfef8dc3252f0be3",
+  "scientific_result_valid": false,
+  "primary_statistics_computed": false,
+  "decision": "Full trajectory completed but same-environment prediction gate failed. Preserve failure; diagnose terminal readout paths without rerunning or reclassifying the trajectory.",
+  "new_failure_evidence": {
+    "prediction_checks_passed": 1,
+    "prediction_checks_total": 6,
+    "message_hash_checks_passed": 4,
+    "message_hash_checks_total": 4,
+    "source_difference": "v2 uses designated-agent predictions from joint two-agent forward; independent author evaluator performs a separate receiver-only terminal forward. no_message additionally uses full-model rather than decoder-only terminal readout. final_only also projects only designated receiver messages.",
+    "cause_established": false
+  },
+  "diagnostic_plan": {
+    "script": "remote/dream_readout_diagnostic_v1.py",
+    "reuse": "Saved native/cross3/self3 messages, full1000 original tokens and batches",
+    "cases": [
+      "matched1 and4, self1 and4 receiver-only readout versus saved joint outputs",
+      "matched1 joint replay versus saved predictions/logits/hidden",
+      "final_only receiver-only projection/readout versus joint",
+      "native receiver-only decoder versus full model versus saved joint",
+      "one fresh matched1 author evaluation versus cached-message receiver-only readout"
+    ],
+    "slurm_wall_minutes": 20,
+    "maximum_gpu_hours": 0.3333333333333333,
+    "estimated_seconds_from_measured_forwards": 850,
+    "criterion": "Reproducible joint outputs plus fresh-author equality with receiver-only readout and reproduced mismatches localize this failure to terminal-path differences. This diagnostic does not pass or relax the v2 gate.",
+    "if_unresolved": "No blind full rerun; report specific remaining mismatch.",
+    "next_if_supported": "Prepare separate correction of terminal readout while preserving frozen statistics and all1000 inclusion; require actual independent author agreement before scientific analysis.",
+    "submitted_job": "12454532"
+  },
+  "evidence_sha256": {
+    "per_item.jsonl": "7513ec17697df3d82330db986c13486c53b05d70fc0081760a94a82b7f49c420",
+    "scheduler.json": "3c0a7c29b26d8e9ed38f5fbee93760aeff72bf77eddc60152db0581cf0568c83",
+    "slurm.err": "9ba5d5c20055e953684ca018576aaf6703900c6cbd75017bb21a856b5a3f69b4",
+    "slurm.out": "1c5ec530cd1226c0fde43e5b90bdaa05da326e6c60d92ccebbd5d7d64bd3b2ac",
+    "started.json": "b645c5efb5e409199382cda42473d7a5e9654b2b2c3730e31f5253a61b9cf83c",
+    "summary.json": "1ef32e9d36269dafdbbdf1a800fd088cb6a0a589300090e4cfef8dc3252f0be3",
+    "token_rows.jsonl": "8d4d538bb4b61eaf19036347a41c68a37ac3d69a9407b373693eda7c1b128ecd"
+  }
+}

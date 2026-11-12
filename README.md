@@ -101,11 +101,23 @@ remain. The measured projection is 6,061.74 seconds (101.03 minutes, including t
 registered margin), with 15.73 GiB peak reserved GPU memory; both resource gates
 pass. See `results/dream_trace_validity_v2.summary.json`.
 
-The full 1,000-question job and its dependent 192-question numerical probe are
-now submitted. At the recorded check, the full job was waiting for resources and
-the probe was waiting for its dependency; no start-time estimate was available.
-There is no full-run scientific result yet. The fixed 16 questions establish
-implementation consistency and a resource estimate, not a mechanism finding.
+The full 1,000-question run saved every trajectory, then failed its implementation
+gate after 67 minutes 51 seconds. All four applicable message-hash comparisons
+passed, but five of six independent prediction comparisons failed (only self at
+round 4 passed). The dependent numerical probe was cancelled without running.
+The primary scientific analysis remains blocked. The small validation cohort did
+not establish full-cohort implementation equivalence. Failure evidence and the
+bounded diagnostic plan are in `results/dream_trace_full_v2.failure.json`.
+
+Source inspection identifies a concrete difference to test: the trace takes the
+designated agent's answer from a joint two-agent forward, while the author uses a
+separate receiver-only terminal forward. Native output also has a full-model
+versus decoder path difference; final-only projects receiver messages separately.
+A submitted diagnostic reuses the saved messages and all original 1,000-question
+batches, compares these readout paths, checks exact joint replay, and compares one
+cached-message endpoint with a fresh author evaluation. Its single-L4 allocation
+is capped at 20 minutes. This is failure localization, not a relaxed validity
+gate, a repaired result, or evidence for the mechanism hypothesis.
 
 Each job uses one L4 and32GiB host RAM. The new validity and sensitivity jobs
 are capped at20minutes each; the full experiment is capped at2hours and must
