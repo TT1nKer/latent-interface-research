@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "registered_date": "2026-11-12",
+  "stage": "development_mechanism_intervention",
+  "question": "Does a frozen predicted answer class suffice for first-exchange receiver decisions, or does within-class example-specific message variation materially change them?",
+  "status_at_registration": "No new intervention results. Existing all1000 trajectories and their decoded-label tracking were inspected. This is not preregistration before observing development data.",
+  "baseline_summary_sha256": "9f43bb1d8ddfb0ec580fdca690bdee8ae0f81e76406446dce99d938b7f8cb9e5",
+  "baseline_per_item_sha256": "a8a411cad532fdedd2b3cf01785b273928b7f8d725411df6779c22abe8e4fc85",
+  "baseline_token_rows_sha256": "8d4d538bb4b61eaf19036347a41c68a37ac3d69a9407b373693eda7c1b128ecd",
+  "native_state_sha256": "7733dd4fdd7ff39ea7cdb5e95c93d33c48c940463b3833598e9657539420301d",
+  "donor_plan_sha256": "d5906c52c82d264819e4318f206541624af4a5ea54bc2b83cdf5fb3901065230",
+  "implementation_sha256": {
+    "dream_label_ablation_v1.py": "f116e8a7ec1ee3b5748629f6e7a9186ed6fbc4b72fcf0ad4b949bc5144dcd7d1",
+    "dream_label_plan_v1.py": "7b92164d74dbe4da3e1ad5b6d0b7373c34009efeb196f05b9cad5556a9651fba",
+    "dream_trace_gate_v2.py": "e160de43e4a435121da608ad795dda157f773dea2e71833f105eaef1e70c4567"
+  },
+  "analysis_sha256": "6d18336cb4a9f314ff900911e2dc105d3b9aba667e9090f52a818394c70febf7",
+  "source_revision": "f85b6d8563a2236117407e0df9c6cd60ea406dac",
+  "model_weight_manifest_sha256": "d97cfa4b2e3a247447039efb60b29e626d7199cc036a1a53d62184a2ef08a2ab",
+  "data_sha256": "a88c888c082611fe5ecdfd62563026357068b2e23dfb0914bd31012ea230e20a",
+  "checkpoint_sha256": "83397168be971c5de6edb51e8d57ddeee87781cae13e77ba55bfb69df3b5f66d",
+  "config_sha256": "756aba88e5ae1b09ba80a60aef1ac0f754359925b9424696bc2d4b6a2a73e56d",
+  "numerical_flags": {
+    "bf16_reduced_precision_reduction": true,
+    "float32_matmul_precision": "highest",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "population": {
+    "questions": 1000,
+    "receivers": [
+      0,
+      1
+    ],
+    "depth": 1,
+    "original_order_and_batches": true,
+    "exclusions": [],
+    "new_training": false,
+    "new_recurrence": false,
+    "gold_used_for_intervention_selection": false
+  },
+  "predicted_classes": {
+    "source": "Argmax of each original native message classifier output from the frozen channel, not gold, receiver predictions, or post-intervention outputs.",
+    "class_counts_by_receiver": [
+      {
+        "0": 131,
+        "1": 123,
+        "2": 112,
+        "3": 139,
+        "4": 122,
+        "5": 123,
+        "6": 126,
+        "7": 124
+      },
+      {
+        "0": 132,
+        "1": 124,
+        "2": 107,
+        "3": 134,
+        "4": 125,
+        "5": 136,
+        "6": 117,
+        "7": 125
+      }
+    ]
+  },
+  "arms": {
+    "matched": "Replay native other-agent packet, same private receiver context, author receiver-only terminal readout; exact predictions and all8 logits must match validated cross1 for both agents on all1000.",
+    "within_class_0": "Salt0 SHA256 ranking within the same frozen predicted class, one cyclic shift per class; no self-donor, bijective. Project original packets once, then permute the projected packets bit-for-bit.",
+    "within_class_1": "Identical rule with salt1. Sensitivity to donor choices, not independent replication.",
+    "different_class": "Sort predicted-class groups, SHA256 rank within groups with salt0, cyclically rotate concatenation by maximum class size; verify every donor has a different class, bijection and no self-donor. Positive control, not new causal-audit methodology.",
+    "label_prefix": "Class index selects one of8 existing teacher-prefix embeddings using the unchanged training template correct answer {label}. No gold, training, tuned prototype or continuous instance variation. Sender/classifier computation remains."
+  },
+  "fixed_measurements": {
+    "primary_per_receiver_and_arm": [
+      "paired_accuracy_change",
+      "changed_label_rate"
+    ],
+    "secondary": [
+      "incoming_class_follow_rate",
+      "max_abs_label_logit_change",
+      "question_bootstrap_descriptive95CI"
+    ],
+    "operational_tolerance": {
+      "absolute_accuracy_difference_max": 0.02,
+      "changed_label_rate_max": 0.05,
+      "all_two_receivers_and_two_within_class_plans_and_label_prefix_must_pass": true
+    },
+    "positive_control": {
+      "different_class_changed_label_rate_min": 0.2,
+      "both_receivers_required": true
+    },
+    "bootstrap": {
+      "resamples": 2000,
+      "seed_base": 20261112,
+      "unit": "target question conditional on fixed donor bank and plans",
+      "status": "Descriptive only; not a formal population equivalence test; donor dependence and plan uncertainty omitted."
+    }
+  },
+  "decision_rule": {
+    "weak_positive_control": "Stop bottleneck inference; diagnose whether intervention is actually influential.",
+    "all_tolerances_pass": "Candidate first-exchange low-dimensional label relay; freeze held-out confirmation before opening926 official validation questions. No paper-level or full recurrent sufficiency claim.",
+    "within_class_pass_hard_prefix_fail": "Discrete label-prefix teacher is insufficient, possibly calibration/geometry. Do not call the channel richly semantic.",
+    "within_class_fail": "Residual message variation affects decisions; next discrimination is confidence/distribution versus task-specific semantic content. Do not automatically increase training or depth."
+  },
+  "resource": {
+    "gpu": "one L4",
+    "cpu": 2,
+    "ram_gib": 32,
+    "walltime_seconds": 1200,
+    "projected_seconds_with_margin": 1128.340183856897,
+    "projection": "1.5*(validated_setup +10*maximum_observed_terminal_seconds)+180",
+    "reserved_gib_limit_exclusive": 22,
+    "after_two_replays_gate": "elapsed +1.5*8*max(two observed readout times)+60 <=1200; reserved<22GiB"
+  },
+  "validity": {
+    "replay": "Both original receiver-only paths must match1000/1000 labels and every recorded label logit before new arms. Small-cohort pass is not accepted.",
+    "fixed_environment": "Model/data/checkpoint/config/vendor/torch/CUDA/flags and input tokens must match the validated baseline.",
+    "public_reference_all_equal": false,
+    "author_reply_is_dependency": false
+  },
+  "limitations": [
+    "Development selection: no held-out inference or novelty proof.",
+    "Donor perturbations preserve class and packet marginal, not confidence or fine-grained content; failures are not semantic-content proofs.",
+    "Shared fixed8-entry codebook makes a class index at most3 bits, not a measured total-wire-cost or compute saving.",
+    "First-exchange sufficiency would not establish sufficiency throughout recurrent updates.",
+    "The task-specific label and prefix supervision are disclosed by the original authors.",
+    "Generic swaps/self controls and frozen-message anchoring are prior art or structural aliases, not contributions."
+  ],
+  "execution_policy": {
+    "automatic_scheduler": "No scheduled polling or automatic expansion is part of this fixed experiment.",
+    "on_failure": "Save actual evidence; no unchanged retry, no threshold changes to manufacture success.",
+    "publication": "Original code and aggregate evidence only; no question texts, private per-item files, tokens or author code."
+  }
+}

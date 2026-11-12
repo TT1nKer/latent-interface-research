@@ -1,5 +1,5 @@
 {
-  "source_commit": "3c8a5f2095f29e3538432b6e6a3622171b7d086e",
+  "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
   "scope": "Current C2C pilot and Dream recurrence implementation; not the complete historical research archive.",
   "excluded": [
     "conversation archives",
@@ -12,6 +12,20 @@
   ],
   "transformations": "Cluster-specific home prefix becomes ./ in metadata; personal Slurm account directives are replaced with generic submission instructions. Scientific code and predictions are unchanged.",
   "files": [
+    {
+      "path": "analyze_dream_label_ablation_v1.py",
+      "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
+      "source_sha256": "6d18336cb4a9f314ff900911e2dc105d3b9aba667e9090f52a818394c70febf7",
+      "exported_sha256": "6d18336cb4a9f314ff900911e2dc105d3b9aba667e9090f52a818394c70febf7",
+      "modified": false
+    },
+    {
+      "path": "analyze_dream_label_tracking_v1.py",
+      "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
+      "source_sha256": "23487039b657501839cbcdb745b7434190d5d2e773eeaa0b3826d0d510411b78",
+      "exported_sha256": "23487039b657501839cbcdb745b7434190d5d2e773eeaa0b3826d0d510411b78",
+      "modified": false
+    },
     {
       "path": "analyze_dream_recurrent_v1.py",
       "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
@@ -108,6 +122,34 @@
       "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
       "source_sha256": "267ac103a342aaf670335ee992051ba2ef7ef1f6bbc27bb0e16f6aabf6f8a1c1",
       "exported_sha256": "267ac103a342aaf670335ee992051ba2ef7ef1f6bbc27bb0e16f6aabf6f8a1c1",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_label_ablation_protocol_v1.json",
+      "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
+      "source_sha256": "e701d0f0c7974694ff1d7b479a279625726dd53c8b42a85c7cf7e4c5485377f1",
+      "exported_sha256": "e701d0f0c7974694ff1d7b479a279625726dd53c8b42a85c7cf7e4c5485377f1",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_label_ablation_v1.py",
+      "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
+      "source_sha256": "f116e8a7ec1ee3b5748629f6e7a9186ed6fbc4b72fcf0ad4b949bc5144dcd7d1",
+      "exported_sha256": "f116e8a7ec1ee3b5748629f6e7a9186ed6fbc4b72fcf0ad4b949bc5144dcd7d1",
+      "modified": false
+    },
+    {
+      "path": "remote/dream_label_ablation_v1.sbatch",
+      "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
+      "source_sha256": "8902b850e19b5464db4b4f5c9eb0bba78355c3977332f2b11abe7fa62a954010",
+      "exported_sha256": "4ad846e83722e08d1c158fc72b63ec829f420e02c95371e202061ae4a78af571",
+      "modified": true
+    },
+    {
+      "path": "remote/dream_label_plan_v1.py",
+      "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
+      "source_sha256": "7b92164d74dbe4da3e1ad5b6d0b7373c34009efeb196f05b9cad5556a9651fba",
+      "exported_sha256": "7b92164d74dbe4da3e1ad5b6d0b7373c34009efeb196f05b9cad5556a9651fba",
       "modified": false
     },
     {
@@ -297,6 +339,13 @@
       "modified": false
     },
     {
+      "path": "results/dream_label_tracking_v1.json",
+      "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
+      "source_sha256": "be68deecbed8cc330facee4edda33a2a351302394b7a801a372fcbd38f7b7527",
+      "exported_sha256": "be68deecbed8cc330facee4edda33a2a351302394b7a801a372fcbd38f7b7527",
+      "modified": false
+    },
+    {
       "path": "results/dream_readout_diagnostic_v1.summary.json",
       "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
       "source_sha256": "7b9e20282fb468ab872ae1b164bad0d3b4231a57a3bd9cc31da495dfb63257a2",
@@ -412,6 +461,13 @@
       "modified": false
     },
     {
+      "path": "test_dream_label_ablation_v1.py",
+      "source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
+      "source_sha256": "a5e986b510c9fa34de15584b2265680009f9a83cc308abdd3acb377f8218fb89",
+      "exported_sha256": "a5e986b510c9fa34de15584b2265680009f9a83cc308abdd3acb377f8218fb89",
+      "modified": false
+    },
+    {
       "path": "test_dream_readout_v3.py",
       "source_commit": "a63ff4756adc1c693085ba5f7eaa7e2511e32ff9",
       "source_sha256": "f2ca654531c21a8b372debce619a57b7369dbea5fa689898dcbe2c2d51ddc385",
@@ -438,6 +494,6 @@
       "modified": false
     }
   ],
-  "latest_update_source_commit": "0dc6c0284b5990be443c9a791b440320ac2f1ddc",
-  "latest_update": "2026-11-10 explicit v2 gate amendment registered before full1000 results; within-environment comparison and fixed numerical probe."
+  "latest_update_source_commit": "8b3f2a3908c435b1a321a65146b8092fd36dded9",
+  "latest_update": "2026-11-12 decoded-label tracking and fixed class-conditioned donor experiment registered before intervention results; no new GPU run yet."
 }

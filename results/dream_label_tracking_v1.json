@@ -1,0 +1,275 @@
+{
+  "n": 1000,
+  "receivers": [
+    {
+      "receiver": 0,
+      "sender": 1,
+      "native_sender_class_counts": {
+        "0": 131,
+        "1": 123,
+        "2": 112,
+        "3": 139,
+        "4": 122,
+        "5": 123,
+        "6": 126,
+        "7": 124
+      },
+      "native_sender_class_correct": 862,
+      "routes": {
+        "cross": [
+          {
+            "depth": 1,
+            "readout_equals_incoming_class": 911,
+            "outgoing_retains_incoming_class": 899,
+            "readout_equals_initial_ancestral_class": 911,
+            "outgoing_equals_initial_ancestral_class": 899,
+            "readout_correct": 879,
+            "initial_ancestral_class_correct": 862
+          },
+          {
+            "depth": 2,
+            "readout_equals_incoming_class": 962,
+            "outgoing_retains_incoming_class": 964,
+            "readout_equals_initial_ancestral_class": 898,
+            "outgoing_equals_initial_ancestral_class": 884,
+            "readout_correct": 813,
+            "initial_ancestral_class_correct": 749
+          },
+          {
+            "depth": 3,
+            "readout_equals_incoming_class": 952,
+            "outgoing_retains_incoming_class": 973,
+            "readout_equals_initial_ancestral_class": 884,
+            "outgoing_equals_initial_ancestral_class": 886,
+            "readout_correct": 872,
+            "initial_ancestral_class_correct": 862
+          },
+          {
+            "depth": 4,
+            "readout_equals_incoming_class": 969,
+            "outgoing_retains_incoming_class": 981,
+            "readout_equals_initial_ancestral_class": 894,
+            "outgoing_equals_initial_ancestral_class": 874,
+            "readout_correct": 807,
+            "initial_ancestral_class_correct": 749
+          },
+          {
+            "depth": 5,
+            "readout_equals_incoming_class": 958,
+            "outgoing_retains_incoming_class": 982,
+            "readout_equals_initial_ancestral_class": 875,
+            "outgoing_equals_initial_ancestral_class": 884,
+            "readout_correct": 868,
+            "initial_ancestral_class_correct": 862
+          },
+          {
+            "depth": 6,
+            "readout_equals_incoming_class": 973,
+            "outgoing_retains_incoming_class": 982,
+            "readout_equals_initial_ancestral_class": 889,
+            "outgoing_equals_initial_ancestral_class": 871,
+            "readout_correct": 807,
+            "initial_ancestral_class_correct": 749
+          }
+        ],
+        "self": [
+          {
+            "depth": 1,
+            "readout_equals_incoming_class": 943,
+            "outgoing_retains_incoming_class": 946,
+            "readout_equals_initial_ancestral_class": 943,
+            "outgoing_equals_initial_ancestral_class": 946,
+            "readout_correct": 744,
+            "initial_ancestral_class_correct": 749
+          },
+          {
+            "depth": 2,
+            "readout_equals_incoming_class": 963,
+            "outgoing_retains_incoming_class": 988,
+            "readout_equals_initial_ancestral_class": 939,
+            "outgoing_equals_initial_ancestral_class": 936,
+            "readout_correct": 737,
+            "initial_ancestral_class_correct": 749
+          },
+          {
+            "depth": 3,
+            "readout_equals_incoming_class": 976,
+            "outgoing_retains_incoming_class": 993,
+            "readout_equals_initial_ancestral_class": 942,
+            "outgoing_equals_initial_ancestral_class": 933,
+            "readout_correct": 736,
+            "initial_ancestral_class_correct": 749
+          },
+          {
+            "depth": 4,
+            "readout_equals_incoming_class": 977,
+            "outgoing_retains_incoming_class": 999,
+            "readout_equals_initial_ancestral_class": 942,
+            "outgoing_equals_initial_ancestral_class": 932,
+            "readout_correct": 738,
+            "initial_ancestral_class_correct": 749
+          },
+          {
+            "depth": 5,
+            "readout_equals_incoming_class": 980,
+            "outgoing_retains_incoming_class": 996,
+            "readout_equals_initial_ancestral_class": 942,
+            "outgoing_equals_initial_ancestral_class": 932,
+            "readout_correct": 738,
+            "initial_ancestral_class_correct": 749
+          },
+          {
+            "depth": 6,
+            "readout_equals_incoming_class": 980,
+            "outgoing_retains_incoming_class": 999,
+            "readout_equals_initial_ancestral_class": 942,
+            "outgoing_equals_initial_ancestral_class": 931,
+            "readout_correct": 738,
+            "initial_ancestral_class_correct": 749
+          }
+        ]
+      }
+    },
+    {
+      "receiver": 1,
+      "sender": 0,
+      "native_sender_class_counts": {
+        "0": 132,
+        "1": 124,
+        "2": 107,
+        "3": 134,
+        "4": 125,
+        "5": 136,
+        "6": 117,
+        "7": 125
+      },
+      "native_sender_class_correct": 749,
+      "routes": {
+        "cross": [
+          {
+            "depth": 1,
+            "readout_equals_incoming_class": 880,
+            "outgoing_retains_incoming_class": 880,
+            "readout_equals_initial_ancestral_class": 880,
+            "outgoing_equals_initial_ancestral_class": 880,
+            "readout_correct": 826,
+            "initial_ancestral_class_correct": 749
+          },
+          {
+            "depth": 2,
+            "readout_equals_incoming_class": 952,
+            "outgoing_retains_incoming_class": 969,
+            "readout_equals_initial_ancestral_class": 918,
+            "outgoing_equals_initial_ancestral_class": 904,
+            "readout_correct": 876,
+            "initial_ancestral_class_correct": 862
+          },
+          {
+            "depth": 3,
+            "readout_equals_incoming_class": 950,
+            "outgoing_retains_incoming_class": 975,
+            "readout_equals_initial_ancestral_class": 860,
+            "outgoing_equals_initial_ancestral_class": 872,
+            "readout_correct": 834,
+            "initial_ancestral_class_correct": 749
+          },
+          {
+            "depth": 4,
+            "readout_equals_incoming_class": 956,
+            "outgoing_retains_incoming_class": 982,
+            "readout_equals_initial_ancestral_class": 913,
+            "outgoing_equals_initial_ancestral_class": 900,
+            "readout_correct": 877,
+            "initial_ancestral_class_correct": 862
+          },
+          {
+            "depth": 5,
+            "readout_equals_incoming_class": 946,
+            "outgoing_retains_incoming_class": 984,
+            "readout_equals_initial_ancestral_class": 860,
+            "outgoing_equals_initial_ancestral_class": 871,
+            "readout_correct": 837,
+            "initial_ancestral_class_correct": 749
+          },
+          {
+            "depth": 6,
+            "readout_equals_incoming_class": 957,
+            "outgoing_retains_incoming_class": 985,
+            "readout_equals_initial_ancestral_class": 912,
+            "outgoing_equals_initial_ancestral_class": 897,
+            "readout_correct": 878,
+            "initial_ancestral_class_correct": 862
+          }
+        ],
+        "self": [
+          {
+            "depth": 1,
+            "readout_equals_incoming_class": 964,
+            "outgoing_retains_incoming_class": 957,
+            "readout_equals_initial_ancestral_class": 964,
+            "outgoing_equals_initial_ancestral_class": 957,
+            "readout_correct": 857,
+            "initial_ancestral_class_correct": 862
+          },
+          {
+            "depth": 2,
+            "readout_equals_incoming_class": 976,
+            "outgoing_retains_incoming_class": 990,
+            "readout_equals_initial_ancestral_class": 960,
+            "outgoing_equals_initial_ancestral_class": 949,
+            "readout_correct": 851,
+            "initial_ancestral_class_correct": 862
+          },
+          {
+            "depth": 3,
+            "readout_equals_incoming_class": 975,
+            "outgoing_retains_incoming_class": 998,
+            "readout_equals_initial_ancestral_class": 956,
+            "outgoing_equals_initial_ancestral_class": 948,
+            "readout_correct": 847,
+            "initial_ancestral_class_correct": 862
+          },
+          {
+            "depth": 4,
+            "readout_equals_incoming_class": 977,
+            "outgoing_retains_incoming_class": 998,
+            "readout_equals_initial_ancestral_class": 956,
+            "outgoing_equals_initial_ancestral_class": 946,
+            "readout_correct": 847,
+            "initial_ancestral_class_correct": 862
+          },
+          {
+            "depth": 5,
+            "readout_equals_incoming_class": 976,
+            "outgoing_retains_incoming_class": 998,
+            "readout_equals_initial_ancestral_class": 954,
+            "outgoing_equals_initial_ancestral_class": 947,
+            "readout_correct": 847,
+            "initial_ancestral_class_correct": 862
+          },
+          {
+            "depth": 6,
+            "readout_equals_incoming_class": 978,
+            "outgoing_retains_incoming_class": 997,
+            "readout_equals_initial_ancestral_class": 950,
+            "outgoing_equals_initial_ancestral_class": 946,
+            "readout_correct": 843,
+            "initial_ancestral_class_correct": 862
+          }
+        ]
+      }
+    }
+  ],
+  "interpretation": "Exploratory decoded-label associations, not a causal or semantic sufficiency test.",
+  "limitations": [
+    "Every depth was already inspected on this development set; this is not independent confirmation.",
+    "Classifier argmax hides confidence and within-class information; agreement does not prove the receiver uses only the class.",
+    "Initial ancestry alternation is a structural identity of memoryless cross updates; empirical label retention is an additional observation, not proof of convergence.",
+    "No new model evaluation, training, donor intervention, or compute-efficiency result."
+  ],
+  "source_sha256": {
+    "summary.json": "9f43bb1d8ddfb0ec580fdca690bdee8ae0f81e76406446dce99d938b7f8cb9e5",
+    "per_item.jsonl": "a8a411cad532fdedd2b3cf01785b273928b7f8d725411df6779c22abe8e4fc85"
+  },
+  "analysis_sha256": "23487039b657501839cbcdb745b7434190d5d2e773eeaa0b3826d0d510411b78"
+}

@@ -58,6 +58,48 @@ See [full-run validation](results/dream_readout_full_v3.summary.json),
 The earlier [baseline analysis](results/dream_recurrent_v3.baseline.summary.json)
 is preserved unchanged.
 
+### Next discriminating experiment: within-class message substitution
+
+A new descriptive analysis of the validated 1,000-question trajectories finds
+that first-exchange receiver decisions match the incoming message classifier's
+argmax on 911/1,000 and 880/1,000 questions for the two receivers. At depth 6,
+re-encoded messages retain the incoming class on 982/1,000 and 985/1,000 questions.
+This suggests substantial label relay, but perfect copying is insufficient:
+the sender classifier accuracies are 86.2% and 74.9%, while the respective
+first-exchange receivers achieve 87.9% and 82.6%. Receiver context or within-class
+message information could account for the improvements. These are exploratory
+associations from existing results, not new model evaluations.
+
+The [fixed development intervention](remote/dream_label_ablation_protocol_v1.json)
+uses all 1,000 questions, both receivers and depth 1. It compares original packets,
+two bijective replacements from another question with the **same frozen predicted
+class**, a different-class positive control, and a class-only prefix selected from
+the original eight-entry training teacher dictionary. No gold answer selects a
+replacement. Each projected donor packet is reused bit-for-bit, avoiding a change
+in projection numerics caused by reordering its batch. The matched condition must
+first reproduce every original receiver label and label logit on all 1,000 questions.
+
+The operational development tolerances are at most two percentage points of
+absolute accuracy change and five percent changed predictions, for both receivers
+and every class-preserving/class-only arm. Different-class swaps must change at
+least twenty percent of predictions in both receivers. Conditional donor-bootstrap
+intervals are descriptive, not population equivalence tests. Failure could reflect
+confidence or projection geometry rather than rich semantic content. No outcome
+has yet been observed; the registered budget is one L4 for at most 20 minutes.
+Nine synthetic CPU measurement/plan tests pass; GPU execution remains pending.
+
+The original [Hidden Messages paper](https://arxiv.org/abs/2610.28905v1) already
+discloses task-specific answer-label supervision and answer-oriented prefix targets.
+Generic message audits are also prior work
+([causal channel audit](https://arxiv.org/abs/2607.26773v1),
+[relayed-cache audit](https://arxiv.org/abs/2608.04893v1)). Neither label codes nor
+generic swaps are claimed as novel. The empirical question is whether residual
+within-class information is necessary for this receiver behavior; a paper would
+still require independent confirmation and a contribution beyond this checkpoint.
+Official QASC validation's 926 questions remain unopened and unevaluated in this
+project. See the [aggregate tracking result](results/dream_label_tracking_v1.json)
+and the [original analysis code](analyze_dream_label_tracking_v1.py).
+
 ### Earlier stages and preserved failures
 
 The initial C2C experiment asks whether an earlier answer encoding continues to
