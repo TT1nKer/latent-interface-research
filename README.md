@@ -7,6 +7,24 @@ a validated new method. Further evaluation code, methodology, and positive or
 negative findings will be released as the pilot progresses, subject to upstream
 model, code, and data licences.
 
+## Research allocation, 2026-11-14
+
+The existing QASC results and failed screening criteria remain unchanged. We have
+lowered their priority while screening other research directions. The
+[cross-field screen](research_direction_screen_20261113.json) records 20 archived
+primary sources with explicit reading depth; it does not claim 20 full readings
+or an established new contribution. PDF paths refer to the local research library;
+paper PDFs and third-party source archives are not included here.
+
+The current candidate asks whether fixed-median latency evaluation misses
+input-dependent timing in adaptive visual compression for robot policies.
+FastVLA's feature-dependent token budget and LIBERO-Dynamic's frozen-median timing
+protocol motivate the question; neither establishes that the effect is material
+or that a published result is wrong. The
+[bounded first probe](vla_latency_coupling_probe_v1.json) measures timing variability
+and resources before closed-loop experiments. No new model experiment has run,
+and the QASC held-out cohort remains unopened.
+
 ## Scientific status, 2026-11-12
 
 **No validated paper-level contribution or scaling result is claimed.**

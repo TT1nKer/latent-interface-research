@@ -1,0 +1,107 @@
+{
+  "schema": "vla_latency_coupling_candidate_v1",
+  "date": "2026-11-14",
+  "status": "Design and stop rules only; not a submitted Slurm job or a frozen scientific confirmation protocol.",
+  "scientific_result": null,
+  "job_ids": [],
+  "first_stage": {
+    "purpose": "Reject a negligible timing mechanism cheaply and measure actual resources.",
+    "planning_cap": "One L4, 30 minutes model runtime for initial profiling; no training, no paid procurement. Environment preparation is separate and must be bounded. Do not automatically repeat a failed job.",
+    "data": "Development-only chronological observations, retaining episode resets; choose and hash trajectories before collecting comparison results. No scientific holdout is selected yet.",
+    "measure": [
+      "camera preprocessing + transfer + model + action postprocessing wall time",
+      "CUDA timing after warmup, same idle allocation",
+      "retained visual tokens and controller history state",
+      "repeated observation-level timing to separate state variation from jitter",
+      "delivery steps ceil(latency_seconds*20), median and tail errors of fixed-median approximation",
+      "peak allocated/reserved VRAM and CPU RSS"
+    ],
+    "gates": [
+      "No local model load.",
+      "Unpruned implementation agrees with native model path within declared numerical tolerance; document exact agreement where obtained.",
+      "No claim of under-22-GiB fit until measured; stop on insufficient resources.",
+      "If all substantive runtime variation is noise or timing intervention leaves delivery steps unchanged, do not advance this first deployment branch.",
+      "Freeze the closed-loop cohort, endpoints and uncertainty analysis only after timing feasibility and closest-prior-art checks, before task outcomes."
+    ]
+  },
+  "closed_loop_outline": {
+    "required_controls": [
+      "Full model with fixed calibrated timing",
+      "Compressed model with the same timing intervention",
+      "Compressed model with measured/calibrated state-dependent timing",
+      "Fixed-token-budget compression at a matched compute range"
+    ],
+    "keep_fixed": [
+      "checkpoint",
+      "camera/crop and normalization",
+      "initial states and trajectory family",
+      "controller and action horizon",
+      "numerical flags and seeds",
+      "success and physical-validity definitions"
+    ],
+    "primary_candidate": "Paired task success effect of changing the timing model for the adaptive policy. Exact confirmatory endpoint and margin remain to be registered before outcomes.",
+    "other_metrics": [
+      "reaction time",
+      "queue underflow",
+      "action age at actuation",
+      "completion time and path/action continuity",
+      "task-balanced uncertainty and success-floor diagnostics"
+    ],
+    "counterfactual_limit": "A full model run at an artificially fast simulator clock is a causal diagnostic, never a claimed deployable speedup."
+  },
+  "scale_planning": {
+    "formula": "n approximately (z_.975 + z_.8)^2 * q / effect^2 for one paired binary contrast under local approximation",
+    "assumptions": "Independent paired episodes, two-sided 5% level and 80% power; q is discordance. Does NOT account for task clustering, multiplicity, interaction variance or model replication. Not an exact power calculation.",
+    "scenarios": [
+      {
+        "absolute_effect": 0.05,
+        "discordant_fraction_assumption": 0.1,
+        "approx_paired_episodes": 314,
+        "four_cell_rollouts": 1256,
+        "gpu_hours_if_30_seconds_per_rollout": 10.466666666666667,
+        "gpu_hours_if_120_seconds_per_rollout": 41.86666666666667
+      },
+      {
+        "absolute_effect": 0.05,
+        "discordant_fraction_assumption": 0.2,
+        "approx_paired_episodes": 628,
+        "four_cell_rollouts": 2512,
+        "gpu_hours_if_30_seconds_per_rollout": 20.933333333333334,
+        "gpu_hours_if_120_seconds_per_rollout": 83.73333333333333
+      },
+      {
+        "absolute_effect": 0.05,
+        "discordant_fraction_assumption": 0.4,
+        "approx_paired_episodes": 1256,
+        "four_cell_rollouts": 5024,
+        "gpu_hours_if_30_seconds_per_rollout": 41.86666666666667,
+        "gpu_hours_if_120_seconds_per_rollout": 167.46666666666667
+      },
+      {
+        "absolute_effect": 0.1,
+        "discordant_fraction_assumption": 0.1,
+        "approx_paired_episodes": 79,
+        "four_cell_rollouts": 316,
+        "gpu_hours_if_30_seconds_per_rollout": 2.6333333333333333,
+        "gpu_hours_if_120_seconds_per_rollout": 10.533333333333333
+      },
+      {
+        "absolute_effect": 0.1,
+        "discordant_fraction_assumption": 0.2,
+        "approx_paired_episodes": 157,
+        "four_cell_rollouts": 628,
+        "gpu_hours_if_30_seconds_per_rollout": 5.233333333333333,
+        "gpu_hours_if_120_seconds_per_rollout": 20.933333333333334
+      },
+      {
+        "absolute_effect": 0.1,
+        "discordant_fraction_assumption": 0.4,
+        "approx_paired_episodes": 314,
+        "four_cell_rollouts": 1256,
+        "gpu_hours_if_30_seconds_per_rollout": 10.466666666666667,
+        "gpu_hours_if_120_seconds_per_rollout": 41.86666666666667
+      }
+    ],
+    "time_note": "30–120 seconds per rollout are unmeasured scenarios, not a quote or allocation request. Profile before committing compute. A 10–20-episode smoke test is not evidence of a five-point effect."
+  }
+}

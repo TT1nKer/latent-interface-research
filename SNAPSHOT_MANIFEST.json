@@ -1,6 +1,6 @@
 {
-  "source_commit": "bda60bce04f268cc3a24a83ef19bf489c67e5e34",
-  "scope": "Current C2C pilot and Dream recurrence implementation; not the complete historical research archive.",
+  "source_commit": "7af4d22f6a59a3878c256f6461b762c2364c27c7",
+  "scope": "Current frozen-model experiments plus a bounded cross-field research screen; not the complete private research archive. New embodied timing proposal has no model results yet.",
   "excluded": [
     "conversation archives",
     "emails",
@@ -375,6 +375,13 @@
       "modified": false
     },
     {
+      "path": "research_direction_screen_20261113.json",
+      "source_commit": "7af4d22f6a59a3878c256f6461b762c2364c27c7",
+      "source_sha256": "50a99dd95987fc4bf4d25f959288c25673d125cf8b12b852216021b8d3f39248",
+      "exported_sha256": "50a99dd95987fc4bf4d25f959288c25673d125cf8b12b852216021b8d3f39248",
+      "modified": false
+    },
+    {
       "path": "results/c2c_acquisition_v1.json",
       "source_sha256": "e0af2a47c2dfe1d9b7f46ce1ea2fe353702b7a72202c58a99eb74d0ad6d6b997",
       "exported_sha256": "9f8cef1214efaaa69e882fac43d240af841b6a7b1b6873346cbbd5e4c72136fa",
@@ -610,6 +617,13 @@
       "path": "vendor/c2c_official/PROVENANCE.json",
       "source_sha256": "3c2f2366e0ec931f5ebca4d2d747ee9e17e7c45d748e80a5deecca170e9121cf",
       "exported_sha256": "3c2f2366e0ec931f5ebca4d2d747ee9e17e7c45d748e80a5deecca170e9121cf",
+      "modified": false
+    },
+    {
+      "path": "vla_latency_coupling_probe_v1.json",
+      "source_commit": "7af4d22f6a59a3878c256f6461b762c2364c27c7",
+      "source_sha256": "cfce45a6796700d3a89efa5ef4df9d1f9c2be03ce327f4345119ab1e6341219a",
+      "exported_sha256": "cfce45a6796700d3a89efa5ef4df9d1f9c2be03ce327f4345119ab1e6341219a",
       "modified": false
     }
   ],

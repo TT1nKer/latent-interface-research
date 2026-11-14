@@ -1,0 +1,308 @@
+{
+  "schema": "crossfield_research_selection_v1",
+  "started_local_date": "2026-11-13",
+  "completed_local_date": "2026-11-14",
+  "timezone": "America/Toronto",
+  "status": "Research allocation decision and falsifiable next probe, NOT a new empirical finding or a claim of established novelty.",
+  "objective": "Find an original, useful, executable research question; prior QASC subject is optional.",
+  "decision": {
+    "qasc": "Retain evidence; deprioritize as the main paper direction. No new 926 evaluation, depth tuning or training this round. This is not an impossibility claim.",
+    "why": "Class-only intervention failed; uncertainty matching has a continuous effect but failed its fixed joint threshold. Related work already studies confidence and latent-channel controls. More same-family evidence alone has an uncertain publication payoff.",
+    "priority": "One bounded feasibility/novelty probe of state-dependent inference latency in adaptive visuomotor compression. Do not commit the whole paper or buy compute yet.",
+    "automation": "No recurring task created or resumed.",
+    "gpu_jobs_submitted_this_round": []
+  },
+  "screen_scope": "Targeted screen across vision representations/compression, embodied inference/control and world-model action utility; not an exhaustive survey of AI.",
+  "branches": [
+    {
+      "name": "Generic frozen visual model translation/stitching",
+      "decision": "Reject generic proposal",
+      "closest": [
+        "2603.12433v1"
+      ],
+      "reason": "Already demonstrated with multiple encoders, losses and tasks. Need a distinct operational failure, not a modality rename."
+    },
+    {
+      "name": "Geometry-aware visual token compression",
+      "decision": "Reject generic proposal",
+      "closest": [
+        "2602.02951v1",
+        "2603.10469v1",
+        "2608.21247v1"
+      ],
+      "reason": "Spatial preservation and action-sensitive distortion already have direct methods."
+    },
+    {
+      "name": "Confidence-guided robotic compute, chunk length or cache refresh",
+      "decision": "Reject generic proposal",
+      "closest": [
+        "2604.04161v1",
+        "2610.19765v1",
+        "2611.01011v1",
+        "2609.22684v1"
+      ],
+      "reason": "Confidence, cache age, adaptive chunking and fresh reactive streams have strong direct precedents."
+    },
+    {
+      "name": "Do world-model futures help downstream actions?",
+      "decision": "Reject generic proposal; leave specific new interventions open",
+      "closest": [
+        "2608.04653v1",
+        "2608.11521v1",
+        "2610.39367v1"
+      ],
+      "reason": "Action-controllability, cached-future ablations and utility gating already exist. Training video foundation models would also be a poor first compute investment."
+    },
+    {
+      "name": "Does freezing latency erase state-dependent cost in adaptive VLA evaluation?",
+      "decision": "Eligible for a bounded first measurement only",
+      "closest": [
+        "2610.22146v1",
+        "2610.24579v1",
+        "2610.34519v1",
+        "2611.09159v1",
+        "2512.15773v1"
+      ],
+      "reason": "There is a concrete composition to test: feature-dependent token budgets with median-calibrated dynamic simulation. None of the inspected sections establishes the size or sign of this composition effect. Search not finding an exact match is not proof of novelty."
+    }
+  ],
+  "candidate": {
+    "question": "When inference effort varies with visual state, can a fixed-median or independent-delay evaluation change the measured benefit of adaptive visual compression?",
+    "hypothesis": "Content-dependent runtime may align with periods requiring fast feedback; replacing it with a fixed delay can change closed-loop outcomes even if aggregate latency looks similar.",
+    "rival_explanations": [
+      "Budget changes may barely alter end-to-end time on an L4.",
+      "Runtime variance may be hardware noise, unrelated to visual state.",
+      "A fixed token budget may already match the adaptive quality/latency trade-off.",
+      "Any apparent effect may be due to a changed controller, action horizon, camera preprocessing or numerical implementation."
+    ],
+    "connection": "Adaptive computer-vision inference supplies input-dependent computation; control and scheduling determine when its information becomes actionable; paired intervention distinguishes representation loss from timing effects.",
+    "not_claimed": [
+      "A new theory of control delay, age of information or adaptive computation.",
+      "An error in FastVLA, LIBERO-Dynamic or TRIAGE reported results.",
+      "That visual attention uniformity measures physical danger or epistemic uncertainty.",
+      "An established new paper direction or an experimentally demonstrated effect."
+    ],
+    "first_measurement": "Record token count and synchronized end-to-end timing on fixed, chronological policy observations with repeated runs. Determine whether state-dependent variation survives timing noise and changes 20 Hz delivery steps. Do this before closed-loop claims.",
+    "later_discriminator": "Keep checkpoint, input preprocessing, controller, task, initial state and action horizon fixed; compare compressed and uncompressed policies under a shared timing intervention and their calibrated state-dependent timing. Report physically deployable comparisons separately from simulated faster-than-hardware counterfactuals.",
+    "permutation_caution": "Shuffling delay on a fixed observation trace can diagnose dependence but is open-loop. In closed loop, changed delay changes future states; an IID-delay intervention does not guarantee the realized marginal delay distribution remains identical. No same-histogram causal claim without actually enforcing/checking it."
+  },
+  "feasibility": {
+    "benchmark": {
+      "repo": "https://github.com/renshaojie233/LIBERO-Dynamic",
+      "commit": "fd45961603cc50debaa959be52116626bc0fda1f",
+      "inspected": "README, formal timing protocol, requirements. Not installed or executed.",
+      "resources": "Released MuJoCo/robosuite benchmark with policy-free smoke test; formal fixed, empirical and measured-wallclock timing documented."
+    },
+    "compression": {
+      "repo": "https://github.com/jiuyixu25/FastVLA",
+      "commit": "31644f9c8fd2b51e8dfde89f8baf04fe8dc44e6d",
+      "inspected": "README, LIBERO setup, MIT license, complete core.py. Not installed or executed.",
+      "control": "Disable pruning, fixed-rate tau=0, adaptive tau=0.1/window=10; preserve native episode reset and original position IDs."
+    },
+    "checkpoint": {
+      "repo": "moojink/openvla-7b-oft-finetuned-libero-spatial",
+      "revision": "6d0231af0e48c5985f1ff86908f4674b84bc049b",
+      "gated": false,
+      "private": false,
+      "model_bytes_from_available_metadata": 15939159216
+    },
+    "limits": [
+      "Metadata only: model files not downloaded or loaded. About 15.94 GB of listed files is not a VRAM estimate.",
+      "Cluster inference/renderer compatibility and L4 memory remain unverified.",
+      "Benchmark requirements and model runtime pin incompatible transformer versions; use separate simulation/model environments or a reviewed minimal dependency set, not an uncontrolled combined installation.",
+      "ReflexBench adds Isaac Lab/cuRobo and its model code is marked after acceptance; not the first integration target."
+    ]
+  },
+  "stopping_rules": [
+    "If a primary paper/code already evaluates the same state-latency coupling with matched interventions, identify a concrete remaining difference or discard this candidate before model work.",
+    "If measured input-dependent timing is negligible at the control clock on the tested deployment, stop this deployment branch; do not synthesize large delays and present them as observed.",
+    "If disable-pruning replay or timing/physics controls are invalid, no scientific analysis. Allow only evidence-specific bounded repair, not repeated environment rebuilds.",
+    "If a fixed-budget baseline explains the apparent gain, do not claim a new adaptive mechanism.",
+    "If the first valid discriminating results are small or inconsistent, report uncertainty and stop expansion unless new evidence justifies it; do not tune on final tasks.",
+    "A novel looking pilot is insufficient for a paper: independent tasks, another policy/accelerator, matched baselines and realistic timing remain necessary."
+  ],
+  "next_artifact": "vla_latency_coupling_probe_v1.json",
+  "papers": [
+    {
+      "id": "2610.34519v1",
+      "title": "TRIAGE: Efficient Vision-Language-Action Inference Needs Both Reuse and Pruning",
+      "url": "https://arxiv.org/abs/2610.34519v1",
+      "read_depth": "Targeted primary HTML sections II–IV and PDF section V setup; not full paper.",
+      "finding": "TRIAGE already separates cache validity from importance and combines reuse and pruning. Fixed token budget and tail latency are explicit; generic cache invalidation is not new.",
+      "pdf_path": "paper_library/files/arxiv_2610.34519_v1.pdf",
+      "pdf_sha256": "dec1880ebce4e7bfc6fc97accea0a8cdeca6c257bf1b2585f8e6b605a60b188d"
+    },
+    {
+      "id": "2604.04161v1",
+      "title": "Adaptive Action Chunking at Inference-time for Vision-Language-Action Models",
+      "url": "https://arxiv.org/abs/2604.04161v1",
+      "read_depth": "Primary abstract, introduction, sections 3.2–4 including algorithm, and Table 1.",
+      "finding": "Action entropy already controls execution chunk size. Sampling uncertainty, time consistency and reactivity are established prior art; not a new proposal here.",
+      "pdf_path": "paper_library/files/arxiv_2604.04161_v1.pdf",
+      "pdf_sha256": "40b92c153a1b3dc385b34978987aab71626b2bfbc7c43ca721c8e08abc09f822"
+    },
+    {
+      "id": "2608.14379v1",
+      "title": "Reflex: Enabling Fast and Predictive Vision-Language-Action Models for Reaction-Critical Manipulation",
+      "url": "https://arxiv.org/abs/2608.14379v1",
+      "read_depth": "Primary abstract/introduction and official project page plus benchmark README.",
+      "finding": "Dynamic latency-aware simulation and multi-frame future prediction already exist. Benchmark is released; project page says model code after acceptance. Isaac Lab/cuRobo adds setup burden.",
+      "pdf_path": "paper_library/files/arxiv_2608.14379_v1.pdf",
+      "pdf_sha256": "03088a580acc371aef0f50a9f1684d11e0112b73772b097ae140daca8936cb40"
+    },
+    {
+      "id": "2611.01011v1",
+      "title": "Leap-VLA: High-Rate Robot Control from a Low-Rate VLM Backbone",
+      "url": "https://arxiv.org/abs/2611.01011v1",
+      "read_depth": "Primary abstract/introduction and PDF section VI limitations.",
+      "finding": "Cache-age conditioning and fresh fast vision explicitly address stale semantics. Paper limits broad dynamic claims and says conflicting action leftovers remain unresolved; no generic stale-cache novelty.",
+      "pdf_path": "paper_library/files/arxiv_2611.01011_v1.pdf",
+      "pdf_sha256": "9df5d9a61645187dc9def0e0b4ae78e4ee4315a1f7ae9a8667389606983f8f57"
+    },
+    {
+      "id": "2603.12433v1",
+      "title": "Revisiting Model Stitching In the Foundation Model Era",
+      "url": "https://arxiv.org/abs/2603.12433v1",
+      "read_depth": "Primary abstract/introduction and PDF sections 3.1–3.2.",
+      "finding": "Frozen heterogeneous vision models are already stitched using final-feature supervision. Generic representation translation or swapping LLMs for CV is not enough; also covers dense tasks.",
+      "pdf_path": "paper_library/files/arxiv_2603.12433_v1.pdf",
+      "pdf_sha256": "c4a7cfc9d91f767c1518c6cbf1ff7f59d14a3dcc1c885f2335cd1299a75c3113"
+    },
+    {
+      "id": "2602.02951v1",
+      "title": "Nuwa: Mending the Spatial Integrity Torn by VLM Token Pruning",
+      "url": "https://arxiv.org/abs/2602.02951v1",
+      "read_depth": "Primary abstract only.",
+      "finding": "Spatial-grounding degradation under token pruning and spatial-anchor preservation are already the subject of Nuwa. Generic geometry-preserving compression excluded.",
+      "pdf_path": "paper_library/files/arxiv_2602.02951_v1.pdf",
+      "pdf_sha256": "f4bfe8300cb7d394421f578583ffb4067dfb7c7c306a71401f3ad04b49edff5d"
+    },
+    {
+      "id": "2609.22684v1",
+      "title": "StateMem: Single-State Residual Memory with Adaptive Inference for Vision-Language-Action Policies",
+      "url": "https://arxiv.org/abs/2609.22684v1",
+      "read_depth": "Primary abstract only.",
+      "finding": "Persistent memory, cache-prefix routing and stale-feature correction are already combined. Not inspected deeply enough to establish a more specific exclusion.",
+      "pdf_path": "paper_library/files/arxiv_2609.22684_v1.pdf",
+      "pdf_sha256": "92b80c278d3b256ba3d4adaeeba6a969111085427ca88703599ffec21bf5d0ca"
+    },
+    {
+      "id": "2608.04653v1",
+      "title": "Overcoming Statistical Bias in Action-Controllable World Models",
+      "url": "https://arxiv.org/abs/2608.04653v1",
+      "read_depth": "Primary abstract only.",
+      "finding": "CoCo already studies action-insensitive world-model shortcuts with counterfactual action/observation constraints and evaluates control. Plausible video versus action utility is not a new generic question.",
+      "pdf_path": "paper_library/files/arxiv_2608.04653_v1.pdf",
+      "pdf_sha256": "7ad6a7556c286f85e638603e526b1befe55c92e2ce142908e2ccbd749ffec4fa"
+    },
+    {
+      "id": "2609.15840v1",
+      "title": "Uncertainty-Guided Sparse Refinement for Action Chunking Transformer Policies",
+      "url": "https://arxiv.org/abs/2609.15840v1",
+      "read_depth": "Primary abstract only.",
+      "finding": "Uncertainty-guided sparse action refinement exists; generic uncertainty-guided allocation cannot be claimed as new.",
+      "pdf_path": "paper_library/files/arxiv_2609.15840_v1.pdf",
+      "pdf_sha256": "dd582d09c9db2a647752659e3c5bccef3a859308709e71d15c8be231636edda2"
+    },
+    {
+      "id": "2610.19765v1",
+      "title": "Refine Actions If Needed: Adaptive Action Chunk Refinement for Robot Manipulation",
+      "url": "https://arxiv.org/abs/2610.19765v1",
+      "read_depth": "Primary abstract only.",
+      "finding": "RAIN predicts refinement error and dynamically routes computation, with matched fixed-refinement controls. Generic refine-only-when-needed is excluded.",
+      "pdf_path": "paper_library/files/arxiv_2610.19765_v1.pdf",
+      "pdf_sha256": "8942edaf0f2cba1a21e54074131fa21063322a63c8d9380e22d5decdf7e92e06"
+    },
+    {
+      "id": "2607.29235v1",
+      "title": "FBFM: A Training-Free Asynchronous Feedback Mechanism for Flow-Matching in World-Action Models Execution",
+      "url": "https://arxiv.org/abs/2607.29235v1",
+      "read_depth": "Primary abstract/search excerpt only.",
+      "finding": "Feedback inside generated world-action chunks is already proposed. Keep as nearby prior art, not a verified reproduction.",
+      "pdf_path": "paper_library/files/arxiv_2607.29235_v1.pdf",
+      "pdf_sha256": "b47a33ee5127e71b26abc8f6e38438c0f4392843f0c3432ec08fe647cd912d94"
+    },
+    {
+      "id": "2608.11521v1",
+      "title": "Keep the Future, Drop the Rollout: RIFT for World Action Models",
+      "url": "https://arxiv.org/abs/2608.11521v1",
+      "read_depth": "Primary abstract/search excerpt only.",
+      "finding": "RIFT already examines whether expensive video rollout can be replaced by fixed final-clean caches. Generic generated-future necessity audits have precedent.",
+      "pdf_path": "paper_library/files/arxiv_2608.11521_v1.pdf",
+      "pdf_sha256": "1f055677a8852209d255dcb269bea940a9e06cfd4ab13df51b446a7df0701f02"
+    },
+    {
+      "id": "2610.24579v1",
+      "title": "LIBERO-Dynamic: Benchmarking Robotic Manipulation in Dynamic Environments",
+      "url": "https://arxiv.org/abs/2610.24579v1",
+      "read_depth": "Primary introduction; PDF appendix A.7 latency calibration; official README and formal evaluation documentation.",
+      "finding": "Formal calibration freezes pooled median end-to-end latency, then quantizes by the control clock. Fixed and empirical timing modes exist in docs. The source supports configurable timing; it does not establish a flaw in any reported result.",
+      "pdf_path": "paper_library/files/arxiv_2610.24579_v1.pdf",
+      "pdf_sha256": "0146be9a5698764c137b6c3f62526c6c86039699f487281c14ec2f10e9453fb4"
+    },
+    {
+      "id": "2610.22146v1",
+      "title": "FastVLA: Task-Conditioned and Temporally Adaptive Visual Token Compression for Efficient Vision-Language-Action Models",
+      "url": "https://arxiv.org/abs/2610.22146v1",
+      "read_depth": "Primary abstract; PDF method/evaluation and conclusion passages; pinned official README and complete fastvla/core.py.",
+      "finding": "Pruning budget depends on current task/visual features and a ten-step history; released source has an enable/disable control and episode reset. This motivates measuring input-dependent runtime instead of assuming it is material.",
+      "pdf_path": "paper_library/files/arxiv_2610.22146_v1.pdf",
+      "pdf_sha256": "b7012ec66d2bdca4e37e14684f289731a2945ea1ce3840452bb5ccfc53be0470"
+    },
+    {
+      "id": "2608.21247v1",
+      "title": "Just Noticeable Difference Modeling for Token Compression in Vision-Language-Action Models",
+      "url": "https://arxiv.org/abs/2608.21247v1",
+      "read_depth": "Primary abstract only.",
+      "finding": "Action-JND already makes compression tolerance receiver/action dependent. Generic task-sensitive distortion is not our novelty.",
+      "pdf_path": "paper_library/files/arxiv_2608.21247_v1.pdf",
+      "pdf_sha256": "8253a62f92482742cfc6dffbf6650c3783673385b2343129275dcd14eaa7972f"
+    },
+    {
+      "id": "2603.10469v1",
+      "title": "DepthCache: Depth-Guided Training-Free Visual Token Merging for Vision-Language-Action Model Inference",
+      "url": "https://arxiv.org/abs/2603.10469v1",
+      "read_depth": "Primary abstract only.",
+      "finding": "DepthCache already combines geometry, temporal reuse and motion adaptation. Geometry plus control is not itself a research contribution.",
+      "pdf_path": "paper_library/files/arxiv_2603.10469_v1.pdf",
+      "pdf_sha256": "a5b677ac85107d5ce9e6713cb06592c901107d3d0fae69a56d546d0e34689dc2"
+    },
+    {
+      "id": "2605.19294v1",
+      "title": "DEFLECT: Delay-Robust Execution via Flow-matching Likelihood-Estimated Counterfactual Tuning for VLA Policies",
+      "url": "https://arxiv.org/abs/2605.19294v1",
+      "read_depth": "Primary abstract only.",
+      "finding": "DEFLECT uses counterfactual fresh/stale action pairs to adapt to delay. Avoid generic claims about stale observations or counterfactual delay training.",
+      "pdf_path": "paper_library/files/arxiv_2605.19294_v1.pdf",
+      "pdf_sha256": "2a2cb5c239a0f9047232ddb87b4e89a0b1555f39a523f32f9dcacaed4b5f17f2"
+    },
+    {
+      "id": "2512.15773v1",
+      "title": "TS-DP: Reinforcement Speculative Decoding For Temporal Adaptive Diffusion Policy Acceleration",
+      "url": "https://arxiv.org/abs/2512.15773v1",
+      "read_depth": "Primary abstract only.",
+      "finding": "TS-DP already adapts speculative diffusion computation to temporal task difficulty. State-sensitive compute allocation is established.",
+      "pdf_path": "paper_library/files/arxiv_2512.15773_v1.pdf",
+      "pdf_sha256": "d29875ed60b07412602911275bc4d110271f7e905d9cd88aeb6f73ab1575d95c"
+    },
+    {
+      "id": "2611.09159v1",
+      "title": "UniExit: A Unified Latency-Aware Early-Exit Runtime for Heterogeneous Edge AI",
+      "url": "https://arxiv.org/abs/2611.09159v1",
+      "read_depth": "Primary abstract only.",
+      "finding": "UniExit explicitly treats input difficulty and runtime state as sources of latency variation. Generic input-dependent latency is established beyond robotics.",
+      "pdf_path": "paper_library/files/arxiv_2611.09159_v1.pdf",
+      "pdf_sha256": "eb2a899e4a2f925e461088b429be46da87202abb046025cbd54a4232cbb86433"
+    },
+    {
+      "id": "2610.39367v1",
+      "title": "Utility-WAM: Correcting Future-Induced Action Changes",
+      "url": "https://arxiv.org/abs/2610.39367v1",
+      "read_depth": "Primary abstract/search excerpt only.",
+      "finding": "Utility-WAM already gates future generation using action utility. Do not rediscover whether imagined futures always help as a new broad thesis.",
+      "pdf_path": "paper_library/files/arxiv_2610.39367_v1.pdf",
+      "pdf_sha256": "0b57225d192c20b25a45faf54a9d04a1ae1775964e9d0f31ce247b0240109327"
+    }
+  ],
+  "evidence_boundary": "This round adds externally sourced prior-art and feasibility evidence, not a neural experiment. Existing raw QASC results, failed thresholds and unopened holdout are preserved."
+}
