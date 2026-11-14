@@ -448,6 +448,32 @@ The upstream repository provides the exact QASC development data and reference
 predictions used by the driver; author-reported reproduction is separate from our
 independent validation.
 
+## Bounded VLA timing probe (2026-11-14)
+
+The candidate in `vla_latency_coupling_probe_v1.json` now has an executable
+preparation and replay path in `remote/vla_*`. No VLA model run or timing result
+has been obtained yet. Five small synthetic-data tests validate the analysis
+checks; they are not robot experiments.
+
+`remote/vla_latency_protocol_v1.json` fixes the development-only selection rule,
+native-output tolerance and conservative continuation criteria before outcomes.
+The probe replays at most 72 chronological observations from three public LIBERO
+training demonstrations. It compares the independent native OpenVLA-OFT path
+against disabled FastVLA, then repeats disabled, fixed-budget and adaptive
+compression in balanced orders with episode resets. It measures wall latency,
+retained tokens, replay jitter, 20 Hz delivery buckets and actual memory. This
+cannot establish closed-loop success or a new scientific contribution.
+
+Preparation is capped at 45 minutes on two CPUs; GPU replay at 30 minutes on one
+L4. Dependencies and data are pinned in `remote/vla_latency_assets_v1.json`;
+resolved installation reports and freezes must be retained. Copy the `remote/vla_*`
+files to the root of the allocated cluster project before running the scripts.
+They expect `$HOME/latent_interfaces_v1`, Apptainer and appropriate site-specific
+Slurm account/partition settings. Inspect the preparation receipt before supplying
+`VLA_PREPARE_RECEIPT` to the GPU script; there is no automatic resubmission.
+Model weights, demonstrations, upstream source and private execution records are
+not bundled. No model execution is permitted on the local workstation.
+
 ## Rights and acknowledgement
 
 Original project code and documentation are available under the [MIT licence](LICENSE).

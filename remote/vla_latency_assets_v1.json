@@ -1,0 +1,217 @@
+{
+  "schema": "vla_latency_assets_v1",
+  "fastvla": {
+    "repo": "jiuyixu25/FastVLA",
+    "revision": "31644f9c8fd2b51e8dfde89f8baf04fe8dc44e6d"
+  },
+  "native": {
+    "repo": "moojink/openvla-oft",
+    "revision": "e4287e94541f459edc4feabc4e181f537cd569a8"
+  },
+  "transformers": {
+    "repo": "moojink/transformers-openvla-oft",
+    "revision": "bc339d9ad707454c0c115970db43c260067c61ab"
+  },
+  "dlimp": {
+    "repo": "moojink/dlimp_openvla",
+    "revision": "040105d256bd28866cc6620621a3d5f7b6b91b46"
+  },
+  "container": {
+    "tag": "python:3.10.14-bookworm",
+    "index_digest": "sha256:9c0e621579faf384d982986f2e0ba86bf09619076842cd0fbd2f24a3bf09f0bc",
+    "platform": [
+      {
+        "annotations": {
+          "com.docker.official-images.bashbrew.arch": "amd64",
+          "org.opencontainers.image.base.digest": "sha256:36c2f5ea2f2ed1af1a446e2a4b9c0581b2e9f6426c9c666c302f3f9da33d9233",
+          "org.opencontainers.image.base.name": "buildpack-deps:bookworm",
+          "org.opencontainers.image.created": "2024-09-05T00:21:33Z",
+          "org.opencontainers.image.revision": "811625e080937a4eca2055b8a31e382563e5b1a3",
+          "org.opencontainers.image.source": "https://github.com/docker-library/python.git#811625e080937a4eca2055b8a31e382563e5b1a3:3.10/bookworm",
+          "org.opencontainers.image.url": "https://hub.docker.com/_/python",
+          "org.opencontainers.image.version": "3.10.14-bookworm"
+        },
+        "digest": "sha256:3a93854ab059302d9d88aef36cf11a8d8e81de310695698adadc18137d222216",
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "platform": {
+          "architecture": "amd64",
+          "os": "linux"
+        },
+        "size": 2517
+      }
+    ]
+  },
+  "model": {
+    "source_url": "https://huggingface.co/api/models/moojink/openvla-7b-oft-finetuned-libero-spatial?blobs=true",
+    "repo": "moojink/openvla-7b-oft-finetuned-libero-spatial",
+    "revision": "6d0231af0e48c5985f1ff86908f4674b84bc049b",
+    "gated": false,
+    "private": false,
+    "model_bytes_from_available_metadata": 15939159216,
+    "files": [
+      {
+        "path": ".gitattributes",
+        "bytes": 674,
+        "lfs_sha256": null
+      },
+      {
+        "path": "README.md",
+        "bytes": 2909,
+        "lfs_sha256": null
+      },
+      {
+        "path": "action_head--150000_checkpoint.pt",
+        "bytes": 302242674,
+        "lfs_sha256": "809858636cf0a65009dd567d2f4e116249442790f02b8fe31f24500ea6118908"
+      },
+      {
+        "path": "added_tokens.json",
+        "bytes": 21,
+        "lfs_sha256": null
+      },
+      {
+        "path": "config.json",
+        "bytes": 60711,
+        "lfs_sha256": null
+      },
+      {
+        "path": "configuration_prismatic.py",
+        "bytes": 5865,
+        "lfs_sha256": null
+      },
+      {
+        "path": "dataset_statistics.json",
+        "bytes": 2957,
+        "lfs_sha256": null
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 136,
+        "lfs_sha256": null
+      },
+      {
+        "path": "lora_adapter/README.md",
+        "bytes": 5034,
+        "lfs_sha256": "1acb533904cd9931276014499b51c98c0fc8e3eab8962de7b971547116068383"
+      },
+      {
+        "path": "lora_adapter/adapter_config.json",
+        "bytes": 813,
+        "lfs_sha256": "30462bf8022279e5c8fe8c58db30d4c9c919b0a43feb0a99b5ca8f8b54c286df"
+      },
+      {
+        "path": "lora_adapter/adapter_model.safetensors",
+        "bytes": 484458600,
+        "lfs_sha256": "4bd2e808805f9b67af090c37e70f239b3b4da7a6473ec621ead6702b16a302ec"
+      },
+      {
+        "path": "model-00001-of-00004.safetensors",
+        "bytes": 4925122448,
+        "lfs_sha256": "2809bd7be9422315c5ecbe91eea612f5b02925f37e0051728ad45bc993c79251"
+      },
+      {
+        "path": "model-00002-of-00004.safetensors",
+        "bytes": 4947392496,
+        "lfs_sha256": "a00a7c5f2b6586ccfc89c693a9c36f3552ff455ff2b1bfea3e92642e4cd2b6d3"
+      },
+      {
+        "path": "model-00003-of-00004.safetensors",
+        "bytes": 4947417456,
+        "lfs_sha256": "a894b7230a08b471af55c57dd7385fd3b51fae2c4d9307a36a8017ef57abf22a"
+      },
+      {
+        "path": "model-00004-of-00004.safetensors",
+        "bytes": 262668432,
+        "lfs_sha256": "a877e3fece1feafb80f59f91585ce04379ee39e2bf9a25cb7b4acf237e896e60"
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "bytes": 94764,
+        "lfs_sha256": null
+      },
+      {
+        "path": "modeling_prismatic.py",
+        "bytes": 49029,
+        "lfs_sha256": null
+      },
+      {
+        "path": "preprocessor_config.json",
+        "bytes": 1650,
+        "lfs_sha256": null
+      },
+      {
+        "path": "processing_prismatic.py",
+        "bytes": 12718,
+        "lfs_sha256": null
+      },
+      {
+        "path": "processor_config.json",
+        "bytes": 130,
+        "lfs_sha256": null
+      },
+      {
+        "path": "proprio_projector--150000_checkpoint.pt",
+        "bytes": 67275256,
+        "lfs_sha256": "438d28e81e125166d0771762424aaf017de3a8daaebde06a5cb71157e62b3bf3"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "bytes": 552,
+        "lfs_sha256": null
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 1842976,
+        "lfs_sha256": null
+      },
+      {
+        "path": "tokenizer.model",
+        "bytes": 499723,
+        "lfs_sha256": null
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 1192,
+        "lfs_sha256": null
+      }
+    ],
+    "scope": "Metadata access only. No weights downloaded or loaded. Local date completion 2026-11-14."
+  },
+  "data": {
+    "repo": "yifengzhu-hf/LIBERO-datasets",
+    "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+    "selection": "First three lexicographically sorted libero_spatial HDF5 paths; demo_0 only; frames range(0,min(length,192),8), before any model comparisons. Public training demonstrations, not heldout or closed-loop results.",
+    "files": [
+      {
+        "rfilename": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_demo.hdf5",
+        "blobId": "14a6c94a96c2daad4348295c06e228608a236fdb",
+        "size": 508779600,
+        "lfs": {
+          "sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead",
+          "size": 508779600,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_demo.hdf5",
+        "blobId": "6fb94eb44f649aacf4dad2e0ee3734404684ec70",
+        "size": 589630943,
+        "lfs": {
+          "sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3",
+          "size": 589630943,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_demo.hdf5",
+        "blobId": "ce6d89257f7ea3a0c4df8a2b1f262f03ae1f62cd",
+        "size": 748271833,
+        "lfs": {
+          "sha256": "7ff1ee60447875c152d8c7819f499d23dbc0eb4d4bf045225d5d87a2cdad99bd",
+          "size": 748271833,
+          "pointerSize": 134
+        }
+      }
+    ]
+  }
+}

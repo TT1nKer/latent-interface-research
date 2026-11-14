@@ -1,7 +1,7 @@
 {
   "schema": "vla_latency_coupling_candidate_v1",
   "date": "2026-11-14",
-  "status": "Design and stop rules only; not a submitted Slurm job or a frozen scientific confirmation protocol.",
+  "status": "Bounded development replay implemented and synthetic stdlib checks passed; cluster import/model execution still unvalidated. No timing or task-success results.",
   "scientific_result": null,
   "job_ids": [],
   "first_stage": {
@@ -102,6 +102,7 @@
         "gpu_hours_if_120_seconds_per_rollout": 41.86666666666667
       }
     ],
-    "time_note": "30–120 seconds per rollout are unmeasured scenarios, not a quote or allocation request. Profile before committing compute. A 10–20-episode smoke test is not evidence of a five-point effect."
-  }
+    "time_note": "30\u2013120 seconds per rollout are unmeasured scenarios, not a quote or allocation request. Profile before committing compute. A 10\u201320-episode smoke test is not evidence of a five-point effect."
+  },
+  "implementation_protocol": "remote/vla_latency_protocol_v1.json"
 }

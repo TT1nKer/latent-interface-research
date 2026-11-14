@@ -1,0 +1,63 @@
+{
+  "schema": "vla_latency_protocol_v1",
+  "date": "2026-11-14",
+  "stage": "development feasibility only",
+  "scientific_confirmation": false,
+  "scientific_result": null,
+  "asset_lock_sha256": "c4eb4d4cf561354c8088378eb6570b8db9caa244cd5317cdbce3e8a8a33ea04b",
+  "cohort": "First 3 lexicographic libero_spatial HDF5 paths at pinned revision; demo_0 each; frames range(0,min(n,192),8); never select by timing or task success. Three public training demonstrations, at most 72 observations.",
+  "image_semantics": "HDF5 opengl image convention required; official evaluation 180-degree rotation; original 128px demos, author JPEG/resize to224 and90% area crop; differs from256px online renders. State = ee_states6 + gripper_states2.",
+  "conditions": [
+    "native: independent upstream OpenVLA-OFT code, same frozen checkpoint, once per observation",
+    "disabled: FastVLA with pruning off",
+    "fixed: rho0.8,tau0,window10",
+    "adaptive: rho0.8,tau0.1,window10"
+  ],
+  "order": [
+    [
+      "disabled",
+      "adaptive",
+      "fixed"
+    ],
+    [
+      "fixed",
+      "disabled",
+      "adaptive"
+    ],
+    [
+      "adaptive",
+      "fixed",
+      "disabled"
+    ]
+  ],
+  "warmup": "3 first-observation forwards per condition/replay, then reset history before each chronological episode. Repeated calls use fresh input state copies.",
+  "native_gate": {
+    "all_observations_all_disabled_replays": true,
+    "raw_action_atol": 0.002,
+    "raw_action_rtol": 0.005,
+    "binarized_gripper_exact": true,
+    "not_task_equivalence_guarantee": true
+  },
+  "resources": {
+    "prepare_cpu": 2,
+    "prepare_host_gib": 8,
+    "prepare_minutes": 45,
+    "gpu": "one L4",
+    "model_minutes_cap": 30,
+    "model_cpu": 2,
+    "model_host_gib": 32,
+    "reserved_gpu_limit_gib": 22
+  },
+  "runtime": "Pinned Python3.10.14 image, torch2.2.0/BF16/custom pinned Transformers fork; explicitly SDPA for both sources; TF preprocessing CPU only. Native and FastVLA separate processes; no checkpoint code mutation. Upstream FastVLA synchronization/FLOP bookkeeping retained. No training.",
+  "timing": "Wall duration includes original preprocess, transfer, policy, action unnormalization and gripper conversion; excludes disk reading/copy/logging. CUDA stream event span includes CPU launch gaps, not a kernel-time sum.",
+  "triage_rules_before_outcomes": {
+    "all_required": true,
+    "adaptive_tokens_vary": true,
+    "stable_three_replay_20hz_bucket_disagreement_fraction_min": 0.1,
+    "within_episode_p90_p10_gt_twice_median_within_state_range": true,
+    "adaptive_within_episode_spread_gt_fixed_spread_plus_adaptive_jitter": true,
+    "actual_reserved_memory_below_22gib": true
+  },
+  "interpretation": "Heuristic conservative go/no-go, not p-value or effect-size confirmation. A pass permits closed-loop protocol design only. A failure stops expansion of this first deployment, not a universal impossibility claim. No task success computed.",
+  "next_stage": "Only after actual resources and triage pass, review closest prior work again and freeze independent closed-loop cohort/endpoints before outcomes. No automatic full study or paid compute."
+}

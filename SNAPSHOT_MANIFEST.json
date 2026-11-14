@@ -1,6 +1,6 @@
 {
-  "source_commit": "7af4d22f6a59a3878c256f6461b762c2364c27c7",
-  "scope": "Current frozen-model experiments plus a bounded cross-field research screen; not the complete private research archive. New embodied timing proposal has no model results yet.",
+  "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+  "scope": "Frozen-model experiment summaries and a bounded VLA timing feasibility implementation. VLA has no model measurements or task-success results yet.",
   "excluded": [
     "conversation archives",
     "emails",
@@ -72,6 +72,13 @@
       "source_commit": "ab8df7dadcddcacbc00098e867cd84ebb765f450",
       "source_sha256": "512f76fff4489ac63b01fe6ddbe5cbf969f8036edc0c87acfb0995c73f12a190",
       "exported_sha256": "512f76fff4489ac63b01fe6ddbe5cbf969f8036edc0c87acfb0995c73f12a190",
+      "modified": false
+    },
+    {
+      "path": "analyze_vla_latency_v1.py",
+      "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+      "source_sha256": "e41f140adf2e34d74506f2660f5d5262725abf4c46db35047c77a236c93ff920",
+      "exported_sha256": "e41f140adf2e34d74506f2660f5d5262725abf4c46db35047c77a236c93ff920",
       "modified": false
     },
     {
@@ -375,6 +382,62 @@
       "modified": false
     },
     {
+      "path": "remote/vla_acquire_v1.py",
+      "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+      "source_sha256": "c028ae8c7281cd6c2b42821d7ac7740601dcd345fa853d912685edd70f748d6c",
+      "exported_sha256": "c028ae8c7281cd6c2b42821d7ac7740601dcd345fa853d912685edd70f748d6c",
+      "modified": false
+    },
+    {
+      "path": "remote/vla_container_python_v1.sh",
+      "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+      "source_sha256": "39492a283c92d9a38a50d77fa30457bc14dcb56e169fdcbdeadaa909ad735f50",
+      "exported_sha256": "39492a283c92d9a38a50d77fa30457bc14dcb56e169fdcbdeadaa909ad735f50",
+      "modified": false
+    },
+    {
+      "path": "remote/vla_latency_assets_v1.json",
+      "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+      "source_sha256": "c4eb4d4cf561354c8088378eb6570b8db9caa244cd5317cdbce3e8a8a33ea04b",
+      "exported_sha256": "c4eb4d4cf561354c8088378eb6570b8db9caa244cd5317cdbce3e8a8a33ea04b",
+      "modified": false
+    },
+    {
+      "path": "remote/vla_latency_probe_v1.sbatch",
+      "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+      "source_sha256": "856b8074ba3eb1a15c08cce7cc8d175bf9d3766dc8b7fd3c9e055ccdf351b0f1",
+      "exported_sha256": "c733407075c4b1027eaa4fb53d628b84665d0cad33d27654789d245e7f94fff1",
+      "modified": true
+    },
+    {
+      "path": "remote/vla_latency_protocol_v1.json",
+      "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+      "source_sha256": "738c4dbbc2d7d92aa12aebc0e322474a80a199872b39078ce073a8ddd0fe6347",
+      "exported_sha256": "738c4dbbc2d7d92aa12aebc0e322474a80a199872b39078ce073a8ddd0fe6347",
+      "modified": false
+    },
+    {
+      "path": "remote/vla_latency_requirements_v1.txt",
+      "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+      "source_sha256": "5dabf1f407a78b2d87ec4072589902ef997539f854a188b371ca05a0fa4ef18c",
+      "exported_sha256": "5dabf1f407a78b2d87ec4072589902ef997539f854a188b371ca05a0fa4ef18c",
+      "modified": false
+    },
+    {
+      "path": "remote/vla_latency_worker_v1.py",
+      "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+      "source_sha256": "90eaac7c30eba479b144a9e6874281cb2d603c7481100068f31020675aed8066",
+      "exported_sha256": "90eaac7c30eba479b144a9e6874281cb2d603c7481100068f31020675aed8066",
+      "modified": false
+    },
+    {
+      "path": "remote/vla_prepare_v1.sbatch",
+      "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+      "source_sha256": "5857a8bf405dd43bc43b41d598fc805470815ba633a4990773696319aaba6b85",
+      "exported_sha256": "7c59ba14bee03ef665910ce7ed0f5d448a5ace71a739f6877420a48bdc627628",
+      "modified": true
+    },
+    {
       "path": "research_direction_screen_20261113.json",
       "source_commit": "7af4d22f6a59a3878c256f6461b762c2364c27c7",
       "source_sha256": "50a99dd95987fc4bf4d25f959288c25673d125cf8b12b852216021b8d3f39248",
@@ -614,6 +677,13 @@
       "modified": false
     },
     {
+      "path": "test_vla_latency_analysis_v1.py",
+      "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+      "source_sha256": "97330120662fe0242050e0fcab07672b7f209967bbeb42b3630a99d270abf99a",
+      "exported_sha256": "97330120662fe0242050e0fcab07672b7f209967bbeb42b3630a99d270abf99a",
+      "modified": false
+    },
+    {
       "path": "vendor/c2c_official/PROVENANCE.json",
       "source_sha256": "3c2f2366e0ec931f5ebca4d2d747ee9e17e7c45d748e80a5deecca170e9121cf",
       "exported_sha256": "3c2f2366e0ec931f5ebca4d2d747ee9e17e7c45d748e80a5deecca170e9121cf",
@@ -621,10 +691,10 @@
     },
     {
       "path": "vla_latency_coupling_probe_v1.json",
-      "source_commit": "7af4d22f6a59a3878c256f6461b762c2364c27c7",
-      "source_sha256": "cfce45a6796700d3a89efa5ef4df9d1f9c2be03ce327f4345119ab1e6341219a",
-      "exported_sha256": "cfce45a6796700d3a89efa5ef4df9d1f9c2be03ce327f4345119ab1e6341219a",
-      "modified": false
+      "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+      "source_sha256": "6560e8d0055eda17cba797c53d1ea14d064de8125811bbed0b36999178e4e0ca",
+      "exported_sha256": "ef233eb6e1185b5545bb9b4d1546d7dd24165569cfa91af42e7bfc0795231201",
+      "modified": true
     }
   ],
   "latest_update_source_commit": "bda60bce04f268cc3a24a83ef19bf489c67e5e34",
