@@ -1,7 +1,7 @@
 {
   "schema": "vla_latency_coupling_candidate_v1",
   "date": "2026-11-14",
-  "status": "Bounded development replay implemented and synthetic stdlib checks passed; cluster import/model execution still unvalidated. No timing or task-success results.",
+  "status": "CPU preparation submitted. One-off successor implemented and gate fault-injection checks passed; GPU not yet submitted.",
   "scientific_result": null,
   "job_ids": [],
   "first_stage": {
@@ -104,5 +104,6 @@
     ],
     "time_note": "30\u2013120 seconds per rollout are unmeasured scenarios, not a quote or allocation request. Profile before committing compute. A 10\u201320-episode smoke test is not evidence of a five-point effect."
   },
-  "implementation_protocol": "remote/vla_latency_protocol_v1.json"
+  "implementation_protocol": "remote/vla_latency_protocol_v1.json",
+  "execution_mode": "One-off Slurm dependency chain with preparation evidence gate; no recurring desktop task. Scientific selection and stop rules unchanged."
 }

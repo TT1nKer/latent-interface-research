@@ -474,6 +474,15 @@ Slurm account/partition settings. Inspect the preparation receipt before supplyi
 Model weights, demonstrations, upstream source and private execution records are
 not bundled. No model execution is permitted on the local workstation.
 
+The finite execution option `remote/vla_latency_after_prepare_v1.sbatch` uses
+Slurm `afterok:<preparation job>` with `--kill-on-invalid-dep=yes`. It validates
+the preparation evidence, runs the existing GPU probe and then the fixed stdlib
+analysis inside the same 30-minute allocation. Failed gates terminate execution.
+This adds no recurring monitor, retry loop or desktop-chat wakeup. Regenerate
+`vla_latency_chain_bundle_v1.json` fingerprints after adapting site-specific
+SBATCH directives, and record the change before submission. The source private
+cluster bundle and sanitized public bundle intentionally have different hashes.
+
 ## Rights and acknowledgement
 
 Original project code and documentation are available under the [MIT licence](LICENSE).

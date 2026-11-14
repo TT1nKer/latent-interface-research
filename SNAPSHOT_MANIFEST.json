@@ -1,5 +1,5 @@
 {
-  "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
+  "source_commit": "3c94d6c319d390d595e9a85881a623b17a0396fa",
   "scope": "Frozen-model experiment summaries and a bounded VLA timing feasibility implementation. VLA has no model measurements or task-success results yet.",
   "excluded": [
     "conversation archives",
@@ -10,7 +10,7 @@
     "paper PDFs",
     "historic Git objects"
   ],
-  "transformations": "Cluster-specific home prefix becomes ./ in metadata; personal Slurm account directives are replaced with generic submission instructions. Scientific code and predictions are unchanged.",
+  "transformations": "Personal Slurm accounts removed. Event-chain bundle fingerprints recomputed against exported files; scientific measurements and decision criteria unchanged. Private execution records and author source excluded.",
   "files": [
     {
       "path": "analyze_dream_label_ablation_v1.py",
@@ -396,10 +396,31 @@
       "modified": false
     },
     {
+      "path": "remote/vla_latency_after_prepare_v1.sbatch",
+      "source_commit": "3c94d6c319d390d595e9a85881a623b17a0396fa",
+      "source_sha256": "47185cb9f21a3ed6397239a5031b116fcd2d28ede964fabd4b89fb01312aa2eb",
+      "exported_sha256": "ba2b6634eb22e2fb52db73ddf0f945bfbdf05eaf396beaab6ec07af14cc935cd",
+      "modified": true
+    },
+    {
       "path": "remote/vla_latency_assets_v1.json",
       "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
       "source_sha256": "c4eb4d4cf561354c8088378eb6570b8db9caa244cd5317cdbce3e8a8a33ea04b",
       "exported_sha256": "c4eb4d4cf561354c8088378eb6570b8db9caa244cd5317cdbce3e8a8a33ea04b",
+      "modified": false
+    },
+    {
+      "path": "remote/vla_latency_chain_bundle_v1.json",
+      "source_commit": "3c94d6c319d390d595e9a85881a623b17a0396fa",
+      "source_sha256": "4b84f28fac11f88be8144ca4de75fccaee322b5633b1e67b45564f104d245467",
+      "exported_sha256": "02ef624bdd07f70ebf36bc2f47e20eb1ddd390e2c3c15f94761c3bc1b70d6d71",
+      "modified": true
+    },
+    {
+      "path": "remote/vla_latency_prepare_gate_v1.py",
+      "source_commit": "3c94d6c319d390d595e9a85881a623b17a0396fa",
+      "source_sha256": "ad84c4a498c1f1f1078db52a23c6f0bb1073e99db045c97a8fe2f03c0a155eaf",
+      "exported_sha256": "ad84c4a498c1f1f1078db52a23c6f0bb1073e99db045c97a8fe2f03c0a155eaf",
       "modified": false
     },
     {
@@ -684,6 +705,13 @@
       "modified": false
     },
     {
+      "path": "test_vla_prepare_gate_v1.py",
+      "source_commit": "3c94d6c319d390d595e9a85881a623b17a0396fa",
+      "source_sha256": "db77421a784ecccc4e6bf95b1855b25987eef8eaf53e01d3bc2fd77550ac7956",
+      "exported_sha256": "db77421a784ecccc4e6bf95b1855b25987eef8eaf53e01d3bc2fd77550ac7956",
+      "modified": false
+    },
+    {
       "path": "vendor/c2c_official/PROVENANCE.json",
       "source_sha256": "3c2f2366e0ec931f5ebca4d2d747ee9e17e7c45d748e80a5deecca170e9121cf",
       "exported_sha256": "3c2f2366e0ec931f5ebca4d2d747ee9e17e7c45d748e80a5deecca170e9121cf",
@@ -691,9 +719,9 @@
     },
     {
       "path": "vla_latency_coupling_probe_v1.json",
-      "source_commit": "41e9df1107c336ebd5a6a2b7362d6516303c31c5",
-      "source_sha256": "6560e8d0055eda17cba797c53d1ea14d064de8125811bbed0b36999178e4e0ca",
-      "exported_sha256": "ef233eb6e1185b5545bb9b4d1546d7dd24165569cfa91af42e7bfc0795231201",
+      "source_commit": "3c94d6c319d390d595e9a85881a623b17a0396fa",
+      "source_sha256": "481d192516afde5a49c995e31794d09c8eb0151987606f5af6dfa3d077397608",
+      "exported_sha256": "0eb9d41909f3d11e3d12efb86c883d4ec7165bace9c0d902f132aabc2ee183bd",
       "modified": true
     }
   ],

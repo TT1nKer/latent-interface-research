@@ -1,0 +1,19 @@
+{
+  "schema": "vla_latency_event_chain_v1",
+  "execution": "One finite Slurm afterok successor to CPU preparation; --kill-on-invalid-dep=yes. Gate then existing GPU replay then existing stdlib analysis within same30min allocation. No timer, polling loop, automatic retry, app wakeup or external messages.",
+  "scientific_protocol_changed": false,
+  "new_gate": "Mechanically checks successful preparation receipt, exact source/bundle, two CPU imports, container, package report/freeze and fixed cohort before loading any model. New failure stops.",
+  "sha256": {
+    "vla_acquire_v1.py": "c028ae8c7281cd6c2b42821d7ac7740601dcd345fa853d912685edd70f748d6c",
+    "vla_container_python_v1.sh": "39492a283c92d9a38a50d77fa30457bc14dcb56e169fdcbdeadaa909ad735f50",
+    "vla_latency_after_prepare_v1.sbatch": "ba2b6634eb22e2fb52db73ddf0f945bfbdf05eaf396beaab6ec07af14cc935cd",
+    "vla_latency_assets_v1.json": "c4eb4d4cf561354c8088378eb6570b8db9caa244cd5317cdbce3e8a8a33ea04b",
+    "vla_latency_prepare_gate_v1.py": "ad84c4a498c1f1f1078db52a23c6f0bb1073e99db045c97a8fe2f03c0a155eaf",
+    "vla_latency_probe_v1.sbatch": "c733407075c4b1027eaa4fb53d628b84665d0cad33d27654789d245e7f94fff1",
+    "vla_latency_protocol_v1.json": "738c4dbbc2d7d92aa12aebc0e322474a80a199872b39078ce073a8ddd0fe6347",
+    "vla_latency_requirements_v1.txt": "5dabf1f407a78b2d87ec4072589902ef997539f854a188b371ca05a0fa4ef18c",
+    "vla_latency_worker_v1.py": "90eaac7c30eba479b144a9e6874281cb2d603c7481100068f31020675aed8066",
+    "vla_prepare_v1.sbatch": "7c59ba14bee03ef665910ce7ed0f5d448a5ace71a739f6877420a48bdc627628",
+    "analyze_vla_latency_v1.py": "e41f140adf2e34d74506f2660f5d5262725abf4c46db35047c77a236c93ff920"
+  }
+}
