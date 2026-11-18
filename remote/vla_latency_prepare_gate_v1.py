@@ -82,8 +82,20 @@ def main():
     ap.add_argument('--prepare-job', required=True)
     ap.add_argument('--bundle', required=True)
     ap.add_argument('--out', required=True)
+    ap.add_argument('--processor-check', required=True)
     args = ap.parse_args()
     result = verify(Path.cwd(), args.prepare, args.prepare_job, args.bundle)
+    processor = json.loads(Path(args.processor_check).read_text())
+    assert processor['passed'] is True and processor['model_loaded'] is False
+    assert set(processor['checks']) == {'native', 'fastvla'}
+    for source, check in processor['checks'].items():
+        assert check['source'] == source and check['passed'] is True and check['model_loaded'] is False
+        assert check['worker_sha256'] == sha('vla_latency_worker_v1.py')
+        assert check['prepare_sha256'] == sha(args.prepare)
+        assert len(check['checks']) == 2 and all(set(c) == {'input_ids', 'attention_mask', 'pixel_values'} for c in check['checks'])
+    for key in ['processor_source_sha256', 'config_sha256', 'checks']:
+        assert processor['checks']['native'][key] == processor['checks']['fastvla'][key]
+    result['processor_check_sha256'] = sha(args.processor_check)
     with Path(args.out).open('x') as f: json.dump(result, f, indent=2); f.write('\n')
 
 

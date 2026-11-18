@@ -1,0 +1,30 @@
+{
+  "status": "initial_gpu_attempt_failed_before_measurements",
+  "preparation": {
+    "completed": true,
+    "elapsed_seconds": 678,
+    "model_loaded": false,
+    "observations": 46
+  },
+  "initial_gpu": {
+    "completed": false,
+    "elapsed_seconds": 62,
+    "prepare_gate_passed": true,
+    "native_model_weights_loaded": true,
+    "measurement_rows": 0,
+    "failure": "ProcessorMixin.from_pretrained delegates to AutoImageProcessor, which requests interactive trust for checkpoint auto_map. Slurm stdin is closed, causing EOFError then ValueError."
+  },
+  "repair": {
+    "change": "Construct the image processor from the pinned local PrismaticImageProcessor and tokenizer from installed AutoTokenizer with trust_remote_code=False. Compose them directly; load before model weights.",
+    "verification": "Slurm CPU exact comparison against HF ProcessorMixin dispatch with explicit local AutoImageProcessor registration, for two deterministic image/text checks and both pinned source trees. No models in CPU check.",
+    "scientific_protocol_changed": false,
+    "initial_failure_retained": true,
+    "environment_reused": true,
+    "automatic_retry_loop": false
+  },
+  "scientific_result": null,
+  "limitations": [
+    "No VLA latency or closed-loop task-success result yet.",
+    "CPU processing checks do not establish action-level native/FastVLA agreement; the original GPU control remains required."
+  ]
+}

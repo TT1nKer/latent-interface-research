@@ -451,9 +451,13 @@ independent validation.
 ## Bounded VLA timing probe (2026-11-14)
 
 The candidate in `vla_latency_coupling_probe_v1.json` now has an executable
-preparation and replay path in `remote/vla_*`. No VLA model run or timing result
-has been obtained yet. Five small synthetic-data tests validate the analysis
-checks; they are not robot experiments.
+preparation and replay path in `remote/vla_*`. Preparation succeeded for 46
+observations. The first GPU allocation failed after 62 seconds, after loading native
+weights but before measurements: `ProcessorMixin` delegated to an unregistered
+`AutoImageProcessor` and requested interactive trust on closed Slurm stdin.
+`results/vla_latency_v1.loader_failure.json` preserves this failure and repair scope.
+There is still no VLA timing or closed-loop task-success result. Synthetic-data
+analysis tests are implementation checks, not robot experiments.
 
 `remote/vla_latency_protocol_v1.json` fixes the development-only selection rule,
 native-output tolerance and conservative continuation criteria before outcomes.
@@ -475,8 +479,14 @@ Model weights, demonstrations, upstream source and private execution records are
 not bundled. No model execution is permitted on the local workstation.
 
 The finite execution option `remote/vla_latency_after_prepare_v1.sbatch` uses
-Slurm `afterok:<preparation job>` with `--kill-on-invalid-dep=yes`. It validates
-the preparation evidence, runs the existing GPU probe and then the fixed stdlib
+Slurm `afterok:<successful prerequisite job>` with `--kill-on-invalid-dep=yes`.
+The loader repair adds `vla_processor_check_v1.sbatch`: a five-minute, two-CPU,
+8 GiB check without model loading, comparing explicit pinned processor components
+to locally registered HF dispatch. Run it with the existing `VLA_PREPARE_RECEIPT`.
+The successor requires its `summary.json` as `VLA_PROCESSOR_CHECK_RECEIPT`,
+plus the original `VLA_PREPARE_JOB` and `VLA_PREPARE_RECEIPT`; depend on this CPU
+check and validate its exact worker/preparation hashes before loading weights.
+It validates the preparation evidence, runs the existing GPU probe and then the fixed stdlib
 analysis inside the same 30-minute allocation. Failed gates terminate execution.
 This adds no recurring monitor, retry loop or desktop-chat wakeup. Regenerate
 `vla_latency_chain_bundle_v1.json` fingerprints after adapting site-specific
