@@ -1,4 +1,12 @@
-# Two tests of when switching between experts has value
+# Transfer and expert selection across three domains
+
+## Which use of the same action corresponds across people?
+
+Two people assembled the same toy. Both picked up a screw several times. The screw pickup during the annotated step “attach body” was the **seventh of eight** pickups for one person and the **fifth of eleven** for the other. This is the first eligible pair and role in the sorted analysis, selected independently of each method's result. The fine action name alone does not distinguish these occurrences. [Source dataset](https://openaccess.thecvf.com/content/CVPR2022/html/Sener_Assembly101_A_Large-Scale_Multi-View_Video_Dataset_for_Understanding_Procedural_Activities_CVPR_2022_paper.html)
+
+We grouped camera copies into physical demonstrations and matched the public fine and coarse Assembly101 annotations for 60 assembly recordings. Among 1,521 within-recording fine-action types that repeated inside coarse operations, 691 occurred under multiple coarse operation names. We then required a same-toy pair with different participants, two distinct roles for the fine action in each recording, and a specific role appearing precisely once for that action in both recordings. This yielded 212 directional tests across 34 pairs and 12 toys. These tests reuse recordings and are clustered by toy. [Source coverage](assembly101_coverage.json) · [Eligibility rules](assembly101_occurrence_screen_20261120.json)
+
+For each test, a method receives the source marked occurrence and the two complete fine-action streams. Every target occurrence of the matching fine action can be selected, including events outside coarse action boundaries. The role labels are reserved for constructing and scoring cases. Uniform selection scored 13.32%, relative occurrence order 15.80%, and an edit-distance baseline matching the full sequences through each candidate 33.22%. Shared best scores receive fractional credit. Giving the 34 recording pairs equal weight yielded 12.75%, 14.17% and 33.04%. The comparison uses annotated action names, full future context and no pixels. It establishes a measurable task and a strong baseline. A claim about visual recognition or generalization to new toys requires a separate test. [Fixed comparator](assembly101_forced_alignment_protocol_20261120.json) · [Results](assembly101_alignment_results.json) · [Official annotations](https://github.com/assembly-101/assembly101-annotations)
 
 ## Bidirectional image and text retrieval
 

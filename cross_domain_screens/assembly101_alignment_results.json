@@ -1,0 +1,76 @@
+{
+  "unordered_pairs": 34,
+  "toys": 12,
+  "ordered_items": 212,
+  "full_target_candidate_range": [
+    2,
+    39
+  ],
+  "results": {
+    "forced_edit": {
+      "fractional_credit_sum": "845/12",
+      "fractional_top1": 0.3321540880503145,
+      "unique_correct": 65,
+      "correct_in_minimizers": 77,
+      "tie_events": 36,
+      "max_tie": 4,
+      "no_prediction": 0,
+      "unordered_pair_macro_top1": 0.3303921568627451
+    },
+    "absolute_clamped": {
+      "fractional_credit_sum": "30",
+      "fractional_top1": 0.14150943396226415,
+      "unique_correct": 30,
+      "correct_in_minimizers": 30,
+      "tie_events": 0,
+      "max_tie": 1,
+      "no_prediction": 0,
+      "unordered_pair_macro_top1": 0.11715686274509804
+    },
+    "absolute_strict": {
+      "fractional_credit_sum": "12",
+      "fractional_top1": 0.05660377358490566,
+      "unique_correct": 12,
+      "correct_in_minimizers": 12,
+      "tie_events": 0,
+      "max_tie": 1,
+      "no_prediction": 46,
+      "unordered_pair_macro_top1": 0.037745098039215684
+    },
+    "normalized": {
+      "fractional_credit_sum": "67/2",
+      "fractional_top1": 0.1580188679245283,
+      "unique_correct": 30,
+      "correct_in_minimizers": 37,
+      "tie_events": 15,
+      "max_tie": 2,
+      "no_prediction": 0,
+      "unordered_pair_macro_top1": 0.14166666666666666
+    },
+    "uniform": {
+      "fractional_credit_sum": "896235409/31744440",
+      "fractional_top1": 0.13317373102662838,
+      "unique_correct": 0,
+      "correct_in_minimizers": 212,
+      "tie_events": 212,
+      "max_tie": 39,
+      "no_prediction": 0,
+      "unordered_pair_macro_top1": 0.1275108488719872
+    }
+  },
+  "example": {
+    "selection": "first eligible pair and role in lexical order",
+    "toy": "c03f",
+    "marked_fine": "pick up screw",
+    "coarse_role": "attach body",
+    "full_source_action_occurrence": [
+      7,
+      8
+    ],
+    "full_target_action_occurrence": [
+      5,
+      11
+    ]
+  },
+  "scope": "Annotation-level retrospective control on entire fine action stream with future tokens; all target positions of the same fine label eligible."
+}

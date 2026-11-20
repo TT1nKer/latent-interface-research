@@ -1,0 +1,62 @@
+{
+  "protocol": "assembly101_occurrence_screen_20261120.json",
+  "inputs": {
+    "total_bytes": 34585869
+  },
+  "sample": {
+    "official_fine_validation_physical_recordings": 62,
+    "official_coarse_assembly_validation_recordings": 60,
+    "toy_ids": 34,
+    "participants": 37,
+    "fine_video_rows_in_matched_recordings": 183818,
+    "deduplicated_fine_events_whole_recordings": 15429,
+    "recordings_with_a_cross_role_event": 60,
+    "coarse_intervals": 953
+  },
+  "containment": {
+    "no_containing_foreground_role": 7449,
+    "strictly_contained": 7978,
+    "observed_sequence_action_types": 3735,
+    "repeated_sequence_action_types": 1521,
+    "repeated_under_different_roles": 691,
+    "occurrences_of_such_actions": 3591,
+    "zero_or_negative_duration": 2
+  },
+  "pairing": {
+    "same_toy_different_person_unordered_pairs_available": 39,
+    "unordered_pairs_eligible": 34,
+    "toys_eligible": 12,
+    "distinct_eligible_fine_verbs_and_objects": 13,
+    "distinct_eligible_coarse_roles": 24,
+    "target_occurrence_count_min_max": [
+      2,
+      23
+    ],
+    "normalized_fail_recordings": 35,
+    "normalized_fail_toys": 12,
+    "normalized_fail_pairs": 32,
+    "both_fail_pairs": 32,
+    "both_fail_toys": 12,
+    "eligible_recordings": 36,
+    "eligible_participants": 27
+  },
+  "rank_baselines": {
+    "ordered_item_count": 212,
+    "same_ordinal_correct": 34,
+    "normalized_ordinal_correct": 65,
+    "chance_sum": 47.21135320348876,
+    "both_ordinal_baselines_wrong": 147,
+    "exact_ordinal_out_of_range": 38,
+    "same_ordinal_correct_fraction": 0.16037735849056603,
+    "normalized_ordinal_correct_fraction": 0.30660377358490565,
+    "chance_sum_fraction": 0.22269506228060737,
+    "both_ordinal_baselines_wrong_fraction": 0.6933962264150944,
+    "macro_over_unordered_pairs": {
+      "same_ordinal_correct": 0.14313725490196078,
+      "normalized_ordinal_correct": 0.28627450980392155,
+      "chance_sum": 0.21510011169542725
+    }
+  },
+  "caveat": "Table of held-out annotations; foreground filtering and fine labels require annotation. Ordered items share recordings, toys and roles. Ordinal controls do not evaluate a learned model or online execution. Dataset by Sener et al. (CVPR 2022), annotations CC BY-NC 4.0; original analysis.",
+  "coverage": "Full source-file hashes are retained privately; the public artifact contains aggregate counts and the pinned official fetch paths."
+}
