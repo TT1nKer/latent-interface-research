@@ -1,0 +1,17 @@
+{
+  "status": "Prospective acquisition and native validity protocol. Before external policy outcomes.",
+  "dataset_revision": "732faa50cca873a8af08243bb6faacd847fe1ffb",
+  "author_code_revision": "fbd27a2f1a1d011ac12802ea3b2f8dc0848c7b64",
+  "release_repo": "https://huggingface.co/datasets/jesbu1/leaps_karel_dataset",
+  "official_link": "https://github.com/clvrai/leaps/blob/fbd27a2f1a1d011ac12802ea3b2f8dc0848c7b64/README.md",
+  "manifest": "karel_dataset/id.txt",
+  "hdf5": "karel_dataset/data-001.hdf5",
+  "hdf5_bytes": 3236016647,
+  "id_bytes": 1741396,
+  "source_programs": 50000,
+  "sampling": {"order":"id.txt release generation order, zero-based", "block_starts":[6170,18670,31170,43670], "block_length":160, "first_demo_indices":[0,1,2,3,4,5], "replacements":false, "label":"Prospective external corpus cohort. No model fits on LEAPS. The published pretraining reader filters token length <45 and shuffles before its 70/15/15 split; this sample does not claim membership of its test fold."},
+  "eligibility": "Save an annotated row for each of the 640 selected IDs. Require unique IDs and complete state/action/termination validation for all six worlds. Withhold score on any failure or missing row. For scientific evaluation retain only the first occurrence of each exact token program and exclude exact development overlap, without replacements. Record all counts, including empty traces. Syntactic exclusion uses SHA256 of UTF-8 whitespace-joined canonical DSL tokens against all 2,045 development hashes. Distinct tokens do not establish semantic novelty.",
+  "validation": "Decode the author reference integer-token sequence and parse into the existing native Karel AST grammar. Six original worlds in stored order. Under strict LEAPS primitive semantics, execute the native AST to produce each command plus STOP, compare every recorded intermediate full physical state, pose, direction, walls and per-cell marker count. Use stored s_h_len/a_h_len, no padding. North decreases source row; normalized north increases internal row. Move into wall, empty pick or put from nine fails. Record all zero-action and no-move worlds. Raw source and normalized worlds stay private.",
+  "budget": {"source_transfer_bytes":67108864,"source_transfer_wall_s":480,"scope":"Combined manifest, HDF5 prefetch, partial source and retries; abort rather than expand the sample or retry a different sample. No local model fit or policy scoring. Generic software installation is separate."},
+  "license": "The code repository declares MIT. The dataset repository does not declare a dataset license. Keep raw/normalized records and authors' program sequences outside Git; share only original code, provenance and summaries."
+}

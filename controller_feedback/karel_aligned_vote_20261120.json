@@ -1,0 +1,20 @@
+{
+  "stage": "Post-discovery comparison on the same validation programs. Existing paired results were known before this protocol; the three new policies had not been scored. This is not independent confirmation.",
+  "question": "Does matching the support examples to the exact first-move decision point already recover correct marker-sensitive branching and preserve invariant decisions?",
+  "inputs": {
+    "validation_zip_sha256": "967dc1c557595e7c4a5ff08a636ec3fe2b5a5320fd6548be50295cf36c5ab4cd",
+    "paired_summary_sha256": "9d67bf57fdd83ee9796c72f2f47105d978320a399f6c95979c4d3444aa0db8b8",
+    "paired_rows_sha256": "bd6fef13840a9ba459bfd9f2cf6d8d94ea1a2f89f6a4c980170e4997af0c11f6",
+    "simulator_sha256": "3683ec3175e9049b554c7fc7f5500e0fd5a9cead91b37407d8efc672c338835f",
+    "predicates_sha256": "be9d49715634d3acb0c92f1eb6467ace3557be65921d4baae650b85c1d660c6a"
+  },
+  "cohort": "Same six worlds, same 2,500 rows and identifiers in order, same exact code hashes, same pair inclusion and oracle next attempted command (including STOP and illegal requests) as frozen karel_return_pairs_20261120.json. No target label, reference program, actual target marker, endpoint, or previous model prediction enters a policy. Use the fixed target-arm marker only in the two marker-conditioned methods. Reuse reference-validated original traces for the other five supports; stop if any eligible target lacks five first moves.",
+  "features": "Replay each support only through its first successful move. Extract front, left and right clearance and marker presence at arrival, and immediately following recorded primitive or STOP. The predictors use only marker presence from these four bits. Retain the three clearance bits only in a checksum of extracted support observations for provenance. Each of five support trajectories casts exactly one vote. No between-program fitting, adaptive thresholds, program IDs as features, or new policy.",
+  "policies": {
+    "pooled": "Use the modal next label from all five supports in both arms.",
+    "marker": "Vote using supports matching the arm's marker flag; if that flag was unseen use all five supports.",
+    "gated": "Split by the marker if and only if both marker levels were observed, both have a uniquely most frequent label, and those labels differ. Otherwise use the pooled modal label for both arms."
+  },
+  "ties": "When selecting a label in a tied modal vote, prefer STOP then lexical action name. Any within-level tie disables the gated policy's split regardless of this deterministic resolution.",
+  "outcomes": "Report pooled, marker and gated within oracle-switch, oracle-stay, and all pairs. For each give count of correct decisions separately per arm, balanced arm accuracy, both-correct, predicted switch, false-switch incidence among oracle-stay, and exact-program-code macro averages. Report gated minus pooled and gated minus marker by both-correct and predicted switch, with paired discordances. Repeat descriptively on pairs where both oracle actions were legal; keep attempts with an illegal reference command in primary. Report distinct-code/world counts and exclusions. No additional baseline, choice of threshold, tuning or significance screen. A strong first-move-aligned vote can remove the apparent need for more complex control; any success here establishes only a teacher-forced single-decision support regularity."
+}
