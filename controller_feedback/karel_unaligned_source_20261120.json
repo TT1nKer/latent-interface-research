@@ -1,0 +1,49 @@
+{
+  "status": "Prospective untouched external source cohort for unaligned-control study; fixed before sample and policy outcome access.",
+  "dataset_revision": "732faa50cca873a8af08243bb6faacd847fe1ffb",
+  "author_code_revision": "fbd27a2f1a1d011ac12802ea3b2f8dc0848c7b64",
+  "release_repo": "https://huggingface.co/datasets/jesbu1/leaps_karel_dataset",
+  "official_link": "https://github.com/clvrai/leaps/blob/fbd27a2f1a1d011ac12802ea3b2f8dc0848c7b64/README.md",
+  "manifest": "karel_dataset/id.txt",
+  "hdf5": "karel_dataset/data-001.hdf5",
+  "hdf5_bytes": 3236016647,
+  "id_bytes": 1741396,
+  "source_programs": 50000,
+  "sampling": {
+    "order": "id.txt release generation order, zero-based",
+    "block_starts": [
+      2404,
+      14904,
+      27404,
+      39904
+    ],
+    "block_length": 192,
+    "first_demo_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "replacements": false,
+    "label": "Fixed new released-ID blocks in generation order. Their centers lie 2500 positions into each quarter. Published pretraining random/test membership is not claimed. No LEAPS fitting or tuning; first six native demos without world filters."
+  },
+  "eligibility": "All 768 original programs must pass every-step, endpoint, sensor, and termination validation. Save all raw-verified records privately. Produce the scored cohort by retaining the first exact UTF-8 whitespace-joined token sequence SHA-256 in this sample that is absent from both the earlier fixed 640 LEAPS programs and the 2045 distinct development programs. Never replace exclusions. Do not filter on recorded outcome, length, movement, action diversity or first move. Record each exclusion reason, counts for zero-action/no-move programs and worlds, all source/world denominators. Exact identical strings do not determine semantic equivalence.",
+  "validation": "Decode the author reference integer-token sequence and parse into the existing native Karel AST grammar. Six original worlds in stored order. Under strict LEAPS primitive semantics, execute the native AST to produce each command plus STOP, compare every recorded intermediate full physical state, pose, direction, walls and per-cell marker count. Use stored s_h_len/a_h_len, no padding. North decreases source row; normalized north increases internal row. Move into wall, empty pick or put from nine fails. Record all zero-action and no-move worlds. Raw source and normalized worlds stay private.",
+  "budget": {
+    "source_transfer_bytes": 75497472,
+    "source_transfer_wall_s": 480,
+    "scope": "Combined manifest, HDF5 prefetch, partial source and retries; abort rather than expand the sample or retry a different sample. No local model fit or policy scoring. Generic software installation is separate."
+  },
+  "license": "The code repository declares MIT. The dataset repository does not declare a dataset license. Keep raw/normalized records and authors' program sequences outside Git; share only original code, provenance and summaries.",
+  "prior_sources": {
+    "prior_leaps_normalized_sha256": "8e14281edbe6e93cdfa5aa1bea2e6bc0a62f65778447d220430a1a98159e706f",
+    "prior_leaps_fixed_count": 640,
+    "development_program_pairs_sha256": "bd6fef13840a9ba459bfd9f2cf6d8d94ea1a2f89f6a4c980170e4997af0c11f6",
+    "development_unique": 2045,
+    "development_zip_sha256": "967dc1c557595e7c4a5ff08a636ec3fe2b5a5320fd6548be50295cf36c5ab4cd",
+    "prior_acquirer_sha256": "fffdb87cca3b55d01a47edd8b0b9ed84d3fcaa278eef5cacb52f49d24f0011c4",
+    "prior_format_sha256": "aba32a4d87ca607f04e146fb85e2bd343540f936a64f93aa090fa920776d665a"
+  }
+}
