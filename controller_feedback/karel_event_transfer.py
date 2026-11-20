@@ -18,8 +18,11 @@ CHECKPOINT = '670119eb898578c2d85268fe5fd2a681243c94c68d48100408b497c22b60ea35'
 
 
 def digest(path):
+    hasher = hashlib.sha256()
     with path.open('rb') as f:
-        return hashlib.file_digest(f, 'sha256').hexdigest()
+        for chunk in iter(lambda: f.read(1024 * 1024), b''):
+            hasher.update(chunk)
+    return hasher.hexdigest()
 
 
 def choose_marks(code, supports):
