@@ -1,0 +1,55 @@
+{
+  "design": "Post-hoc time-direction diagnostic on both previously scored panels. The source always uses the fixed eight events on either side. For the same target candidates compare both sides, the eight earlier actions only and the eight later actions only. An earlier action here means earlier in the start-time ordered transcript, not necessarily already completed (bimanual actions can overlap). Includes only gold action transcripts, ranks over all candidates offline, and does not detect when to issue a cue online. No new predictor fitted.",
+  "discovery": {
+    "single": {
+      "n": 212,
+      "scores": {
+        "both": 0.5872641509433962,
+        "past": 0.539308176100629,
+        "future": 0.44146655231560894
+      }
+    },
+    "same_order": {
+      "n": 34,
+      "scores": {
+        "both": 0.38235294117647056,
+        "past": 0.3382352941176471,
+        "future": 0.17647058823529413
+      }
+    },
+    "reversed": {
+      "n": 26,
+      "scores": {
+        "both": 0.4230769230769231,
+        "past": 0.4230769230769231,
+        "future": 0.23076923076923078
+      }
+    }
+  },
+  "heldout": {
+    "single": {
+      "n": 146,
+      "scores": {
+        "both": 0.6506849315068494,
+        "past": 0.636986301369863,
+        "future": 0.4623287671232877
+      }
+    },
+    "same_order": {
+      "n": 40,
+      "scores": {
+        "both": 0.525,
+        "past": 0.4,
+        "future": 0.15
+      }
+    },
+    "reversed": {
+      "n": 6,
+      "scores": {
+        "both": 0.8333333333333334,
+        "past": 0.6666666666666666,
+        "future": 0.16666666666666666
+      }
+    }
+  }
+}

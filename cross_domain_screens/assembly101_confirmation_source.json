@@ -1,0 +1,25 @@
+{
+  "status": "Frozen from official coarse train/discovery split metadata before opening training annotations or scores. Physical recording, exact toy IDs and participant IDs are disjoint; toy variants within the same toy category can remain related.",
+  "sources": {
+    "schema": "https://github.com/assembly-101/assembly101-annotations/tree/01651287eec9778bdf1de20e91e4b3162cccd770",
+    "official_drive": "https://drive.google.com/drive/folders/1QoT-hIiKUrSHMxYBKHvWpW9Z9aCznJB7",
+    "val_file_id": "1rXNhSvm87cUxCBybLJAqpfjI-ncvuDRD",
+    "train_file_id": "16zMkWiIyKjpDY19WQOceMGZpWYo-pRSJ",
+    "discovery_split_sha256": "5334cfa366c2d7d1528fa36f292065d85e478a35e69c0dcd0a848edb7ef5f707",
+    "official_train_split_sha256": "597c10ed66752b2abd736f4b1b25ca04f86ab7de473e95e11d4a05c394038fbc"
+  },
+  "n_discovery": 60,
+  "n_discovery_toys": 34,
+  "n_discovery_people": 37,
+  "n_train": 191,
+  "n_disjoint": 44,
+  "n_toys": 24,
+  "n_people": 11,
+  "n_distinct_person_same_toy_pairs": 21,
+  "n_toys_with_pairs": 9,
+  "train_fine_sha256": "748cd23d772d2ecf9c4506378401d26765afc5c096bc7b2c802e5733fcefa766",
+  "input_manifest_sha256": "d49440342dcf955b4e1e4f0f60cc3fe814d231ccacfbda4c1d95e2818021ecbf",
+  "input_files": 46,
+  "train_fine_bytes": 100677017,
+  "recording_prefix_ambiguity": "Checking both possible participant IDs in inconsistent filename prefixes retains the same 44 recordings as the user-ID-only rule; no eligible ID overlaps either discovery identifier set."
+}

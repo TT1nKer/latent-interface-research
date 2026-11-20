@@ -1,0 +1,76 @@
+{
+  "recordings": 44,
+  "toys": 24,
+  "participants": 11,
+  "discovery_recording_overlap": 0,
+  "discovery_toy_overlap": 0,
+  "discovery_participant_overlap": 0,
+  "distinct_person_same_toy_pairs": 21,
+  "pairs_with_unique_shared_role": 20,
+  "primary": {
+    "toys": 2,
+    "recording_pairs": 3,
+    "equal_toy_mean": {
+      "parts": 0.875,
+      "edit": 0.0,
+      "uniform": 0.027854983332864826
+    },
+    "parts_minus_edit": 0.875,
+    "paired_toy_95": [
+      0.75,
+      1.0
+    ],
+    "win_tie_loss": [
+      2,
+      0,
+      0
+    ],
+    "unique_dual_success_toys": 2,
+    "meets_gate": false
+  },
+  "single": {
+    "n": 146,
+    "rates": {
+      "parts": 0.6506849315068494,
+      "edit": 0.3801369863013699,
+      "uniform": 0.1445336710697307
+    }
+  },
+  "reversed": {
+    "directed_n": 6,
+    "rates": {
+      "parts": 0.8333333333333334,
+      "edit": 0.0,
+      "uniform": 0.029095900642166876
+    }
+  },
+  "same_order": {
+    "directed_n": 40,
+    "rates": {
+      "parts": 0.525,
+      "edit": 0.225,
+      "uniform": 0.023162885363070596
+    }
+  },
+  "reversed_overlap_excluded_directed": 0,
+  "per_reversal_toy": {
+    "b06a": {
+      "directed_n": 2,
+      "rates": {
+        "parts": 1.0,
+        "edit": 0.0,
+        "uniform": 0.024132231404958678
+      }
+    },
+    "c03d": {
+      "directed_n": 4,
+      "rates": {
+        "parts": 0.75,
+        "edit": 0.0,
+        "uniform": 0.03157773526077098
+      }
+    }
+  },
+  "protocol_sha256": "3e4923b23bc91c04015f1ec5d6c3021d043e5329b9b7ea5e7b40fc9d91c52367",
+  "evaluation": "No fitting or window changes. Annotated full action streams, including future observations. Same dataset family; different official split, toy codes and participant IDs."
+}
