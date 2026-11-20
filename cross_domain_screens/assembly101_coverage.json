@@ -1,7 +1,9 @@
 {
   "protocol": "assembly101_occurrence_screen_20261120.json",
   "inputs": {
-    "total_bytes": 34585869
+    "total_bytes": 34585869,
+    "input_manifest_sha256": "3bcd046eba856f42c8c2886e23a70787857896e8731d4cc872e9d7ce3cc12540",
+    "input_file_count": 62
   },
   "sample": {
     "official_fine_validation_physical_recordings": 62,

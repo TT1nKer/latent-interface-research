@@ -1,0 +1,55 @@
+{
+  "protocol_commit": "d3dac4e",
+  "protocol_sha256": "04bb93d3340409f4f102efaf4a1f20c5028d661a3708d2f5b6d7a7ebf41f59ca",
+  "verified_input_files": 62,
+  "single": {
+    "n": 212,
+    "credit_sum": "249/2",
+    "accuracy": 0.5872641509433962,
+    "unique_correct": 124,
+    "any_credit": 125,
+    "uniform_credit_sum": "896235409/31744440",
+    "uniform_accuracy": 0.13317373102662838
+  },
+  "existing_forced_edit_single_top1": 0.3321540880503145,
+  "swaps": {
+    "all": {
+      "n": 60,
+      "credit_sum": "24",
+      "accuracy": 0.4,
+      "unique_correct": 24,
+      "any_credit": 24,
+      "uniform_credit_sum": "12391079832121/7505869250880",
+      "uniform_accuracy": 0.027514201260274308
+    },
+    "same_order": {
+      "n": 34,
+      "credit_sum": "13",
+      "accuracy": 0.38235294117647056,
+      "unique_correct": 13,
+      "any_credit": 13,
+      "uniform_credit_sum": "40621650259313/37529346254400",
+      "uniform_accuracy": 0.031835204676699744
+    },
+    "reversed": {
+      "n": 26,
+      "credit_sum": "11",
+      "accuracy": 0.4230769230769231,
+      "unique_correct": 11,
+      "any_credit": 11,
+      "uniform_credit_sum": "197534712049/347493946800",
+      "uniform_accuracy": 0.021863658331102584
+    }
+  },
+  "unordered_swap_recording_pairs": 16,
+  "swap_toys": 8,
+  "distinct_toys_with_unique_correct_reversed_dual_cues": 3,
+  "unique_reversal_toys_sorted": [
+    "c03f",
+    "c07a",
+    "c09c"
+  ],
+  "exceeds_single_edit_comparator": true,
+  "advance": true,
+  "scope": "Exploratory retrospective localization on the same panel; complete, labeled fine-action transcript including future events."
+}
