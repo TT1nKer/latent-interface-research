@@ -1,0 +1,37 @@
+{
+  "ordered_marks_original": 212,
+  "ordered_marks_within_swappable_group": 96,
+  "eligible_groups_by_number_of_shared_roles": {
+    "1": 58,
+    "2": 18,
+    "3": 4
+  },
+  "unordered_mission_pairs": 30,
+  "physical_recording_pairs": 16,
+  "physical_recordings": 21,
+  "participants": 19,
+  "toys": 8,
+  "unordered_mission_pairs_with_reversed_rank": 13,
+  "strict_disjoint_reversals": 13,
+  "strict_reversal_recording_pairs": 7,
+  "strict_reversal_toys": 4,
+  "minimum_frame_gap_of_strict_reversals": 260,
+  "first_disjoint_reversal": {
+    "toy": "c03f",
+    "action": [
+      "pick up",
+      "screw"
+    ],
+    "source_roles": [
+      "attach roller arm",
+      "attach body"
+    ],
+    "target_roles": [
+      "attach body",
+      "attach roller arm"
+    ],
+    "minimum_frame_gap": 260
+  },
+  "max_pairs_exact_for_one_monotone_map": 17,
+  "definition": "Post-hoc availability count. Fix the two recordings and one fine verb/object; two different source marks must require two different target occurrences, each drawn from a coarse role shared and uniquely annotated in both recordings. Each unordered pair of roles gives one swap before reversing the direction of transfer. No method outcomes used."
+}
