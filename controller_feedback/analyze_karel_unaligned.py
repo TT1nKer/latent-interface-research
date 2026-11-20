@@ -164,9 +164,11 @@ def analyze(path):
 
 def check_receipt(path, receipt_path):
     receipt = json.loads(receipt_path.read_text())
+    hasher = hashlib.sha256()
     with path.open('rb') as f:
-        digest = hashlib.file_digest(f, 'sha256').hexdigest()
-    if receipt.get('completed') is not True or receipt.get('per_target_sha256') != digest:
+        for block in iter(lambda: f.read(1 << 20), b''):
+            hasher.update(block)
+    if receipt.get('completed') is not True or receipt.get('per_target_sha256') != hasher.hexdigest():
         raise ValueError('uncompleted evaluation or per-target digest differs from the evaluation receipt')
     return receipt
 
