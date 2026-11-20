@@ -9,7 +9,7 @@ model, code, and data licences.
 
 ## Learning which operation to call, 2026-11-20
 
-A single GRU chose the correct leaf in 68% of unseen three-operation compositions. A table fitted from single-operation demonstrations achieved 100% when given the operation sequence. We therefore moved to Karel worlds where the agent receives demonstrations and must choose actions without the reference program. [Experiments, controls and source data](controller_feedback/README.md)
+When a marker changed but the expert should keep the same next action, a policy using live readings made unnecessary switches in 63.20% of development pairs and 41.97% of external pairs. Voting from five demonstrations aligned at the first move reduced these rates to 4.19% and 4.24%. On the external corpus, only 23 distinct programs required a switch, below the prespecified 50-program floor. We closed the first-arrival screen. [Experiments, counts and scope](controller_feedback/README.md)
 
 ## One visual-token intervention in closed-loop control, 2026-11-20
 

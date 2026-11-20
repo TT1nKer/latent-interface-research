@@ -71,3 +71,17 @@ The last rule got 624 additional switching pairs right and lost 344 stay pairs r
 For an external check, the prospective protocol selects six original demonstrations from each of 640 program records in four fixed blocks of the LEAPS release. It requires all sampled reference trajectories to pass source-specific validation and excludes exact program overlaps with development before evaluation. The rules stay fixed across corpora. The 50-distinct-switching-program floor applies before assigning evidential weight to the test. [Source and eligibility](leaps_karel_source_20261120.json) · [Paired evaluation](karel_leaps_transfer_20261120.json)
 
 For independent reproduction, the original aligned-vote protocol pins both `program_pairs.jsonl` and the entire preceding run receipt. When the paired worker is run in a new Slurm allocation, the job number changes the receipt digest. Verify the recorded per-pair row digest against the original and check the reference action and endpoint coverage. In a separate copy of the aligned-vote protocol, set `inputs.paired_summary_sha256` to the new receipt digest and give that copy to `karel_aligned_vote.py`. Keep the dataset, per-pair row, simulator and sensor digests pinned. The published protocol preserves the hashes used for the reported run.
+
+### External result and decision
+
+All 640 sampled programs had different token sequences from each other and from the development set. The source-specific interpreter matched all 13,963 original actions, 17,803 states and sensor readings, and 3,840 terminations. Our decision point requires a move in the query and each of the other five worlds. Of the 3,840 worlds, 1,155 queries had no move and a further 525 lacked five moving supports. This left 2,160 pairs in 360 programs. The published worlds and reference code stay with the original release. [LEAPS data at fixed revision](https://huggingface.co/datasets/jesbu1/leaps_karel_dataset/tree/732faa50cca873a8af08243bb6faacd847fe1ffb/karel_dataset) · [External results and eligibility](leaps_results.json)
+
+| Frozen predictor | Both right on 106 expert switches | Wrongly changes on 2,054 expert stays | Both right on all 2,160 pairs |
+|---|---:|---:|---:|
+| All-step memory using live readings | 60/106 (56.60%) | 862/2,054 (41.97%) | 52.87% |
+| Same-step vote with an unambiguous split | 66/106 (62.26%) | 87/2,054 (4.24%) | 88.61% |
+| All-step memory with readings masked | 0/106 (0%) | 0/2,054 (0%) | 89.21% |
+
+The reduction in unnecessary changes appeared in the new corpus. Relative performance on the switches depends on weighting: when each switching program counts equally, both-correct rates are 48.70% for the selective vote and 55.51% for live memory. On the full distribution, the masked policy got 13 more pairs correct than the selective vote. Restricting to the 2,079 pairs where both reference commands were legal, the selective vote gained three net pairs over the aligned pooled vote.
+
+**Close this first-arrival experiment.** The 106 switch pairs represent only 23 distinct programs, below the registered minimum of 50. The two corpora share a programming language, and the hand-specified first-move boundary is available to the aligned votes. The data support a narrow result about selecting feedback in these cases. A future evaluation of learned reuse needs to withhold the correspondence between decision points and measure full-task outcomes on new programs.
