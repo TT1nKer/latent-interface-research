@@ -7,6 +7,10 @@ a validated new method. Further evaluation code, methodology, and positive or
 negative findings will be released as the pilot progresses, subject to upstream
 model, code, and data licences.
 
+## Learning which operation to call, 2026-11-20
+
+A single GRU chose the correct leaf in 68% of unseen three-operation compositions. A table fitted from single-operation demonstrations achieved 100% when given the operation sequence. We therefore moved to Karel worlds where the agent receives demonstrations and must choose actions without the reference program. [Experiments, controls and source data](controller_feedback/README.md)
+
 ## One visual-token intervention in closed-loop control, 2026-11-20
 
 We tested whether first-action imitation error helps decide which camera view
