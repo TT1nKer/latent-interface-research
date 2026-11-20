@@ -1,0 +1,552 @@
+{
+  "population": {
+    "type": "Validation mirror of the synthetic Karel bank",
+    "records": 2500,
+    "distinct_program_token_sequences": 2045,
+    "worlds": 15000,
+    "source_program_sequences_corroborated": 1000,
+    "author_sequences_form_same_ordered_prefix": false,
+    "all_original_actions_and_endpoints_reproduced": true,
+    "input_digests": {
+      "val.zip": "967dc1c557595e7c4a5ff08a636ec3fe2b5a5320fd6548be50295cf36c5ab4cd",
+      "short_val_code.txt": "d6908129926120a7ec0c58e2c60dbb7938dc1e19554b7e76a999f4034542f2f4",
+      "karel-stairway_code.json": "ff542ff88162918a4c02e0a27c6a1490696c4f5cacc6d3006663c51f569c4ceb",
+      "karel-stairway_task.txt": "3be328fc36ef854fe6ccadada943cf9ad084cdae7a73b3c885f9493689e86c80"
+    }
+  },
+  "complete_demonstration_replay": {
+    "programs": 2500,
+    "worlds": 15000,
+    "ordered_source_target_pairs": 75000,
+    "equal_input_pairs": 40,
+    "groups": {
+      "all": {
+        "programs": 2500,
+        "terminal_rate": 0.67416,
+        "trace_rate": 0.6718933333333333,
+        "different_trace_terminal_rate": 0.0022666666666666664
+      },
+      "conditional_syntax": {
+        "programs": 1559,
+        "terminal_rate": 0.47748556767158434,
+        "trace_rate": 0.47385075903356855,
+        "different_trace_terminal_rate": 0.003634808638015822
+      },
+      "no_conditional_syntax": {
+        "programs": 941,
+        "terminal_rate": 1,
+        "trace_rate": 1,
+        "different_trace_terminal_rate": 0
+      },
+      "varied_observed_traces": {
+        "programs": 1259,
+        "terminal_rate": 0.35297855440826054,
+        "trace_rate": 0.34847762774688906,
+        "different_trace_terminal_rate": 0.004500926661371458
+      },
+      "constant_observed_traces": {
+        "programs": 1241,
+        "terminal_rate": 1,
+        "trace_rate": 1,
+        "different_trace_terminal_rate": 0
+      }
+    },
+    "k_support": {
+      "1": {
+        "programs": 2500,
+        "mode_terminal": 0.67416,
+        "mode_exact": 0.6718933333333333,
+        "hindsight_terminal": 0.67416,
+        "hindsight_exact": 0.6718933333333333
+      },
+      "3": {
+        "programs": 2500,
+        "mode_terminal": 0.6914177777777778,
+        "mode_exact": 0.6891,
+        "hindsight_terminal": 0.81042,
+        "hindsight_exact": 0.80878
+      },
+      "5": {
+        "programs": 2500,
+        "mode_terminal": 0.7033533333333334,
+        "mode_exact": 0.7013333333333334,
+        "hindsight_terminal": 0.8596666666666667,
+        "hindsight_exact": 0.8584666666666667
+      }
+    },
+    "prefix_counts": {
+      "1": {
+        "pairs": 72102,
+        "same_next": 67958,
+        "terminal_hits": 50556
+      },
+      "3": {
+        "pairs": 45000,
+        "same_next": 42702,
+        "terminal_hits": 33348
+      }
+    }
+  },
+  "separate_human_stairway_exercise": {
+    "programs": 1,
+    "worlds": 3,
+    "ordered_source_target_pairs": 6,
+    "equal_input_pairs": 0,
+    "groups": {
+      "all": {
+        "programs": 1,
+        "terminal_rate": 0,
+        "trace_rate": 0,
+        "different_trace_terminal_rate": 0
+      },
+      "conditional_syntax": {
+        "programs": 1,
+        "terminal_rate": 0,
+        "trace_rate": 0,
+        "different_trace_terminal_rate": 0
+      },
+      "no_conditional_syntax": {
+        "programs": 0,
+        "terminal_rate": null,
+        "trace_rate": null,
+        "different_trace_terminal_rate": null
+      },
+      "varied_observed_traces": {
+        "programs": 1,
+        "terminal_rate": 0,
+        "trace_rate": 0,
+        "different_trace_terminal_rate": 0
+      },
+      "constant_observed_traces": {
+        "programs": 0,
+        "terminal_rate": null,
+        "trace_rate": null,
+        "different_trace_terminal_rate": null
+      }
+    },
+    "k_support": {
+      "1": {
+        "programs": 1,
+        "mode_terminal": 0,
+        "mode_exact": 0,
+        "hindsight_terminal": 0,
+        "hindsight_exact": 0
+      }
+    },
+    "prefix_counts": {
+      "1": {
+        "pairs": 6,
+        "same_next": 6,
+        "terminal_hits": 0
+      },
+      "3": {
+        "pairs": 6,
+        "same_next": 6,
+        "terminal_hits": 0
+      }
+    }
+  },
+  "prospective_plan_selection": {
+    "program_mean_endpoint_accuracy": {
+      "mode": 0.7033533333333333,
+      "legality_mode": 0.7647177777777777,
+      "sensor": 0.8215,
+      "ranker": 0.7838,
+      "oracle": 0.8596666666666668
+    },
+    "ranker_paired_gains": {
+      "legality_mode": {
+        "mean": 0.019082222222222226,
+        "paired_program_bootstrap_95": [
+          0.015971120366341223,
+          0.0225290391622492
+        ]
+      },
+      "sensor": {
+        "mean": -0.03769999999999994,
+        "paired_program_bootstrap_95": [
+          -0.044411114915261916,
+          -0.03173285074244749
+        ]
+      }
+    },
+    "fitted_selector_retained": false,
+    "simulation_and_signature_counts": {
+      "support_simulations": 15000,
+      "support_attempted_steps": 126461,
+      "support_empty_plans": 0,
+      "target_candidate_simulations": 28789,
+      "target_attempted_steps": 233665,
+      "target_empty_candidate_simulations": 0,
+      "has_exact_signature": 3035,
+      "exact_signature_candidates": 3035,
+      "exact_signature_endpoint_hits": 3035,
+      "exact_signature_trace_matches": 3035
+    }
+  },
+  "online_support_policy": {
+    "live": {
+      "macro_endpoint": 0.356,
+      "endpoint_count": 5340,
+      "trace_count": 5247,
+      "outside_ceiling_successes": 429,
+      "lost_vs_ceiling": 7984,
+      "termination": {
+        "stop": 12166,
+        "crash": 1504,
+        "cap": 1330
+      }
+    },
+    "initial": {
+      "macro_endpoint": 0.5258666666666667,
+      "endpoint_count": 7888,
+      "trace_count": 7873,
+      "outside_ceiling_successes": 5,
+      "lost_vs_ceiling": 5012,
+      "termination": {
+        "stop": 9478,
+        "crash": 3952,
+        "cap": 1570
+      }
+    },
+    "masked": {
+      "macro_endpoint": 0.49506666666666665,
+      "endpoint_count": 7426,
+      "trace_count": 7414,
+      "outside_ceiling_successes": 2,
+      "lost_vs_ceiling": 5471,
+      "termination": {
+        "stop": 9121,
+        "crash": 4329,
+        "cap": 1550
+      }
+    },
+    "worlds_outside_fixed_plan_ceiling": 2105,
+    "live_minus_masked": {
+      "mean": -0.13906666666666667,
+      "paired_program_bootstrap_95": [
+        -0.1551333333333333,
+        -0.12293333333333335
+      ],
+      "live_only": 1510,
+      "comparator_only": 3596
+    },
+    "live_minus_initial": {
+      "mean": -0.16986666666666667,
+      "paired_program_bootstrap_95": [
+        -0.18533333333333346,
+        -0.1542666666666666
+      ],
+      "live_only": 1276,
+      "comparator_only": 3824
+    },
+    "by_syntax": {
+      "True": {
+        "live": 0.3403891383365405,
+        "initial": 0.4032499465469318,
+        "masked": 0.3538593115244815
+      },
+      "False": {
+        "live": 0.38186326602904713,
+        "initial": 0.7290116896918172,
+        "masked": 0.7290116896918172
+      }
+    }
+  },
+  "paired_marker_decision": {
+    "eligible_pairs": 14995,
+    "eligible_distinct_codes": 2045,
+    "exclusions": {
+      "silent_limit": 5
+    },
+    "excluded_attribute_counts": {
+      "no_move": 0,
+      "no_five_supports": 0,
+      "zero_limit": 0,
+      "one_limit": 5
+    },
+    "groups": {
+      "switch": {
+        "worlds": 1435,
+        "distinct_codes": 257,
+        "oracle_illegal_by_arm": [
+          20,
+          34
+        ],
+        "oracle_transitions": {
+          "putMarker->move": 254,
+          "STOP->turnRight": 21,
+          "putMarker->pickMarker": 69,
+          "move->turnLeft": 33,
+          "move->pickMarker": 209,
+          "move->putMarker": 106,
+          "putMarker->STOP": 125,
+          "turnRight->move": 26,
+          "STOP->pickMarker": 78,
+          "turnLeft->STOP": 14,
+          "move->turnRight": 36,
+          "turnRight->pickMarker": 57,
+          "putMarker->turnLeft": 67,
+          "turnLeft->pickMarker": 53,
+          "putMarker->turnRight": 80,
+          "turnLeft->move": 38,
+          "turnLeft->turnRight": 24,
+          "move->STOP": 22,
+          "turnRight->turnLeft": 27,
+          "STOP->move": 30,
+          "turnRight->putMarker": 14,
+          "turnLeft->putMarker": 33,
+          "pickMarker->putMarker": 1,
+          "STOP->turnLeft": 6,
+          "STOP->putMarker": 12
+        },
+        "policies": {
+          "live": {
+            "counts": {
+              "zero_correct": 1168,
+              "one_correct": 752,
+              "both_correct": 615,
+              "prediction_switched": 1149,
+              "zero_illegal": 36,
+              "one_illegal": 10
+            },
+            "world_rates": {
+              "zero_correct": 0.8139372822299652,
+              "one_correct": 0.5240418118466899,
+              "both_correct": 0.42857142857142855,
+              "prediction_switched": 0.8006968641114982,
+              "zero_illegal": 0.025087108013937282,
+              "one_illegal": 0.006968641114982578,
+              "balanced_correct": 0.6689895470383276
+            },
+            "distinct_code_macro": {
+              "zero_correct": 0.7915693904020752,
+              "one_correct": 0.5141374837872892,
+              "both_correct": 0.41152183311716384,
+              "prediction_switched": 0.7853653264159101,
+              "zero_illegal": 0.03158236057068742,
+              "one_illegal": 0.008041504539559013,
+              "balanced_correct": 0.6528534370946821
+            }
+          },
+          "initial": {
+            "counts": {
+              "zero_correct": 1130,
+              "one_correct": 248,
+              "both_correct": 0,
+              "prediction_switched": 0,
+              "zero_illegal": 164,
+              "one_illegal": 26
+            },
+            "world_rates": {
+              "zero_correct": 0.7874564459930313,
+              "one_correct": 0.17282229965156795,
+              "both_correct": 0.0,
+              "prediction_switched": 0.0,
+              "zero_illegal": 0.11428571428571428,
+              "one_illegal": 0.018118466898954706,
+              "balanced_correct": 0.4801393728222996
+            },
+            "distinct_code_macro": {
+              "zero_correct": 0.7635970600951145,
+              "one_correct": 0.17460008646779074,
+              "both_correct": 0,
+              "prediction_switched": 0,
+              "zero_illegal": 0.12075226977950713,
+              "one_illegal": 0.022892347600518805,
+              "balanced_correct": 0.46909857328145266
+            }
+          },
+          "masked": {
+            "counts": {
+              "zero_correct": 1158,
+              "one_correct": 211,
+              "both_correct": 0,
+              "prediction_switched": 0,
+              "zero_illegal": 170,
+              "one_illegal": 25
+            },
+            "world_rates": {
+              "zero_correct": 0.8069686411149826,
+              "one_correct": 0.1470383275261324,
+              "both_correct": 0.0,
+              "prediction_switched": 0.0,
+              "zero_illegal": 0.11846689895470383,
+              "one_illegal": 0.017421602787456445,
+              "balanced_correct": 0.4770034843205575
+            },
+            "distinct_code_macro": {
+              "zero_correct": 0.7658884565499352,
+              "one_correct": 0.15538261997405967,
+              "both_correct": 0,
+              "prediction_switched": 0,
+              "zero_illegal": 0.1262645914396887,
+              "one_illegal": 0.023216601815823606,
+              "balanced_correct": 0.46063553826199743
+            }
+          }
+        }
+      },
+      "stay": {
+        "worlds": 13560,
+        "distinct_codes": 1845,
+        "oracle_illegal_by_arm": [
+          2566,
+          0
+        ],
+        "oracle_transitions": {
+          "putMarker->putMarker": 4142,
+          "pickMarker->pickMarker": 2566,
+          "turnLeft->turnLeft": 1337,
+          "move->move": 2632,
+          "STOP->STOP": 1575,
+          "turnRight->turnRight": 1308
+        },
+        "policies": {
+          "live": {
+            "counts": {
+              "zero_correct": 9367,
+              "one_correct": 7022,
+              "both_correct": 4491,
+              "prediction_switched": 8570,
+              "zero_illegal": 606,
+              "one_illegal": 44
+            },
+            "world_rates": {
+              "zero_correct": 0.6907817109144543,
+              "one_correct": 0.5178466076696165,
+              "both_correct": 0.3311946902654867,
+              "prediction_switched": 0.6320058997050148,
+              "zero_illegal": 0.04469026548672567,
+              "one_illegal": 0.0032448377581120944,
+              "balanced_correct": 0.6043141592920354
+            },
+            "distinct_code_macro": {
+              "zero_correct": 0.7019705783216681,
+              "one_correct": 0.503340525101443,
+              "both_correct": 0.33547399412080015,
+              "prediction_switched": 0.6196224224661313,
+              "zero_illegal": 0.03427263993659657,
+              "one_illegal": 0.004426377597109304,
+              "balanced_correct": 0.6026555517115555
+            }
+          },
+          "initial": {
+            "counts": {
+              "zero_correct": 12952,
+              "one_correct": 12952,
+              "both_correct": 12952,
+              "prediction_switched": 0,
+              "zero_illegal": 2644,
+              "one_illegal": 86
+            },
+            "world_rates": {
+              "zero_correct": 0.9551622418879055,
+              "one_correct": 0.9551622418879055,
+              "both_correct": 0.9551622418879055,
+              "prediction_switched": 0.0,
+              "zero_illegal": 0.19498525073746312,
+              "one_illegal": 0.006342182890855457,
+              "balanced_correct": 0.9551622418879055
+            },
+            "distinct_code_macro": {
+              "zero_correct": 0.9393495934959349,
+              "one_correct": 0.9393495934959349,
+              "both_correct": 0.9393495934959349,
+              "prediction_switched": 0,
+              "zero_illegal": 0.16276723878349894,
+              "one_illegal": 0.008115025594700391,
+              "balanced_correct": 0.9393495934959349
+            }
+          },
+          "masked": {
+            "counts": {
+              "zero_correct": 12876,
+              "one_correct": 12876,
+              "both_correct": 12876,
+              "prediction_switched": 0,
+              "zero_illegal": 2627,
+              "one_illegal": 88
+            },
+            "world_rates": {
+              "zero_correct": 0.9495575221238938,
+              "one_correct": 0.9495575221238938,
+              "both_correct": 0.9495575221238938,
+              "prediction_switched": 0.0,
+              "zero_illegal": 0.1937315634218289,
+              "one_illegal": 0.006489675516224189,
+              "balanced_correct": 0.9495575221238938
+            },
+            "distinct_code_macro": {
+              "zero_correct": 0.9315688045769347,
+              "one_correct": 0.9315688045769347,
+              "both_correct": 0.9315688045769347,
+              "prediction_switched": 0,
+              "zero_illegal": 0.16014754591990366,
+              "one_illegal": 0.008431195423065342,
+              "balanced_correct": 0.9315688045769347
+            }
+          }
+        }
+      }
+    },
+    "continue_breadth_gate": true
+  },
+  "legal_next_commands_sensitivity": {
+    "type": "post_hoc_descriptive",
+    "definition": "Both next commands requested by the expert program can legally execute, or are STOP.",
+    "counts": {
+      "all": {
+        "stay": {
+          "pairs": 13560,
+          "live_both_correct": 4491,
+          "live_switched": 8570,
+          "initial_both_correct": 12952,
+          "initial_switched": 0,
+          "masked_both_correct": 12876,
+          "masked_switched": 0,
+          "distinct_codes": 1845
+        },
+        "switch": {
+          "pairs": 1435,
+          "live_both_correct": 615,
+          "live_switched": 1149,
+          "initial_both_correct": 0,
+          "initial_switched": 0,
+          "masked_both_correct": 0,
+          "masked_switched": 0,
+          "distinct_codes": 257
+        }
+      },
+      "both_legal": {
+        "stay": {
+          "pairs": 10994,
+          "live_both_correct": 4027,
+          "live_switched": 6598,
+          "initial_both_correct": 10461,
+          "initial_switched": 0,
+          "masked_both_correct": 10405,
+          "masked_switched": 0,
+          "distinct_codes": 1594
+        },
+        "switch": {
+          "pairs": 1381,
+          "live_both_correct": 615,
+          "live_switched": 1123,
+          "initial_both_correct": 0,
+          "initial_switched": 0,
+          "masked_both_correct": 0,
+          "masked_switched": 0,
+          "distinct_codes": 255
+        }
+      }
+    }
+  },
+  "protocol_sha256": {
+    "supplied_schedule": "5097926b4290c8f4a2abd6d7c933ab4ea00496997482ccd51b8267ce8504ee9d",
+    "fixed_trace": "dd8a73d466f808a7926287ca0d6f12a1283d54c763555011797efa5cd75ba64d",
+    "online": "5b37302f6e4d9ca4ca9e93c39ba16ac15120120d65684d6adc913a2df6330897",
+    "plan_selection": "5379bf4bf9f188b2fd5247db3d2a674664be2aecf76324c37485e4586f102663",
+    "marker_pairs": "6f46b6c354961f87cd9d5feaaf35b9250c0f26e54d40120c747bd286f1015043"
+  }
+}
