@@ -1,0 +1,262 @@
+{
+  "source": {
+    "raw_rows": 1758,
+    "identical_repeats": 0,
+    "conflicting_recording_ids": 0,
+    "available_valid_task_recordings": 1758,
+    "available_tasks": 20,
+    "selected_pairs": 365,
+    "selected_tasks": 20,
+    "selected_distinct_recordings": 730,
+    "fine_events": 62294,
+    "coarse_intervals": 5437,
+    "source_sha256": "cc7898b49958a62fe021ae2ffa53a709c3fd6f45fd3f893960b8aac6d13dfe9c",
+    "sampling_sha256": "15ce5d99ac89b49b7102feb707554a78cd260971546add132aab1b54c8cc005c",
+    "design_sha256": "6818dc325ccc25077d253f6df93b73beff5df5dcf970b5cd4cb5b7c241d2d523"
+  },
+  "physical_pairs_with_unique_role": 159,
+  "physical_pairs_with_two_marks": 55,
+  "primary": {
+    "activities": 4,
+    "recording_pairs": 4,
+    "equal_activity_mean": {
+      "parts": 0.25,
+      "edit": 0.0,
+      "uniform": 0.1684027777777778
+    },
+    "parts_minus_edit": 0.25,
+    "paired_activity_95": [
+      0.0,
+      0.75
+    ],
+    "win_tie_loss": [
+      1,
+      3,
+      0
+    ],
+    "unique_dual_success_activities": 1,
+    "meets_gate": false
+  },
+  "strict_reversed": {
+    "directed_n": 8,
+    "rates": {
+      "parts": 0.25,
+      "edit": 0.0,
+      "uniform": 0.1684027777777778
+    }
+  },
+  "same_order": {
+    "directed_n": 142,
+    "rates": {
+      "parts": 0.5528169014084507,
+      "edit": 0.8163145539906104,
+      "uniform": 0.20041654690045033
+    }
+  },
+  "excluded_overlapping_reversed_directed": 0,
+  "single": {
+    "n": 710,
+    "rates": {
+      "parts": 0.6767605633802817,
+      "edit": 0.8084507042253521,
+      "uniform": 0.38668748615323373
+    }
+  },
+  "single_by_activity": {
+    "assemble computer": {
+      "n": 4,
+      "rates": {
+        "parts": 0.625,
+        "edit": 1.0,
+        "uniform": 0.3625
+      }
+    },
+    "assemble laser scanner": {
+      "n": 2,
+      "rates": {
+        "parts": 1.0,
+        "edit": 0.5,
+        "uniform": 0.2916666666666667
+      }
+    },
+    "assemble nightstand": {
+      "n": 44,
+      "rates": {
+        "parts": 0.4981060606060606,
+        "edit": 0.5568181818181818,
+        "uniform": 0.25459599111564996
+      }
+    },
+    "assemble stool": {
+      "n": 46,
+      "rates": {
+        "parts": 0.7391304347826086,
+        "edit": 0.9130434782608695,
+        "uniform": 0.43067632850241544
+      }
+    },
+    "assemble tray table": {
+      "n": 34,
+      "rates": {
+        "parts": 0.7647058823529411,
+        "edit": 0.8627450980392157,
+        "uniform": 0.367483660130719
+      }
+    },
+    "assemble utility cart": {
+      "n": 46,
+      "rates": {
+        "parts": 0.6793478260869565,
+        "edit": 0.6413043478260869,
+        "uniform": 0.2826342728802683
+      }
+    },
+    "change belt": {
+      "n": 18,
+      "rates": {
+        "parts": 0.4166666666666667,
+        "edit": 0.3888888888888889,
+        "uniform": 0.44907407407407407
+      }
+    },
+    "change circuit breaker": {
+      "n": 44,
+      "rates": {
+        "parts": 0.48863636363636365,
+        "edit": 0.6363636363636364,
+        "uniform": 0.44393939393939397
+      }
+    },
+    "disassemble nightstand": {
+      "n": 26,
+      "rates": {
+        "parts": 0.6153846153846154,
+        "edit": 0.6923076923076923,
+        "uniform": 0.4551282051282051
+      }
+    },
+    "disassemble stool": {
+      "n": 14,
+      "rates": {
+        "parts": 0.5,
+        "edit": 0.7142857142857143,
+        "uniform": 0.3952380952380952
+      }
+    },
+    "disassemble tray table": {
+      "n": 4,
+      "rates": {
+        "parts": 0.5,
+        "edit": 0.75,
+        "uniform": 0.3125
+      }
+    },
+    "disassemble utility cart": {
+      "n": 16,
+      "rates": {
+        "parts": 0.875,
+        "edit": 0.875,
+        "uniform": 0.3875
+      }
+    },
+    "fix motorcycle": {
+      "n": 50,
+      "rates": {
+        "parts": 0.84,
+        "edit": 1.0,
+        "uniform": 0.43333333333333335
+      }
+    },
+    "make coffee with espresso machine": {
+      "n": 8,
+      "rates": {
+        "parts": 0.625,
+        "edit": 1.0,
+        "uniform": 0.5
+      }
+    },
+    "make coffee with nespresso machine": {
+      "n": 38,
+      "rates": {
+        "parts": 0.7368421052631579,
+        "edit": 0.9868421052631579,
+        "uniform": 0.4276315789473684
+      }
+    },
+    "setup big printer": {
+      "n": 40,
+      "rates": {
+        "parts": 0.5833333333333334,
+        "edit": 0.8875,
+        "uniform": 0.45166666666666666
+      }
+    },
+    "setup camera": {
+      "n": 98,
+      "rates": {
+        "parts": 0.8112244897959183,
+        "edit": 0.8673469387755102,
+        "uniform": 0.37124911652972875
+      }
+    },
+    "setup gopro": {
+      "n": 112,
+      "rates": {
+        "parts": 0.6785714285714286,
+        "edit": 0.8705357142857143,
+        "uniform": 0.4023065476190476
+      }
+    },
+    "setup small printer": {
+      "n": 36,
+      "rates": {
+        "parts": 0.6111111111111112,
+        "edit": 0.7314814814814815,
+        "uniform": 0.375
+      }
+    },
+    "setup switch": {
+      "n": 30,
+      "rates": {
+        "parts": 0.6333333333333333,
+        "edit": 0.7944444444444444,
+        "uniform": 0.2882804232804233
+      }
+    }
+  },
+  "reversal_by_activity": {
+    "assemble nightstand": {
+      "directed_n": 2,
+      "rates": {
+        "parts": 0.0,
+        "edit": 0.0,
+        "uniform": 0.18055555555555555
+      }
+    },
+    "assemble utility cart": {
+      "directed_n": 2,
+      "rates": {
+        "parts": 1.0,
+        "edit": 0.0,
+        "uniform": 0.08680555555555555
+      }
+    },
+    "change belt": {
+      "directed_n": 2,
+      "rates": {
+        "parts": 0.0,
+        "edit": 0.0,
+        "uniform": 0.25
+      }
+    },
+    "disassemble nightstand": {
+      "directed_n": 2,
+      "rates": {
+        "parts": 0.0,
+        "edit": 0.0,
+        "uniform": 0.15625
+      }
+    }
+  },
+  "limits": "Separate dataset and unreused physical recordings; performer identity disjointness is unverified. Roles are exact structured verb/noun annotations and some label vocabularies are sparse. Complete human action transcripts including their future are supplied. No pixel inference or assisted task execution."
+}

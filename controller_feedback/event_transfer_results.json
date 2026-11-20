@@ -1,0 +1,41 @@
+{
+  "programs": 513,
+  "targets": 2565,
+  "differing_reference_streams": 2308,
+  "both": {
+    "neural": 0.8339181286549724,
+    "uniform": 0.14230019493177395,
+    "clock": 0.8023391812865512,
+    "occurrence": 0.7937621832358689,
+    "edit": 0.8382066276803132
+  },
+  "motor_ceiling": 0.8526315789473684,
+  "per_mission": {
+    "neural": 0.838401559454191,
+    "uniform": 0.1783625730994152,
+    "clock": 0.809551656920078,
+    "occurrence": 0.8015594541910331,
+    "edit": 0.8421052631578947
+  },
+  "both_on_differing_worlds_pooled": {
+    "neural": 0.8431542461005199,
+    "uniform": 0.07279029462738301,
+    "clock": 0.8093587521663779,
+    "occurrence": 0.7998266897746967,
+    "edit": 0.8474870017331022
+  },
+  "neural_minus_strongest_simple": -0.004288499025340786,
+  "paired_program_95": [
+    -0.010916179337232101,
+    0.0023391812865497545
+  ],
+  "retained": false,
+  "completed": true,
+  "all_screened": 766,
+  "worker_sha256": "b02d260ef67ec6fb45771e8ae738a015e8197f334da2c6db6ddd3fd5d681366d",
+  "cohort_sha256": "4fb37ac92f658b4769ad7543d7f613f7373aff4be29b33bb46ac0f6ea5035d90",
+  "checkpoint_sha256": "670119eb898578c2d85268fe5fd2a681243c94c68d48100408b497c22b60ea35",
+  "protocol_sha256": "e3c26891807f01e880bae02174d4b7622f9c36046fc17b6eeee55198d9ab9da5",
+  "tokens_sha256": "99b1b58739a2b298399230d535d0bf2961afc1111d9bb31f1cab9363563889d7",
+  "per_program_sha256": "2c7e235a1a97dc341fb83c76c881e20a1dc37c1abbc11701a7a997b18dbde7c6"
+}

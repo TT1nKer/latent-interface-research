@@ -18,6 +18,20 @@ We froze the rules and tested all eligible records from another official split, 
 
 Temporal annotation transfer already appears in music synchronisation and in learned video alignment. Liu et al. explicitly address repeated, reordered actions. The open empirical question is whether a cue and evidence about the parts being assembled can recover **both** role-specific events when order reverses, and still locate ordinary events. The measured panel provides a feasibility check. Independent recordings and comparison with a nonmonotone method are needed before claiming a new result. [Liu et al., CVPR 2022](https://openaccess.thecvf.com/content/CVPR2022/papers/Liu_Learning_To_Align_Sequential_Actions_in_the_Wild_CVPR_2022_paper.pdf) · [Zalkow et al., AES 2017](https://www.audiolabs-erlangen.de/content/05_fau/assistant/zalkow/01_publications/ZalkowWPAM17_MeasureTransfer_AES.pdf)
 
+## A second dataset changes which matcher wins
+
+We carried the two fixed rules to HoloAssist, an independently collected dataset of egocentric physical procedures. We specified source selection, role labels and scoring before measuring coverage. Among 1,758 labeled recordings, 730 were selected in 365 non-reused recording pairs spanning 20 task types. We compared the two complete fine-action transcripts from recordings with the same task type. Reference roles were identified using structured coarse verb and noun labels. Individual performer identities could recur and are unavailable for the same disjointness check used on Assembly101. [Original dataset and paper](https://openaccess.thecvf.com/content/ICCV2023/html/Wang_HoloAssist_an_Egocentric_Human_Interaction_Dataset_for_Interactive_AI_Assistants_ICCV_2023_paper.html) · [Frozen design](holoassist_occurrence_transfer_20261120.json)
+
+| Single marked occurrence | Eligible queries | Nearby parts | Full-sequence edit |
+|---|---:|---:|---:|
+| Assembly101 discovery | 212 | 58.73% | 33.22% |
+| Assembly101 new toys and people | 146 | 65.07% | 38.01% |
+| HoloAssist external | 710 | 67.68% | **80.85%** |
+
+On HoloAssist, the edit matcher also solved both marks more frequently when their order was preserved (81.63% versus 55.28%, 142 directions). Only four physical recording pairs from four activities showed a qualifying strict reversal. The part rule solved two of eight directions; the edit rule solved zero. This misses the independently specified coverage floor. The rankings in the table concern offline localization from gold fine-action transcripts. [Measurements](holoassist_results.json) · [Evaluation code](analyze_holoassist_occurrence_transfer.py)
+
+Candidate counts differ across datasets. Matching the exact distribution of candidate counts in a descriptive overlap analysis left an other-parts advantage of 26.58 percentage points on the Assembly101 held-out panel and an edit advantage of 2.77 points on HoloAssist. We used each common count's smaller frequency as its weight. This still leaves differences in annotation taxonomy, tasks, action order and participants. Benchmark identity or observed error patterns cannot be used as an advance estimate of the better matcher on a new task. [Count-stratified results and weights](candidate_count_results.json)
+
 ## Bidirectional image and text retrieval
 
 A specialist can rank texts for an image and another can rank images for a text. We tested whether mixing them corrects complete groups of four decisions on BiVLC. We grouped 2,933 items by their 1,161 source photographs and held photographs intact across five folds. Each training fold selected the same TROHN-Img checkpoint in both directions. The held-out rule and this single model solved exactly the same 2,031 groups (69.25%). Across the 12 ordered pairs of distinct checkpoints we found 60 incompatible directional decision patterns among 35,196 item-pair combinations. For any fixed pair, even a perfect fallback restricted to these patterns could rescue at most 10 of 2,933 items.

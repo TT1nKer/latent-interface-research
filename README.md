@@ -7,6 +7,10 @@ a validated new method. Further evaluation code, methodology, and positive or
 negative findings will be released as the pilot progresses, subject to upstream
 model, code, and data licences.
 
+## Transferring a marked action between demonstrations
+
+When a person picks up several screws, which pickup corresponds to a marked one in another person's demonstration? On 146 human-annotated queries from new Assembly101 toys and participants, the identities of nearby parts located the marked occurrence in 65.07%, compared with 38.01% for full sequence alignment. On 710 queries from a separate HoloAssist study the ordering reversed, with 67.68% and 80.85% respectively. Strictly reordered pairs remain scarce in both independent tests. [Cohorts, code, prior work and limitations](cross_domain_screens/README.md)
+
 ## Learning which operation to call, 2026-11-20
 
 A follow-up tests whether two occurrences of the same action carry different usable information. Redistributing position weights changed reference-statement accuracy from 97.70% to 45.61% while preserving every decision over 4,584 held-out worlds. We also measured the value of acquiring a fifth demonstration on a disjoint cohort. [Transfer experiments](controller_feedback/transfer.md) · [Vision and solver comparisons](cross_domain_screens/README.md)
