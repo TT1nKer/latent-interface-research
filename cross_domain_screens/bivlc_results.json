@@ -1,0 +1,200 @@
+{
+  "models": [
+    "BiVLC_CLIP_COCO.csv",
+    "BiVLC_CLIP_TROHN-Img.csv",
+    "BiVLC_CLIP_TROHN-Text.csv",
+    "BiVLC_ViT-B-32.csv"
+  ],
+  "input_sha256": {
+    "BiVLC_CLIP_COCO.csv": "f92c085fba9b2b8d00f27725c86cf69286d935527293b0adc3edeb24b515a46d",
+    "BiVLC_CLIP_TROHN-Img.csv": "ba141342134ee48f2cd620a78acc4f3b04fc9d7703fc2e6ecce18aa3d7dd917c",
+    "BiVLC_CLIP_TROHN-Text.csv": "d6fe25e5ea7f8e1386557e76429cefffae4a30a0f699f5686fbaa76c8dfe4b9b",
+    "BiVLC_ViT-B-32.csv": "a16d196aa1ad012f826b002fc59df56926ab08bed68eae33f96ceec5cdb48c82",
+    "source_photo_ids.csv": "2e96c53ff8720e83cdbe2b1580f6c3c0c12b54043c029d717b5236f670deab98"
+  },
+  "items": 2933,
+  "unique_source_images": 1161,
+  "folds": [
+    {
+      "fold": 0,
+      "n": 549,
+      "sources": 226,
+      "single": 1,
+      "direction": [
+        1,
+        1
+      ],
+      "primary": [
+        1,
+        1
+      ]
+    },
+    {
+      "fold": 1,
+      "n": 657,
+      "sources": 255,
+      "single": 1,
+      "direction": [
+        1,
+        1
+      ],
+      "primary": [
+        1,
+        1
+      ]
+    },
+    {
+      "fold": 2,
+      "n": 519,
+      "sources": 208,
+      "single": 1,
+      "direction": [
+        1,
+        1
+      ],
+      "primary": [
+        1,
+        1
+      ]
+    },
+    {
+      "fold": 3,
+      "n": 603,
+      "sources": 231,
+      "single": 1,
+      "direction": [
+        1,
+        1
+      ],
+      "primary": [
+        1,
+        1
+      ]
+    },
+    {
+      "fold": 4,
+      "n": 605,
+      "sources": 241,
+      "single": 1,
+      "direction": [
+        1,
+        1
+      ],
+      "primary": [
+        1,
+        1
+      ]
+    }
+  ],
+  "single_model_correct": [
+    1788,
+    2031,
+    1686,
+    1439
+  ],
+  "baseline_correct": 2031,
+  "primary_paired_cluster_ci": [
+    0.0,
+    0.0
+  ],
+  "heldout_comparisons": {
+    "direction_raw": {
+      "n": 2933,
+      "correct": 2031,
+      "baseline_correct": 2031,
+      "gain": 0,
+      "loss": 0,
+      "difference": 0.0
+    },
+    "direction_veto": {
+      "n": 2933,
+      "correct": 2031,
+      "baseline_correct": 2031,
+      "gain": 0,
+      "loss": 0,
+      "difference": 0.0
+    },
+    "primary": {
+      "n": 2933,
+      "correct": 2031,
+      "baseline_correct": 2031,
+      "gain": 0,
+      "loss": 0,
+      "difference": 0.0
+    },
+    "primary_raw": {
+      "n": 2933,
+      "correct": 2031,
+      "baseline_correct": 2031,
+      "gain": 0,
+      "loss": 0,
+      "difference": 0.0
+    }
+  },
+  "primary_by_edit": {
+    "add": {
+      "n": 475,
+      "correct": 323,
+      "baseline_correct": 323,
+      "gain": 0,
+      "loss": 0,
+      "difference": 0.0
+    },
+    "replace": {
+      "n": 2099,
+      "correct": 1608,
+      "baseline_correct": 1608,
+      "gain": 0,
+      "loss": 0,
+      "difference": 0.0
+    },
+    "swap": {
+      "n": 359,
+      "correct": 100,
+      "baseline_correct": 100,
+      "gain": 0,
+      "loss": 0,
+      "difference": 0.0
+    }
+  },
+  "retained": false,
+  "veto_outcomes": {
+    "direction": {
+      "rejected": 0,
+      "rescued": 0
+    },
+    "primary": {
+      "rejected": 0,
+      "rescued": 0
+    }
+  },
+  "pooled_ordered_off_diagonal_pairs": {
+    "events": 60,
+    "opportunities": 35196,
+    "by_pair": {
+      "0_1": 8,
+      "0_2": 4,
+      "0_3": 2,
+      "1_0": 6,
+      "1_2": 10,
+      "1_3": 4,
+      "2_0": 0,
+      "2_1": 2,
+      "2_3": 5,
+      "3_0": 3,
+      "3_1": 10,
+      "3_2": 6
+    }
+  },
+  "oracle": {
+    "any_single": 2303,
+    "any_directional_pair": 2349,
+    "extra_recombinations_only": 46
+  },
+  "syntax_checks": [
+    "published four individual comparisons reconstruct all released group / direction values",
+    "four textual metadata fields and row order agree after casefolding in each file versus the pinned benchmark",
+    "all four label permutations preserve each of the sixteen possible cycle outputs",
+    "no within-model cycle and no cycle coexists with a correct group"
+  ]
+}

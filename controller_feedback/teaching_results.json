@@ -1,0 +1,235 @@
+{
+  "programs": 766,
+  "future_worlds": 1532,
+  "estimates": {
+    "retrieval_base": {
+      "mean": 0.8296344647519582,
+      "paired_program_95": [
+        0.8087467362924282,
+        0.8505221932114883
+      ]
+    },
+    "retrieval_oracle": {
+      "mean": 0.8785900783289817,
+      "paired_program_95": [
+        0.8609660574412533,
+        0.8955613577023499
+      ]
+    },
+    "retrieval_disagreement": {
+      "mean": 0.856396866840731,
+      "paired_program_95": [
+        0.8381201044386423,
+        0.8740208877284595
+      ]
+    },
+    "retrieval_novelty": {
+      "mean": 0.858355091383812,
+      "paired_program_95": [
+        0.8400783289817232,
+        0.8763054830287206
+      ]
+    },
+    "retrieval_uniform": {
+      "mean": 0.8508485639686684,
+      "paired_program_95": [
+        0.8328981723237598,
+        0.8684725848563969
+      ]
+    },
+    "retrieval_own": {
+      "mean": 0.8570496083550914,
+      "paired_program_95": [
+        0.8390992167101827,
+        0.8746736292428199
+      ]
+    },
+    "retrieval_other": {
+      "mean": 0.8528067885117493,
+      "paired_program_95": [
+        0.8348482375979113,
+        0.8701125979112271
+      ]
+    },
+    "retrieval_own_minus_other": {
+      "mean": 0.004242819843342037,
+      "paired_program_95": [
+        0.0009791122715404699,
+        0.007832898172323759
+      ]
+    },
+    "retrieval_oracle_minus_uniform": {
+      "mean": 0.027741514360313316,
+      "paired_program_95": [
+        0.02154046997389034,
+        0.03426892950391645
+      ]
+    },
+    "retrieval_disagreement_minus_uniform": {
+      "mean": 0.005548302872062663,
+      "paired_program_95": [
+        0.0016318537859007832,
+        0.0097911227154047
+      ]
+    },
+    "retrieval_novelty_minus_uniform": {
+      "mean": 0.007506527415143603,
+      "paired_program_95": [
+        0.0026109660574412533,
+        0.012402088772845953
+      ]
+    },
+    "retrieval_own_minus_uniform": {
+      "mean": 0.006201044386422976,
+      "paired_program_95": [
+        0.00293733681462141,
+        0.0097911227154047
+      ]
+    },
+    "retrieval_random_demo_gain": {
+      "mean": 0.02121409921671018,
+      "paired_program_95": [
+        0.011096605744125326,
+        0.031331592689295036
+      ]
+    },
+    "edit_base": {
+      "mean": 0.827023498694517,
+      "paired_program_95": [
+        0.806135770234987,
+        0.847911227154047
+      ]
+    },
+    "edit_oracle": {
+      "mean": 0.881201044386423,
+      "paired_program_95": [
+        0.8635770234986945,
+        0.8988250652741514
+      ]
+    },
+    "edit_disagreement": {
+      "mean": 0.8580287206266318,
+      "paired_program_95": [
+        0.839425587467363,
+        0.8766318537859008
+      ]
+    },
+    "edit_novelty": {
+      "mean": 0.8577023498694517,
+      "paired_program_95": [
+        0.8390910574412532,
+        0.8763054830287206
+      ]
+    },
+    "edit_uniform": {
+      "mean": 0.8554177545691906,
+      "paired_program_95": [
+        0.8371409921671018,
+        0.8733681462140992
+      ]
+    },
+    "edit_own": {
+      "mean": 0.8639033942558747,
+      "paired_program_95": [
+        0.8453002610966057,
+        0.8818537859007833
+      ]
+    },
+    "edit_other": {
+      "mean": 0.8599869451697127,
+      "paired_program_95": [
+        0.8413838120104439,
+        0.8782637075718016
+      ]
+    },
+    "edit_own_minus_other": {
+      "mean": 0.0039164490861618795,
+      "paired_program_95": [
+        0.0013054830287206266,
+        0.00685378590078329
+      ]
+    },
+    "edit_oracle_minus_uniform": {
+      "mean": 0.025783289817232376,
+      "paired_program_95": [
+        0.0195822454308094,
+        0.03198433420365535
+      ]
+    },
+    "edit_disagreement_minus_uniform": {
+      "mean": 0.0026109660574412533,
+      "paired_program_95": [
+        -0.0009791122715404699,
+        0.006527415143603133
+      ]
+    },
+    "edit_novelty_minus_uniform": {
+      "mean": 0.0022845953002610967,
+      "paired_program_95": [
+        -0.0026109660574412533,
+        0.007180156657963447
+      ]
+    },
+    "edit_own_minus_uniform": {
+      "mean": 0.008485639686684074,
+      "paired_program_95": [
+        0.004561031331592693,
+        0.012728459530026109
+      ]
+    },
+    "edit_random_demo_gain": {
+      "mean": 0.02839425587467363,
+      "paired_program_95": [
+        0.019908616187989555,
+        0.03720626631853786
+      ]
+    },
+    "strictly_opposite": {
+      "mean": 0.0026109660574412533,
+      "paired_program_95": [
+        0.0,
+        0.006527415143603133
+      ]
+    },
+    "personalization_opportunity": {
+      "mean": 0.0006527415143603133,
+      "paired_program_95": [
+        0.0,
+        0.0016318537859007832
+      ]
+    },
+    "interaction": {
+      "mean": 0.004079634464751959,
+      "paired_program_95": [
+        0.0019582245430809398,
+        0.0063642297650130545
+      ]
+    },
+    "calibration_choices_differ": {
+      "mean": 0.13054830287206268,
+      "paired_program_95": [
+        0.10704960835509138,
+        0.15404699738903394
+      ]
+    }
+  },
+  "strictly_opposite_programs": 2,
+  "calibration_choices_differ_programs": 100,
+  "discordant_choices_interaction": 0.03125,
+  "retained": false,
+  "completed": true,
+  "source_receipt_sha256": "d4b302762459fdc1fce90da3c944c9c5d06ae80d194a60129e618997a39e26fb",
+  "source_sha256": "4fb37ac92f658b4769ad7543d7f613f7373aff4be29b33bb46ac0f6ea5035d90",
+  "checkpoint_sha256": "670119eb898578c2d85268fe5fd2a681243c94c68d48100408b497c22b60ea35",
+  "worker_sha256": "873cad06f003eb90c58ed289e4e540bd8bf29d9a7c238ed99be9a76f429cb79a",
+  "protocol_sha256": "b30c1e9010c40aceab74e6111eac1deb83f5ab2d1df717f4eb724f3f883785b0",
+  "notes_sha256": "08e99cb3001e5b3d830408d0e0f92731c50ac192b13bbad0b3df285f3a885609",
+  "per_program_sha256": "3bdbba42f027bfbc700b268462e9cc2bdb98ebeb02952a3fe040969cbd27e0b9",
+  "helpers_sha256": {
+    "karel_online_control.py": "30d161bd90b1df13e297ab78c302bf98c74f94cc0666bb657151b6d6109301bd",
+    "karel_unaligned_baselines.py": "377c50b78e03183519530b0cc80261335c6ba987cdc9844aaf89f56ffbb924a7",
+    "karel_unaligned_model.py": "a4a975def987cf0635dbaf8a3145a1f6dd20d9549f3ee666750682d7d68b91ae",
+    "karel_predicates.py": "be9d49715634d3acb0c92f1eb6467ace3557be65921d4baae650b85c1d660c6a",
+    "leaps_karel_source_format.py": "aba32a4d87ca607f04e146fb85e2bd343540f936a64f93aa090fa920776d665a"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "purpose": "Frozen before measurement. Post-hoc behavioral identifiability check using external archival tasks and frozen retrieval seed 17.",
+  "scope": "764 codes, six original worlds per code. Natural rollout includes STOP, cap and crash decisions. One Frontenac CPU for up to ten minutes. No training.",
+  "intervention": "Compute original action masses from attention and original vote matrix. Uniformly redistribute the mass of each primitive including STOP over finite-prior support positions with that observed donor action. Padding has weight zero. Reaggregate using the original float32 bmm. No AST, query label or target state goes into the intervened policy. Recurrence receives the query observation and previous executed action only.",
+  "endpoints": "Count bitwise score changes, maximum absolute score error and top-action flips over every visited original decision. Reproduce every archived seed-17 (success, termination, steps). If any top action differs on an original path, execute an independent intervened rollout all the way. Otherwise identical path follows inductively. Compare outcome records and successes.",
+  "sites": "Use exact prior teacher-forced native static-site diagnostic conditioned on the primitive, matched lexical site available and competing alternative site. Ground truth enters the scorer only. Reproduce all original per-target hard counts and hits, compute expected uniform top-hit over exact position ties, report code-macro and step-micro for frozen 524 codes and 10369 steps. This intervention tests a property of this vote-and-recurrence architecture and is post hoc.",
+  "checkpoint": "results/karel_unaligned_train_12502089/checkpoint.pt",
+  "per_target": "results/karel_unaligned_eval_12502096/per_target.jsonl",
+  "per_program_sites": "results/karel_unaligned_sites_12502139/per_program.jsonl",
+  "pins": {
+    "karel_online_control.py": "30d161bd90b1df13e297ab78c302bf98c74f94cc0666bb657151b6d6109301bd",
+    "karel_predicates.py": "be9d49715634d3acb0c92f1eb6467ace3557be65921d4baae650b85c1d660c6a",
+    "karel_trace_control.py": "3683ec3175e9049b554c7fc7f5500e0fd5a9cead91b37407d8efc672c338835f",
+    "karel_unaligned_baselines.py": "377c50b78e03183519530b0cc80261335c6ba987cdc9844aaf89f56ffbb924a7",
+    "karel_unaligned_evaluate.py": "cc51675d74efdfbf038b36d28a8645e660447541eeb7d1f4c92ff8c94c20e48d",
+    "karel_unaligned_model.py": "a4a975def987cf0635dbaf8a3145a1f6dd20d9549f3ee666750682d7d68b91ae",
+    "leaps_karel_source_format.py": "aba32a4d87ca607f04e146fb85e2bd343540f936a64f93aa090fa920776d665a",
+    "karel_unaligned_sites.py": "1cef9f82cc80712aef51638c05ea833d79ddde16da162d168fb1c717c31d6846",
+    "karel_equal_action_mass.py": "facbe7ac8ee0b16a31071617c1cdc27b6cca947bc5814a7e031e43fd593cd8a5",
+    "karel_equal_action_mass.sbatch": "dad91539a16cd99047ab065f89df67c9e5142287f99d060e0fb00a2bcbda50eb",
+    "results/karel_unaligned_eval_12502096/summary.json": "81ace306649def191ddf5de1722ab805f1bfc6a2af0e424e526c29a505330f6a",
+    "results/karel_unaligned_sites_12502139/per_program.jsonl": "0e5538a7e2aafe1209be2cb7534a3125ccd26b4d509321746b46c238af28883f",
+    "results/karel_unaligned_eval_12502096/per_target.jsonl": "4c8a6af34faa8992b418d271ec0963639721da21a024650a6ee8ab646a4ea9d7",
+    "results/karel_unaligned_train_12502089/checkpoint.pt": "670119eb898578c2d85268fe5fd2a681243c94c68d48100408b497c22b60ea35"
+  }
+}

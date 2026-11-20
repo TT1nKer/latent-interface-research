@@ -1,0 +1,141 @@
+{
+  "eligible_programs": 766,
+  "estimates": {
+    "fixed_before": {
+      "mean": 0.827023498694517,
+      "paired_program_95": [
+        0.806135770234987,
+        0.847911227154047
+      ]
+    },
+    "routed_before": {
+      "mean": 0.835509138381201,
+      "paired_program_95": [
+        0.8152741514360313,
+        0.8560704960835509
+      ]
+    },
+    "fixed_after": {
+      "mean": 0.8554177545691906,
+      "paired_program_95": [
+        0.8371409921671018,
+        0.8733681462140992
+      ]
+    },
+    "routed_after": {
+      "mean": 0.8593342036553525,
+      "paired_program_95": [
+        0.8413838120104439,
+        0.8769582245430809
+      ]
+    },
+    "route_gain_before": {
+      "mean": 0.008485639686684074,
+      "paired_program_95": [
+        0.0039164490861618795,
+        0.014033942558746737
+      ]
+    },
+    "route_gain_after": {
+      "mean": 0.0039164490861618795,
+      "paired_program_95": [
+        0.0006527415143603133,
+        0.007506527415143603
+      ]
+    },
+    "interaction": {
+      "mean": -0.0045691906005221935,
+      "paired_program_95": [
+        -0.009138381201044387,
+        -0.0006527415143603133
+      ]
+    },
+    "fixed_insertion_gain": {
+      "mean": 0.02839425587467363,
+      "paired_program_95": [
+        0.019908616187989555,
+        0.03720626631853786
+      ]
+    },
+    "routed_insertion_gain": {
+      "mean": 0.023825065274151437,
+      "paired_program_95": [
+        0.015665796344647518,
+        0.03198433420365535
+      ]
+    },
+    "switch": {
+      "mean": 0.044386422976501305,
+      "paired_program_95": [
+        0.033942558746736295,
+        0.05548302872062663
+      ]
+    },
+    "route_help_insert_harm": {
+      "mean": 0.0013054830287206266,
+      "paired_program_95": [
+        0.0,
+        0.0039164490861618795
+      ]
+    },
+    "routed_insert_help": {
+      "mean": 0.05483028720626632,
+      "paired_program_95": [
+        0.04177545691906005,
+        0.06788511749347259
+      ]
+    },
+    "routed_insert_harm": {
+      "mean": 0.01174934725848564,
+      "paired_program_95": [
+        0.00587467362924282,
+        0.018276762402088774
+      ]
+    },
+    "routed_insert_tie": {
+      "mean": 0.933420365535248,
+      "paired_program_95": [
+        0.9190600522193212,
+        0.9471279373368147
+      ]
+    },
+    "fixed_insert_help": {
+      "mean": 0.06266318537859007,
+      "paired_program_95": [
+        0.0489392950391645,
+        0.07702349869451697
+      ]
+    },
+    "fixed_insert_harm": {
+      "mean": 0.011096605744125326,
+      "paired_program_95": [
+        0.00587467362924282,
+        0.016971279373368148
+      ]
+    },
+    "fixed_insert_tie": {
+      "mean": 0.9262402088772846,
+      "paired_program_95": [
+        0.910574412532637,
+        0.9412532637075718
+      ]
+    }
+  },
+  "retained": false,
+  "completed": true,
+  "source_receipt_sha256": "d4b302762459fdc1fce90da3c944c9c5d06ae80d194a60129e618997a39e26fb",
+  "main_summary_sha256": "e45d9f5fa4ef1924c44a9f0ac5dcc3199bbdd211a8ccffaead8c18c1193422dd",
+  "main_rows_sha256": "3bdbba42f027bfbc700b268462e9cc2bdb98ebeb02952a3fe040969cbd27e0b9",
+  "source_cohort_sha256": "4fb37ac92f658b4769ad7543d7f613f7373aff4be29b33bb46ac0f6ea5035d90",
+  "worker_sha256": "ca8d35f62fd97a96fa1b60ce941f3171635be04b39742dded8f26de8c5450ea8",
+  "protocol_sha256": "6415f7343dc792f1e28c07ae8162fb0e42ec5059a0688f463d0eed2c4d95a152",
+  "helpers_sha256": {
+    "karel_teaching_transfer.py": "873cad06f003eb90c58ed289e4e540bd8bf29d9a7c238ed99be9a76f429cb79a",
+    "karel_online_control.py": "30d161bd90b1df13e297ab78c302bf98c74f94cc0666bb657151b6d6109301bd",
+    "karel_unaligned_baselines.py": "377c50b78e03183519530b0cc80261335c6ba987cdc9844aaf89f56ffbb924a7",
+    "karel_unaligned_model.py": "a4a975def987cf0635dbaf8a3145a1f6dd20d9549f3ee666750682d7d68b91ae",
+    "karel_predicates.py": "be9d49715634d3acb0c92f1eb6467ace3557be65921d4baae650b85c1d660c6a",
+    "leaps_karel_source_format.py": "aba32a4d87ca607f04e146fb85e2bd343540f936a64f93aa090fa920776d665a"
+  },
+  "per_program_sha256": "12b8e057bf099a73a071925bbc8b838ff31a87ea39a4b23e9d96036fe7543eb0"
+}

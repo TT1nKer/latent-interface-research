@@ -1,0 +1,6 @@
+{
+ "stage":"Clarification before any teaching outcomes were scored. The primary rule is unchanged.",
+ "privileged_calibration":"Selecting by a receiver's calibration success requires obtaining both candidate demonstrations as well as the two labeled calibration endpoints. Only the disagreement, initial-novelty and uniform choices use one paid candidate demonstration. Report privileged crossed measurement and feasible selectors separately.",
+ "opportunity":"Report the empirical difference between per-program personalized hindsight optimal candidate and the best single candidate shared between receivers, using the same two final worlds. With two candidates and two receivers let d_r = U_r(1)-U_r(0). The difference is (|d_A|+|d_B|-|d_A+d_B|)/4, positive only for strictly opposing ranks. This is a finite two-world hindsight opportunity, not a population bound.",
+ "bootstrap":"5000 uniform paired program resamples, fixed NumPy default_rng seed 20261120. Include every eligible program, including ties and empty episodes."
+}

@@ -1916,5 +1916,123 @@
     },
     "diagnostic_protocol_sha256": "515401baf2d949777f7fee0a7e812235c119cb6e502da4d7a6fab16cc91a2f07",
     "checkpoint_sha256": "670119eb898578c2d85268fe5fd2a681243c94c68d48100408b497c22b60ea35"
+  },
+  "posthoc_strongest_endpoint_comparator_at_sites": {
+    "development_holdout": {
+      "all": {
+        "distinct_codes": 395,
+        "worlds": 2604,
+        "no_move_worlds": 0,
+        "steps": 25059,
+        "trained": {
+          "micro": 0.9831996488287641,
+          "code_macro": 0.9819623982627332,
+          "expected_hits": 24638.0
+        },
+        "dp": {
+          "micro": 0.9755863147099829,
+          "code_macro": 0.9749461106909257,
+          "expected_hits": 24447.21746031746
+        },
+        "trained_minus_dp_code_macro": 0.00701628757180749
+      },
+      "site_available": {
+        "distinct_codes": 395,
+        "worlds": 2604,
+        "no_move_worlds": 0,
+        "steps": 24929,
+        "trained": {
+          "micro": 0.9883268482490273,
+          "code_macro": 0.9908335875457952,
+          "expected_hits": 24638.0
+        },
+        "dp": {
+          "micro": 0.9806738120388889,
+          "code_macro": 0.9837697635850206,
+          "expected_hits": 24447.21746031746
+        },
+        "trained_minus_dp_code_macro": 0.007063823960774672
+      },
+      "hard": {
+        "distinct_codes": 315,
+        "worlds": 1992,
+        "no_move_worlds": 0,
+        "steps": 14674,
+        "trained": {
+          "micro": 0.980169006405888,
+          "code_macro": 0.984672213492434,
+          "expected_hits": 14383.0
+        },
+        "dp": {
+          "micro": 0.967167606672854,
+          "code_macro": 0.9712968987944179,
+          "expected_hits": 14192.217460317459
+        },
+        "trained_minus_dp_code_macro": 0.01337531469801601,
+        "paired_program_descriptive_95": [
+          0.005379232088425468,
+          0.021839203098172826
+        ]
+      },
+      "checked_teacher_boundaries_including_stop": 27663
+    },
+    "external": {
+      "all": {
+        "distinct_codes": 750,
+        "worlds": 3955,
+        "no_move_worlds": 716,
+        "steps": 17579,
+        "trained": {
+          "micro": 0.9705899084134478,
+          "code_macro": 0.9065446876789036,
+          "expected_hits": 17062.0
+        },
+        "dp": {
+          "micro": 0.9668883191253629,
+          "code_macro": 0.9004568095123603,
+          "expected_hits": 16996.929761904754
+        },
+        "trained_minus_dp_code_macro": 0.006087878166543395
+      },
+      "site_available": {
+        "distinct_codes": 703,
+        "worlds": 3878,
+        "no_move_worlds": 691,
+        "steps": 17260,
+        "trained": {
+          "micro": 0.9885283893395134,
+          "code_macro": 0.9864868267438969,
+          "expected_hits": 17062.0
+        },
+        "dp": {
+          "micro": 0.9847583871323727,
+          "code_macro": 0.979629327266728,
+          "expected_hits": 16996.929761904754
+        },
+        "trained_minus_dp_code_macro": 0.006857499477168915
+      },
+      "hard": {
+        "distinct_codes": 524,
+        "worlds": 2947,
+        "no_move_worlds": 302,
+        "steps": 10369,
+        "trained": {
+          "micro": 0.9809046195390105,
+          "code_macro": 0.9769576689136585,
+          "expected_hits": 10171.0
+        },
+        "dp": {
+          "micro": 0.974629160179841,
+          "code_macro": 0.9661662615450896,
+          "expected_hits": 10105.929761904772
+        },
+        "trained_minus_dp_code_macro": 0.01079140736856898,
+        "paired_program_descriptive_95": [
+          0.0060283020409562646,
+          0.015873818231277672
+        ]
+      },
+      "checked_teacher_boundaries_including_stop": 22163
+    }
   }
 }

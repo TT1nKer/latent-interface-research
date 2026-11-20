@@ -1,0 +1,24 @@
+{
+  "schema": "karel_demo_dual_role_v1",
+  "frozen_before_main_outcomes": true,
+  "source_job": "12502194",
+  "source_protocol_sha256": "b30c1e9010c40aceab74e6111eac1deb83f5ab2d1df717f4eb724f3f883785b0",
+  "source_receipt_sha256": "d4b302762459fdc1fce90da3c944c9c5d06ae80d194a60129e618997a39e26fb",
+  "source_cohort_sha256": "4fb37ac92f658b4769ad7543d7f613f7373aff4be29b33bb46ac0f6ea5035d90",
+  "model_sha256": "670119eb898578c2d85268fe5fd2a681243c94c68d48100408b497c22b60ea35",
+  "helpers_sha256": {
+    "karel_teaching_transfer.py": "873cad06f003eb90c58ed289e4e540bd8bf29d9a7c238ed99be9a76f429cb79a",
+    "karel_online_control.py": "30d161bd90b1df13e297ab78c302bf98c74f94cc0666bb657151b6d6109301bd",
+    "karel_unaligned_baselines.py": "377c50b78e03183519530b0cc80261335c6ba987cdc9844aaf89f56ffbb924a7",
+    "karel_unaligned_model.py": "a4a975def987cf0635dbaf8a3145a1f6dd20d9549f3ee666750682d7d68b91ae",
+    "karel_predicates.py": "be9d49715634d3acb0c92f1eb6467ace3557be65921d4baae650b85c1d660c6a",
+    "leaps_karel_source_format.py": "aba32a4d87ca607f04e146fb85e2bd343540f936a64f93aa090fa920776d665a"
+  },
+  "question": "Can one uniformly purchased expert trajectory identify which fixed executor to use after adding that trajectory to memory? How does the benefit change when both executors retain their original memory?",
+  "panel": "Reuse all eligible unique programs and precisely the original hash permutation, four base examples, two possible paid candidates and two final worlds from karel_teaching_transfer_20261120. The two calibration worlds are unused. Main per-program baseline means and five-support binary final results are integrity-checked and reused. No program tokens supplied to any executor or router.",
+  "actions": "The same single candidate is drawn uniformly on each task. Enumerate both one-candidate interventions and average for exact expectation. Route using strict exact terminal state including STOP: run retrieval and weighted edit on that candidate using only four base supports. Route to retrieval only if retrieval gets that candidate right and edit does not; otherwise use edit. The fixed action always uses edit. The label comes exclusively from the purchased demonstration. No comparison against the unbought candidate, calibration labels, or final labels for routing.",
+  "factorial": "Cross fixed-edit versus endpoint-informed routing with withholding versus appending the purchased demonstration to the chosen executor memory. Both worlds and both choices have equal weight within program. Final outcome requires STOP and exact final grid; original cap stays fixed from base demonstrations.",
+  "primary": "Per-program future success of routing after insertion minus fixed edit after insertion. Paired program bootstrap percentile interval from 5000 draws, NumPy default_rng seed 20261120, row order fixed from the original source. Retain only if mean >= 0.02 and lower 95% endpoint > 0. Otherwise stop this one-query strategy.",
+  "secondary": "Report all four cells, routing benefit before update, primary minus pre-update routing benefit (factorial interaction), insertion benefit for each routing policy, fraction switching, fraction (program,candidate) gains/losses/ties on insertion under the routed and fixed policies. Report fraction of pairs where routing while withholding beats fixed edit while withholding and insertion harms that routed controller. Base stores marginal mean across two final worlds and cannot identify same-world joint sign; comparison of baseline and inserted outcomes uses paired two-world mean. No causal claim outside this deterministic intervention and source distribution.",
+  "limits": "One finite two-world realization per task and two receivers; source-generator overlap beyond exact code possible. Earlier related endpoint results seen; new main-task outcomes and per-program rows unread when this protocol was frozen. No extra arms, no tuning or adaptive follow-on; no independently sampled confirmatory cohort claimed. Compute at most 5 minutes on one school CPU, after original study completion."
+}

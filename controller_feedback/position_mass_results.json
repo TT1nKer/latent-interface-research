@@ -1,0 +1,31 @@
+{
+  "completed": true,
+  "posthoc": true,
+  "programs": 764,
+  "worlds": 4584,
+  "original_records_reproduced": 4584,
+  "original_sites_reproduced": 4584,
+  "hard_codes": 524,
+  "hard_steps": 10369,
+  "sites": {
+    "learned_hits": {
+      "code_macro": 0.9769576689136585,
+      "step_micro": 0.9809046195390105
+    },
+    "uniform_hits": {
+      "code_macro": 0.45613049286943785,
+      "step_micro": 0.4600854907833426
+    }
+  },
+  "original_path_queries": 22345,
+  "nonidentical_scores": 17261,
+  "max_abs": 1.3113021850585938e-06,
+  "original_path_action_flips": 0,
+  "alternative_paths_executed": 0,
+  "changed_outcome_records": 0,
+  "original_successes": 3816,
+  "intervened_successes": 3816,
+  "protocol_sha256": "eaba9287b734428638ed15c65ee62ee3e02ef1ee995254011fc80c2823ec955b",
+  "worker_sha256": "facbe7ac8ee0b16a31071617c1cdc27b6cca947bc5814a7e031e43fd593cd8a5",
+  "per_target_sha256": "d0effd4ba8c34fde2d2121ef07800a43837a72d524ada2d4f284f1c5690bbf0f"
+}

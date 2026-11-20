@@ -1,0 +1,71 @@
+{
+  "question": "For semantically equivalent encodings, does the identity of the best solver change enough to matter after controlling for which mathematical problem is being solved?",
+  "public_paired_data": {
+    "title": "LPBench quick benchmark, original per-unit measurements and report",
+    "commit": "cbd8a53ec250602eff4b53f4e583a4ad24856252",
+    "source_table": "https://github.com/h-a-forster/lpbench/blob/cbd8a53ec250602eff4b53f4e583a4ad24856252/docs/results/quick/units.csv",
+    "report": "https://github.com/h-a-forster/lpbench/blob/cbd8a53ec250602eff4b53f4e583a4ad24856252/REPORT.md",
+    "raw_url": "https://raw.githubusercontent.com/h-a-forster/lpbench/cbd8a53ec250602eff4b53f4e583a4ad24856252/docs/results/quick/units.csv",
+    "units_sha256": "454f45ed1a7ac8575bf544228eec456eab7b8fca0673c909b6506e3fdf545f4a",
+    "report_sha256": "837b22267121eb6530f5688c36bcb35081c91395fdc6c3749a548a66b7fe20fb",
+    "size_bytes": 479204,
+    "all_records": 2388,
+    "all_original_problems": 206,
+    "verified_completion": "Source's primal and dual residuals, gap and reference objective checks on the original problem at tolerance 1e-6, plus solve wall time no more than 10 seconds. These checks provide numerical evidence rather than a formal exact proof.",
+    "resources": "One solver thread and 3 concurrent workers on one Windows machine. Recorded CPU timer resolution approximately 0.015625 seconds."
+  },
+  "observed": {
+    "population": {
+      "problems": 30,
+      "configs": [
+        "highs-dsimplex",
+        "highs-hipdlp",
+        "highs-ipx",
+        "highs-pdlp",
+        "ortools-glop",
+        "ortools-pdlp",
+        "scip-soplex"
+      ],
+      "records": 840,
+      "permutations": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "per_problem_configs_and_forms_complete": true,
+      "noise_problems": 10,
+      "noise_configs": [
+        "highs-dsimplex",
+        "highs-ipx"
+      ],
+      "noise_three_repeats_per_cell": true,
+      "noise_and_permutation_problems_overlap": 2
+    },
+    "exploratory": {
+      "verified_completion": {
+        "invariant_instance_hindsight": 1,
+        "per_representation_hindsight": 1,
+        "potential_gap": 0,
+        "nominal_winner_transfer_to_three": 0.9643386243386244,
+        "per_representation_hindsight_on_three": 1,
+        "instances_with_common_winner_across_four": 30,
+        "instances_with_positive_invariant_regret": 0,
+        "largest_instance_regret": 0,
+        "median_instance_regret": 0.0
+      },
+      "capped_cpu_seconds": {
+        "invariant_instance_hindsight": 0.180599,
+        "per_representation_hindsight": 0.18033858333333333,
+        "potential_gap": 0.00026041666666666666,
+        "nominal_winner_transfer_to_three": 0.21994502314814815,
+        "per_representation_hindsight_on_three": 0.19027777777777777,
+        "instances_with_common_winner_across_four": 29,
+        "instances_with_positive_invariant_regret": 1,
+        "largest_instance_regret": 0.0078125,
+        "median_instance_regret": 0.0
+      }
+    }
+  },
+  "known_scope": "Ranks and variability under permutation are already studied. Only the policy-class gap on this quick panel and its screening use were computed here. The near-zero gap does not generalize to hard MIP or SAT, different solver budgets, or unseen hardware."
+}
