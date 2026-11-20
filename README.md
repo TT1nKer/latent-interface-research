@@ -9,7 +9,7 @@ model, code, and data licences.
 
 ## Learning which operation to call, 2026-11-20
 
-The follow-up removes the first-move landmark. The study compares learned matching to eight simple methods while each policy drives a held-out world to completion. [Whole-task evaluation from unsegmented demonstrations](controller_feedback/unaligned.md)
+The follow-up removes the first-move landmark and lets each policy drive its own held-out world. Across 764 fresh external programs, learned matching reached 82.96% full-world success and support-weighted prefix alignment reached 83.42%. The paired 95% interval for the difference was −1.48 to +0.56 percentage points. [Whole-task evaluation from unsegmented demonstrations](controller_feedback/unaligned.md)
 
 When a marker changed but the expert should keep the same next action, a policy using live readings made unnecessary switches in 63.20% of development pairs and 41.97% of external pairs. Voting from five demonstrations aligned at the first move reduced these rates to 4.19% and 4.24%. On the external corpus, only 23 distinct programs required a switch, below the prespecified 50-program floor. We closed the first-arrival screen. [Experiments, counts and scope](controller_feedback/README.md)
 

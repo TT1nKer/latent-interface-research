@@ -1,5 +1,20 @@
 # Whole-task control from five unsegmented demonstrations
 
+**The learned matcher reached 82.96% complete-task success on a fresh corpus. The strongest simple method reached 83.42%.** The learned-minus-simple difference was −0.47 percentage points, with a paired whole-program 95% bootstrap interval of [−1.48, +0.56]. All three trained seeds scored below the strongest simple comparator. This misses the prespecified two-point improvement rule. [Full estimates, denominators and diagnostics](unaligned_results.json)
+
+| Full-world success | In-domain holdout (395 codes) | External LEAPS (764 codes) |
+|---|---:|---:|
+| Vote by elapsed step | 59.70% | 62.02% |
+| Follow a modal demonstrated plan | 62.72% | 64.94% |
+| Align action/observation histories with equal sensor weights | 74.32% | 79.84% |
+| Align histories with sensor weights estimated from the five demonstrations | **78.23%** | **83.42%** |
+| Learned retrieval of individual demonstration positions | 75.93% | 82.96% |
+| Equally trained model with one support centroid per action | 57.96% | 73.59% |
+
+How the comparison is controlled matters. On external programs the learned retriever exceeded fixed-weight alignment by 3.11 points and its matched-capacity centroid alternative by 9.37 points. The simple rule that estimates sensor relevance from the five unsegmented demonstrations removed the practical advantage. Its inference requires no previous training programs. Model success rates average individual runs for three seeds. The intervals describe variation across programs conditional on these fitted policies.
+
+The two policies fail differently. On external worlds, the learned retriever attempted an illegal action in 2.81% of runs and stopped on an incorrect final grid in 13.99%; 0.25% hit the action cap. The strongest simple method attempted an illegal action in 4.54%, stopped on an incorrect grid in 12.04%, and never hit the cap. These are rollout outcomes; the data do not identify which intermediate decision caused a wrong endpoint.
+
 The policy sees the full action and local sensor sequences of five demonstrations. On its own grid it receives four local sensor bits and the history it has actually executed. During training it learns which primitive action to take from expert actions in other training episodes. The data supply no labels pairing a query step with any demonstration step. At evaluation the policy drives the entire episode, including the decision to stop. Success requires exact final position, orientation, marker counts and walls. [Fixed study design](karel_unaligned_protocol_20261120.json)
 
 The learned retrieval policy uses a shared causal GRU to encode prefixes, compares the current query to all observed support positions, and votes with the primitives demonstrated at those positions. An equal-parameter control compresses the stored positions for each action into a single centroid. We fit three seeds independently for both policies. Eight simple methods include voting by elapsed step count, following a modal plan, suffix matching, and online sequence alignment that allows insertions and deletions. All use the same five demonstrations, four sensors and rollout limits. [Simple controls](karel_unaligned_baselines_20261120.json)
@@ -11,5 +26,7 @@ The fit uses 1,650 unique program strings from the development corpus. The in-do
 The primary comparison averages complete-world success of the individual neural seeds and subtracts the strongest of all eight simple methods. Its retention rule requires at least a two-percentage-point gain on the external cohort, a positive lower paired bootstrap endpoint, and a positive gain for each of the three seeds. The bootstrap resamples entire programs and selects the strongest simple method again inside each draw. [Analysis](analyze_karel_unaligned.py)
 
 A separate diagnostic examines what the model attends to on reference trajectories. After the model scores positions, an instrumented interpreter identifies the statement that produced each primitive. The main diagnostic asks whether the best-matching position comes from the same statement when two different statements produce the same action and the correct one appears among the supports. A loop revisiting the same statement counts as the same site. This metric uses reference actions as the preceding query history. The endpoint experiment uses the policy’s own actions throughout. [Correspondence diagnostic](karel_unaligned_sites_20261120.json)
+
+On the external corpus, 10,369 decisions in 524 programs met this ambiguity criterion. For equally weighted programs, the trained metric selected the correct program statement 97.70% of the time, compared with 92.94% for nearest elapsed step and 83.02% for random model weights. The score concerns a single fitted seed and expert histories. These comparison methods differ from the strongest whole-task baseline, whose position scores are the subject of a separate post-hoc check. [Position results](unaligned_results.json) · [Follow-up specification](karel_unaligned_dp_sites_20261120.json)
 
 Learning from unsegmented demonstrations and executing on new tasks has established precedents. Duan et al. evaluate attention-based one-shot imitation on novel block-stacking tasks. Sun et al. evaluate demonstration-based program synthesis and action-sequence prediction in Karel. Here the specific question is whether learned correspondence improves the exact whole-world result over a strong simple alignment method under identical execution-time information. [Duan et al.](https://arxiv.org/abs/1703.07326) · [Sun et al.](https://proceedings.mlr.press/v80/sun18a.html)
