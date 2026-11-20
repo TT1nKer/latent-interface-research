@@ -53,6 +53,7 @@ def score(new_dir, discovery_dir):
     vectors={s:noun_vectors(xs) for s,xs in tokens.items()}
     singles, reverse, preserved = [], [], []
     by_toy=defaultdict(list)
+    single_toys=defaultdict(list)
     pairs, reversal_pairs, same_toy_pairs = set(), set(), 0
     overlap_count=0
     for a,b in combinations(sorted(coarse),2):
@@ -76,6 +77,7 @@ def score(new_dir, discovery_dir):
                 selected=edit[i]['forced_edit']
                 credits[key]=dict(parts=part,edit=Fraction(int(j in selected),len(selected)),uniform=chance)
                 singles.append(credits[key])
+                single_toys[meta[s][0]].append(credits[key])
             for x,y in swaps:
                 sa,sb=sorted((eligible[s][x][2],eligible[s][y][2]))
                 ta,tb=sorted((eligible[t][x][2],eligible[t][y][2]))
@@ -96,6 +98,7 @@ def score(new_dir, discovery_dir):
                 discovery_recording_overlap=0,discovery_toy_overlap=0,discovery_participant_overlap=0,
                 distinct_person_same_toy_pairs=same_toy_pairs,pairs_with_unique_shared_role=len(pairs),
                 primary=primary_outcome(by_toy,reversal_pairs),single=dict(n=len(singles),rates=rates(singles)),
+                secondary_single_by_toy={toy:dict(n=len(rows),rates=rates(rows)) for toy,rows in sorted(single_toys.items())},
                 reversed=dict(directed_n=len(reverse),rates=rates(reverse)),same_order=dict(directed_n=len(preserved),rates=rates(preserved)),
                 reversed_overlap_excluded_directed=overlap_count,
                 per_reversal_toy={toy:dict(directed_n=len(rows),rates=rates(rows)) for toy,rows in sorted(by_toy.items())},
@@ -108,7 +111,18 @@ if __name__=='__main__':
     parser.add_argument('new',type=Path)
     parser.add_argument('discovery',type=Path)
     parser.add_argument('--out',type=Path,required=True)
+    parser.add_argument('--single-by-toy',type=Path,help='Optional post-hoc single-cue breakdown')
     a=parser.parse_args()
+    result=score(a.new,a.discovery)
+    strata=result.pop('secondary_single_by_toy')
     with a.out.open('x') as output:
-        json.dump(score(a.new,a.discovery),output,indent=2,allow_nan=False)
+        json.dump(result,output,indent=2,allow_nan=False)
         output.write('\n')
+    if a.single_by_toy:
+        gains=[r['rates']['parts']-r['rates']['edit'] for r in strata.values()]
+        detail=dict(posthoc=True,by_toy=strata,toys=len(gains),
+                    positive_tied_negative=[sum(x>0 for x in gains),sum(x==0 for x in gains),sum(x<0 for x in gains)],
+                    equal_toy_advantage=mean(gains) if gains else None)
+        with a.single_by_toy.open('x') as output:
+            json.dump(detail,output,indent=2,allow_nan=False)
+            output.write('\n')
