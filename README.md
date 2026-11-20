@@ -7,6 +7,31 @@ a validated new method. Further evaluation code, methodology, and positive or
 negative findings will be released as the pilot progresses, subject to upstream
 model, code, and data licences.
 
+## One visual-token intervention in closed-loop control, 2026-11-20
+
+We tested whether first-action imitation error helps decide which camera view
+should receive a larger visual-token budget. We selected 32 demonstration
+trajectories across three LIBERO-Spatial bowl-placement tasks before measuring
+model outcomes. At one prespecified decision per trajectory, we crossed two
+external-camera angles with two budgets (102 and 512 tokens). Each branch executed
+the predicted eight-action chunk up to task termination. The same frozen policy
+then used 512 tokens for every remaining decision on its own observations.
+Identical-action replays verified the simulator controls.
+
+Across 128 rollouts, both budgets succeeded on the same 60 of 64 paired views
+and failed on the same four. Assigning the larger budget at random, assigning it
+to the view with the larger expert-relative first-step translation loss from
+compression, and choosing with perfect knowledge of the terminal outcomes all
+gave **93.75% success**. All 64 first translation commands changed. In 39 views
+the two branches also ended on different control steps (range of differences,
+−4 to +5).
+
+We closed this single-chunk routing experiment. The 32 trajectories leave room
+for small effects. Under independent trajectory sampling, a one-sided 95% upper
+bound on the gain achievable with perfect outcome knowledge over random allocation
+is 4.47 percentage points. This result is specific to the sampled tasks, decision
+distribution and dense feedback following the intervention.
+
 ## Research allocation, 2026-11-14
 
 The existing QASC results and failed screening criteria remain unchanged. We have
