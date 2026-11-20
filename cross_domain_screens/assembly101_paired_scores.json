@@ -1,0 +1,37 @@
+{
+  "posthoc": true,
+  "unordered_recording_pairs": 16,
+  "method": "For the same fine action and same ordered recording pair, predict each of the two swapped source marks separately; only dual correct counts. Exact expectation for independent uniform tie-breaking per source query. Each unordered mission contributes both directions.",
+  "strata": {
+    "all": {
+      "directed_swaps": 60,
+      "joint_accuracy": {
+        "forced_edit": 0.125,
+        "absolute_clamped": 0.03333333333333333,
+        "absolute_strict": 0.03333333333333333,
+        "normalized": 0.029166666666666667,
+        "uniform": 0.027514201260274308
+      }
+    },
+    "same_order": {
+      "directed_swaps": 34,
+      "joint_accuracy": {
+        "forced_edit": 0.22058823529411764,
+        "absolute_clamped": 0.058823529411764705,
+        "absolute_strict": 0.058823529411764705,
+        "normalized": 0.051470588235294115,
+        "uniform": 0.031835204676699744
+      }
+    },
+    "reversed": {
+      "directed_swaps": 26,
+      "joint_accuracy": {
+        "forced_edit": 0.0,
+        "absolute_clamped": 0.0,
+        "absolute_strict": 0.0,
+        "normalized": 0.0,
+        "uniform": 0.021863658331102584
+      }
+    }
+  }
+}
