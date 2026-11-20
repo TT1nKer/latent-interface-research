@@ -59,4 +59,15 @@ Compositional generalization and learned state-dependent selection of operations
 
 The preceding policy pools examples from different execution steps. A separate development comparison aligns the five supporting examples at precisely the same event as the query, the first forward move. Three fixed votes either pool all support labels, condition on marker presence, or condition only when both marker levels have different unambiguous modes. This control was designed after observing the first policy’s errors. [Aligned vote protocol](karel_aligned_vote_20261120.json)
 
+| First-arrival predictor | Both commands correct on expert switches | Wrongly changes on expert stays | Both commands correct overall |
+|---|---:|---:|---:|
+| All-step memory using live readings | 42.86% | 63.20% | 34.05% |
+| Vote from the same step, ignoring the marker | 0% | 0% | 84.31% |
+| Vote from the same step and marker level | 45.02% | 5.49% | 85.54% |
+| Split the vote only on unambiguous support | 43.48% | 4.19% | 86.18% |
+
+The last rule got 624 additional switching pairs right and lost 344 stay pairs relative to pooled voting. Weighting distinct programs equally, joint accuracy on switches is 41.15% for the all-step policy, 40.75% for the plain marker vote and 38.72% for the selective vote. The largest difference is in unnecessary changes. Alignment, features and the decision rule change together, so this comparison does not isolate the causal contribution of alignment. [All counts and both-legal sensitivity](karel_results.json)
+
 For an external check, the prospective protocol selects six original demonstrations from each of 640 program records in four fixed blocks of the LEAPS release. It requires all sampled reference trajectories to pass source-specific validation and excludes exact program overlaps with development before evaluation. The rules stay fixed across corpora. The 50-distinct-switching-program floor applies before assigning evidential weight to the test. [Source and eligibility](leaps_karel_source_20261120.json) · [Paired evaluation](karel_leaps_transfer_20261120.json)
+
+For independent reproduction, the original aligned-vote protocol pins both `program_pairs.jsonl` and the entire preceding run receipt. When the paired worker is run in a new Slurm allocation, the job number changes the receipt digest. Verify the recorded per-pair row digest against the original and check the reference action and endpoint coverage. In a separate copy of the aligned-vote protocol, set `inputs.paired_summary_sha256` to the new receipt digest and give that copy to `karel_aligned_vote.py`. Keep the dataset, per-pair row, simulator and sensor digests pinned. The published protocol preserves the hashes used for the reported run.

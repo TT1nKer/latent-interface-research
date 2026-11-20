@@ -548,5 +548,679 @@
     "online": "5b37302f6e4d9ca4ca9e93c39ba16ac15120120d65684d6adc913a2df6330897",
     "plan_selection": "5379bf4bf9f188b2fd5247db3d2a674664be2aecf76324c37485e4586f102663",
     "marker_pairs": "6f46b6c354961f87cd9d5feaaf35b9250c0f26e54d40120c747bd286f1015043"
+  },
+  "development_aligned_votes": {
+    "design": "Post-discovery control on the same held-out worlds within the development corpus; the three votes were fixed before they were evaluated.",
+    "protocol_sha256": "8aaf61a4088906e4ce253bb28e43febf1a59fb8afa7e7acccabab2e5522ce651",
+    "original": {
+      "all": {
+        "worlds": 14995,
+        "distinct_codes": 2045,
+        "methods": {
+          "pooled": {
+            "counts": {
+              "zero_correct": 13815,
+              "one_correct": 12832,
+              "both_correct": 12642,
+              "predicted_switch": 0,
+              "false_switch": 0
+            },
+            "world_rates": {
+              "zero_correct": 0.9213071023674558,
+              "one_correct": 0.8557519173057686,
+              "both_correct": 0.843081027009003,
+              "predicted_switch": 0.0,
+              "false_switch": 0.0,
+              "balanced_correct": 0.8885295098366122
+            },
+            "code_macro": {
+              "zero_correct": 0.9058815539255637,
+              "one_correct": 0.8300054333061668,
+              "both_correct": 0.8146427601195327,
+              "predicted_switch": 0.0,
+              "false_switch": 0.0,
+              "balanced_correct": 0.8679434936158652
+            }
+          },
+          "marker": {
+            "counts": {
+              "zero_correct": 13887,
+              "one_correct": 13229,
+              "both_correct": 12827,
+              "predicted_switch": 1442,
+              "false_switch": 744
+            },
+            "world_rates": {
+              "zero_correct": 0.926108702900967,
+              "one_correct": 0.8822274091363788,
+              "both_correct": 0.8554184728242747,
+              "predicted_switch": 0.09616538846282094,
+              "false_switch": 0.049616538846282095,
+              "balanced_correct": 0.9041680560186729
+            },
+            "code_macro": {
+              "zero_correct": 0.9118717739744635,
+              "one_correct": 0.8594947025264874,
+              "both_correct": 0.8274653626731866,
+              "predicted_switch": 0.11309426786199403,
+              "false_switch": 0.05930453681064928,
+              "balanced_correct": 0.8856832382504755
+            }
+          },
+          "gated": {
+            "counts": {
+              "zero_correct": 13901,
+              "one_correct": 13254,
+              "both_correct": 12922,
+              "predicted_switch": 1238,
+              "false_switch": 568
+            },
+            "world_rates": {
+              "zero_correct": 0.9270423474491497,
+              "one_correct": 0.883894631543848,
+              "both_correct": 0.8617539179726575,
+              "predicted_switch": 0.08256085361787262,
+              "false_switch": 0.03787929309769923,
+              "balanced_correct": 0.9054684894964988
+            },
+            "code_macro": {
+              "zero_correct": 0.9127682694919859,
+              "one_correct": 0.8615321923390383,
+              "both_correct": 0.8348818255908721,
+              "predicted_switch": 0.09687584895408856,
+              "false_switch": 0.04536810649280087,
+              "balanced_correct": 0.8871502309155122
+            }
+          }
+        },
+        "gated_difference": {
+          "pooled": {
+            "both_correct": {
+              "gated_only": 624,
+              "comparator_only": 344,
+              "world_rate_delta": 0.018672890963654553,
+              "code_macro_delta": 0.020239065471339357
+            },
+            "predicted_switch": {
+              "gated_only": 1238,
+              "comparator_only": 0,
+              "world_rate_delta": 0.08256085361787262,
+              "code_macro_delta": 0.09687584895408856
+            }
+          },
+          "marker": {
+            "both_correct": {
+              "gated_only": 117,
+              "comparator_only": 22,
+              "world_rate_delta": 0.006335445148382794,
+              "code_macro_delta": 0.007416462917685496
+            },
+            "predicted_switch": {
+              "gated_only": 0,
+              "comparator_only": 204,
+              "world_rate_delta": -0.013604534844948316,
+              "code_macro_delta": -0.01621841890790547
+            }
+          }
+        }
+      },
+      "oracle_switch": {
+        "worlds": 1435,
+        "distinct_codes": 257,
+        "methods": {
+          "pooled": {
+            "counts": {
+              "zero_correct": 1173,
+              "one_correct": 190,
+              "both_correct": 0,
+              "predicted_switch": 0,
+              "false_switch": 0
+            },
+            "world_rates": {
+              "zero_correct": 0.8174216027874565,
+              "one_correct": 0.13240418118466898,
+              "both_correct": 0.0,
+              "predicted_switch": 0.0,
+              "false_switch": 0.0,
+              "balanced_correct": 0.47491289198606274
+            },
+            "code_macro": {
+              "zero_correct": 0.764461738002594,
+              "one_correct": 0.14280155642023346,
+              "both_correct": 0.0,
+              "predicted_switch": 0.0,
+              "false_switch": 0.0,
+              "balanced_correct": 0.4536316472114137
+            }
+          },
+          "marker": {
+            "counts": {
+              "zero_correct": 1296,
+              "one_correct": 743,
+              "both_correct": 646,
+              "predicted_switch": 698,
+              "false_switch": 0
+            },
+            "world_rates": {
+              "zero_correct": 0.9031358885017422,
+              "one_correct": 0.5177700348432056,
+              "both_correct": 0.45017421602787455,
+              "predicted_switch": 0.486411149825784,
+              "false_switch": 0.0,
+              "balanced_correct": 0.710452961672474
+            },
+            "code_macro": {
+              "zero_correct": 0.856355382619974,
+              "one_correct": 0.49111543450064854,
+              "both_correct": 0.40745784695201037,
+              "predicted_switch": 0.4585603112840467,
+              "false_switch": 0.0,
+              "balanced_correct": 0.6737354085603113
+            }
+          },
+          "gated": {
+            "counts": {
+              "zero_correct": 1285,
+              "one_correct": 728,
+              "both_correct": 624,
+              "predicted_switch": 670,
+              "false_switch": 0
+            },
+            "world_rates": {
+              "zero_correct": 0.8954703832752613,
+              "one_correct": 0.5073170731707317,
+              "both_correct": 0.4348432055749129,
+              "predicted_switch": 0.46689895470383275,
+              "false_switch": 0.0,
+              "balanced_correct": 0.7013937282229965
+            },
+            "code_macro": {
+              "zero_correct": 0.8466277561608301,
+              "one_correct": 0.47769130998702986,
+              "both_correct": 0.38722438391699093,
+              "predicted_switch": 0.43346303501945527,
+              "false_switch": 0.0,
+              "balanced_correct": 0.6621595330739299
+            }
+          }
+        },
+        "gated_difference": {
+          "pooled": {
+            "both_correct": {
+              "gated_only": 624,
+              "comparator_only": 0,
+              "world_rate_delta": 0.4348432055749129,
+              "code_macro_delta": 0.38722438391699093
+            },
+            "predicted_switch": {
+              "gated_only": 670,
+              "comparator_only": 0,
+              "world_rate_delta": 0.46689895470383275,
+              "code_macro_delta": 0.43346303501945527
+            }
+          },
+          "marker": {
+            "both_correct": {
+              "gated_only": 0,
+              "comparator_only": 22,
+              "world_rate_delta": -0.015331010452961672,
+              "code_macro_delta": -0.02023346303501944
+            },
+            "predicted_switch": {
+              "gated_only": 0,
+              "comparator_only": 28,
+              "world_rate_delta": -0.01951219512195122,
+              "code_macro_delta": -0.025097276264591406
+            }
+          }
+        }
+      },
+      "oracle_stay": {
+        "worlds": 13560,
+        "distinct_codes": 1845,
+        "methods": {
+          "pooled": {
+            "counts": {
+              "zero_correct": 12642,
+              "one_correct": 12642,
+              "both_correct": 12642,
+              "predicted_switch": 0,
+              "false_switch": 0
+            },
+            "world_rates": {
+              "zero_correct": 0.9323008849557523,
+              "one_correct": 0.9323008849557523,
+              "both_correct": 0.9323008849557523,
+              "predicted_switch": 0.0,
+              "false_switch": 0.0,
+              "balanced_correct": 0.9323008849557523
+            },
+            "code_macro": {
+              "zero_correct": 0.9105209274314965,
+              "one_correct": 0.9105209274314965,
+              "both_correct": 0.9105209274314965,
+              "predicted_switch": 0.0,
+              "false_switch": 0.0,
+              "balanced_correct": 0.9105209274314965
+            }
+          },
+          "marker": {
+            "counts": {
+              "zero_correct": 12591,
+              "one_correct": 12486,
+              "both_correct": 12181,
+              "predicted_switch": 744,
+              "false_switch": 744
+            },
+            "world_rates": {
+              "zero_correct": 0.9285398230088495,
+              "one_correct": 0.9207964601769911,
+              "both_correct": 0.8983038348082596,
+              "predicted_switch": 0.05486725663716814,
+              "false_switch": 0.05486725663716814,
+              "balanced_correct": 0.9246681415929203
+            },
+            "code_macro": {
+              "zero_correct": 0.9060493827160494,
+              "one_correct": 0.8941102077687444,
+              "both_correct": 0.8657904245709124,
+              "predicted_switch": 0.07390846130683529,
+              "false_switch": 0.07390846130683529,
+              "balanced_correct": 0.9000797952423969
+            }
+          },
+          "gated": {
+            "counts": {
+              "zero_correct": 12616,
+              "one_correct": 12526,
+              "both_correct": 12298,
+              "predicted_switch": 568,
+              "false_switch": 568
+            },
+            "world_rates": {
+              "zero_correct": 0.9303834808259587,
+              "one_correct": 0.9237463126843658,
+              "both_correct": 0.9069321533923304,
+              "predicted_switch": 0.04188790560471976,
+              "false_switch": 0.04188790560471976,
+              "balanced_correct": 0.9270648967551622
+            },
+            "code_macro": {
+              "zero_correct": 0.908262571514604,
+              "one_correct": 0.898130081300813,
+              "both_correct": 0.8766305329719963,
+              "predicted_switch": 0.057648298705209274,
+              "false_switch": 0.057648298705209274,
+              "balanced_correct": 0.9031963264077085
+            }
+          }
+        },
+        "gated_difference": {
+          "pooled": {
+            "both_correct": {
+              "gated_only": 0,
+              "comparator_only": 344,
+              "world_rate_delta": -0.02536873156342183,
+              "code_macro_delta": -0.03389039445950015
+            },
+            "predicted_switch": {
+              "gated_only": 568,
+              "comparator_only": 0,
+              "world_rate_delta": 0.04188790560471976,
+              "code_macro_delta": 0.057648298705209274
+            }
+          },
+          "marker": {
+            "both_correct": {
+              "gated_only": 117,
+              "comparator_only": 0,
+              "world_rate_delta": 0.008628318584070796,
+              "code_macro_delta": 0.010840108401083959
+            },
+            "predicted_switch": {
+              "gated_only": 0,
+              "comparator_only": 176,
+              "world_rate_delta": -0.012979351032448377,
+              "code_macro_delta": -0.016260162601626015
+            }
+          }
+        }
+      }
+    },
+    "both_oracle_legal": {
+      "all": {
+        "worlds": 12375,
+        "distinct_codes": 1800,
+        "methods": {
+          "pooled": {
+            "counts": {
+              "zero_correct": 11330,
+              "one_correct": 10394,
+              "both_correct": 10206,
+              "predicted_switch": 0,
+              "false_switch": 0
+            },
+            "world_rates": {
+              "zero_correct": 0.9155555555555556,
+              "one_correct": 0.839919191919192,
+              "both_correct": 0.8247272727272728,
+              "predicted_switch": 0.0,
+              "false_switch": 0.0,
+              "balanced_correct": 0.8777373737373737
+            },
+            "code_macro": {
+              "zero_correct": 0.8892098765432099,
+              "one_correct": 0.8045987654320987,
+              "both_correct": 0.7866913580246914,
+              "predicted_switch": 0.0,
+              "false_switch": 0.0,
+              "balanced_correct": 0.8469043209876543
+            }
+          },
+          "marker": {
+            "counts": {
+              "zero_correct": 11471,
+              "one_correct": 10694,
+              "both_correct": 10437,
+              "predicted_switch": 1265,
+              "false_switch": 594
+            },
+            "world_rates": {
+              "zero_correct": 0.926949494949495,
+              "one_correct": 0.8641616161616161,
+              "both_correct": 0.8433939393939394,
+              "predicted_switch": 0.10222222222222223,
+              "false_switch": 0.048,
+              "balanced_correct": 0.8955555555555555
+            },
+            "code_macro": {
+              "zero_correct": 0.910570987654321,
+              "one_correct": 0.826962962962963,
+              "both_correct": 0.8033333333333333,
+              "predicted_switch": 0.12816358024691357,
+              "false_switch": 0.06594135802469135,
+              "balanced_correct": 0.868766975308642
+            }
+          },
+          "gated": {
+            "counts": {
+              "zero_correct": 11481,
+              "one_correct": 10732,
+              "both_correct": 10529,
+              "predicted_switch": 1080,
+              "false_switch": 435
+            },
+            "world_rates": {
+              "zero_correct": 0.9277575757575758,
+              "one_correct": 0.8672323232323232,
+              "both_correct": 0.8508282828282828,
+              "predicted_switch": 0.08727272727272728,
+              "false_switch": 0.03515151515151515,
+              "balanced_correct": 0.8974949494949496
+            },
+            "code_macro": {
+              "zero_correct": 0.9109043209876543,
+              "one_correct": 0.8309907407407408,
+              "both_correct": 0.812,
+              "predicted_switch": 0.11015432098765432,
+              "false_switch": 0.05079320987654321,
+              "balanced_correct": 0.8709475308641975
+            }
+          }
+        },
+        "gated_difference": {
+          "pooled": {
+            "both_correct": {
+              "gated_only": 601,
+              "comparator_only": 278,
+              "world_rate_delta": 0.0261010101010101,
+              "code_macro_delta": 0.025308641975308688
+            },
+            "predicted_switch": {
+              "gated_only": 1080,
+              "comparator_only": 0,
+              "world_rate_delta": 0.08727272727272728,
+              "code_macro_delta": 0.11015432098765432
+            }
+          },
+          "marker": {
+            "both_correct": {
+              "gated_only": 113,
+              "comparator_only": 21,
+              "world_rate_delta": 0.007434343434343434,
+              "code_macro_delta": 0.008666666666666711
+            },
+            "predicted_switch": {
+              "gated_only": 0,
+              "comparator_only": 185,
+              "world_rate_delta": -0.01494949494949495,
+              "code_macro_delta": -0.018009259259259253
+            }
+          }
+        }
+      },
+      "oracle_switch": {
+        "worlds": 1381,
+        "distinct_codes": 255,
+        "methods": {
+          "pooled": {
+            "counts": {
+              "zero_correct": 1124,
+              "one_correct": 188,
+              "both_correct": 0,
+              "predicted_switch": 0,
+              "false_switch": 0
+            },
+            "world_rates": {
+              "zero_correct": 0.8139029688631426,
+              "one_correct": 0.13613323678493844,
+              "both_correct": 0.0,
+              "predicted_switch": 0.0,
+              "false_switch": 0.0,
+              "balanced_correct": 0.47501810282404056
+            },
+            "code_macro": {
+              "zero_correct": 0.7591503267973856,
+              "one_correct": 0.14640522875816994,
+              "both_correct": 0.0,
+              "predicted_switch": 0.0,
+              "false_switch": 0.0,
+              "balanced_correct": 0.4527777777777778
+            }
+          },
+          "marker": {
+            "counts": {
+              "zero_correct": 1246,
+              "one_correct": 717,
+              "both_correct": 622,
+              "predicted_switch": 671,
+              "false_switch": 0
+            },
+            "world_rates": {
+              "zero_correct": 0.9022447501810282,
+              "one_correct": 0.5191889934829833,
+              "both_correct": 0.4503982621288921,
+              "predicted_switch": 0.48587979724837077,
+              "false_switch": 0.0,
+              "balanced_correct": 0.7107168718320058
+            },
+            "code_macro": {
+              "zero_correct": 0.8550980392156863,
+              "one_correct": 0.49640522875816995,
+              "both_correct": 0.4116339869281046,
+              "predicted_switch": 0.46281045751633987,
+              "false_switch": 0.0,
+              "balanced_correct": 0.6757516339869281
+            }
+          },
+          "gated": {
+            "counts": {
+              "zero_correct": 1235,
+              "one_correct": 702,
+              "both_correct": 601,
+              "predicted_switch": 645,
+              "false_switch": 0
+            },
+            "world_rates": {
+              "zero_correct": 0.8942795076031861,
+              "one_correct": 0.5083272990586531,
+              "both_correct": 0.4351918899348298,
+              "predicted_switch": 0.4670528602461984,
+              "false_switch": 0.0,
+              "balanced_correct": 0.7013034033309196
+            },
+            "code_macro": {
+              "zero_correct": 0.8439869281045752,
+              "one_correct": 0.4818954248366013,
+              "both_correct": 0.3915686274509804,
+              "predicted_switch": 0.43718954248366015,
+              "false_switch": 0.0,
+              "balanced_correct": 0.6629411764705883
+            }
+          }
+        },
+        "gated_difference": {
+          "pooled": {
+            "both_correct": {
+              "gated_only": 601,
+              "comparator_only": 0,
+              "world_rate_delta": 0.4351918899348298,
+              "code_macro_delta": 0.3915686274509804
+            },
+            "predicted_switch": {
+              "gated_only": 645,
+              "comparator_only": 0,
+              "world_rate_delta": 0.4670528602461984,
+              "code_macro_delta": 0.43718954248366015
+            }
+          },
+          "marker": {
+            "both_correct": {
+              "gated_only": 0,
+              "comparator_only": 21,
+              "world_rate_delta": -0.015206372194062274,
+              "code_macro_delta": -0.02006535947712418
+            },
+            "predicted_switch": {
+              "gated_only": 0,
+              "comparator_only": 26,
+              "world_rate_delta": -0.01882693700217234,
+              "code_macro_delta": -0.025620915032679714
+            }
+          }
+        }
+      },
+      "oracle_stay": {
+        "worlds": 10994,
+        "distinct_codes": 1594,
+        "methods": {
+          "pooled": {
+            "counts": {
+              "zero_correct": 10206,
+              "one_correct": 10206,
+              "both_correct": 10206,
+              "predicted_switch": 0,
+              "false_switch": 0
+            },
+            "world_rates": {
+              "zero_correct": 0.928324540658541,
+              "one_correct": 0.928324540658541,
+              "both_correct": 0.928324540658541,
+              "predicted_switch": 0.0,
+              "false_switch": 0.0,
+              "balanced_correct": 0.928324540658541
+            },
+            "code_macro": {
+              "zero_correct": 0.8966506343231563,
+              "one_correct": 0.8966506343231563,
+              "both_correct": 0.8966506343231563,
+              "predicted_switch": 0.0,
+              "false_switch": 0.0,
+              "balanced_correct": 0.8966506343231563
+            }
+          },
+          "marker": {
+            "counts": {
+              "zero_correct": 10225,
+              "one_correct": 9977,
+              "both_correct": 9815,
+              "predicted_switch": 594,
+              "false_switch": 594
+            },
+            "world_rates": {
+              "zero_correct": 0.9300527560487538,
+              "one_correct": 0.9074949972712388,
+              "both_correct": 0.8927596871020557,
+              "predicted_switch": 0.05402947062033837,
+              "false_switch": 0.05402947062033837,
+              "balanced_correct": 0.9187738766599963
+            },
+            "code_macro": {
+              "zero_correct": 0.9066046284678656,
+              "one_correct": 0.8646486825595985,
+              "both_correct": 0.8471037222919281,
+              "predicted_switch": 0.0825352014498815,
+              "false_switch": 0.0825352014498815,
+              "balanced_correct": 0.885626655513732
+            }
+          },
+          "gated": {
+            "counts": {
+              "zero_correct": 10246,
+              "one_correct": 10030,
+              "both_correct": 9928,
+              "predicted_switch": 435,
+              "false_switch": 435
+            },
+            "world_rates": {
+              "zero_correct": 0.9319628888484628,
+              "one_correct": 0.9123158086228852,
+              "both_correct": 0.9030380207385846,
+              "predicted_switch": 0.03956703656539931,
+              "false_switch": 0.03956703656539931,
+              "balanced_correct": 0.9221393487356739
+            },
+            "code_macro": {
+              "zero_correct": 0.9087480830893628,
+              "one_correct": 0.8713927227101631,
+              "both_correct": 0.8599644500209117,
+              "predicted_switch": 0.06450927087689949,
+              "false_switch": 0.06450927087689949,
+              "balanced_correct": 0.890070402899763
+            }
+          }
+        },
+        "gated_difference": {
+          "pooled": {
+            "both_correct": {
+              "gated_only": 0,
+              "comparator_only": 278,
+              "world_rate_delta": -0.02528651991995634,
+              "code_macro_delta": -0.03668618430224457
+            },
+            "predicted_switch": {
+              "gated_only": 435,
+              "comparator_only": 0,
+              "world_rate_delta": 0.03956703656539931,
+              "code_macro_delta": 0.06450927087689949
+            }
+          },
+          "marker": {
+            "both_correct": {
+              "gated_only": 113,
+              "comparator_only": 0,
+              "world_rate_delta": 0.010278333636529016,
+              "code_macro_delta": 0.012860727728983612
+            },
+            "predicted_switch": {
+              "gated_only": 0,
+              "comparator_only": 159,
+              "world_rate_delta": -0.014462434054939058,
+              "code_macro_delta": -0.018025930572982005
+            }
+          }
+        }
+      }
+    }
   }
 }
